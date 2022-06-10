@@ -4,13 +4,15 @@ import Link from "next/link";
 
 export default function Blog({ posts }) {
   return (
-    <>
-      {posts.map(({ slug, frontmatter }) => (
-        <Link href={"/blog/" + slug} key={slug}>
-          {slug}
-        </Link>
-      ))}
-    </>
+    <div className="w-full flex items-center">
+      <div className="container">
+        {posts.map(({ slug, frontmatter }) => (
+          <Link href={"/blog/" + slug} key={slug}>
+            {slug}
+          </Link>
+        ))}
+      </div>
+    </div>
   );
 }
 
