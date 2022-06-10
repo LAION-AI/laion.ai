@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Regular.ttf");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-SemiBold.ttf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url("../fonts/Poppins-Italic.ttf");
+  font-weight: 400;
+  font-style: italic;
+}
+
+div {
+  font-family: "Poppins" !important;
+}
+
+.full-container {
+  min-height: 100vh;
+}
+
+@supports (-webkit-touch-callout: none) {
+  .full-container {
+    min-height: -webkit-fill-available;
+  }
+} 
+
+.slide-container, .slide-container > div, .react-slideshow-container, .react-slideshow-fade-wrapper, .react-slideshow-fade-images-wrap {
+  height: 100%;
+}
