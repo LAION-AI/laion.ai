@@ -4,6 +4,10 @@ const nextConfig = {
 };
 
 module.exports = {
+  assetPrefix: "/laion.ai",
+  publicRuntimeConfig: {
+    basePath: "/laion.ai",
+  },
   basePath: "/laion.ai",
 };
 
