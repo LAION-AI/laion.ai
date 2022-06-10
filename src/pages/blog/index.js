@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Blog({ posts }) {
   return (
-    <div className="w-full flex justify-center">
+    <div className="w-full flex justify-center pt-5">
       <div className="container">
         {posts.map(({ slug, frontmatter }) => (
           <Link href={"/blog/" + slug} key={slug}>

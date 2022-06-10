@@ -10,9 +10,9 @@ export default function Nav() {
       <Link href="/">
         <p className="text-2xl cursor-pointer pl-0">LAION</p>
       </Link>
-      <div className="flex child:pl-3">
+      <div className="sm:flex child:pl-3 hidden">
         <p>Projects</p>
-        <p>Team</p>
+        <Link href="/team">Team</Link>
         <Link href="/blog">Blog</Link>
         <p>About</p>
         <p>Contact</p>
