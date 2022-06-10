@@ -8,5 +8,6 @@ module.exports = {
       },
     },
   },
+
   plugins: [require("tailwind-children")],
 };

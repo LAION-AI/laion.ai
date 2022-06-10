@@ -1,3 +1,34 @@
+import team from "../../content/team.json";
+
 export default function Team() {
-  return <div>sfdsf</div>;
+  return (
+    <div className="w-full flex justify-center py-5">
+      <div className="container px-5 grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
+        {team.map((item, i) => {
+          return (
+            <div
+              className="border border-white flex flex-col lg:flex-row"
+              key={i}
+            >
+              <div className="basis-1/3">
+                <img
+                  className="w-full h-full object-center object-cover"
+                  src={
+                    item.img
+                      ? item.img
+                      : "https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg"
+                  }
+                />
+              </div>
+              <div className="p-5 basis-2/3">
+                <p className="text-2xl pb-1">{item.name}</p>
+                <hr />
+                <p className="pt-2">{item.desc}</p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
 }
