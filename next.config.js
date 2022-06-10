@@ -1,10 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-};
-
-module.exports = {
-  assetPrefix: "/laion.ai",
+  assetPrefix: "/laion.ai/",
   publicRuntimeConfig: {
     basePath: "/laion.ai",
   },
