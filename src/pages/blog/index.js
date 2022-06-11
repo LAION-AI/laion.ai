@@ -7,7 +7,7 @@ export default function Blog({ posts }) {
   return (
     <div className="w-full flex justify-center pt-16">
       <div className="container px-5">
-        <h1 className="text-8xl font-bold pb-4">BLOG</h1>
+        <h1 className="text-7xl md:text-8xl font-bold pb-4">BLOG</h1>
 
         {posts.map(({ slug, frontmatter, content }) => {
           let cont = md()
@@ -20,7 +20,7 @@ export default function Blog({ posts }) {
 
           return (
             <Link href={"/blog/" + slug} key={slug}>
-              <div className="border border-white flex flex-col md:flex-row items-stretch">
+              <div className="border cursor-pointer border-white flex flex-col md:flex-row items-stretch">
                 <div>
                   <img
                     className="h-full object-cover"
@@ -28,8 +28,8 @@ export default function Blog({ posts }) {
                   />
                 </div>
                 <div className="p-5">
-                  <div className="flex  pb-1 items-end">
-                    <p className="text-4xl ">{frontmatter.title}</p>
+                  <div className="flex  pb-1 items-end ">
+                    <p className="text-3xl ">{frontmatter.title}</p>
                     <p className="pl-4 text-lg">by: {frontmatter.author},</p>
                     <p className="pl-2 text-lg">{frontmatter.date}</p>
                   </div>
