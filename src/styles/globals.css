@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  background-color: black;
+}
+
 @font-face {
   font-family: 'Poppins';
   src: url("../fonts/Poppins-Regular.ttf");

@@ -31,7 +31,7 @@ export default function Home() {
         </div>
       </div>
       <div className="z-10">
-        <h1 className="text-6xl pb-1 font-bold">LAION</h1>
+        <h1 className="text-8xl pb-1 font-bold">LAION</h1>
         <p className="italic pb-3">
           Large-scale Artificial Intelligence Open Network
         </p>
