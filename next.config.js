@@ -6,6 +6,9 @@ const nextConfig = {
     basePath: "/laion.ai",
   },
   basePath: "/laion.ai",
+  images: {
+    path: `/laion.ai/_next/image`,
+  },
 };
 
 module.exports = nextConfig;

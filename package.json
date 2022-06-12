@@ -18,6 +18,7 @@
     "react-burger-menu": "^3.0.8",
     "react-dom": "18.1.0",
     "react-slideshow-image": "^3.7.5",
+    "react-transition-group": "^4.4.2",
     "tailwind-children": "^0.5.0"
   },
   "devDependencies": {
