@@ -29,6 +29,7 @@ export default function Blog({ posts }) {
                 </div>
                 <div className="p-5">
                   <div className="flex  pb-1 items-end ">
+                    <p className="text-3xl">{frontmatter.title}</p>
                     <p className="pl-2 text-lg">by: {frontmatter.author},</p>
                     <p className="pl-1 text-lg">{frontmatter.date}</p>
                   </div>
