@@ -70,3 +70,7 @@ div {
 .fade-exit.fade-exit-active {
   opacity: 0;
 }
+
+.container {
+  max-width: 1000px !important;
+}

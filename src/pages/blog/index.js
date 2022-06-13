@@ -7,7 +7,7 @@ export default function Blog({ posts }) {
   return (
     <div className="w-full flex justify-center pt-16">
       <div className="container px-5">
-        <h1 className="text-8xl md:text-9xl font-bold pb-4">BLOG</h1>
+        <h1 className="text-8xl md:text-9xl font-bold pb-2">BLOG</h1>
 
         {posts.map(({ slug, frontmatter, content }) => {
           let cont = md()
@@ -29,9 +29,8 @@ export default function Blog({ posts }) {
                 </div>
                 <div className="p-5">
                   <div className="flex  pb-1 items-end ">
-                    <p className="text-3xl ">{frontmatter.title}</p>
-                    <p className="pl-4 text-lg">by: {frontmatter.author},</p>
-                    <p className="pl-2 text-lg">{frontmatter.date}</p>
+                    <p className="pl-2 text-lg">by: {frontmatter.author},</p>
+                    <p className="pl-1 text-lg">{frontmatter.date}</p>
                   </div>
                   <hr />
                   <p className="pt-2">{cont}</p>
