@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: rgb(13, 103, 193);
+  background-color: #219be0;
 }
 
 ::selection {
-  color: rgb(13, 103, 193);
+  color: #219be0;
   background: white;
 }
 
