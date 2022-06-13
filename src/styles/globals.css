@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: #219be0;
+  background-color: #278fcc;
 }
 
 ::selection {
-  color: #219be0;
+  color: #278fcc;
   background: white;
 }
 
@@ -63,7 +63,7 @@ div {
 /* TRANSITION */
 .fade-enter {
   opacity: 0;
-  transform: translate(0, 50px);
+  transform: translate(50, 0px);
   z-index: 1;
 }
 .fade-enter.fade-enter-active {

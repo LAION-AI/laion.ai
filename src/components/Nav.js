@@ -8,7 +8,7 @@ export default function Nav() {
       position: "fixed",
       width: "1.2em",
       height: "1.0em",
-      right: "2rem",
+      right: "1.2rem",
       top: ".8em",
     },
     bmBurgerBars: {
@@ -52,41 +52,49 @@ export default function Nav() {
 
   return (
     <div
-      className="fixed w-full flex px-8 py-2 z-30 transition-colors bg-sky text-white items-center justify-between 
+      className="fixed w-full flex md:flex-col px-4 py-2 md:py-5 z-30 bg-sky text-white md:h-full items-center justify-between  
+                md:static md:w-auto md:bg-white md:text-sky md:justify-start md:max-h-screen
                       child:pl-2 child:text-lg"
     >
-      <Link href="/">
-        <p className="text-2xl cursor-pointer font-bold pl-0">LAION</p>
-      </Link>
-      <div className="sm:flex child:pl-3 hidden">
-        <p>
-          <Link href="/projects">Projects</Link>
-        </p>
-        <Link href="/team">Team</Link>
-        <Link href="/blog">Blog</Link>
-        <Link href="/about">About</Link>
-        <p>Contact</p>
-        <p>FAQ</p>
-      </div>
-      <div className="sm:hidden">
-        <Menu right styles={styles}>
-          <div>
-            <p>
-              <Link href="/projects">Projects</Link>
-            </p>
-            <p>
-              <Link href="/team">Team</Link>
-            </p>
-            <p>
-              <Link href="/blog">Blog</Link>
-            </p>
-            <p>
-              <Link href="/about">About</Link>
-            </p>
-            <p>Contact</p>
-            <p>FAQ</p>
-          </div>
-        </Menu>
+      <div>
+        <Link href="/">
+          <p className="text-2xl md:text-8xl cursor-pointer font-bold pl-0">
+            LAION
+          </p>
+        </Link>
+        <div
+          className="md:flex child:pl-3 md:text-xl child:md:pl-1 child:md:pt-2 hidden md:flex-col 
+          child:brightness-100 hover:child:brightness-75 child:transition"
+        >
+          <p>
+            <Link href="/projects">Projects</Link>
+          </p>
+          <Link href="/team">Team</Link>
+          <Link href="/blog">Blog</Link>
+          <Link href="/about">About</Link>
+          <p>Contact</p>
+          <p>FAQ</p>
+        </div>
+        <div className="md:hidden">
+          <Menu right styles={styles}>
+            <div>
+              <p>
+                <Link href="/projects">Projects</Link>
+              </p>
+              <p>
+                <Link href="/team">Team</Link>
+              </p>
+              <p>
+                <Link href="/blog">Blog</Link>
+              </p>
+              <p>
+                <Link href="/about">About</Link>
+              </p>
+              <p>Contact</p>
+              <p>FAQ</p>
+            </div>
+          </Menu>
+        </div>
       </div>
     </div>
   );

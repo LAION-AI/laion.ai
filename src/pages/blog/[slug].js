@@ -4,7 +4,7 @@ import md from "markdown-it";
 
 export default function Post({ frontmatter, content }) {
   return (
-    <div className="w-full flex justify-center py-5 pt-16">
+    <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <div className="container px-5">
         <h1 className="text-8xl md:text-9xl font-bold pb-2">
           {frontmatter.title}

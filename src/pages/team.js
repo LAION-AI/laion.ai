@@ -2,7 +2,7 @@ import team from "../../content/team.json";
 
 export default function Team() {
   return (
-    <div className="w-full flex justify-center py-5 pt-16">
+    <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <div className="container px-5">
         <h1 className="text-7xl md:text-9xl font-bold pb-2">TEAM</h1>
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">

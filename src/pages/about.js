@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="w-full flex justify-center py-5 pt-16">
+    <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <div
         className="container px-5
                       child:pb-5 child:lg:pb-10 child:lg:w-2/3"
