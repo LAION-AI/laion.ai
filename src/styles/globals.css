@@ -13,8 +13,8 @@ body {
 
 @font-face {
   font-family: "Dinish";
-  src: url("DinishCondensed-Bold.woff2") format("woff2"),
-    url("DinishCondensed-Bold.woff") format("woff");
+  src: url("../fonts/DinishCondensed-Bold.woff2") format("woff2"),
+    url("../fonts/DinishCondensed-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
@@ -22,8 +22,8 @@ body {
 
 @font-face {
   font-family: "Dinish";
-  src: url("Dinish-Regular.woff2") format("woff2"),
-    url("Dinish-Regular.woff") format("woff");
+  src: url("../fonts/Dinish-Regular.woff2") format("woff2"),
+    url("../fonts/Dinish-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -31,8 +31,8 @@ body {
 
 @font-face {
   font-family: "Dinish";
-  src: url("Dinish-Italic.woff2") format("woff2"),
-    url("Dinish-Italic.woff") format("woff");
+  src: url("../fonts/Dinish-Italic.woff2") format("woff2"),
+    url("../fonts/Dinish-Italic.woff") format("woff");
   font-weight: normal;
   font-style: italic;
   font-display: swap;
