@@ -59,7 +59,9 @@ export default function Nav() {
         <p className="text-2xl cursor-pointer font-bold pl-0">LAION</p>
       </Link>
       <div className="sm:flex child:pl-3 hidden">
-        <p>Projects</p>
+        <p>
+          <Link href="/projects">Projects</Link>
+        </p>
         <Link href="/team">Team</Link>
         <Link href="/blog">Blog</Link>
         <Link href="/about">About</Link>
@@ -69,7 +71,9 @@ export default function Nav() {
       <div className="sm:hidden">
         <Menu right styles={styles}>
           <div>
-            <p>Projects</p>
+            <p>
+              <Link href="/projects">Projects</Link>
+            </p>
             <p>
               <Link href="/team">Team</Link>
             </p>
