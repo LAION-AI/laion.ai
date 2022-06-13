@@ -12,26 +12,26 @@ body {
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.ttf");
+  font-family: "Dinish";
+  src: url("../fonts/Dinish-Regular.otf");
   font-weight: 400;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-SemiBold.ttf");
+  font-family: "Dinish";
+  src: url("../fonts/DinishCondensed-Bold.otf");
   font-weight: 600;
 }
 
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Italic.ttf");
+  font-family: "Dinish";
+  src: url("../fonts/Dinish-Italic.otf");
   font-weight: 400;
   font-style: italic;
 }
 
 div {
-  font-family: "Poppins" !important;
+  font-family: "Dinish" !important;
 }
 
 .full-container {

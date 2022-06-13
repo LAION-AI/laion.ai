@@ -2,10 +2,10 @@ export default function Home() {
   return (
     <div className="w-full flex justify-center py-5 pt-16 h-full">
       <div className="container px-5 h-full flex-col flex">
-        <h1 className="text-7xl md:text-8xl font-bold pb-4">Projects</h1>
-        <div className="flex items-center h-full lg:mb-16">
+        <h1 className="text-8xl md:text-9xl font-bold pb-4">PROJECTS</h1>
+        <div className="flex items-center h-full md:mb-8 lg:mb-24">
           <div
-            className="flex pt-5 flex-col md:flex-row justify-center  
+            className="flex flex-col md:flex-row justify-center  
                   child:md:w-2/5 child:border child:border-white child:bg-sky child:p-3 hover:child:bg-white hover:child:text-sky child:transition-colors child:cursor-pointer child:flex child:flex-col"
           >
             <div className="mb-5 md:mb-0 md:mr-5">

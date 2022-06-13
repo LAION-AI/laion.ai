@@ -7,7 +7,7 @@ export default function Blog({ posts }) {
   return (
     <div className="w-full flex justify-center pt-16">
       <div className="container px-5">
-        <h1 className="text-7xl md:text-8xl font-bold pb-4">BLOG</h1>
+        <h1 className="text-8xl md:text-9xl font-bold pb-4">BLOG</h1>
 
         {posts.map(({ slug, frontmatter, content }) => {
           let cont = md()
