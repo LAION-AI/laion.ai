@@ -15,7 +15,7 @@ export default function Home() {
                 We are creating the world’s largest openly accessible
                 image-text-pair dataset, as a step to democratize research on
                 training of large language-image models like DALL-E & CLIP
-                <br />
+                <br /> <br />
                 Explore our already released samples (400M) & help us to quickly
                 grow into the billions!
               </p>
