@@ -1,4 +1,5 @@
 import Tags from "../components/Tags";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -14,13 +15,15 @@ export default function Home() {
           className="flex pt-5 flex-col md:flex-row w-full
                   child:border child:border-white child:bg-sky child:p-3 child:w-64 hover:child:bg-white hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
         >
-          <div className="mb-4 md:mb-0 md:mr-3">
-            <p className="text-2xl pb-1">LAION-400M</p>
-            <hr />
-            <p className="pt-2">
-              The world’s largest openly accessible image-text-pair dataset
-            </p>
-          </div>
+          <Link href="/blog/laion-400-open-dataset">
+            <div className="mb-4 md:mb-0 md:mr-3">
+              <p className="text-2xl pb-1">LAION-400M</p>
+              <hr />
+              <p className="pt-2">
+                The world’s largest openly accessible image-text-pair dataset
+              </p>
+            </div>
+          </Link>
           <div className="">
             <p className="text-2xl pb-1">LAION-5B</p>
             <hr />

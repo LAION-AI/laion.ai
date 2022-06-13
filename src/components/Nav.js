@@ -30,9 +30,8 @@ export default function Nav() {
       top: "0px",
     },
     bmMenu: {
-      background: "#000",
+      background: "#203e55",
       padding: "2.5em 1.5em 0",
-      fontSize: "1.15em",
     },
     bmMorphShape: {
       fill: "#fff",
@@ -43,10 +42,12 @@ export default function Nav() {
     },
     bmItem: {
       display: "inline-block",
-      lineHeight: "1.75em",
     },
     bmOverlay: {
       background: "rgba(0, 0, 0, 0.3)",
+      position: "fixed",
+      top: "0px",
+      left: "0px",
     },
   };
 
@@ -70,12 +71,12 @@ export default function Nav() {
           <Link href="/team">Team</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
-          <p>Contact</p>
-          <p>FAQ</p>
+          <Link href="/contact">Contact</Link>
+          <Link href="/faq">FAQ</Link>
         </div>
         <div className="md:hidden">
           <Menu right styles={styles}>
-            <div>
+            <div className="child:pb-2 child:child:text-2xl">
               <p>
                 <Link href="/projects">Projects</Link>
               </p>
@@ -88,8 +89,12 @@ export default function Nav() {
               <p>
                 <Link href="/about">About</Link>
               </p>
-              <p>Contact</p>
-              <p>FAQ</p>
+              <p>
+                <Link href="/contact">Contact</Link>
+              </p>
+              <p>
+                <Link href="/faq">FAQ</Link>
+              </p>
             </div>
           </Menu>
         </div>
