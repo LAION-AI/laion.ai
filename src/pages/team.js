@@ -9,7 +9,7 @@ export default function Team() {
           {team.map((item, i) => {
             return (
               <div
-                className="border border-white flex flex-col lg:flex-row"
+                className="bg-sky border border-white flex flex-col lg:flex-row"
                 key={i}
               >
                 <div className="basis-1/3">

@@ -16,6 +16,7 @@
     "next": "12.1.6",
     "react": "18.1.0",
     "react-burger-menu": "^3.0.8",
+    "react-cursor-follow": "^2.0.0",
     "react-dom": "18.1.0",
     "react-slideshow-image": "^3.7.5",
     "react-transition-group": "^4.4.2",

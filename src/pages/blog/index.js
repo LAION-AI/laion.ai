@@ -20,7 +20,7 @@ export default function Blog({ posts }) {
 
           return (
             <Link href={"/blog/" + slug} key={slug}>
-              <div className="border cursor-pointer border-white flex flex-col md:flex-row items-stretch">
+              <div className="border cursor-pointer bg-sky border-white flex flex-col md:flex-row items-stretch">
                 <div>
                   <img
                     className="h-full object-cover"

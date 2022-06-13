@@ -15,7 +15,7 @@ export default function Home() {
         <p className="text-2xl">TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.</p>
         <div
           className="flex pt-5 flex-col md:flex-row w-full
-                  child:border child:border-white child:p-3 child:w-64 hover:child:bg-white hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
+                  child:border child:border-white child:bg-sky child:p-3 child:w-64 hover:child:bg-white hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
         >
           <div className="mb-4 md:mb-0 md:mr-3">
             <p className="text-2xl pb-1">LAION-400M</p>

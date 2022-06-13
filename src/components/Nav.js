@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
 
@@ -50,37 +50,9 @@ export default function Nav() {
     },
   };
 
-  let solid = false;
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", function () {
-        console.log(window.scrollY);
-        if (window.scrollY >= 30) {
-          if (!solid) {
-            document.documentElement.style.setProperty(
-              "--nav-color",
-              "rgba(14, 94, 174, 1)"
-            );
-            solid = true;
-          }
-        } else {
-          if (solid) {
-            document.documentElement.style.setProperty(
-              "--nav-color",
-              "rgba(14, 94, 174, 0)"
-            );
-            solid = false;
-          }
-        }
-      });
-    }
-  }, []);
-
   return (
     <div
-      id="navbar"
-      className="fixed w-full flex px-8 py-2 z-30 transition-colors text-white items-center justify-between 
+      className="fixed w-full flex px-8 py-2 z-30 transition-colors bg-sky text-white items-center justify-between 
                       child:pl-2 child:text-lg"
     >
       <Link href="/">
