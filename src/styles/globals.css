@@ -82,3 +82,139 @@ div {
 .container {
   max-width: 1000px !important;
 }
+
+.navbar > div > div a {
+  text-decoration: none !important;
+}
+/* Markdown Format */
+
+h2,
+h3,
+h5,
+h4,
+h6 {
+  font-size: 1.5rem; /* 24px */
+  line-height: 2rem; /* 32px */
+}
+
+h2 {
+  font-size: 1.875rem; /* 30px */
+  line-height: 2.25rem; /* 36px */
+  display: flex;
+  align-items: center;
+}
+h2,
+h3,
+h5,
+h4,
+h6 {
+  padding-top: 1em;
+  display: flex;
+  align-items: center;
+}
+
+h2::after,
+h3::after,
+h4::after,
+h6::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #fff;
+  margin-left: 0.5em;
+}
+
+a {
+  text-decoration: underline;
+}
+
+table {
+  width: 100%;
+  table-layout: fixed;
+  margin-top: 0.75em;
+}
+
+tr,
+th,
+td {
+  border-color: white;
+  border-width: 1px;
+  padding: 0.5em;
+  text-align: center;
+}
+
+th img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0.5em;
+}
+
+p,
+h6,
+code,
+pre {
+  font-size: 1.1rem; /* 16px */
+  line-height: 1.5rem; /* 24px */
+}
+
+.article p,
+.article,
+h6 {
+  margin-top: 0.5em;
+}
+
+li {
+  margin-left: 1.5em;
+  display: list-item;
+  padding-top: 0.2em;
+}
+
+ol > li {
+  margin-left: 0em;
+  padding-left: 1.5em;
+}
+
+ol {
+  list-style-type: decimal;
+  list-style-position: inside;
+}
+
+li::before {
+  content: "-  ";
+}
+
+ol > li::before {
+  content: "";
+}
+
+h6 {
+  font-style: italic;
+}
+
+blockquote,
+code,
+pre {
+  color: #278fcc;
+  background: white;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+pre {
+  margin-top: 0.5em;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+}
+
+pre > code {
+  padding-left: 0em;
+  padding-right: 0em;
+}
+
+.article img {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 0.75em;
+  padding-bottom: 0.25em;
+}

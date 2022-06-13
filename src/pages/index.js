@@ -1,8 +1,6 @@
-import "react-slideshow-image/dist/styles.css";
-
 export default function Home() {
   return (
-    <div className="h-full md:h-screen w-full flex flex-col items-center justify-center text-center px-5 ">
+    <div className="h-full md:h-screen w-full flex flex-col items-center justify-center text-center px-5 pt-16 md:pt-0">
       <div className="z-10 w-full md:w-auto">
         <h1 className="text-8xl md:text-9xl pb-1 font-bold">LAION</h1>
         <p className="italic pb-3">

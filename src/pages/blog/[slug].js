@@ -6,15 +6,15 @@ export default function Post({ frontmatter, content }) {
   return (
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <div className="container px-5">
-        <h1 className="text-8xl md:text-9xl font-bold pb-2">
-          {frontmatter.title}
-        </h1>
-        <img src={frontmatter.previewImg} alt={frontmatter.title} />
-        <div className="flex items-end pt-2 pb-2">
-          <p className="text-lg">by: {frontmatter.author},</p>
-          <p className="pl-2 text-lg">{frontmatter.date}</p>
-        </div>
-        <div dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+        <h1 className="text-8xl md:text-9xl font-bold">{frontmatter.title}</h1>
+        <p className="text-2xl pb-2">
+          by: {frontmatter.author}, {frontmatter.date}
+        </p>
+        <hr />
+        <div
+          className="pt-2 article"
+          dangerouslySetInnerHTML={{ __html: md().render(content) }}
+        />
       </div>
     </div>
   );

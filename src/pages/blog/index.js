@@ -20,19 +20,18 @@ export default function Blog({ posts }) {
 
           return (
             <Link href={"/blog/" + slug} key={slug}>
-              <div className="border cursor-pointer bg-sky border-white flex flex-col md:flex-row items-stretch">
+              <div className="border hover:bg-white hover:text-sky transition-colors cursor-pointer bg-sky border-white flex flex-col md:flex-row items-stretch">
                 <div>
                   <img
                     className="h-full object-cover"
                     src={frontmatter.previewImg}
                   />
                 </div>
-                <div className="p-5">
-                  <div className="flex  pb-1 items-end ">
-                    <p className="text-3xl">{frontmatter.title}</p>
-                    <p className="pl-2 text-lg">by: {frontmatter.author},</p>
-                    <p className="pl-1 text-lg">{frontmatter.date}</p>
-                  </div>
+                <div className="p-5 ">
+                  <p className="text-3xl">{frontmatter.title}</p>
+                  <p className="text-lg">
+                    by: {frontmatter.author}, {frontmatter.date}
+                  </p>
                   <hr />
                   <p className="pt-2">{cont}</p>
                 </div>

@@ -52,9 +52,9 @@ export default function Nav() {
 
   return (
     <div
-      className="fixed w-full flex md:flex-col px-4 py-2 md:py-5 z-30 bg-sky text-white md:h-full items-center justify-between  
+      className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-5 z-30 bg-sky text-white md:h-full items-center justify-between  
                 md:static md:w-auto md:bg-white md:text-sky md:justify-start md:max-h-screen
-                      child:pl-2 child:text-lg"
+                      child:pl-2 child:md:pl-0 child:text-lg "
     >
       <div>
         <Link href="/">
@@ -66,9 +66,7 @@ export default function Nav() {
           className="md:flex child:pl-3 md:text-xl child:md:pl-1 child:md:pt-2 hidden md:flex-col 
           child:brightness-100 hover:child:brightness-75 child:transition"
         >
-          <p>
-            <Link href="/projects">Projects</Link>
-          </p>
+          <Link href="/projects">Projects</Link>
           <Link href="/team">Team</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
