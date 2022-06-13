@@ -1,6 +1,13 @@
+import Tags from "../components/Tags";
+
 export default function Home() {
   return (
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5 h-full">
+      <Tags
+        title="Projects"
+        desc="A selection of open-source projects maintained by LAION, the Large-scale Artificial Intelligence Open Network, to be used freely in machine learning efforts."
+      />
+
       <div className="container px-5 h-full flex-col flex">
         <h1 className="text-8xl md:text-9xl font-bold pb-2">PROJECTS</h1>
         <div className="flex md:items-center h-full md:mb-20">

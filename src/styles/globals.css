@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: #278fcc;
+  background-color: #203e55;
 }
 
 ::selection {
-  color: #278fcc;
+  color: #203e55;
   background: white;
 }
 
@@ -195,7 +195,7 @@ h6 {
 blockquote,
 code,
 pre {
-  color: #278fcc;
+  color: #203e55;
   background: white;
   padding-left: 0.5em;
   padding-right: 0.5em;
