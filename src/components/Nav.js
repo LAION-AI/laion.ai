@@ -75,7 +75,7 @@ export default function Nav() {
           <Link href="/faq">FAQ</Link>
         </div>
       </div>
-      <div className="flex child:mr-3 -ml-0.5 child:w-8 child:brightness-100 hover:child:brightness-150 child:transition">
+      <div className="child:mr-3 -ml-0.5 child:w-8 child:brightness-100 hover:child:brightness-150 child:transition hidden md:flex">
         <a href="" target="_blank" rel="noopener noreferrer">
           <FaEnvelope />
         </a>
@@ -112,6 +112,25 @@ export default function Nav() {
             <p>
               <Link href="/faq">FAQ</Link>
             </p>
+            <div className="child:mr-3 pt-4 child:w-8 child:brightness-100 hover:child:brightness-90 child:transition flex">
+              <a href="" target="_blank" rel="noopener noreferrer">
+                <FaEnvelope />
+              </a>
+              <a
+                href="https://discord.com/invite/eq3cAMZtCC"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaDiscord />
+              </a>
+              <a
+                href="https://github.com/LAION-AI/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaGithub />
+              </a>
+            </div>
           </div>
         </Menu>
       </div>
