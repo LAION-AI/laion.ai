@@ -73,10 +73,15 @@ export default function Nav() {
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
+          <Link href="/impressum">Impressum</Link>
         </div>
       </div>
       <div className="child:mr-3 -ml-0.5 child:w-8 child:brightness-100 hover:child:brightness-150 child:transition hidden md:flex">
-        <a href="" target="_blank" rel="noopener noreferrer">
+        <a
+          href="mailtio:contact@laion.ai"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaEnvelope />
         </a>
         <a
@@ -112,8 +117,15 @@ export default function Nav() {
             <p>
               <Link href="/faq">FAQ</Link>
             </p>
+            <p>
+              <Link href="/impressum">Impressum</Link>
+            </p>
             <div className="child:mr-3 pt-4 child:w-8 child:brightness-100 hover:child:brightness-90 child:transition flex">
-              <a href="" target="_blank" rel="noopener noreferrer">
+              <a
+                href="mailtio:contact@laion.ai"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <FaEnvelope />
               </a>
               <a
