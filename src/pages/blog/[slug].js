@@ -4,7 +4,7 @@ import md from "markdown-it";
 import Tags from "../../components/Tags";
 import dateFormat from "dateformat";
 
-export default function Post({ frontmatter, content, date }) {
+export default function Post({ frontmatter, content, date, slug }) {
   return (
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags

@@ -8,6 +8,7 @@ const nextConfig = {
   basePath: "/laion.ai",
   images: {
     loader: "akamai",
+
     path: `/laion.ai/_next/image`,
   },
 };
