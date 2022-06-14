@@ -2,8 +2,9 @@ import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
 import Tags from "../../components/Tags";
+import dateFormat from "dateformat";
 
-export default function Post({ frontmatter, content }) {
+export default function Post({ frontmatter, content, date }) {
   return (
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags
@@ -17,9 +18,11 @@ export default function Post({ frontmatter, content }) {
         image={frontmatter.previewImg}
       />
       <div className="container px-5">
-        <h1 className="text-8xl md:text-9xl font-bold">{frontmatter.title}</h1>
+        <h1 className="text-8xl md:text-9xl font-bold">
+          {frontmatter.title.toUpperCase()}
+        </h1>
         <p className="text-2xl pb-2">
-          by: {frontmatter.author}, {frontmatter.date}
+          by: {frontmatter.author}, {dateFormat(date, "m mmm, yyyy")}
         </p>
         <hr />
         <div

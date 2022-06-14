@@ -11,6 +11,7 @@
     "deploy": "npm run build && npm run export && touch ./out/.nojekyll"
   },
   "dependencies": {
+    "dateformat": "^5.0.3",
     "framer-motion": "^6.3.11",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
