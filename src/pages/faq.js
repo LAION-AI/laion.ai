@@ -1,0 +1,26 @@
+import Tags from "../components/Tags";
+
+import questions from "../../content/faq.json";
+
+export default function Faq() {
+  return (
+    <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
+      <Tags title="About" />
+      <div className="container px-5">
+        <h1 className="text-7xl md:text-9xl font-bold pb-2">FAQ</h1>
+        {questions.map((item, i) => {
+          return (
+            <div
+              className="bg-sky border border-white mb-5 lg:flex-row p-5"
+              key={i}
+            >
+              <p className="text-3xl pb-2">{item.q}</p>
+              <hr />
+              <p className="pt-3">{item.a}</p>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}

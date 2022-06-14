@@ -53,7 +53,7 @@ export default function Nav() {
 
   return (
     <div
-      className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-5 z-30 bg-sky text-white md:h-full items-center justify-between  
+      className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-6 z-30 bg-sky text-white md:h-full items-center justify-between  
                 md:static md:w-auto md:bg-white md:text-sky md:justify-start md:max-h-screen
                       child:pl-2 child:md:pl-0 child:text-lg "
     >
@@ -71,7 +71,6 @@ export default function Nav() {
           <Link href="/team">Team</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
-          <Link href="/contact">Contact</Link>
           <Link href="/faq">FAQ</Link>
         </div>
         <div className="md:hidden">
@@ -88,9 +87,6 @@ export default function Nav() {
               </p>
               <p>
                 <Link href="/about">About</Link>
-              </p>
-              <p>
-                <Link href="/contact">Contact</Link>
               </p>
               <p>
                 <Link href="/faq">FAQ</Link>

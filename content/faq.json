@@ -1,0 +1,22 @@
+[
+  {
+    "q": "Does LAION datasets respect copyright laws?",
+    "a": "LAION datasets are simply indexes to the internet, i.e. lists of URLs to the original images together with the ALT texts found linked to those images. While we downloaded and calculated CLIP embeddings of the pictures to compute similarity scores between pictures and texts, we subsequently discarded all the photos. Any researcher using the datasets must reconstruct the images data by downloading the subset he is interested in. For this purpose, we suggest the img2dataset tool."
+  },
+  {
+    "q": "Does dataset contains images that may be disturbing for viewers?",
+    "a": "No, but links in the dataset can lead to images that are disturbing or discomforting depending on the filter or search method employed."
+  },
+  {
+    "q": "I found a dataset containing images while searching on the internet. What about copyright then?",
+    "a": "Any dataset containing images is not released by LAION, it must have been reconstructed with the provided tools by other people. We do not host and also do not provide links on our website to access such datasets. Please refer only to links we provide for official released data."
+  },
+  {
+    "q": "I found my name and my picture in the dataset. I am an EU citizen and I want to protect my personal data as allowed by GDPR. What should I do?",
+    "a": "If you found your name only on the ALT text data, and the corresponding picture does NOT contain your image, this is not considered personal data under GDPR terms. Your name associated with other identifiable data is. If the URL or the picture has your image, you may request a takedown of the dataset entry in the GDPR page. As per GDPR, we provide a takedown form you can use. Upon form submission, we will investigate the request, and if verifiable, we will remove the entry from all data repositories we control. Such repositories include current data stored on our computers and future releases of the datasets. We cannot act on data that are not under our control, for example, past releases that circulate via torrents."
+  },
+  {
+    "q": "Do your scripts respect robots.txt instructions?",
+    "a": "Despite the “Crawling at Home” project name, we are not crawling websites to create the datasets. Common Crawl did the crawling part in the past, and they did respect the robots.txt instruction. We only analyse their data and then look at the pictures to assess their value concerning the provided alt text."
+  }
+]
