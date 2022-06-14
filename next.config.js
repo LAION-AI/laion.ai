@@ -12,8 +12,8 @@ const nextConfig = {
     path: `/laion.ai/_next/image`,
   },
   i18n: {
-    locales: ["en"],
-    defaultLocale: "en",
+    locales: ["en-US"],
+    defaultLocale: "en-US",
   },
 };
 
