@@ -91,6 +91,12 @@ div {
   outline: none !important;
 }
 
+@media (max-width: 767px) and (max-height: 615px) {
+  .top-add {
+    padding-top: 4rem !important;
+  }
+}
+
 /* Markdown Format */
 
 h2,

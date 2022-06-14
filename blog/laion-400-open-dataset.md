@@ -2,7 +2,7 @@
 title: "LAION-400-MILLION OPEN DATASET"
 author: "Christoph Schuhmann"
 date: "Aug 20, 2021"
-previewImg: "https://i.imgur.com/HnEUZwG.png"
+previewImg: "/laion.ai/images/blog/400.png"
 ---
 
 We present LAION-400M: the world’s largest openly available image-text-pair dataset with 400 million samples.
@@ -132,7 +132,7 @@ We provide two 6GB knn indices built using the [autofaiss](https://github.com/cr
 Vision and language modelling has been taking off in 2021. Here are some pointers about what this kind of image + text datasets unlocks and why it seems interesting:
 
 - Six months ago, OpenAI released two blog posts and papers, [CLIP](https://openai.com/blog/clip/) and [DALL-E](https://openai.com/blog/dall-e/). Both models rely on a large amount of (text, image) pairs. They used an unreleased 400M pairs dataset.
-  - CLIP is a model that computes how related are a text and an image. It makes it possible to build large text to image search, and it makes it possible to create that kind of crazy text to image art [clip-art](https://ml.berkeley.edu/blog/posts/clip-art/). They released a small and medium version of the model but no training code.
+  - CLIP is a model that computes how related are a text and an image. It makes it possible to build large text to image search, and it makes it possible to create that kind of crazy text to image art [clip-art](https://ml.berkeley.edu/blog/blog/clip-art/). They released a small and medium version of the model but no training code.
   - DALL-E is a model that directly generates images from texts. As can be seen from the blog post, it achieves awe-inspiring results that could directly impact the world for anything that needs drawing and illustrations. OpenAI did not release any model, even through an API
 
 Since then, various researchers have organised several efforts to replicate DALL-E. People gathered initially around this excellent DALLE replication repository [DALLE-PyTorch](https://github.com/lucidrains/DALLE-pytorch) with some fantastic results visible in the readme. More recently, as part of huggingface events, new developments have been achieved (see [DALLE-mini report](https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-mini--Vmlldzo4NjIxODA) ), and an online demo is now available at [DALLE-mini demo.](https://huggingface.co/spaces/flax-community/dalle-mini)

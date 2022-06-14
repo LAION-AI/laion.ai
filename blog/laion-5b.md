@@ -2,7 +2,7 @@
 title: "LAION-5B: A NEW ERA OF OPEN LARGE-SCALE MULTI-MODAL DATASETS"
 author: "Romain Beaumont"
 date: "Mar 31, 2022"
-previewImg: "https://i.imgur.com/fYRNR2C.png"
+previewImg: "/laion.ai/images/blog/5b.png"
 ---
 
 We present a dataset of 5,85 billion CLIP-filtered image-text pairs, 14x bigger than LAION-400M, previously the biggest openly accessible image-text dataset in the world.

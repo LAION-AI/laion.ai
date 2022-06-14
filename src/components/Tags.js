@@ -2,6 +2,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Tags(props) {
+  const router = useRouter();
+
   const title = props.title ? props.title + " | LAION" : "LAION";
   const desc = props.desc
     ? props.desc
@@ -10,7 +12,9 @@ export default function Tags(props) {
   const alt = props.alt
     ? props.alt
     : "The text: LAION. Large-scale Artificial Intelligence Open Network, TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.";
-  const router = useRouter();
+  const slug = props.slug ? props.slug : router.route;
+
+  console.log(props.image);
 
   return (
     <Head>
@@ -30,11 +34,8 @@ export default function Tags(props) {
       <meta name="twitter:image:alt" content={alt} />
 
       <meta property="og:type" content="website" />
-      <meta property="og:url" content={"https://laion.ai/" + router.route} />
-      <meta
-        property="twitter:url"
-        content={"https://laion.ai/" + router.route}
-      />
+      <meta property="og:url" content={"https://laion.ai" + slug} />
+      <meta property="twitter:url" content={"https://laion.ai" + slug} />
       <meta property="twitter:card" content="summary_large_image" />
 
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="full-container md:h-screen w-full flex flex-col items-center justify-center text-center px-5 pt-0">
+    <div className="full-container  md:h-screen w-full flex flex-col items-center justify-center text-center px-5 top-add">
       <Tags />
       <div className="z-10 w-full md:w-auto">
         <h1 className="text-8xl md:text-9xl font-bold">LAION</h1>

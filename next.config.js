@@ -11,6 +11,10 @@ const nextConfig = {
 
     path: `/laion.ai/_next/image`,
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 };
 
 module.exports = nextConfig;

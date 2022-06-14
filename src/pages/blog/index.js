@@ -24,9 +24,9 @@ export default function Blog({ posts }) {
           return (
             <Link href={"/blog/" + slug} key={slug}>
               <div className="border mb-5 hover:bg-white hover:text-sky transition-colors cursor-pointer bg-sky border-white flex flex-col lg:flex-row items-stretch">
-                <div className="basis-2/5">
+                <div className="basis-2/5 flex">
                   <img
-                    className="h-full object-cover"
+                    className="h-full flex object-cover"
                     src={frontmatter.previewImg}
                   />
                 </div>
@@ -48,11 +48,11 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync("posts");
+  const files = fs.readdirSync("blog");
 
   const posts = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(`posts/${fileName}`, "utf-8");
+    const readFile = fs.readFileSync(`blog/${fileName}`, "utf-8");
     const { data: frontmatter, content } = matter(readFile);
     const date = Date.parse(frontmatter.date);
 
