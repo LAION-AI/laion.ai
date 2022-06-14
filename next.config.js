@@ -8,12 +8,7 @@ const nextConfig = {
   basePath: "/laion.ai",
   images: {
     loader: "akamai",
-
     path: `/laion.ai/_next/image`,
-  },
-  i18n: {
-    locales: ["en-US"],
-    defaultLocale: "en-US",
   },
 };
 
