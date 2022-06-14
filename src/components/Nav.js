@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { slide as Menu } from "react-burger-menu";
+import { FaDiscord, FaEnvelope, FaGithub } from "react-icons/fa";
 
 export default function Nav() {
   var styles = {
@@ -53,8 +54,8 @@ export default function Nav() {
 
   return (
     <div
-      className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-6 z-30 bg-sky text-white md:h-full items-center justify-between  
-                md:static md:w-auto md:bg-white md:text-sky md:justify-start md:max-h-screen
+      className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-6 md:pb-7 z-30 bg-sky text-white md:h-full items-center justify-between  
+                md:static md:w-auto md:bg-white md:text-sky md:max-h-screen md:justify-between
                       child:pl-2 child:md:pl-0 child:text-lg "
     >
       <div>
@@ -65,7 +66,7 @@ export default function Nav() {
         </Link>
         <div
           className="md:flex child:pl-3 md:text-xl child:md:pl-1 child:md:pt-2 hidden md:flex-col 
-          child:brightness-100 hover:child:brightness-75 child:transition"
+          child:brightness-100 hover:child:brightness-150 child:transition"
         >
           <Link href="/projects">Projects</Link>
           <Link href="/team">Team</Link>
@@ -73,27 +74,46 @@ export default function Nav() {
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
         </div>
-        <div className="md:hidden">
-          <Menu right styles={styles}>
-            <div className="child:pb-2 child:child:text-2xl">
-              <p>
-                <Link href="/projects">Projects</Link>
-              </p>
-              <p>
-                <Link href="/team">Team</Link>
-              </p>
-              <p>
-                <Link href="/blog">Blog</Link>
-              </p>
-              <p>
-                <Link href="/about">About</Link>
-              </p>
-              <p>
-                <Link href="/faq">FAQ</Link>
-              </p>
-            </div>
-          </Menu>
-        </div>
+      </div>
+      <div className="flex child:mr-3 -ml-0.5 child:w-8 child:brightness-100 hover:child:brightness-150 child:transition">
+        <a href="" target="_blank" rel="noopener noreferrer">
+          <FaEnvelope />
+        </a>
+        <a
+          href="https://discord.com/invite/eq3cAMZtCC"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaDiscord />
+        </a>
+        <a
+          href="https://github.com/LAION-AI/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <FaGithub />
+        </a>
+      </div>
+      <div className="md:hidden">
+        <Menu right styles={styles}>
+          <div className="child:pb-2 child:child:text-2xl">
+            <p>
+              <Link href="/projects">Projects</Link>
+            </p>
+            <p>
+              <Link href="/team">Team</Link>
+            </p>
+            <p>
+              <Link href="/blog">Blog</Link>
+            </p>
+            <p>
+              <Link href="/about">About</Link>
+            </p>
+            <p>
+              <Link href="/faq">FAQ</Link>
+            </p>
+          </div>
+        </Menu>
       </div>
     </div>
   );

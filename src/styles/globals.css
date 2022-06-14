@@ -86,6 +86,11 @@ div {
 .navbar > div > div a {
   text-decoration: none !important;
 }
+
+.bm-item {
+  outline: none !important;
+}
+
 /* Markdown Format */
 
 h2,
@@ -199,12 +204,14 @@ pre {
   background: white;
   padding-left: 0.5em;
   padding-right: 0.5em;
+  font-size: 0.9rem !important;
 }
 
 pre {
   margin-top: 0.5em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
+  overflow-x: scroll !important;
 }
 
 pre > code {
