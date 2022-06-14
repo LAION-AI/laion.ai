@@ -3,7 +3,7 @@ import matter from "gray-matter";
 import md from "markdown-it";
 import Tags from "../components/Tags";
 
-export default function Post({ frontmatter, content, date }) {
+export default function Post({ frontmatter, content }) {
   return (
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags title="Impressum" />

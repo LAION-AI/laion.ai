@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="h-full md:h-screen w-full flex flex-col items-center justify-center text-center px-5 pt-16 md:pt-0">
+    <div className="full-container md:h-screen w-full flex flex-col items-center justify-center text-center px-5 pt-0">
       <Tags />
       <div className="z-10 w-full md:w-auto">
         <h1 className="text-8xl md:text-9xl font-bold">LAION</h1>
@@ -24,13 +24,16 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <div className="">
-            <p className="text-2xl pb-1">LAION-5B</p>
-            <hr />
-            <p className="pt-2">
-              Dataset consisting of 5.85 billion CLIP-filtered image-text pairs
-            </p>
-          </div>
+          <Link href="/laion.ai/blog/laion-5b">
+            <div className="">
+              <p className="text-2xl pb-1">LAION-5B</p>
+              <hr />
+              <p className="pt-2">
+                Dataset consisting of 5.85 billion CLIP-filtered image-text
+                pairs
+              </p>
+            </div>
+          </Link>
         </div>
       </div>
     </div>
