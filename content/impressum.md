@@ -26,7 +26,7 @@ Telefon: +49 176-22398086
 
 E-Mail: contact@laion.ai
 
-### **Verantwortliche i.S.d. § 55 Abs. 2 RStV**:
+### Verantwortliche i.S.d. § 55 Abs. 2 RStV:
 
 Christoph Schuhmann, Marie-Henning-Weg 143, 21035 Hamburg
 
