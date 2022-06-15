@@ -9,7 +9,8 @@ export default function Team() {
         desc="The team behind LAION, the Large-scale Artificial Intelligence Open Network, a non-profit organization creating open-source machine learning resources."
       />
       <div className="container px-5">
-        <h1 className="text-7xl md:text-9xl font-bold pb-2">TEAM</h1>
+        <h1 className="text-7xl md:text-8xl font-bold pb-2">TEAM</h1>
+        <hr className="mb-5 md:hidden" />
         <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-5">
           {team.map((item, i) => {
             return (

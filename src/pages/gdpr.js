@@ -17,9 +17,11 @@ export default function GDPR({ frontmatter, content }) {
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags title="GDPR" />
       <div className="container px-5">
-        <h1 className="text-8xl md:text-9xl font-bold">
+        <h1 className="text-8xl md:text-8xl font-bold">
           {frontmatter.title.toUpperCase()}
         </h1>
+        <hr className="mb-5 mt-2 md:hidden" />
+
         <div
           className=" article pb-4"
           dangerouslySetInnerHTML={{ __html: md().render(content) }}

@@ -10,7 +10,7 @@ export default function Nav() {
       width: "1.2em",
       height: "1.0em",
       right: "1.2rem",
-      top: ".8em",
+      top: "1em",
     },
     bmBurgerBars: {
       background: "#fff",
@@ -55,12 +55,12 @@ export default function Nav() {
   return (
     <div
       className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-6 md:pb-7 z-30 bg-sky text-white md:h-full items-center justify-between  
-                md:static md:w-auto md:bg-white md:text-sky md:max-h-screen md:justify-between
+                md:static md:w-auto md:bg-paper md:text-sky md:max-h-screen md:justify-between
                       child:pl-2 child:md:pl-0 child:text-lg "
     >
       <div>
         <Link href="/">
-          <p className="text-2xl md:text-8xl cursor-pointer font-bold pl-0">
+          <p className="text-4xl md:text-7xl cursor-pointer font-bold pl-0 md:pb-3">
             LAION
           </p>
         </Link>

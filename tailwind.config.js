@@ -4,6 +4,7 @@ module.exports = {
     extend: {
       colors: {
         sky: "#1D374E",
+        paper: "#F6F6F6",
       },
     },
   },

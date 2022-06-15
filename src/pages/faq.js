@@ -7,7 +7,9 @@ export default function Faq() {
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags title="FAQ" />
       <div className="container px-5">
-        <h1 className="text-7xl md:text-9xl font-bold pb-2">FAQ</h1>
+        <h1 className="text-7xl md:text-8xl font-bold pb-2">FAQ</h1>
+        <hr className="mb-5 mt-2 md:hidden" />
+
         {questions.map((item, i) => {
           return (
             <div

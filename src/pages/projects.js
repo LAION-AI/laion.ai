@@ -10,7 +10,9 @@ export default function Home() {
       />
 
       <div className="container px-5 h-full flex-col flex">
-        <h1 className="text-8xl md:text-9xl font-bold pb-2">PROJECTS</h1>
+        <h1 className="text-8xl md:text-8xl font-bold pb-2">PROJECTS</h1>
+        <hr className="mb-5 md:hidden" />
+
         <div className="flex md:items-center h-full md:mb-20">
           <div
             className="flex flex-col md:flex-row md:justify-center  

@@ -6,7 +6,7 @@ export default function Home() {
     <div className="full-container  md:h-screen w-full flex flex-col items-center justify-center text-center px-5 top-add">
       <Tags />
       <div className="z-10 w-full md:w-auto">
-        <h1 className="text-8xl md:text-9xl font-bold">LAION</h1>
+        <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
         <p className="italic pb-3">
           Large-scale Artificial Intelligence Open Network
         </p>
@@ -24,7 +24,7 @@ export default function Home() {
               </p>
             </div>
           </Link>
-          <Link href="/laion.ai/blog/laion-5b">
+          <Link href="/blog/laion-5b">
             <div className="">
               <p className="text-2xl pb-1">LAION-5B</p>
               <hr />
