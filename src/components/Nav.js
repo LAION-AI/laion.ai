@@ -31,7 +31,7 @@ export default function Nav() {
       top: "0px",
     },
     bmMenu: {
-      background: "#203e55",
+      background: "#1D374E",
       padding: "2.5em 1.5em 0",
     },
     bmMorphShape: {

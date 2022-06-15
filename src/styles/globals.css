@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 body {
-  background-color: #203e55;
+  background-color: #1d374e;
 }
 
 ::selection {
-  color: #203e55;
+  color: #1d374e;
   background: white;
 }
 
@@ -213,7 +213,7 @@ h6 {
 blockquote,
 code,
 pre {
-  color: #203e55;
+  color: #1d374e;
   background: white;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -254,5 +254,5 @@ input {
 textarea::selection,
 input::selection {
   color: white !important;
-  background: #203e55;
+  background: #1d374e;
 }
