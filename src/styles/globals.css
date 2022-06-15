@@ -50,6 +50,13 @@ div {
   .full-container {
     min-height: -webkit-fill-available;
   }
+
+  .article-image {
+    display: block !important;
+  }
+  .article-image > img {
+    height: auto !important;
+  }
 }
 
 .slide-container,
@@ -230,4 +237,22 @@ pre > code {
   margin-right: auto;
   padding-top: 0.75em;
   padding-bottom: 0.25em;
+}
+
+/* Form */
+
+label {
+  padding-bottom: 0.2em;
+}
+
+textarea,
+input {
+  color: black !important;
+  padding: 0.5em;
+}
+
+textarea::selection,
+input::selection {
+  color: white !important;
+  background: #203e55;
 }
