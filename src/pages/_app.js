@@ -9,11 +9,16 @@ function MyApp({ Component, pageProps, router }) {
       <div className="md:basis-1/5  ">
         <Nav />
       </div>
-      <div className="md:overflow-y-scroll md:max-h-screen text-white grow md:grow-0 md:basis-4/5 flex child:grow flex-col ">
+      <div
+        id="content"
+        className="md:overflow-y-scroll md:max-h-screen text-white grow md:grow-0 md:basis-4/5 flex child:grow flex-col "
+      >
         <LazyMotion features={domAnimation}>
           <AnimatePresence
             exitBeforeEnter
-            onExitComplete={() => window.scrollTo(0, 0)}
+            onExitComplete={() =>
+              document.getElementById("content").scrollTo(0, 0)
+            }
           >
             <m.div
               key={router.route}
