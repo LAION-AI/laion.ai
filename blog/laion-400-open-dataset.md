@@ -68,6 +68,8 @@ Number with height and width >= 256 211M
 
 By using the KNN index, we can extract specialized datasets by domains of interest. They are (or will be) sufficient in size to train technical domain models.
 
+Also, use [https://rom1504.github.io/clip-retrieval/](https://rom1504.github.io/clip-retrieval/) for simple visualisation of the dataset. There you can search among the dataset using CLIP and a knn index.
+
 ### Disclaimer & Content Warning
 
 Our filtering protocol only removed NSFW images detected as illegal, but the dataset still has NSFW content accordingly marked in the metadata. When freely navigating through the dataset, keep in mind that it is a large-scale, **non-curated** set crawled from the internet for research purposes, such that collected links may lead to discomforting and disturbing content. Therefore, please use the demo links with **caution**. You can extract a “safe” subset by filtering out samples drawn with NSFW or via stricter CLIP filtering.
@@ -75,12 +77,6 @@ Our filtering protocol only removed NSFW images detected as illegal, but the dat
 There is a certain degree of duplication because we used URL+text as deduplication criteria. The same image with the same caption may sit at different URLs, causing duplicates. The same image with other captions is not, however, considered duplicated.
 
 Using KNN clustering should make it easy to further deduplicate by image content.
-
-### Random non-NSFW Samples from the LAION-400M dataset
-
-NEED TO TRANSFER
-
-Also, use [https://rom1504.github.io/clip-retrieval/](https://rom1504.github.io/clip-retrieval/) for simple visualisation of the dataset. There you can search among the dataset using CLIP and a knn index.
 
 ### LAION-400M Open Dataset structure
 
