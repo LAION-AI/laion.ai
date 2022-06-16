@@ -4,12 +4,7 @@ import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 export default function Home() {
-  const slideImages = [
-    { url: "/laion.ai/images/gallery/dragon.jpg" },
-    { url: "/laion.ai/images/gallery/charcoal.jpg" },
-    { url: "/laion.ai/images/gallery/fox.jpg" },
-    { url: "/laion.ai/images/gallery/river.jpg" },
-  ];
+  const slideImages = ["dragon", "charcoal", "fox", "river"];
 
   return (
     <div className="full-container  md:h-screen w-full flex flex-col items-center justify-center text-center px-5 top-add relative child:absolute">
@@ -19,11 +14,24 @@ export default function Home() {
           <Fade duration={3500} arrows={false} pauseOnHover={false}>
             {slideImages.map((slideImage, index) => {
               return (
-                <img
-                  src={slideImage.url}
-                  className="object-cover h-full w-full opacity-20"
-                  key={index}
-                />
+                <picture key={index}>
+                  <source
+                    srcSet={"/laion.ai/images/gallery/" + slideImage + ".avif"}
+                    type="image/avif"
+                  />
+                  <source
+                    srcSet={"/laion.ai/images/gallery/" + slideImage + ".webp"}
+                    type="image/webp"
+                  />
+                  <source
+                    srcSet={"/laion.ai/images/gallery/" + slideImage + ".jpg"}
+                    type="image/jpeg"
+                  />
+                  <img
+                    src={"/laion.ai/images/gallery/" + slideImage + ".jpg"}
+                    className="object-cover h-full w-full opacity-20"
+                  />
+                </picture>
               );
             })}
           </Fade>
