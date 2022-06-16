@@ -63,8 +63,14 @@ div {
 .slide-container > div,
 .react-slideshow-container,
 .react-slideshow-fade-wrapper,
-.react-slideshow-fade-images-wrap {
-  height: 100%;
+.react-slideshow-fade-images-wrap,
+.react-slideshow-fade-images-wrap > div {
+  height: 100% !important;
+}
+
+.index-img {
+  height: 85vh;
+  width: 70vw;
 }
 
 /* TRANSITION */
