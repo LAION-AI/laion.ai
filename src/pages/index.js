@@ -38,8 +38,16 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full md:w-auto ">
-        <div className="z-10 h-full">
-          <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
+        <div className="z-10 h-full md:bg-sky p-10">
+          <div className="flex justify-center">
+            <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
+            <div className="flex items-center">
+              <img
+                src={"/laion.ai/images/logo.svg"}
+                className="pl-4 pb-1 h-16"
+              />
+            </div>
+          </div>
           <p className="italic pb-3">
             Large-scale Artificial Intelligence Open Network
           </p>
