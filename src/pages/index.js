@@ -4,7 +4,7 @@ import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 
 export default function Home() {
-  const slideImages = ["dragon", "charcoal", "fox", "river"];
+  const slideImages = ["dragon", "painting", "fox", "river"];
 
   return (
     <div className="full-container  md:h-screen w-full flex flex-col items-center justify-center text-center px-5 top-add relative child:absolute">
@@ -29,7 +29,7 @@ export default function Home() {
                   />
                   <img
                     src={"/laion.ai/images/gallery/" + slideImage + ".jpg"}
-                    className="object-cover h-full w-full opacity-20"
+                    className="object-cover  h-full w-full opacity-20 md:opacity-25"
                   />
                 </picture>
               );
@@ -38,7 +38,7 @@ export default function Home() {
         </div>
       </div>
       <div className="w-full md:w-auto ">
-        <div className="z-10 h-full md:bg-sky p-10">
+        <div className="z-10 h-full md:bg-sky p-8">
           <div className="flex justify-center">
             <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
             <div className="flex items-center">

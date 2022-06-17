@@ -8,7 +8,7 @@ body {
 
 ::selection {
   color: #1d374e;
-  background: white;
+  background: #f6f6f6;
 }
 
 @font-face {
