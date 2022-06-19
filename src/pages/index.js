@@ -7,9 +7,9 @@ export default function Home() {
   const slideImages = ["dragon", "painting", "fox", "river"];
 
   return (
-    <div className="full-container  md:h-screen w-full flex flex-col items-center justify-center text-center px-5 top-add relative child:absolute">
+    <div className="full-container  md:h-screen w-full flex flex-col items-center justify-center text-center px-5  relative child:absolute">
       <Tags />
-      <div className="z-0 h-screen w-full">
+      <div className="z-0 h-screen w-full fixed md:absolute">
         <div className="slide-container">
           <Fade duration={3500} arrows={false} pauseOnHover={false}>
             {slideImages.map((slideImage, index) => {
@@ -37,7 +37,7 @@ export default function Home() {
           </Fade>
         </div>
       </div>
-      <div className="w-full md:w-auto ">
+      <div className="w-full md:w-auto top-add">
         <div className="z-10 h-full md:bg-sky p-8">
           <div className="flex justify-center">
             <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>

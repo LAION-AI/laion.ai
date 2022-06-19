@@ -11,7 +11,7 @@ function MyApp({ Component, pageProps, router }) {
       </div>
       <div
         id="content"
-        className="md:overflow-y-scroll md:max-h-screen md:z-50 shadow-lg shadow-neutral-600/70 text-white grow md:grow-0 md:basis-4/5 flex child:grow flex-col "
+        className="md:overflow-y-scroll md:max-h-screen md:z-50 md:shadow-lg shadow-neutral-600/70 text-white grow md:grow-0 md:basis-4/5 flex child:grow flex-col "
       >
         <LazyMotion features={domAnimation}>
           <AnimatePresence
