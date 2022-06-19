@@ -79,7 +79,7 @@ export default function Nav() {
       </div>
       <div className="child:mr-3 -ml-0.5 child:w-8 child:brightness-100 hover:child:brightness-150 child:transition hidden md:flex">
         <a
-          href="mailtio:contact@laion.ai"
+          href="mailto:contact@laion.ai"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -126,7 +126,7 @@ export default function Nav() {
             </p>
             <div className="child:mr-3 pt-4 child:w-8 child:brightness-100 hover:child:brightness-90 child:transition flex">
               <a
-                href="mailtio:contact@laion.ai"
+                href="mailto:contact@laion.ai"
                 target="_blank"
                 rel="noopener noreferrer"
               >
