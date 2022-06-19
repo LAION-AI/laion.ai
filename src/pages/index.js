@@ -16,19 +16,19 @@ export default function Home() {
               return (
                 <picture key={index}>
                   <source
-                    srcSet={"/laion.ai/images/gallery/" + slideImage + ".avif"}
+                    srcSet={"/images/gallery/" + slideImage + ".avif"}
                     type="image/avif"
                   />
                   <source
-                    srcSet={"/laion.ai/images/gallery/" + slideImage + ".webp"}
+                    srcSet={"/images/gallery/" + slideImage + ".webp"}
                     type="image/webp"
                   />
                   <source
-                    srcSet={"/laion.ai/images/gallery/" + slideImage + ".jpg"}
+                    srcSet={"/images/gallery/" + slideImage + ".jpg"}
                     type="image/jpeg"
                   />
                   <img
-                    src={"/laion.ai/images/gallery/" + slideImage + ".jpg"}
+                    src={"/images/gallery/" + slideImage + ".jpg"}
                     className="object-cover  h-full w-full opacity-20 md:opacity-25"
                   />
                 </picture>
@@ -42,10 +42,7 @@ export default function Home() {
           <div className="flex justify-center">
             <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
             <div className="flex items-center">
-              <img
-                src={"/laion.ai/images/logo.svg"}
-                className="pl-4 pb-1 h-16"
-              />
+              <img src={"/images/logo.svg"} className="pl-4 pb-1 h-16" />
             </div>
           </div>
           <p className="italic pb-3">

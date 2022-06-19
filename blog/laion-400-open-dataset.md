@@ -2,7 +2,7 @@
 title: "LAION-400-MILLION OPEN DATASET"
 author: "Christoph Schuhmann"
 date: "Aug 20, 2021"
-previewImg: "/laion.ai/images/blog/500m.png"
+previewImg: "/images/blog/500m.png"
 ---
 
 We present LAION-400M: the world’s largest openly available image-text-pair dataset with 400 million samples.

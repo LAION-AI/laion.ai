@@ -8,7 +8,7 @@ export default function Tags(props) {
   const desc = props.desc
     ? props.desc
     : "LAION, Large-scale Artificial Intelligence Open Network, is a non-profit organization making machine learning resources available to the general public.";
-  const image = props.image ? props.img : "/laion.ai/social.png";
+  const image = props.image ? props.img : "/social.png";
   const alt = props.alt
     ? props.alt
     : "The text: LAION. Large-scale Artificial Intelligence Open Network, TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.";
@@ -38,12 +38,7 @@ export default function Tags(props) {
 
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="theme-color" content="#1D374E" />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/laion.ai/favicon.png"
-      />
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
     </Head>
   );
 }

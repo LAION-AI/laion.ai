@@ -33,7 +33,7 @@ export default function Home() {
                 </p>
               </div>
             </Link>
-            <Link href="/laion.ai/blog/laion-5b">
+            <Link href="/blog/laion-5b">
               <div className="">
                 <p className="text-4xl pb-1">LAION-5B</p>
                 <hr />
