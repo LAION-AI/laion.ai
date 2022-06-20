@@ -15,7 +15,7 @@ export default function Team() {
           {team.map((item, i) => {
             return (
               <div
-                className="bg-sky border border-white flex flex-col lg:flex-row"
+                className="bg-sky border border-white flex flex-col lg:flex-row shadow-lg shadow-neutral-800/20"
                 key={i}
               >
                 <div className="basis-1/3">
@@ -23,13 +23,14 @@ export default function Team() {
                     className="w-full h-full object-center object-cover"
                     src={
                       item.img
-                        ? item.img
+                        ? "/images/team/" + item.img + ".jpg"
                         : "https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg"
                     }
                   />
                 </div>
                 <div className="p-5 basis-2/3">
-                  <p className="text-2xl pb-1">{item.name}</p>
+                  <p className="text-2xl">{item.name}</p>
+                  <p className="pb-1 text-sm">{item.title}</p>
                   <hr />
                   <p className="pt-2">{item.desc}</p>
                 </div>

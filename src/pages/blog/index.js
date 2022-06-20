@@ -24,7 +24,7 @@ export default function Blog({ posts }) {
 
           return (
             <Link href={"/blog/" + slug} key={slug}>
-              <div className="border mb-5 hover:bg-white hover:text-sky transition-colors cursor-pointer bg-sky border-white flex flex-col lg:flex-row items-stretch">
+              <div className="border mb-5 hover:bg-white hover:text-sky transition-colors cursor-pointer bg-sky border-white flex flex-col lg:flex-row items-stretch shadow-lg shadow-neutral-800/20">
                 <div className="basis-2/5 flex article-image">
                   <img
                     className="h-full  flex object-cover"
