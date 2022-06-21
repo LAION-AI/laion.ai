@@ -5,7 +5,7 @@ date: "Aug 20, 2021"
 previewImg: "/images/blog/500m.png"
 ---
 
-We present LAION-400M: the world’s largest openly available image-text-pair dataset with 400 million samples.
+We present LAION-400M: 400M English (image, text) pairs
 
 ### Sponsors
 
