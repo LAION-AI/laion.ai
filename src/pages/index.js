@@ -58,7 +58,7 @@ export default function Home() {
                 <p className="text-2xl pb-1">LAION-400M</p>
                 <hr />
                 <p className="pt-2">
-                  The world’s largest openly accessible image-text-pair dataset
+                  An open dataset containing 400 million English (image, text) pairs.
                 </p>
               </div>
             </Link>
@@ -67,8 +67,7 @@ export default function Home() {
                 <p className="text-2xl pb-1">LAION-5B</p>
                 <hr />
                 <p className="pt-2">
-                  Dataset consisting of 5.85 billion CLIP-filtered image-text
-                  pairs
+                  A dataset consisting of 5.85 billion multilingual CLIP-filtered image-text pairs.
                 </p>
               </div>
             </Link>
