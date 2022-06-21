@@ -23,9 +23,8 @@ export default function Home() {
                 <p className="text-4xl pb-1">LAION-400M</p>
                 <hr />
                 <p className="pt-2 text-lg">
-                  We are creating the world’s largest openly accessible
-                  image-text-pair dataset, as a step to democratize research on
-                  training of large language-image models like DALL-E & CLIP
+                  We have created an openly accessible 400M image-text-pair dataset, 
+                  as a step to democratize research on training of large language-image models like DALL-E & CLIP
                 </p>
                 <p className="pt-1 text-lg">
                   Explore our already released samples (400M) & help us to
