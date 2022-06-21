@@ -15,7 +15,7 @@ export default function Team() {
           {team.map((item, i) => {
             return (
               <div
-                className="bg-sky border border-white flex flex-col lg:flex-row shadow-lg shadow-neutral-800/20"
+                className="bg-sky border border-paper flex flex-col lg:flex-row shadow-lg shadow-neutral-800/20"
                 key={i}
               >
                 <div className="basis-1/3">

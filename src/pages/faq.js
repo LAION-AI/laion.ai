@@ -13,7 +13,7 @@ export default function Faq() {
         {questions.map((item, i) => {
           return (
             <div
-              className="bg-sky border border-white mb-5 lg:flex-row p-5 shadow-lg shadow-neutral-800/20"
+              className="bg-sky border border-paper mb-5 lg:flex-row p-5 shadow-lg shadow-neutral-800/20"
               key={i}
             >
               <p className="text-3xl pb-2">{item.q}</p>

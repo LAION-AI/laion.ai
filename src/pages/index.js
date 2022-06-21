@@ -51,14 +51,15 @@ export default function Home() {
           <p className="text-2xl">TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.</p>
           <div
             className="flex pt-5 flex-col md:flex-row w-full
-                  child:border child:border-white child:bg-sky child:p-3 child:w-64 hover:child:bg-white hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
+                  child:border child:border-paper child:bg-sky child:p-3 child:w-64 hover:child:bg-paper hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
           >
             <Link href="/blog/laion-400-open-dataset">
               <div className="mb-4 md:mb-0 md:mr-3">
                 <p className="text-2xl pb-1">LAION-400M</p>
                 <hr />
                 <p className="pt-2">
-                  An open dataset containing 400 million English image-text pairs.
+                  An open dataset containing 400 million English image-text
+                  pairs.
                 </p>
               </div>
             </Link>
@@ -67,7 +68,8 @@ export default function Home() {
                 <p className="text-2xl pb-1">LAION-5B</p>
                 <hr />
                 <p className="pt-2">
-                  A dataset consisting of 5.85 billion multilingual CLIP-filtered image-text pairs.
+                  A dataset consisting of 5.85 billion multilingual
+                  CLIP-filtered image-text pairs.
                 </p>
               </div>
             </Link>

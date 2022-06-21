@@ -6,7 +6,7 @@ import { FaDiscord, FaEnvelope, FaGithub } from "react-icons/fa";
 export default function Nav() {
   return (
     <div
-      className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-6 md:pb-7 z-30 bg-sky text-white md:h-full items-center justify-between  
+      className="navbar fixed w-full flex md:flex-col px-4 md:px-6 py-2 md:py-6 md:pb-7 z-30 bg-sky text-paper md:h-full items-center justify-between  
                 md:static md:w-auto md:bg-paper md:text-sky md:max-h-screen md:justify-between
                       child:pl-2 child:md:pl-0 child:text-lg "
     >

@@ -121,7 +121,7 @@ export default function GDPR({ frontmatter, content }) {
               <button
                 type="submit"
                 disabled={submitting}
-                className="py-1 px-4 bg-white text-sky hover:brightness-90 transition-all"
+                className="py-1 px-4 bg-paper text-sky hover:brightness-90 transition-all"
               >
                 Send
               </button>
