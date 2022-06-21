@@ -58,7 +58,7 @@ export default function Home() {
                 <p className="text-2xl pb-1">LAION-400M</p>
                 <hr />
                 <p className="pt-2">
-                  An open dataset containing 400 million English (image, text) pairs.
+                  An open dataset containing 400 million English image-text pairs.
                 </p>
               </div>
             </Link>
