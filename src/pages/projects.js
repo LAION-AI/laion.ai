@@ -15,7 +15,7 @@ export default function Home() {
         {projects.map((item, i) => {
           return (
             <Link key={i} href={item.link}>
-              <div className="bg-sky border border-paper hover:bg-paper hover:text-sky transition-colors mb-5 lg:flex-row p-5 shadow-lg shadow-neutral-800/20">
+              <div className="bg-sky border border-paper hover:bg-paper hover:text-sky cursor-pointer transition-colors mb-5 lg:flex-row p-5 shadow-lg shadow-neutral-800/20">
                 <p className="text-3xl pb-2">{item.name}</p>
                 <hr />
                 <p className="pt-3">{item.desc}</p>
