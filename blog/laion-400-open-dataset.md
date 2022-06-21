@@ -10,7 +10,7 @@ We present LAION-400M: the world’s largest openly available image-text-pair da
 ### Sponsors
 
 We made it so far due to the generosity of these donors:
-| ![](https://laion.ai/wp-content/uploads/2021/09/doodlebot-e1630822844129.png) |![](https://laion.ai/wp-content/uploads/2021/09/gentec_logo_neg.svg)|![](https://laion.ai/wp-content/uploads/2021/09/Eye_of_Providence-150x150.png)|
+| ![](https://imgur.com/z6K7kSq) |![](https://i.imgur.com/KYvncYl.png)|![](https://i.imgur.com/y2yNLm8.png)|
 |--|--|--|
 |[doodlebot.ai](http://doodlebot.ai/)|[Gentec Data](https://gentec.ro/)|[the-eye.eu](http://the-eye.eu/)|
 
@@ -239,7 +239,7 @@ The size of the tars of 270MB is when using the options of img2dataset indicated
 
 Finally, the tar dataset aims to compute and package clip embeddings and compute a KNN index over the clip embeddings. The [clip-retrieval](https://github.com/rom1504/clip-retrieval/) tool makes it fast to compute 100M embeddings per 20h with a single 3080 GPU, so it’s possible to rerun this part on the whole dataset or a subset at a low cost. The embeddings are stored in NPY files next to parquet files in the same order. Since this dataset is much smaller than image one, each NPY file stores 1M samples. NPY files are 1GB in size, and parquet files are 150MB. There are a total of 400 such files. These embeddings help build text and an image knn index using the [autofaiss](https://github.com/criteo/autofaiss) tool, making it possible to produce a quantised index of an arbitrary file. The chosen index type is 6GB, so it’s cheap for anyone to load and run fast (10ms) queries over the whole dataset. We also generated another kind of index of size 16GB. Thanks to memory mapping, it’s also possible to load it at no ram usage. A simple [web demo](https://rom1504.github.io/clip-retrieval/) shows the results.
 
-![](https://laion.ai/wp-content/uploads/2021/08/Screenshot_20210905_223842-1024x393.png)
+![](https://i.imgur.com/6bEztg9.png)
 
 ### License
 
