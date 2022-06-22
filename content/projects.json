@@ -50,7 +50,7 @@
     "name": "Models",
     "entries": [
       {
-        "name": "Openclip B/16",
+        "name": "Openclip (B/16, B/16+ & L/14)",
         "modality": "image/text",
         "kind": "Contrastive",
         "status": "released",
@@ -77,7 +77,7 @@
         "name": "Audio clip",
         "modality": "audio/text",
         "kind": "Contrastive",
-        "status": "Training",
+        "status": "Trained proof of concept, scaling",
         "desc": "",
         "link": "/projects"
       },
@@ -126,7 +126,7 @@
         "modality": "image/text",
         "kind": "Contrastive",
         "status": "Released",
-        "desc": "Using CLIP to detect watermarks in images.",
+        "desc": "Detector for watermarks in images.",
         "link": "https://github.com/LAION-AI/LAION-5B-WatermarkDetection"
       },
       {
