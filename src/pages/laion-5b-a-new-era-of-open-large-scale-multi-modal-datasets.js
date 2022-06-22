@@ -5,9 +5,7 @@ import { useRouter } from "next/router";
 export default function Redirect() {
   const router = useRouter();
   useEffect(() => {
-    if (notloggedincondition) {
-      router.push("/blog/laion-5b");
-    }
+    router.push("/blog/laion-5b");
   });
 
   return <></>;
