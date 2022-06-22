@@ -19,13 +19,14 @@ export default function Home() {
               {item.entries.map((item, i) => {
                 return (
                   <Link key={i} href={item.link}>
-                    <div className="bg-sky border border-paper hover:bg-paper hover:text-sky cursor-pointer transition-colors mb-5 lg:flex-row p-5 shadow-lg shadow-neutral-800/20 flex">
+                    <div className="bg-sky border border-paper hover:bg-paper hover:text-sky cursor-pointer transition-colors mb-5 p-5 shadow-lg shadow-neutral-800/20 flex flex-col sm:flex-row">
                       <div className="basis-1/4">
                         <p className="text-2xl">{item.name}</p>
                         <p>{item.modality}</p>
                         <p>{item.kind}</p>
                         <p>Status: {item.status}</p>
                       </div>
+                      <hr className="mt-4 mb-4 sm:hidden" />
                       <div className="basis-3/4">{item.desc}</div>
                     </div>
                   </Link>
