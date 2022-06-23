@@ -15,23 +15,45 @@ export default function Home() {
         {projects.map((item, i) => {
           return (
             <div key={i}>
-              <h3 className="pt-0 pb-4">{item.name.toUpperCase()}</h3>
-              {item.entries.map((item, i) => {
-                return (
-                  <Link key={i} href={item.link}>
-                    <div className="bg-sky border border-paper hover:bg-paper hover:text-sky cursor-pointer transition-colors mb-5 p-5 shadow-lg shadow-neutral-800/20 flex flex-col sm:flex-row">
-                      <div className="basis-1/4">
-                        <p className="text-2xl">{item.name}</p>
-                        <p>{item.modality}</p>
-                        <p>{item.kind}</p>
-                        <p>Status: {item.status}</p>
+              <h3 className={"pb-4 " + (i === 0 ? "pt-0" : "pt-5")}>
+                {item.name.toUpperCase()}
+              </h3>
+              <div className="grid gap-5 grid-cols-2">
+                {item.entries.map((item, i) => {
+                  return (
+                    <Link key={i} href={item.link}>
+                      <div
+                        className={
+                          "bg-sky border border-paper hover:bg-paper hover:text-sky cursor-pointer transition-colors p-5 shadow-lg shadow-neutral-800/20 flex flex-col sm:flex-row " +
+                          (item.desc === undefined
+                            ? "col-span-1"
+                            : "col-span-2")
+                        }
+                      >
+                        <div className={item.desc !== undefined && "basis-1/4"}>
+                          <p className="text-2xl">{item.name}</p>
+                          <p>{item.modality}</p>
+                          <p>{item.kind}</p>
+                          <p>Status: {item.status}</p>
+                        </div>
+                        <hr
+                          className={
+                            "mt-4 mb-4 sm:hidden " +
+                            (item.desc === undefined && "hidden")
+                          }
+                        />
+                        <div
+                          className={
+                            "basis-3/4 " + (item.desc === undefined && "hidden")
+                          }
+                        >
+                          {item.desc}
+                        </div>
                       </div>
-                      <hr className="mt-4 mb-4 sm:hidden" />
-                      <div className="basis-3/4">{item.desc}</div>
-                    </div>
-                  </Link>
-                );
-              })}
+                    </Link>
+                  );
+                })}
+              </div>
             </div>
           );
         })}

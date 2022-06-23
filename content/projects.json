@@ -179,14 +179,12 @@
         "name": "LAION-400M",
         "modality": "image/text",
         "status": "Published",
-        "desc": "Cited many times",
         "link": "https://arxiv.org/abs/2111.02114"
       },
       {
         "name": "LAION-5B",
         "modality": "image/text",
         "status": "started",
-        "desc": "",
         "link": "https://github.com/LAION-AI/laion5B-paper"
       }
     ]
