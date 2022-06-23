@@ -33,17 +33,20 @@
   {
     "name": "Robert Kaczmarczyk",
     "title": "Medical Lead",
-    "desc": "Technical University of Munich. 3 years experience in epidemiological research."
+    "desc": "Technical University of Munich. 3 years experience in epidemiological research.",
+    "img": "robert"
   },
   {
     "name": "Theo Coombes",
     "title": "Founding Member",
-    "desc": "Programmer with a great passion for big data and machine learning."
+    "desc": "Programmer with a great passion for big data and machine learning.",
+    "img": "theo"
   },
   {
     "name": "Mehdi Cherti",
     "title": "HelmholtzAI",
-    "desc": "Researcher on Machine Learning and Deep Generative Models. PhD in Computer Science."
+    "desc": "Researcher on Machine Learning and Deep Generative Models. PhD in Computer Science.",
+    "img": "mehdi"
   },
   {
     "name": "Jan Ebert",
