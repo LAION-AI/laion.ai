@@ -1,9 +1,18 @@
 import Tags from "../components/Tags";
 import Link from "next/link";
 import { Fade } from "react-slideshow-image";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 import "react-slideshow-image/dist/styles.css";
 
 export default function Home() {
+  const router = useRouter();
+  useEffect(() => {
+    if (location.hash === "#contact") {
+      router.push("/gdpr");
+    }
+  }, []);
+
   const slideImages = ["dragon", "painting", "fox", "river"];
 
   return (
