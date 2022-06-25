@@ -20,43 +20,69 @@ export default function Home() {
               </h3>
               <div className="grid gap-5 grid-cols-2">
                 {item.entries.map((item, i) => {
-                  return (
-                    <Link key={i} href={item.link}>
-                      <div
+                  if (item.link.charAt(0) === `/`) {
+                    return (
+                      <a
                         className={
-                          "bg-sky border border-paper hover:bg-paper hover:text-sky cursor-pointer transition-colors p-5 shadow-lg shadow-neutral-800/20 flex flex-col sm:flex-row " +
+                          "no-underline " +
                           (item.desc === undefined
                             ? "col-span-1"
                             : "col-span-2")
                         }
                       >
-                        <div className={item.desc !== undefined && "basis-1/4"}>
-                          <p className="text-2xl">{item.name}</p>
-                          <p>{item.modality}</p>
-                          <p>{item.kind}</p>
-                          <p>Status: {item.status}</p>
-                        </div>
-                        <hr
-                          className={
-                            "mt-4 mb-4 sm:hidden " +
-                            (item.desc === undefined && "hidden")
-                          }
-                        />
-                        <div
-                          className={
-                            "basis-3/4 " + (item.desc === undefined && "hidden")
-                          }
-                        >
-                          {item.desc}
-                        </div>
-                      </div>
-                    </Link>
-                  );
+                        <Link key={i} href={item.link}>
+                          <ProjectItem item={item} />
+                        </Link>
+                      </a>
+                    );
+                  } else {
+                    return (
+                      <a
+                        key={i}
+                        href={item.link}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        className={
+                          "no-underline " +
+                          (item.desc === undefined
+                            ? "col-span-1"
+                            : "col-span-2")
+                        }
+                      >
+                        <ProjectItem item={item} />
+                      </a>
+                    );
+                  }
                 })}
               </div>
             </div>
           );
         })}
+      </div>
+    </div>
+  );
+}
+
+function ProjectItem({ item }) {
+  return (
+    <div
+      className={
+        " bg-sky border border-paper hover:bg-paper hover:text-sky cursor-pointer transition-colors p-5 shadow-lg shadow-neutral-800/20 flex flex-col sm:flex-row "
+      }
+    >
+      <div className={item.desc !== undefined && "basis-1/4"}>
+        <p className="text-2xl">{item.name}</p>
+        <p>{item.modality}</p>
+        <p>{item.kind}</p>
+        <p>Status: {item.status}</p>
+      </div>
+      <hr
+        className={
+          "mt-4 mb-4 sm:hidden " + (item.desc === undefined && "hidden")
+        }
+      />
+      <div className={"basis-3/4 " + (item.desc === undefined && "hidden")}>
+        {item.desc}
       </div>
     </div>
   );
