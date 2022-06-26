@@ -1,40 +1,39 @@
 [
   {
+    "name": "Christoph Schuhmann",
+    "title": "Organizational Lead / Founder",
+    "desc": "Master in Physics & Computer Science. Producer of Schools of Trust.",
+    "img": "christoph"
+  },
+  {
     "name": "Jenia Jitsev",
-    "title": "Scientific Lead",
+    "title": "Scientific Lead / Founder",
     "desc": "Senior researcher at Juelich Supercomputing Center and head of Cross-Sectional Deep Learning.",
     "img": "jenia"
   },
   {
     "name": "Richard Vencu",
-    "title": "Engineering Lead",
+    "title": "Engineering Lead / Founder",
     "desc": "AI, automation, and electronics engineer with 28 years of experience in the industry.",
     "img": "vencu"
   },
   {
-    "name": "Christoph Schuhmann",
-    "title": "Organizational Lead",
-    "desc": "Master in Physics & Computer Science. Producer of Schools of Trust.",
-    "img": "christoph"
-  },
-
-  {
-    "name": "Aran Komatsuzaki",
-    "title": "PhD student of Machine Learning",
-    "desc": "Georgia Institute of Technology. 4 years experience in model research.",
-    "img": "aran"
-  },
-  {
     "name": "Romain Beaumont",
-    "title": "Machine Learning Engineer",
+    "title": "Machine Learning Engineer / Founder",
     "desc": "I like to apply scale and deep learning to build AI apps and models.",
     "img": "romain"
   },
   {
     "name": "Robert Kaczmarczyk",
-    "title": "Medical Lead",
+    "title": "Community/medical Lead / Founder",
     "desc": "Technical University of Munich. 3 years experience in epidemiological research.",
     "img": "robert"
+  },
+  {
+    "name": "Aran Komatsuzaki",
+    "title": "PhD student of Machine Learning",
+    "desc": "Georgia Institute of Technology. 4 years experience in model research.",
+    "img": "aran"
   },
   {
     "name": "Theo Coombes",
