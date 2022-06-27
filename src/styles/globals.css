@@ -50,13 +50,6 @@ div {
   .full-container {
     min-height: -webkit-fill-available;
   }
-
-  .article-image {
-    display: block !important;
-  }
-  .article-image > img {
-    height: auto !important;
-  }
 }
 
 .slide-container,
@@ -108,6 +101,13 @@ div {
   .top-add {
     padding-top: 7.5em !important;
   }
+}
+
+.team-wrap > span > img,
+.team-wrap > span {
+  height: 100% !important;
+  object-fit: cover;
+  object-position: center !important;
 }
 
 /* Markdown Format */
