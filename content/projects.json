@@ -6,14 +6,14 @@
         "name": "LAION-400M",
         "modality": "image/text",
         "status": "Released",
-        "desc": "Formerly known as crawling@home (C@H), we have created an openly accessible 400M image-text-pair dataset.",
+        "desc": "Formerly known as crawling@home (C@H), an openly accessible 400M image-text-pair dataset.",
         "link": "/blog/laion-400-open-dataset"
       },
       {
         "name": "LAION5B",
         "modality": "image/text",
         "status": "Released",
-        "desc": "To democratize research on large-scale multi-modal models, we present LAION-5B – a dataset consisting of 5.85 billion CLIP-filtered image-text pairs, featuring several nearest neighbor indices, an improved web-interface for exploration and subset generation, and detection scores for watermark, NSFW, and toxic content detection.",
+        "desc": "A dataset consisting of 5.85 billion CLIP-filtered image-text pairs, featuring several nearest neighbor indices, an improved web-interface for exploration and subset generation, and detection scores for watermark, NSFW, and toxic content detection.",
         "link": "/blog/laion-5b"
       },
       {
@@ -27,22 +27,30 @@
         "name": "LAION Aesthetics",
         "modality": "image/text",
         "status": "Released",
-        "desc": "NEEDED",
+        "desc": "A subset of LAION5B that has been estimated by a model trained on top of clip embeddings to contain only aestheticly pleasing images.",
         "link": "https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md"
       },
       {
         "name": "LAION-3D",
         "modality": "3d/image/text",
         "status": "Started",
-        "desc": "NEEDED",
+        "desc": "An effort to create a large-scale dataset consisting of 3D models and descriptor pairs.",
         "link": "https://github.com/LAION-AI/laion-3d"
       },
       {
         "name": "Audio Dataset",
         "modality": "text/audio",
         "status": "Started",
-        "desc": "NEEDED",
+        "desc": "An audio dataset for training CLAP and other models, containing a raw and processed dataset, the latter containing .flac files with captions, labels, and other metadata.",
         "link": "https://github.com/LAION-AI/audio-dataset"
+      },
+      {
+        "name": "Watermark Detection",
+        "modality": "image/text",
+        "kind": "Contrastive",
+        "status": "Released",
+        "desc": "A repository containing datasets to train a watermark classifier.",
+        "link": "https://github.com/LAION-AI/watermark-detection"
       }
     ]
   },
@@ -54,7 +62,7 @@
         "modality": "image/text",
         "kind": "Contrastive",
         "status": "released",
-        "desc": "Reproduced openai clip",
+        "desc": "An open source implementation of OpenAI's CLIP (Contrastive Language-Image Pre-training).",
         "link": "https://github.com/mlfoundations/open_clip"
       },
       {
@@ -62,72 +70,48 @@
         "modality": "image/text",
         "kind": "Generative",
         "status": "Started",
-        "desc": "Trying to reproduce dalle2",
+        "desc": "An implementation of DALL-E 2, OpenAI's text-to-image synthesis neural network, in Pytorch.",
         "link": "https://github.com/lucidrains/DALLE2-pytorch"
       },
       {
-        "name": "Clipcap",
+        "name": "ClipCap",
         "modality": "image/text",
         "kind": "Generative",
         "status": "Released",
-        "desc": "Generate text from embedding",
+        "desc": "Generate text from embedding, using pretrained encoder and language models.",
         "link": "https://github.com/TheoCoombes/ClipCap"
       },
       {
-        "name": "Audio clip",
+        "name": "CLAP",
         "modality": "audio/text",
         "kind": "Contrastive",
-        "status": "Trained proof of concept, scaling",
-        "desc": "",
-        "link": "/projects"
+        "status": "Started",
+        "desc": "A Contrastive Language-Audio Pretraining model, like CLIP, for audio.",
+        "link": "https://github.com/LAION-AI/CLAP"
       },
       {
-        "name": "Video clip",
+        "name": "Video CLIP",
         "modality": "video/text",
         "kind": "Contrastive",
-        "status": "Started",
-        "desc": "",
+        "status": "Planning",
+        "desc": "A contrastive language pretraining model for videos.",
         "link": "https://github.com/LAION-AI/video-clip"
       },
       {
         "name": "Multilingual-CLIP",
         "modality": "image/text",
         "kind": "Contrastive",
-        "status": "Just started",
-        "desc": "OpenAI CLIP text encoders for any language.",
+        "status": "In progress",
+        "desc": "An implementation of OpenAI's CLIP text encoders for any language.",
         "link": "https://github.com/FreddeFrallan/Multilingual-CLIP"
-      },
-      {
-        "name": "Super-resolution",
-        "modality": "image->image",
-        "kind": "Generative",
-        "status": "Started",
-        "desc": "Using a high-resolution subset of LAION-5B for the training",
-        "link": "https://github.com/LAION-AI/super-resolution"
-      },
-      {
-        "name": "Medical CLIP",
-        "modality": "image/text",
-        "kind": "Contrastive",
-        "status": "Started",
-        "desc": "Using CLIP to improve MRI -> image synthesis (see project outline).",
-        "link": "https://github.com/LAION-AI/medical"
       },
       {
         "name": "NSFW Detection",
         "modality": "image/text",
         "kind": "Contrastive",
         "status": "Released",
-        "desc": "Using CLIP to detect NSFW in images.",
+        "desc": "A detctor for not safe for work content within images using CLIP.",
         "link": "https://github.com/LAION-AI/CLIP-based-NSFW-Detector"
-      },
-      {
-        "name": "Watermark Detection",
-        "modality": "image/text",
-        "kind": "Contrastive",
-        "status": "Released",
-        "desc": "Detector for watermarks in images.",
-        "link": "https://github.com/LAION-AI/LAION-5B-WatermarkDetection"
       },
       {
         "name": "Electric Sheep",
@@ -146,28 +130,28 @@
         "name": "img2dataset",
         "modality": "image/text",
         "status": "Released",
-        "desc": "Used to download laion5B in a week, twice",
+        "desc": "A tool which allows a user to turn large sets of image urls to an image dataset. Can download, resize and package 100M urls in 20 hours on one machine.",
         "link": "https://github.com/rom1504/img2dataset"
       },
       {
         "name": "Clip Retrieval",
         "modality": "image/text",
         "status": "Released",
-        "desc": "Used to compute 5B Vit-L/14 embeddings",
+        "desc": "Allows a user to easily compute clip embeddings and build a clip retrieval system with them. 100M text+image embeddings can be processed in 20 hours using a RTX 3080.",
         "link": "https://github.com/rom1504/clip-retrieval"
       },
       {
         "name": "Crawlingathome-gpu-hcloud",
         "modality": "image/text",
         "status": "Released",
-        "desc": "Filtering common crawl using clip",
+        "desc": "GPU controlled Hetzner Cloud workers swarm for Crawling@Home project.",
         "link": "https://github.com/rvencu/crawlingathome-gpu-hcloud"
       },
       {
         "name": "Clip Benchmark",
         "modality": "image/text",
         "status": "In Progress",
-        "desc": "Evaluating clip performances easily",
+        "desc": "Evaluating CLIP-like models on a standard set of datasets on different tasks such as zero-shot classification and zero-shot retrieval.",
         "link": "https://github.com/LAION-AI/CLIP_benchmark"
       }
     ]
