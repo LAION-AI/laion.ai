@@ -1,5 +1,6 @@
 import team from "../../content/team.json";
 import Tags from "../components/Tags";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Team() {
   return (
@@ -18,14 +19,17 @@ export default function Team() {
                 className="bg-sky border border-paper flex flex-col lg:flex-row shadow-lg shadow-neutral-800/20"
                 key={i}
               >
-                <div className="basis-1/3">
-                  <img
-                    className="w-full h-full object-center object-cover"
+                <div className="basis-1/3 team-wrap">
+                  <ExportedImage
                     src={
                       item.img
                         ? "/images/team/" + item.img + ".jpg"
-                        : "https://thumbs.dreamstime.com/b/default-avatar-profile-flat-icon-social-media-user-vector-portrait-unknown-human-image-default-avatar-profile-flat-icon-184330869.jpg"
+                        : "/images/team/none.jpg"
                     }
+                    alt={item.name}
+                    layout="responsive"
+                    width={100}
+                    height={100}
                   />
                 </div>
                 <div className="p-5 basis-2/3">

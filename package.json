@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "deploy": "npm run build && npm run export && touch ./out/.nojekyll"
+    "deploy": "npm run build && npm run export && next-image-export-optimizer && touch ./out/.nojekyll"
   },
   "dependencies": {
     "@formspark/use-formspark": "^0.1.39",
@@ -17,6 +17,7 @@
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
     "next": "12.1.6",
+    "next-image-export-optimizer": "^0.10.1",
     "react": "18.1.0",
     "react-burger-menu": "^3.0.8",
     "react-dom": "18.1.0",

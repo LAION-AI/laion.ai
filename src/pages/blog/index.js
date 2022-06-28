@@ -4,6 +4,7 @@ import Link from "next/link";
 import md from "markdown-it";
 import Tags from "../../components/Tags";
 import dateFormat from "dateformat";
+import ExportedImage from "next-image-export-optimizer";
 
 export default function Blog({ posts }) {
   return (
@@ -25,10 +26,13 @@ export default function Blog({ posts }) {
           return (
             <Link href={"/blog/" + slug} key={slug}>
               <div className="border mb-5 hover:bg-paper hover:text-sky transition-colors cursor-pointer bg-sky border-paper flex flex-col lg:flex-row items-stretch shadow-lg shadow-neutral-800/20">
-                <div className="basis-2/5 flex article-image">
-                  <img
-                    className="h-full  flex object-cover"
+                <div className="basis-2/5 team-wrap">
+                  <ExportedImage
                     src={frontmatter.previewImg}
+                    alt={frontmatter.title}
+                    layout="responsive"
+                    width={1600}
+                    height={900}
                   />
                 </div>
                 <div className="p-5 basis-3/5">
