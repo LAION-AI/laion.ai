@@ -39,6 +39,7 @@ export default function Tags(props) {
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="theme-color" content="#1D374E" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     </Head>
   );
 }
