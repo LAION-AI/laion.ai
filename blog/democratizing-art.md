@@ -9,7 +9,7 @@ Now anyone can generate artwork of stunning visual quality within seconds, using
 
 ![](https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/37a1fd3d-fa23-4bd3-ba2d-afa67d2ac4b6/2-01.png?format=750w)
 
-Inspired by OpenAI’s [DALL-E 2](https://openai.com/dall-e-2/) and Google’s [Imagen](https://imagen.research.google/), the team at LAION collaborated with Stability.ai, CompVis, and Eleuther AI to build an open Text-to-Image model of similar capabilities named “Stable Diffusion”. These models will soon be available for everyone to download and generate images using their hardware - completely open & free. LAION's contribution was to assemble and release a large-scale language-vision dataset, LAION-5B, and to filter subsets from it, LAION-Aesthetics, which became Stable Diffusion’s final training data.
+Inspired by OpenAI’s [DALL-E 2](https://openai.com/dall-e-2/) and Google’s [Imagen](https://imagen.research.google/), the team at LAION collaborated with [Stability.ai](https://stability.ai), CompVis, and Eleuther AI to build an open Text-to-Image model of similar capabilities named “Stable Diffusion”. These models will soon be available for everyone to download and generate images using their hardware - completely open & free. LAION's contribution was to assemble and release a large-scale language-vision dataset, LAION-5B, and to filter subsets from it, LAION-Aesthetics, which became Stable Diffusion’s final training data.
 
 The necessary hardware requirements to run such models are surprisingly low. It can run on a consumer GPU with as low as 5.1 GB of VRAM or even on a MacBook Pro with a M1 processor. 
 
