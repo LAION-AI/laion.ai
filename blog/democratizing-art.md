@@ -9,7 +9,7 @@ Now anyone can generate artwork of stunning visual quality within seconds, using
 
 ![](https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/37a1fd3d-fa23-4bd3-ba2d-afa67d2ac4b6/2-01.png?format=750w)
 
-Inspired by OpenAI’s [DALL-E 2](https://openai.com/dall-e-2/) and Google’s [Imagen](https://imagen.research.google/), the team at LAION collaborated with Stability.ai, CompVis, and Eleuther AI to build an open Text-to-Image model of similar capabilities named “Stable Diffusion”. These models will soon be available for everyone to download and generate images using their hardware - completely open & free. LAION's contribution was to assemble and release a large-scale language-vision dataset, LAION-5B, and to filter subsets from them, LAION-Aesthetics, which became Stable Diffusion’s final training data.
+Inspired by OpenAI’s [DALL-E 2](https://openai.com/dall-e-2/) and Google’s [Imagen](https://imagen.research.google/), the team at LAION collaborated with Stability.ai, CompVis, and Eleuther AI to build an open Text-to-Image model of similar capabilities named “Stable Diffusion”. These models will soon be available for everyone to download and generate images using their hardware - completely open & free. LAION's contribution was to assemble and release a large-scale language-vision dataset, LAION-5B, and to filter subsets from it, LAION-Aesthetics, which became Stable Diffusion’s final training data.
 
 The necessary hardware requirements to run such models are surprisingly low. It can run on a consumer GPU with as low as 5.1 GB of VRAM or even on a MacBook Pro with a M1 processor. 
 
@@ -17,7 +17,7 @@ At the moment, the model is already available for research purposes under:
 
 [Request Research Access to Stable Diffusion V1](https://stability.ai/research-access-form)
 
-After a further safety evalutation by Stability.ai the model be released for anyone to access.
+After a further safety evaluation by Stability.ai the model be released for anyone to access.
 We have implemented this initial phase of restricted research-only access to allow us researchers and the general public to prepare for the widespread open use of this very impactful technology.
 As mentioned previously, models of similar capabilities, such as DALL-E 2, have been released previously under limited access.
 However, at the time of writing, no model of comparable quality has been available for the general public to access or download. 
@@ -37,7 +37,6 @@ Of course, our mission as a nonprofit organization is to make machine learning d
 ![](https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/7346e820-8f18-4bd0-901e-379c5bc07c92/2-01.png?format=750w)
 
 We aim to make this technology freely available for millions of users through donations of compute time on computers with GPUs that would otherwise be unused (e.g., in companies or at home). Similar to previous platforms such as Folding@Home, anybody would be able to share remote compute to build a collaborative, open inference platform - whether that be organizations or everyday people alike. We also aim to use existing supercomputing research facilities by applying for compute time at different sites (e.g., Juelich Supercomputing Center of Helmholtz Society, Germany or Oak Ridge Laboratory of National Energy Department, USA) to expand the scale and the generic capabilities of the models.
-
 
 Interested researchers, machine learning experts, journalists, educators and decision-makers can signup here for access to our already functional website for research purposes:
 
