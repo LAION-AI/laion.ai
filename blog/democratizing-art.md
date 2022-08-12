@@ -9,7 +9,11 @@ Now anyone can generate artwork of stunning visual quality within seconds, using
 
 ![](https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/37a1fd3d-fa23-4bd3-ba2d-afa67d2ac4b6/2-01.png?format=750w)
 
-Large image-text models like ALIGN, BASIC, Turing Bletchly, FLORENCE & GLIDE have shown better and better performance compared to previous flagship models like CLIP and DALL-E. Most of them had been trained on billions of image-text pairs and unfortunately, no datasets of this size had been openly available until now. To address this problem we present LAION 5B, a large-scale dataset for research purposes consisting of 5,85B CLIP-filtered image-text pairs. 2,3B contain English language, 2,2B samples from 100+ other languages and 1B samples have texts that do not allow a certain language assignment (e.g. names ). Additionally, we provide several nearest neighbor indices, an improved web interface for exploration & subset creation as well as detection scores for watermark and NSFW. We also announce a full reproduction of a clip training trained on LAION-400M at [open_clip](https://github.com/mlfoundations/open_clip). Explore the dataset at the [search demo](https://rom1504.github.io/clip-retrieval/). See also the [same post on laion website](https://laion.ai/laion-5b-open-dataset) .
+Inspired by OpenAI’s [DALL-E 2](https://openai.com/dall-e-2/) and Google’s [Imagen](https://imagen.research.google/), the team at LAION collaborated with Stability.ai, CompVis, and Eleuther AI to build an open Text-to-Image model of similar capabilities named “Stable Diffusion”. These models will soon be available for everyone to download and generate images using their hardware - completely open & free. LAION's contribution was to assemble and release a large-scale language-vision dataset, LAION-5B, and to filter subsets from them, LAION-Aesthetics, which became Stable Diffusion’s final training data.
+
+
+
+. Explore the dataset at the [search demo](https://rom1504.github.io/clip-retrieval/). See also the [same post on laion website](https://laion.ai/laion-5b-open-dataset) .
 
 We thank our sponsors [hugging face](https://huggingface.co/), [doodlebot](http://doodlebot.ai/) and [stability](https://stability.ai/) for providing us with computing resources to produce this dataset! We also thank the-eye.eu for hosting the image embeddings and a copy of the whole dataset.
 
