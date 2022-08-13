@@ -18,6 +18,7 @@ At the moment, the model is already available for research purposes under:
 [Request Research Access to Stable Diffusion V1](https://stability.ai/research-access-form)
 
 The GitHub repository with the training code and technical details can be found here
+
 [Stable Diffusion repository by CompVis](https://github.com/CompVis/stable-diffusion)
 
 
