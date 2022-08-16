@@ -22,18 +22,20 @@ As inputs this model uses not the images themselves, but their CLIP Image embedd
 We call this model LAION-Aesthetics_Predictor V1 .
 
 Its results were so encouraging, that we decided to produce 8M and 120M sample subsets of the LAION 5B images with the highest predicted scores, of those that have english texts.
-We call the dataset consisting of these 2 subsets [LAION-Aesthetics V1]( https://github.com/LAION-AI/aesthetic-predictor).
+We call the dataset consisting of these 2 subsets [LAION-Aesthetics V1]( https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md).
 
- <p align="center">
+<p align="center">
     <img width="1024" src="https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics%20V1.jpg?raw=true">
-
-*Images of the 120M subset*
+</p>
+<p align="center"> <i>Images of the 120M subset</i>
 </p>
 
 The model used for creating this subset can be found here:
+
 https://github.com/LAION-AI/aesthetic-predictor 
 
 The LAION-Aesthetics V1 dataset & further details about it can be found here:
+
 https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md 
 
 
@@ -41,11 +43,13 @@ After these very encouraging results, we continued to experiment and gathered th
 
 More samples from the SAC dataset, which had grown in the meanwhile to 176000 image - rating pairs
 LAION-Logos, a dataset of 15.000 logo image-text pairs with aesthetic ratings from 1 to 10. We collected this dataset to improve the models abilities to evaluate images with more or less aesthetic texts in them.
+
 The Aesthetic Visual Analysis (AVA) dataset ( https://github.com/imfing/ava_downloader ), which is a large-Scale database for aesthetic visual analysis that contains 250000 photos from dpchallenge.com with several aesthetic ratings from 1 to 10 for most images.
  
 After training several MLPs with different numbers of layers and parameters and different activation functions, we found that a simple linear model on the top of CLIP ViT/14 produced in our subjective view the visually most appealing results when used to rank images of LAION-5B. ( Even though other MLPs with e.g. Relu functions produced slightly lower MSE and MAE loss values. )
 
 We call the resulting model trained on SAC, LAION-Logos and AVA LAION-Aesthetics_Predictor V2.
+
 It can be found here:
 https://github.com/christophschuhmann/improved-aesthetic-predictor 
 
