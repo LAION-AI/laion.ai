@@ -8,7 +8,7 @@ previewImg: "![image](https://user-images.githubusercontent.com/22318853/1849428
 ## We present  LAION-Aesthetics, several collections of images-text-pairs from LAION 5B with high visual quality.
 
 <p align="center">
-![](https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics.jpg)
+![](https://user-images.githubusercontent.com/22318853/184942888-2de9f57d-8bf6-4ce4-8a48-3e7120fad948.png)
 </p>
 
 To create **LAION-Aesthetics** we trained several lightweight models that predicts the rating people gave when they were asked **“How much do you like this image on a scale from 1 to 10?”**.
