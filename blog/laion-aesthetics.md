@@ -4,7 +4,8 @@ author: "Christoph Schuhmann"
 date: "Aug 16, 2022"
 previewImg: "https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics.jpg"
 ---
-## A new era of art has begun. 
+## We present  LAION-Aesthetics V1 & V2, 2 collections of subsets of LAION 5B With high visual quality.
+
 Now anyone can generate artwork of stunning visual quality within seconds, using AI guided by natural language prompts.
 
 ![](https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics.jpg)
