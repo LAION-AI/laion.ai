@@ -2,14 +2,15 @@
 title: "LAION-Aesthetics"
 author: "Christoph Schuhmann"
 date: "Aug 16, 2022"
-previewImg: "![image](https://user-images.githubusercontent.com/22318853/184942888-2de9f57d-8bf6-4ce4-8a48-3e7120fad948.png)
+previewImg: "![image]( https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/LAION-Aesthetics.jpg)
 "
 ---
-## We present  LAION-Aesthetics, several collections of images-text-pairs from LAION 5B with high visual quality.
+## We present  LAION-Aesthetics, several collections of subsets from LAION 5B with high visual quality.
 
-<p align="center">
-![](https://user-images.githubusercontent.com/22318853/184942888-2de9f57d-8bf6-4ce4-8a48-3e7120fad948.png)
+ <p align="center">
+    <img width="1024" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/LAION-Aesthetics.jpg" alt="LAION-Aesthetics">
 </p>
+
 
 To create **LAION-Aesthetics** we trained several lightweight models that predicts the rating people gave when they were asked **“How much do you like this image on a scale from 1 to 10?”**.
 
