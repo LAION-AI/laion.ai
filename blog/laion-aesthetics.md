@@ -2,53 +2,85 @@
 title: "LAION-Aesthetics"
 author: "Christoph Schuhmann"
 date: "Aug 16, 2022"
-previewImg: "https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics.jpg"
+previewImg: "![image](https://user-images.githubusercontent.com/22318853/184942888-2de9f57d-8bf6-4ce4-8a48-3e7120fad948.png)
+"
 ---
-## We present  LAION-Aesthetics V1 & V2, 2 collections of subsets of LAION 5B With high visual quality.
+## We present  LAION-Aesthetics, several collections of images-text-pairs from LAION 5B with high visual quality.
 
-Now anyone can generate artwork of stunning visual quality within seconds, using AI guided by natural language prompts.
-
+<p align="center">
 ![](https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics.jpg)
+</p>
 
-Inspired by OpenAI’s [DALL-E 2](https://openai.com/dall-e-2/) and Google’s [Imagen](https://imagen.research.google/), the team at LAION collaborated with [Stability.ai](https://stability.ai), [CompVis](https://ommer-lab.com/), [Runway ML](https://runwayml.com/) and Eleuther AI to build an open Text-to-Image model of similar capabilities named “Stable Diffusion”. These models will soon be available for everyone to download and generate images using their hardware - completely open & free. LAION's contribution was to assemble and release a large-scale language-vision dataset, LAION-5B, and to filter subsets from it, LAION-Aesthetics, which became Stable Diffusion’s final training data. The training of the model was conducted by the researchers [Robin Rombach](https://scholar.google.com/citations?user=ygdQhrIAAAAJ) (CompVis) and [Patrick Esser](https://scholar.google.com/citations?user=ang8MoQAAAAJ) (Runway ML).
-
-The necessary hardware requirements to run such models are surprisingly low. It can run on a consumer GPU with as low as 5.1 GB of VRAM or even on a MacBook Pro with a M1 processor. 
-
-At the moment, the model is already available for research purposes under: 
-
-[Request Research Access to Stable Diffusion V1](https://stability.ai/research-access-form)
-
-The GitHub repository with the training code and technical details can be found here
-
-[Stable Diffusion repository by CompVis](https://github.com/CompVis/stable-diffusion)
+To create **LAION-Aesthetics** we trained several lightweight models that predicts the rating people gave when they were asked **“How much do you like this image on a scale from 1 to 10?”**.
 
 
-After a further safety evaluation by Stability.ai the model be released for anyone to access.
-We have implemented this initial phase of restricted research-only access to allow us researchers and the general public to prepare for the widespread open use of this very impactful technology.
-As mentioned previously, models of similar capabilities, such as DALL-E 2, have been released previously under limited access.
-However, at the time of writing, no model of comparable quality has been available for the general public to access or download. 
+We started with training a linear model on 5000 image-rating pairs from the [SAC](https://github.com/JD-P/simulacra-aesthetic-captions )  dataset (which only contained 5000 samples at that time).  
+Simulacra Aesthetic Captions is a dataset of over 238000 synthetic images generated with AI models such as CompVis latent GLIDE and Stable Diffusion from over forty thousand user submitted prompts.
 
-We know that other teams are working to build similar text-to-image models. More community-led open projects will likely follow after this launch, using Stable Diffusion as the foundation. Therefore, even if we were to hold the model back from the public, further developments in text-to-image models would inevitably arrive soon, providing the public with an even more capable set of tools to synthesize artwork and photos.  What remains unclear is how many models will be released transparently and become publicly available, allowing further studies involving a broad research community. It would be unfortunate for the public if some of these innovative models would remain closed without providing the opportunity for independent research and safety evaluation, despite these organizations already targeting to build applications that may significantly impact human society.
+As inputs this model uses not the images themselves, but their CLIP Image embeddings produced with the Open AI CLIP VIT L 14 model.
+We call this model LAION-Aesthetics_Predictor V1 .
 
-Therefore, a responsible, open, transparent step-by-step release of Stable Diffusion is the best possible approach to empower the broad research community and the general public to investigate and get accustomed to this technological, artistic, and cultural revolution. We also think it is vital to convey how innovative the learning algorithms can be at this early stage. It may even challenge our very core beliefs about what creativity means.
+Its results were so encouraging, that we decided to produce 8M and 120M sample subsets of the LAION 5B images with the highest predicted scores, of those that have english texts.
+We call the dataset consisting of these 2 subsets [LAION-Aesthetics V1]( https://github.com/LAION-AI/aesthetic-predictor).
 
-![](https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/e9173b23-ede6-4004-b69c-7b03fce8872b/Screenshot+2022-08-10+at+15.58.02.png?format=750w)
+<p align="center">
+*Images of the 120M subset*
+</p>
 
-To allow researchers, machine learning experts, journalists, educators, and decision-makers to explore the abilities of Stable Diffusion, we provide a website to provide the ability to generate images using these models (after a proper identification).
+The model used for creating this subset can be found here:
+https://github.com/LAION-AI/aesthetic-predictor 
 
-In the future, we plan to give access to the website for everyone to generate images at no cost in exchange for short annotation tasks that will help us further improve models.
+The LAION-Aesthetics V1 dataset & further details about it can be found here:
+https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md 
 
-Of course, our mission as a nonprofit organization is to make machine learning datasets and models available to the general public. All images and texts produced on this website will be released openly as datasets for everyone to discover and use. 
 
-![](https://images.squarespace-cdn.com/content/v1/6213c340453c3f502425776e/7346e820-8f18-4bd0-901e-379c5bc07c92/2-01.png?format=750w)
+After these very encouraging results, we continued to experiment and gathered the following data to train more improved MLP models:
 
-We aim to make this technology freely available for millions of users through donations of compute time on computers with GPUs that would otherwise be unused (e.g., in companies or at home). Similar to previous platforms such as Folding@Home, anybody would be able to share remote compute to build a collaborative, open inference platform - whether that be organizations or everyday people alike. We also aim to use existing supercomputing research facilities by applying for compute time at different sites (e.g., Juelich Supercomputing Center of Helmholtz Society, Germany or Oak Ridge Laboratory of National Energy Department, USA) to expand the scale and the generic capabilities of the models.
+More samples from the SAC dataset, which had grown in the meanwhile to 176000 image - rating pairs
+LAION-Logos, a dataset of 15.000 logo image-text pairs with aesthetic ratings from 1 to 10. We collected this dataset to improve the models abilities to evaluate images with more or less aesthetic texts in them.
+The Aesthetic Visual Analysis (AVA) dataset ( https://github.com/imfing/ava_downloader ), which is a large-Scale database for aesthetic visual analysis that contains 250000 photos from dpchallenge.com with several aesthetic ratings from 1 to 10 for most images.
+ 
+After training several MLPs with different numbers of layers and parameters and different activation functions, we found that a simple linear model on the top of CLIP ViT/14 produced in our subjective view the visually most appealing results when used to rank images of LAION-5B. ( Even though other MLPs with e.g. Relu functions produced slightly lower MSE and MAE loss values. )
 
-Interested researchers, machine learning experts, journalists, educators and decision-makers can signup here for access to our already functional website for research purposes:
+We call the resulting model trained on SAC, LAION-Logos and AVA LAION-Aesthetics_Predictor V2.
+It can be found here:
+https://github.com/christophschuhmann/improved-aesthetic-predictor 
 
-[Signup for laiondream.ai](https://laiondream.ai/signup)
+Visualizations of sorting all 2.37B images from LAION 5B that have English captions into 40 buckets with the LAION-Aesthetics_Predictor V2 can be found here: http://captions.christoph-schuhmann.de/aesthetic_viz_laion_sac+logos+ava1-l14-linearMSE-en-2.37B.html
 
-People who are interested in donating time on their GPUs, to support the backend of our website, please visit this website to learn more about the technical & logistic requirements for this:
 
-[Support laiondream.ai](https://laiondream.ai/support)
+Using LAION-Aesthetics_Predictor V2, we created the following subsets of the LAION 5B samples with English captions:
+
+1,2B image-text pairs with predicted aesthetics scores of 4.5 or higher:
+http://captions.christoph-schuhmann.de/2B-en-4.5.html 
+https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_4.5plus 
+939M image-text pairs with predicted aesthetics scores of 4.75 or higher:
+http://captions.christoph-schuhmann.de/2B-en-4.75.html 
+https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_4.75plus 
+600M image-text pairs with predicted aesthetics scores of 5 or higher:
+http://captions.christoph-schuhmann.de/2B-en-5.html 
+https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_5plus 
+12M image-text pairs with predicted aesthetics scores of 6 or higher:
+http://captions.christoph-schuhmann.de/2B-en-6.html 
+https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6plus  
+3M image-text pairs with predicted aesthetics scores of 6.25 or higher:
+http://captions.christoph-schuhmann.de/2B-en-6.25.html  
+https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.25plus 
+625K image-text pairs with predicted aesthetics scores of 6.5 or higher:
+http://captions.christoph-schuhmann.de/2B-en-6.5.html   
+https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.5plus  
+
+We call the collection of these subsets LAION-Aesthetics V2.
+
+We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train Stable Diffusion V1 model. https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1 
+
+At the moment we are translating all 2,15B samples from LAION 5B of the multilingual subset to English using the 1,2B parameter M2M-100 model. 
+This will allow us to roughly double the size of V2.
+
+Stay tuned & keep checking our blog for more datasets in the near future. :)
+
+If you have any questions or comments or the wish to support our efforts, don’t hesitate to join our Discord community and contact us:
+https://discord.gg/vnjVezbeSJ 
+
+Christoph Schuhmann ( spirit-from-germany#1488 ) and Romain Beaumont ( rom1504#5008 )
 
