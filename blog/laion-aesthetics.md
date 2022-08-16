@@ -24,7 +24,9 @@ We call this model LAION-Aesthetics_Predictor V1 .
 Its results were so encouraging, that we decided to produce 8M and 120M sample subsets of the LAION 5B images with the highest predicted scores, of those that have english texts.
 We call the dataset consisting of these 2 subsets [LAION-Aesthetics V1]( https://github.com/LAION-AI/aesthetic-predictor).
 
-<p align="center">
+ <p align="center">
+    <img width="1024" src="https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics%20V1.jpg?raw=true">
+
 *Images of the 120M subset*
 </p>
 
