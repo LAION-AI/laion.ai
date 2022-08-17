@@ -108,6 +108,7 @@ Additionally, we are already working on new multimodal large-scale dataset, this
 
 Stay tuned & keep checking our blog for more datasets in the near future.
 
+## Connect
 
 If you have any questions or comments or the wish to support our efforts, don’t hesitate to join our Discord community and contact us:
 https://discord.gg/vnjVezbeSJ 
