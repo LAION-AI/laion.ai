@@ -93,9 +93,9 @@ https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.5plus
 
 We call the collection of these subsets **LAION-Aesthetics V2**.
 
-We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train Stable Diffusion V1 model. ( https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1 )
+We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train [Stable Diffusion V1]( https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1 ) model. 
 
-At the moment we are translating all 2,15B samples from LAION 5B of the multilingual subset to English using the 1,2B parameter M2M-100 model ( https://github.com/facebookresearch/fairseq/tree/main/examples/m2m_100 ). 
+At the moment we are translating all 2,15B samples from LAION 5B of the multilingual subset to English using the 1,2B parameter [M2M-100]( https://github.com/facebookresearch/fairseq/tree/main/examples/m2m_100 ) model . 
 
 This will allow us to roughly double the size of V2.
 
