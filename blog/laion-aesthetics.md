@@ -39,7 +39,7 @@ The LAION-Aesthetics V1 dataset & further details about it can be found here:
 https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md 
 
 
-After these very encouraging results, we continued to experiment and gathered the following data to train more improved MLP models:
+After these very encouraging results, we continued to experiment and gathered the following data to train more improved MLP (multi-layer perceptron) models:
 
 More samples from the SAC dataset, which had grown in the meanwhile to 176000 image - rating pairs
 LAION-Logos, a dataset of 15.000 logo image-text pairs with aesthetic ratings from 1 to 10. We collected this dataset to improve the models abilities to evaluate images with more or less aesthetic texts in them.
