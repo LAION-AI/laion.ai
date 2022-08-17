@@ -60,7 +60,8 @@ Visualizations of sorting all 2.37B images from LAION 5B that have English capti
 http://captions.christoph-schuhmann.de/aesthetic_viz_laion_sac+logos+ava1-l14-linearMSE-en-2.37B.html
 
 
-Using LAION-Aesthetics_Predictor V2, we created the following subsets of the LAION 5B samples with English captions:
+Using LAION-Aesthetics_Predictor V2, we created the following subsets of the LAION 5B samples with English captions. 
+
 
 1,2B image-text pairs with predicted aesthetics scores of 4.5 or higher:
 
@@ -92,6 +93,7 @@ https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.25plus
 http://captions.christoph-schuhmann.de/2B-en-6.5.html   
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.5plus  
 
+(These subsets may and likely do include most of the samples from LAION-Aesthetics V1. They results from a new ranking of the same english 5B samples.)
 
 We call the collection of these subsets **LAION-Aesthetics V2**.
 
