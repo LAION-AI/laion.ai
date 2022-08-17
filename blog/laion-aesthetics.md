@@ -113,5 +113,5 @@ Stay tuned & keep checking our blog for more datasets in the near future.
 If you have any questions or comments or the wish to support our efforts, don’t hesitate to join our Discord community and contact us:
 https://discord.gg/vnjVezbeSJ 
 
-Christoph Schuhmann ( spirit-from-germany#1488 ) and Romain Beaumont ( rom1504#5008 )
+**Christoph Schuhmann ( spirit-from-germany#1488 )** and **Romain Beaumont ( rom1504#5008 )**
 
