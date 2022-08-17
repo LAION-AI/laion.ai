@@ -14,6 +14,7 @@ previewImg: "![image]( https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris
 
 To create **LAION-Aesthetics** we trained several lightweight models that predicts the rating people gave when they were asked **“How much do you like this image on a scale from 1 to 10?”**.
 
+## LAION-Aesthetics V1
 
 We started with training a linear model on 5000 image-rating pairs from the [SAC](https://github.com/JD-P/simulacra-aesthetic-captions )  dataset (which only contained 5000 samples at that time).  
 Simulacra Aesthetic Captions is a dataset of over 238000 synthetic images generated with AI models such as CompVis latent GLIDE and Stable Diffusion from over forty thousand user submitted prompts.
@@ -38,6 +39,7 @@ The LAION-Aesthetics V1 dataset & further details about it can be found here:
 
 https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md 
 
+## LAION-Aesthetics V2
 
 After these very encouraging results, we continued to experiment and gathered the following data to train more improved MLP (multi-layer perceptron) models:
 
@@ -95,11 +97,16 @@ We call the collection of these subsets **LAION-Aesthetics V2**.
 
 We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train [Stable Diffusion V1]( https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1 ) model. 
 
+## What's next?
+
 At the moment we are translating all 2,15B samples from LAION 5B of the multilingual subset to English using the 1,2B parameter [M2M-100]( https://github.com/facebookresearch/fairseq/tree/main/examples/m2m_100 ) model . 
 
 This will allow us to roughly double the size of V2.
 
-Stay tuned & keep checking our blog for more datasets in the near future. :)
+Additionally, we are already working on new multimodal large-scale dataset, this time at webpage-level, similar to the interleaved image-text dataset Deepmind used for [Flamingo]( https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model ), but also with audio & video files ... and much, much bigger. :)
+
+
+Stay tuned & keep checking our blog for more datasets in the near future.
 
 
 If you have any questions or comments or the wish to support our efforts, don’t hesitate to join our Discord community and contact us:
