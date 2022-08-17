@@ -2,8 +2,7 @@
 title: "LAION-Aesthetics"
 author: "Christoph Schuhmann"
 date: "Aug 16, 2022"
-previewImg: "![image]( https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/LAION-Aesthetics.jpg)
-"
+previewImg: "![image](https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/LAION-Aesthetics.jpg)"
 ---
 ## We present  LAION-Aesthetics, several collections of subsets from LAION 5B with high visual quality.
 
@@ -93,7 +92,7 @@ https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.25plus
 http://captions.christoph-schuhmann.de/2B-en-6.5.html   
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.5plus  
 
-(These subsets may and likely do include most of the samples from LAION-Aesthetics V1. They results from a new ranking of the same english 5B samples.)
+These subsets overlap. 5 fully includes 6 which includes 6.25 and so on.
 
 We call the collection of these subsets **LAION-Aesthetics V2**.
 
