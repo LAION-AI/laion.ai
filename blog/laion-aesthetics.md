@@ -53,38 +53,54 @@ We call the resulting model trained on SAC, LAION-Logos and AVA LAION-Aesthetics
 It can be found here:
 https://github.com/christophschuhmann/improved-aesthetic-predictor 
 
-Visualizations of sorting all 2.37B images from LAION 5B that have English captions into 40 buckets with the LAION-Aesthetics_Predictor V2 can be found here: http://captions.christoph-schuhmann.de/aesthetic_viz_laion_sac+logos+ava1-l14-linearMSE-en-2.37B.html
+Visualizations of sorting all 2.37B images from LAION 5B that have English captions into 40 buckets with the LAION-Aesthetics_Predictor V2 can be found here: 
+
+http://captions.christoph-schuhmann.de/aesthetic_viz_laion_sac+logos+ava1-l14-linearMSE-en-2.37B.html
 
 
 Using LAION-Aesthetics_Predictor V2, we created the following subsets of the LAION 5B samples with English captions:
 
 1,2B image-text pairs with predicted aesthetics scores of 4.5 or higher:
+
 http://captions.christoph-schuhmann.de/2B-en-4.5.html 
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_4.5plus 
+
 939M image-text pairs with predicted aesthetics scores of 4.75 or higher:
+
 http://captions.christoph-schuhmann.de/2B-en-4.75.html 
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_4.75plus 
+
 600M image-text pairs with predicted aesthetics scores of 5 or higher:
+
 http://captions.christoph-schuhmann.de/2B-en-5.html 
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_5plus 
+
 12M image-text pairs with predicted aesthetics scores of 6 or higher:
+
 http://captions.christoph-schuhmann.de/2B-en-6.html 
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6plus  
+
 3M image-text pairs with predicted aesthetics scores of 6.25 or higher:
+
 http://captions.christoph-schuhmann.de/2B-en-6.25.html  
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.25plus 
+
 625K image-text pairs with predicted aesthetics scores of 6.5 or higher:
+
 http://captions.christoph-schuhmann.de/2B-en-6.5.html   
 https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.5plus  
 
-We call the collection of these subsets LAION-Aesthetics V2.
 
-We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train Stable Diffusion V1 model. https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1 
+We call the collection of these subsets **LAION-Aesthetics V2**.
 
-At the moment we are translating all 2,15B samples from LAION 5B of the multilingual subset to English using the 1,2B parameter M2M-100 model. 
+We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train Stable Diffusion V1 model. ( https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1 )
+
+At the moment we are translating all 2,15B samples from LAION 5B of the multilingual subset to English using the 1,2B parameter M2M-100 model ( https://github.com/facebookresearch/fairseq/tree/main/examples/m2m_100 ). 
+
 This will allow us to roughly double the size of V2.
 
 Stay tuned & keep checking our blog for more datasets in the near future. :)
+
 
 If you have any questions or comments or the wish to support our efforts, don’t hesitate to join our Discord community and contact us:
 https://discord.gg/vnjVezbeSJ 
