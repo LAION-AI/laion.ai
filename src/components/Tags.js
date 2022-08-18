@@ -27,7 +27,7 @@ export default function Tags(props) {
       <meta property="twitter:description" content={desc} />
 
       <meta property="og:image" content={image} />
-      <meta property="twitter:image" content={image} />
+      <meta property="twitter:image" content={"https://laion.ai/" + image} />
 
       <meta name="twitter:image:alt" content={alt} />
 
