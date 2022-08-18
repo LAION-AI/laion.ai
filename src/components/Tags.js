@@ -20,11 +20,11 @@ export default function Tags(props) {
 
       <meta name="title" content={title} />
       <meta property="og:title" content={title} />
-      <meta property="twitter:title" content={title} />
+      <meta name="twitter:title" content={title} />
 
       <meta name="description" content={desc} />
       <meta property="og:description" content={desc} />
-      <meta property="twitter:description" content={desc} />
+      <meta name="twitter:description" content={desc} />
 
       <meta property="og:image" content={"https://laion.ai/" + image} />
       <meta name="twitter:image" content={"https://laion.ai/" + image} />
@@ -33,8 +33,8 @@ export default function Tags(props) {
 
       <meta property="og:type" content="website" />
       <meta property="og:url" content={"https://laion.ai" + slug} />
-      <meta property="twitter:url" content={"https://laion.ai" + slug} />
-      <meta property="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content={"https://laion.ai" + slug} />
+      <meta name="twitter:card" content="summary_large_image" />
 
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name="theme-color" content="#1D374E" />
