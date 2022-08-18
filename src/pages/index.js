@@ -46,8 +46,8 @@ export default function Home() {
           </Fade>
         </div>
       </div>
-      <div className="w-full md:w-auto pt-24">
-        <div className="z-10 h-full md:bg-sky p-8 md:shadow-md md:shadow-neutral-800/20">
+      <div className="w-full md:w-auto pt-24 md:pt-0 ">
+        <div className="z-10 h-full md:max-h-screen lg:bg-sky p-8 md:shadow-md md:shadow-neutral-800/20 ">
           <div className="flex justify-center">
             <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
             <div className="flex items-center">
