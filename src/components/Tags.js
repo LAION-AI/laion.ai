@@ -8,11 +8,12 @@ export default function Tags(props) {
   const desc = props.desc
     ? props.desc
     : "LAION, Large-scale Artificial Intelligence Open Network, is a non-profit organization making machine learning resources available to the general public.";
-  const image = props.image ? props.img : "/social.png";
+  const image = props.image ? props.image : "/social.png";
   const alt = props.alt
     ? props.alt
     : "The text: LAION. Large-scale Artificial Intelligence Open Network, TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.";
   const slug = props.slug ? props.slug : router.route;
+
 
   return (
     <Head>
