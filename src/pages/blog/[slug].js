@@ -19,7 +19,7 @@ export default function Post({ frontmatter, content, date, slug }) {
         slug={"/blog/" + slug}
       />
       <div className="container px-5">
-        <h1 className="text-8xl md:text-8xl font-bold">
+        <h1 className="text-8xl md:text-8xl font-bold title-flow">
           {frontmatter.title.toUpperCase()}
         </h1>
         <p className="text-2xl pb-2">

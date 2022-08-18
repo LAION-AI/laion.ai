@@ -14,7 +14,6 @@ export default function Tags(props) {
     : "The text: LAION. Large-scale Artificial Intelligence Open Network, TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.";
   const slug = props.slug ? props.slug : router.route;
 
-
   return (
     <Head>
       <title>{title}</title>

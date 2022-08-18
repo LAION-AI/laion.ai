@@ -18,7 +18,7 @@ export default function Nav() {
         </Link>
         <div
           className="md:flex child:pl-3 md:text-xl child:md:pl-1 child:md:pt-2 hidden md:flex-col 
-          child:brightness-100 hover:child:brightness-150 child:transition"
+          child:brightness-100  child:transition"
         >
           <Link href="/projects">Projects</Link>
           <Link href="/team">Team</Link>
@@ -29,7 +29,7 @@ export default function Nav() {
           <Link href="/impressum">Impressum</Link>
         </div>
       </div>
-      <div className="child:mr-3 -ml-0.5 child:w-8 child:brightness-100 hover:child:brightness-150 child:transition hidden md:flex">
+      <div className="child:mr-3 -ml-0.5 child:w-8 child:brightness-100 child:transition hidden md:flex">
         <a
           href="mailto:contact@laion.ai"
           target="_blank"

@@ -46,7 +46,7 @@ export default function Home() {
           </Fade>
         </div>
       </div>
-      <div className="w-full md:w-auto top-add">
+      <div className="w-full md:w-auto pt-24">
         <div className="z-10 h-full md:bg-sky p-8 md:shadow-md md:shadow-neutral-800/20">
           <div className="flex justify-center">
             <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
@@ -59,11 +59,11 @@ export default function Home() {
           </p>
           <p className="text-2xl">TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.</p>
           <div
-            className="flex pt-5 flex-col md:flex-row w-full
+            className="flex pt-5 flex-col lg:flex-row w-full items-center
                   child:border child:border-paper child:bg-sky child:p-3 child:w-64 hover:child:bg-paper hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
           >
             <Link href="/blog/laion-400-open-dataset">
-              <div className="mb-4 md:mb-0 md:mr-3">
+              <div className="mb-4 lg:mb-0 lg:mr-3 ">
                 <p className="text-2xl pb-1">LAION-400M</p>
                 <hr />
                 <p className="pt-2">
@@ -73,8 +73,18 @@ export default function Home() {
               </div>
             </Link>
             <Link href="/blog/laion-5b">
-              <div className="">
+              <div className="mb-4 lg:mb-0 lg:mr-3">
                 <p className="text-2xl pb-1">LAION-5B</p>
+                <hr />
+                <p className="pt-2">
+                  A dataset consisting of 5.85 billion multilingual
+                  CLIP-filtered image-text pairs.
+                </p>
+              </div>
+            </Link>
+            <Link href="/blog/laion-aesthetics">
+              <div className="">
+                <p className="text-2xl pb-1">LAION-Aesthetics</p>
                 <hr />
                 <p className="pt-2">
                   A dataset consisting of 5.85 billion multilingual

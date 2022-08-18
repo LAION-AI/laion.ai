@@ -97,17 +97,17 @@ div {
   outline: none !important;
 }
 
-@media (max-width: 767px) and (max-height: 615px) {
-  .top-add {
-    padding-top: 7.5em !important;
-  }
-}
-
 .team-wrap > span > img,
 .team-wrap > span {
   height: 100% !important;
   object-fit: cover;
   object-position: center !important;
+}
+
+@media (max-width: 415px) {
+  .title-flow {
+    font-size: 22vw;
+  }
 }
 
 /* Markdown Format */
@@ -270,4 +270,13 @@ textarea::selection,
 input::selection {
   color: white !important;
   background: #1d374e;
+}
+
+a:hover {
+  opacity: 100%;
+  transition: opacity 200ms;
+}
+
+a:hover {
+  opacity: 75%;
 }
