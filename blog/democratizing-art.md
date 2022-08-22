@@ -45,9 +45,9 @@ We aim to make this technology freely available for millions of users through do
 
 Interested researchers, machine learning experts, journalists, educators and decision-makers can signup here for access to our image generation website for research, media & education purposes:
 
-https://laiondream.net/
+[Image Generation with laiondream.net](https://laiondream.net/)
 
 
 People who are interested in donating time on their GPUs, to support the backend of our website, please visit this website to learn more about the technical & logistic requirements for this:
 
-[Support laiondream.net](https://laiondream.net/support)
+[Donate GPU time laiondream.net](https://laiondream.net/support)
