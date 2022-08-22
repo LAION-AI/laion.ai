@@ -43,11 +43,7 @@ Of course, our mission as a nonprofit organization is to make machine learning d
 
 We aim to make this technology freely available for millions of users through donations of compute time on computers with GPUs that would otherwise be unused (e.g., in companies or at home). Similar to previous platforms such as Folding@Home, anybody would be able to share remote compute to build a collaborative, open inference platform - whether that be organizations or everyday people alike. We also aim to use existing supercomputing research facilities by applying for compute time at different sites (e.g., Juelich Supercomputing Center of Helmholtz Society, Germany or Oak Ridge Laboratory of National Energy Department, USA) to expand the scale and the generic capabilities of the models.
 
-Interested researchers, machine learning experts, journalists, educators and decision-makers can signup here for access to our already functional website for research purposes:
+Interested researchers, machine learning experts, journalists, educators and decision-makers can signup here for access to our image generation website for research, media & education purposes:
 
-[Signup for laiondream.ai](https://laiondream.ai/signup)
-
-People who are interested in donating time on their GPUs, to support the backend of our website, please visit this website to learn more about the technical & logistic requirements for this:
-
-[Support laiondream.ai](https://laiondream.ai/support)
+https://laiondream.net/
 
