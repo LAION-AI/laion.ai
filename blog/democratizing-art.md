@@ -47,3 +47,7 @@ Interested researchers, machine learning experts, journalists, educators and dec
 
 https://laiondream.net/
 
+
+People who are interested in donating time on their GPUs, to support the backend of our website, please visit this website to learn more about the technical & logistic requirements for this:
+
+[Support laiondream.net](https://laiondream.net/support)
