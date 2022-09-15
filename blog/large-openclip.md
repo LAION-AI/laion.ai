@@ -1,4 +1,9 @@
-# Large scale openCLIP: L/14, H/14 and g/14 trained on LAION-2B
+---
+title: "Large scale openCLIP: L/14, H/14 and g/14 trained on LAION-2B"
+author: "Romain Beaumont"
+date: "Sep 15, 2022"
+previewImg: "/images/blog/compare3.png"
+---
 
 We trained three large CLIP models with [OpenCLIP](https://github.com/mlfoundations/open_clip): ViT-L/14, ViT-H/14 and ViT-g/14 (ViT-g/14 was trained only for about a third the epochs compared to the rest). The H/14 model achieves **78.0%** zero shot top-1 accuracy on ImageNet and **73.4%** on zero-shot image retrieval at Recall@5 on MS COCO. As of September 2022, this is the best open source CLIP model.
 
