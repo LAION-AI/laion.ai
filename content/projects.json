@@ -17,6 +17,13 @@
         "link": "/blog/laion-5b"
       },
       {
+        "name": "Clip H/14",
+        "modality": "image/text",
+        "status": "Released",
+        "desc": "The largest open source clip.",
+        "link": "/blog/large-openclip"
+      },
+      {
         "name": "LAION5B High-Res",
         "modality": "image/text",
         "status": "Released",
