@@ -19,11 +19,11 @@ CLIP makes it possible to compute representations of images and texts to measure
 
 CLIP models are trained in a self supervised fashion on hundreds of millions or billions of (image, text) pairs.
 
-With LAION, we produced the LAION-5B dataset that contains 5 billions of closely related image and text pairs.
+With LAION, we produced the LAION-5B dataset that contains 5.8 billions of closely related image and text pairs.
 
 The CLIP model ViT B/32, released by OpenAI, was initially used to filter this dataset out of common crawl.
 
-Producing the best open source CLIP model out of this data set completes the open source replication of the [excellent](https://openai.com/blog/clip/) clip paper that OpenAI released one year ago.
+Producing the best open source CLIP model out of this data set completes the open source replication of the [excellent](https://openai.com/blog/clip/) CLIP paper that OpenAI released one year ago.
 
 
 ## Results
@@ -38,186 +38,30 @@ L/14 was trained on JUWELS Booster supercomputer by [Ross wightman](https://gith
 #### 32B samples seen
 
 
-<table>
-  <tr>
-   <td><strong>Model name</strong>
-   </td>
-   <td><strong>Batch size</strong>
-   </td>
-   <td><strong>Samples seen</strong>
-   </td>
-   <td><strong>Text Params</strong>
-   </td>
-   <td><strong>Image params</strong>
-   </td>
-   <td><strong>Imagenet top1</strong>
-   </td>
-   <td><strong>Mscoco image retrieval at 5</strong>
-   </td>
-   <td><strong>Flickr30k image retrieval at 5</strong>
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/eval_openclip/reports/B-32-2B--VmlldzoyNDkwNDMy">B/32</a>
-   </td>
-   <td>79k
-   </td>
-   <td>34B (16 epochs of laion2B)
-   </td>
-   <td>63.43M
-   </td>
-   <td>87.85M
-   </td>
-   <td>66.6%
-   </td>
-   <td>65.4%
-   </td>
-   <td>88.4%
-   </td>
-  </tr>
-  <tr>
-   <td>L/14
-   </td>
-   <td>79k for 14B samples, 86K for 18B
-   </td>
-   <td>32B
-   </td>
-   <td>123.65M
-   </td>
-   <td>303.97M
-   </td>
-   <td>75.3%
-   </td>
-   <td>71.1%
-   </td>
-   <td>92.9%
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/eval_openclip/reports/H-14--VmlldzoyNDAxODQ3">H/14</a>
-   </td>
-   <td>79k
-   </td>
-   <td>32B (16 epochs of laion2B)
-   </td>
-   <td>354.03M
-   </td>
-   <td>632.08M
-   </td>
-   <td>78.0%
-   </td>
-   <td>73.4%
-   </td>
-   <td>94%
-   </td>
-  </tr>
-</table>
+| **Model name**                                                                   | **Batch size**                   | **Samples seen**           | **Text Params** | **Image params** | **Imagenet top1** | **Mscoco image retrieval at 5** | **Flickr30k image retrieval at 5** |
+|----------------------------------------------------------------------------------|----------------------------------|----------------------------|-----------------|------------------|-------------------|---------------------------------|------------------------------------|
+| [B/32](https://wandb.ai/rom1504/eval_openclip/reports/B-32-2B--VmlldzoyNDkwNDMy) | 79k                              | 34B (16 epochs of laion2B) | 63.43M          | 87.85M           | 66.6%             | 65.4%                           | 88.4%                              |
+| L/14                                                                             | 79k for 14B samples, 86K for 18B | 32B                        | 123.65M         | 303.97M          | 75.3%             | 71.1%                           | 92.9%                              |
+| [H/14](https://wandb.ai/rom1504/eval_openclip/reports/H-14--VmlldzoyNDAxODQ3)    | 79k                              | 32B (16 epochs of laion2B) | 354.03M         | 632.08M          | 78.0%             | 73.4%                           | 94%                                |
 
 
 
 #### 12B samples seen
 
 
-<table>
-  <tr>
-   <td><strong>Model name</strong>
-   </td>
-   <td><strong>Batch size</strong>
-   </td>
-   <td><strong>Samples seen</strong>
-   </td>
-   <td><strong>Text Params</strong>
-   </td>
-   <td><strong>Image params</strong>
-   </td>
-   <td><strong>Imagenet top1</strong>
-   </td>
-   <td><strong>Mscoco image retrieval at 5</strong>
-   </td>
-   <td><strong>Flickr30k image retrieval at 5</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>B/32
-   </td>
-   <td>32k
-   </td>
-   <td>12B (32 epochs of laion400m)
-   </td>
-   <td>63.43M
-   </td>
-   <td>87.85M
-   </td>
-   <td>62.9%
-   </td>
-   <td>60.8%
-   </td>
-   <td>85.5%
-   </td>
-  </tr>
-  <tr>
-   <td>B/16
-   </td>
-   <td>32k
-   </td>
-   <td>12B (32 epochs of laion400m)
-   </td>
-   <td>91.16M
-   </td>
-   <td>86.19M
-   </td>
-   <td>69%
-   </td>
-   <td>63.6%
-   </td>
-   <td>85.5%
-   </td>
-  </tr>
-  <tr>
-   <td>L/14
-   </td>
-   <td>32k
-   </td>
-   <td>12B (32 epochs of laion400m)
-   </td>
-   <td>123.65M
-   </td>
-   <td>303.97M
-   </td>
-   <td>72%
-   </td>
-   <td>68.1%
-   </td>
-   <td>90.8%
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/eval_openclip/reports/slow-g-14--VmlldzoyNTMwMjg5">g/14</a>
-   </td>
-   <td>32k for 8B samples then 64k for 4B samples
-   </td>
-   <td>12B (similar to 32 epochs on laion400m)
-   </td>
-   <td>354.03M
-   </td>
-   <td>1012.65M
-   </td>
-   <td>76.6%
-   </td>
-   <td>72.4%
-   </td>
-   <td>93.5%
-   </td>
-  </tr>
-</table>
+| **Model name**                                                                     | **Batch size**                             | **Samples seen**                        | **Text Params** | **Image params** | **Imagenet top1** | **Mscoco image retrieval at 5** | **Flickr30k image retrieval at 5** |
+|------------------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------|-----------------|------------------|-------------------|---------------------------------|------------------------------------|
+| B/32                                                                               | 32k                                        | 12B (32 epochs of laion400m)            | 63.43M          | 87.85M           | 62.9%             | 60.8%                           | 85.5%                              |
+| B/16                                                                               | 32k                                        | 12B (32 epochs of laion400m)            | 91.16M          | 86.19M           | 69%               | 63.6%                           | 85.5%                              |
+| L/14                                                                               | 32k                                        | 12B (32 epochs of laion400m)            | 123.65M         | 303.97M          | 72%               | 68.1%                           | 90.8%                              |
+| [g/14](https://wandb.ai/rom1504/eval_openclip/reports/slow-g-14--VmlldzoyNTMwMjg5) | 32k for 8B samples then 64k for 4B samples | 12B (similar to 32 epochs on laion400m) | 354.03M         | 1012.65M         | 76.6%             | 72.4%                           | 93.5%                              |
 
 
 In addition to having overall better results, we hope the larger text encoder will help improve text understanding. The good performance on the retrieval metrics seems to be a good indicator of this property.
 
 Note the difference in samples seen between the H/14 and the g/14 model. This explains the difference in performance. We picked this lower number to try and fix the stability issue at a lower cost. Eventually they were fixed (by using bfloat16). The performance of this model falls in the scaling curve of 12B sample seen (similar to 32 epochs of laion400m), and a g/14 trained on 32B samples of laion2B would most likely follow the same trends as the other models and get better performance as H/14.
 
-
-![alt_text](public/images/blog/images/compare3.png "image_tooltip")
+![alt_text](/images/blog/compare3.png "image_tooltip")
 
 
 
@@ -231,97 +75,19 @@ We release the checkpoints for the models, they are available through [openclip]
 Related work results:
 
 
-<table>
-  <tr>
-   <td><strong>Model name</strong>
-   </td>
-   <td><strong>Samples seen</strong>
-   </td>
-   <td><strong>Imagenet top1</strong>
-   </td>
-   <td><strong>Mscoco image retrieval at 5</strong>
-   </td>
-   <td><strong>Flickr30k image retrieval at 5</strong>
-   </td>
-  </tr>
-  <tr>
-   <td>Openai B/32
-   </td>
-   <td>12B (32 epochs of WIT)
-   </td>
-   <td>62%
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Openai B/16
-   </td>
-   <td>12B (32 epochs of WIT)
-   </td>
-   <td>69%
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Openai L/14
-   </td>
-   <td>12B (32 epochs of WIT)
-   </td>
-   <td>75.4%
-   </td>
-   <td>61%
-   </td>
-   <td>87%
-   </td>
-  </tr>
-  <tr>
-   <td>ALIGN
-   </td>
-   <td>20B
-   </td>
-   <td>76.4%
-   </td>
-   <td>69.8%
-   </td>
-   <td>93.3%
-   </td>
-  </tr>
-  <tr>
-   <td>BASIC
-   </td>
-   <td>32B
-   </td>
-   <td>85.7%
-   </td>
-   <td>
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>CoCa
-   </td>
-   <td>32B
-   </td>
-   <td>86.3%
-   </td>
-   <td>74.2%
-   </td>
-   <td>95.7%
-   </td>
-  </tr>
-</table>
+| **Model name** | **Samples seen**       | **Imagenet top1** | **Mscoco image retrieval at 5** | **Flickr30k image retrieval at 5** |
+|----------------|------------------------|-------------------|---------------------------------|------------------------------------|
+| Openai B/32    | 12B (32 epochs of WIT) | 62%               |                                 |                                    |
+| Openai B/16    | 12B (32 epochs of WIT) | 69%               |                                 |                                    |
+| Openai L/14    | 12B (32 epochs of WIT) | 75.4%             | 61%                             | 87%                                |
+| ALIGN          | 20B                    | 76.4%             | 69.8%                           | 93.3%                              |
+| BASIC          | 32B                    | 85.7%             |                                 |                                    |
+| CoCa           | 32B                    | 86.3%             | 74.2%                           | 95.7%                              |
 
 
 [BASIC](https://arxiv.org/abs/2111.10050) and  [ALIGN](https://arxiv.org/abs/2102.05918) got excellent imagenet results. They used either different image encoder architecture (EfficientNet, CoAtNet), a larger network scale (BASIC-L with 2.4B params) or pre trained their network with supervised learning on a large dataset (BASIC CoAtNet vision encoder).
 
-[COCA](https://arxiv.org/abs/2205.01917) additionally used captioning during training and got 86.3% top1.
+[COCA](https://arxiv.org/abs/2205.01917) additionally used captioning loss during training with a multi-modal text decoder which predicted text tokens autoregressively and got 86.3% top1, employing a larger model scale (2.1B params)
 
 
 ## Scaling up notes
@@ -362,81 +128,13 @@ Eventually only 2 things worked:
 
 To better understand the cost and length of training of clip, we provide these training speed numbers. All numbers assume a100 with 40GB of VRAM. We used gradient checkpointing.
 
-
-<table>
-  <tr>
-   <td>Model
-   </td>
-   <td>Batch size per gpu
-   </td>
-   <td>Precision
-   </td>
-   <td>Number of gpus
-   </td>
-   <td>Sample per second per gpu
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/open-clip/runs/rnxrp6k7?workspace=user-rom1504">B/32</a>
-   </td>
-   <td>96
-   </td>
-   <td>float16
-   </td>
-   <td>824
-   </td>
-   <td>228
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/open-clip/runs/2zphcgkn?workspace=user-rom1504">H/14</a>
-   </td>
-   <td>96
-   </td>
-   <td>float16
-   </td>
-   <td>824
-   </td>
-   <td>30
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/open-clip/runs/21cpomx2?workspace=user-rom1504">g/14</a>
-   </td>
-   <td>40
-   </td>
-   <td>float16
-   </td>
-   <td>800
-   </td>
-   <td>20
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/open-clip/runs/3l7ppqh3?workspace=user-rom1504">H/14</a>
-   </td>
-   <td>96
-   </td>
-   <td>bfloat16
-   </td>
-   <td>824
-   </td>
-   <td>42
-   </td>
-  </tr>
-  <tr>
-   <td><a href="https://wandb.ai/rom1504/open-clip/runs/1pby5fkb?workspace=user-rom1504">g/14</a>
-   </td>
-   <td>80
-   </td>
-   <td>bfloat16
-   </td>
-   <td>800
-   </td>
-   <td>31
-   </td>
-  </tr>
-</table>
+| Model                                                                           | Batch size per gpu | Precision | Number of gpus | Sample per second per gpu |
+|---------------------------------------------------------------------------------|--------------------|-----------|----------------|---------------------------|
+| [B/32](https://wandb.ai/rom1504/open-clip/runs/rnxrp6k7?workspace=user-rom1504) | 96                 | float16   | 824            | 228                       |
+| [H/14](https://wandb.ai/rom1504/open-clip/runs/2zphcgkn?workspace=user-rom1504) | 96                 | float16   | 824            | 30                        |
+| [g/14](https://wandb.ai/rom1504/open-clip/runs/21cpomx2?workspace=user-rom1504) | 40                 | float16   | 800            | 20                        |
+| [H/14](https://wandb.ai/rom1504/open-clip/runs/3l7ppqh3?workspace=user-rom1504) | 96                 | bfloat16  | 824            | 42                        |
+| [g/14](https://wandb.ai/rom1504/open-clip/runs/1pby5fkb?workspace=user-rom1504) | 80                 | bfloat16  | 800            | 31                        |
 
 
 The speed usually increases with batch size per gpu until a plateau is reached. The speed also increases with the number of gpu. After a certain number of gpus, the curve becomes slower than linear.
@@ -466,14 +164,14 @@ Thanks to
 
 
 * [Romain Beaumont](https://github.com/rom1504) for running the experiments on H/14 and g/14
-* [Ross wightman](https://github.com/rwightman) for conducting all the openclip experiments at JUWELS Booster (Juelich Supercomputing Center) up to L/14 and providing valuable feedback during these H and g clip trainings
+* [Ross Wightman](https://github.com/rwightman) for conducting all the openclip experiments at JUWELS Booster (Juelich Supercomputing Center) up to L/14 and providing valuable feedback during these H and g clip trainings
 * [Phil Wang](https://github.com/lucidrains) for providing ideas and code (cosine attention, post layer norm, ..) during the stability issues
 * [Boris Dayma](https://github.com/borisdayma) and [Mitchell Wortsman](https://mitchellnw.github.io/) for both proposing to try float32 that showed precision was an issue and eventually lead to trying bfloat16
 * [Blinkdl](https://github.com/Blinkdl) for proposing interesting ideas regarding tuning the learning rate
 * [Christoph Schuhmann](https://github.com/christophschuhmann) for following up on all these experiments, and finding very early that training were frozen, saving some valuable timeuiding Stable Diffusion with CLIP
 * [Jenia Jitsev](https://github.com/JeniaJitsev) for providing ideas and feedback during the training issues, supervision and coordination of the compute grants at JUWELS Booster
-* [Ludwig Schmidt](https://github.com/ludwigschmidt) for reviewing this post and giving many ideas about laion datasets and clip 
-* [Mehdi Cherti](https://github.com/mehdidc) for helping to debug the evaluation scripts and getting comparable results for mscoco
+* [Ludwig Schmidt](https://github.com/ludwigschmidt) for reviewing this post and giving many ideas about LAION datasets and CLIP 
+* [Mehdi Cherti](https://github.com/mehdidc) for helping to debug the evaluation scripts and getting comparable results for MS-COCOcoco
 
 And of course [Emad](https://twitter.com/EMostaque) (Stability AI) for providing the many GPUs used during these experiments! (g/14 and H/14!)
 
