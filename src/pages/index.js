@@ -82,7 +82,7 @@ export default function Home() {
                 </p>
               </div>
             </Link>
-            <Link href="/blog/large_openclip">
+            <Link href="/blog/large-openclip">
               <div className="mb-4 lg:mb-0 lg:mr-3">
                 <p className="text-2xl pb-1">Clip H/14</p>
                 <hr />
