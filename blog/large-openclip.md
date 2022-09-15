@@ -168,10 +168,10 @@ Thanks to
 * [Phil Wang](https://github.com/lucidrains) for providing ideas and code (cosine attention, post layer norm, ..) during the stability issues
 * [Boris Dayma](https://github.com/borisdayma) and [Mitchell Wortsman](https://mitchellnw.github.io/) for both proposing to try float32 that showed precision was an issue and eventually lead to trying bfloat16
 * [Blinkdl](https://github.com/Blinkdl) for proposing interesting ideas regarding tuning the learning rate
-* [Christoph Schuhmann](https://github.com/christophschuhmann) for following up on all these experiments, and finding very early that training were frozen, saving some valuable timeuiding Stable Diffusion with CLIP
+* [Christoph Schuhmann](https://github.com/christophschuhmann) for daring proposing to train such large clips, following up on all these experiments, and finding very early that training were frozen, saving some valuable time
 * [Jenia Jitsev](https://github.com/JeniaJitsev) for providing ideas and feedback during the training issues, supervision and coordination of the compute grants at JUWELS Booster
 * [Ludwig Schmidt](https://github.com/ludwigschmidt) for reviewing this post and giving many ideas about LAION datasets and CLIP 
-* [Mehdi Cherti](https://github.com/mehdidc) for helping to debug the evaluation scripts and getting comparable results for MS-COCOcoco
+* [Mehdi Cherti](https://github.com/mehdidc) for helping to debug the evaluation scripts and getting comparable results for MS-COCO
 
 And of course [Emad](https://twitter.com/EMostaque) (Stability AI) for providing the many GPUs used during these experiments! (g/14 and H/14!)
 
