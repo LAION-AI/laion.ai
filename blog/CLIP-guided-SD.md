@@ -2,12 +2,12 @@
 title: "LAION-Aesthetics"
 author: "Christoph Schuhmann"
 date: "Sep 16, 2022"
-previewImg: "![image](https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/LAION-Aesthetics.jpg)"
+previewImg: "![image](![image](https://user-images.githubusercontent.com/22318853/190650567-16c9c9d1-6443-4ea1-a6db-d19a3390e575.png))"
 ---
-## We present  LAION-Aesthetics, several collections of subsets from LAION 5B with high visual quality.
+## Guiding Stable Diffusion with OpenCLIP H & g
 
  <p align="center">
-    <img width="1024" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/LAION-Aesthetics.jpg" alt="LAION-Aesthetics">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
 </p>
 
 
