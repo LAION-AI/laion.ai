@@ -6,97 +6,88 @@ previewImg: "![image](![image](https://user-images.githubusercontent.com/2231885
 ---
 ## Guiding Stable Diffusion with OpenCLIP H & g
 
+
+
+To explore the usefulness of our new CLIP models for image generation tasks, we use it to guide the generation of Stable Diffusion V1-5.
+
+<ul style="list-style-type:circle">
+<li>For each denoiser step of Stable Diffusion, the denoised latent vectors were decoded into RGB tensors, applying several random augmentations ( rotations of up to 5 degree, translations of up to 5%, changes of saturation, contrast and brightness of up to 5% and adding a bit random noise)</li>
+<li>Then we fed 48 of these augmentations  into the CLIP image encoder and compared the image embeddings with the text embeddings by calculating the spherical_dist_loss. </li>
+<li>Then we back propagated this loss through the frozen CLIP and the frozen autoencoder to get a gradients in the latent space that could be applied to the denoised latent tensors</li>
+<li>So we added the negatives of these gradients from the denoiser step, along with the latents predicted SD‘s denoising layer, as an extra layer of guidance</li>
+</ul>
+
+
+
+With this procedure we generated images for input texts of increasing compositional difficulty. We generated 16 images with guidance by our CLIP H and g models and “cherry picked” the “prettiest” 3 for each prompt. We are aware that this approach is highly subjective, but we think it is an easy and still very valuable visualization of what our models can and cannot do in combination with Stable Diffusion. 
+
+
+<b><i>"Happy teddy bears mixing sparkling chemicals as mad scientists as very aesthetic high quality cartoons. Happy teddy bears are using several test tubes and laboratory equipment. Chemicals are wonderfully sparkling. Very beautiful aesthetic high quality cartoon, Trending on artstation, Vibes of Happiness & enchantment" </i></b>
+
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
  <p align="center">
     <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
 </p>
 
 
-To create **LAION-Aesthetics** we trained several lightweight models that predicts the rating people gave when they were asked **“How much do you like this image on a scale from 1 to 10?”**.
 
-## LAION-Aesthetics V1
+<b><i>"Happy teddy bears mixing sparkling chemicals as mad scientists as very aesthetic high quality cartoons. Happy teddy bears are using several test tubes and laboratory equipment. Chemicals are wonderfully sparkling. Very beautiful aesthetic high quality cartoon, Trending on artstation, Vibes of Happiness & enchantment" </i></b>
 
-We started with training a linear model on 5000 image-rating pairs from the [SAC](https://github.com/JD-P/simulacra-aesthetic-captions )  dataset (which only contained 5000 samples at that time).  
-Simulacra Aesthetic Captions is a dataset of over 238000 synthetic images generated with AI models such as CompVis latent GLIDE and Stable Diffusion from over forty thousand user submitted prompts.
-
-As inputs this model uses not the images themselves, but their CLIP Image embeddings produced with the Open AI CLIP VIT L 14 model.
-We call this model LAION-Aesthetics_Predictor V1 .
-
-Its results were so encouraging, that we decided to produce 8M and 120M sample subsets of the LAION 5B images with the highest predicted scores, of those that have english texts.
-We call the dataset consisting of these 2 subsets [LAION-Aesthetics V1]( https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md).
-
-<p align="center">
-    <img width="1024" src="https://github.com/LAION-AI/laion.ai/blob/Chris/blog/LAION-Aesthetics%20V1.jpg?raw=true">
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
 </p>
-<p align="center"> <i>Images of the 120M subset</i>
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
 </p>
 
-The model used for creating this subset can be found here:
 
-https://github.com/LAION-AI/aesthetic-predictor 
 
-The LAION-Aesthetics V1 dataset & further details about it can be found here:
+<b><i>"Happy teddy bears mixing sparkling chemicals as mad scientists as very aesthetic high quality cartoons. Happy teddy bears are using several test tubes and laboratory equipment. Chemicals are wonderfully sparkling. Very beautiful aesthetic high quality cartoon, Trending on artstation, Vibes of Happiness & enchantment" </i></b>
 
-https://github.com/LAION-AI/laion-datasets/blob/main/laion-aesthetic.md 
 
-## LAION-Aesthetics V2
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
 
-After these very encouraging results, we continued to experiment and gathered the following data to train more improved MLP (multi-layer perceptron) models:
 
-More samples from the SAC dataset, which had grown in the meanwhile to 176000 image - rating pairs
-LAION-Logos, a dataset of 15.000 logo image-text pairs with aesthetic ratings from 1 to 10. We collected this dataset to improve the models abilities to evaluate images with more or less aesthetic texts in them.
+<b><i>"Happy teddy bears mixing sparkling chemicals as mad scientists as very aesthetic high quality cartoons. Happy teddy bears are using several test tubes and laboratory equipment. Chemicals are wonderfully sparkling. Very beautiful aesthetic high quality cartoon, Trending on artstation, Vibes of Happiness & enchantment" </i></b>
 
-The Aesthetic Visual Analysis (AVA) dataset ( https://github.com/imfing/ava_downloader ), which is a large-Scale database for aesthetic visual analysis that contains 250000 photos from dpchallenge.com with several aesthetic ratings from 1 to 10 for most images.
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
+ <p align="center">
+    <img width="512" src="https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/0_seed-0_cfg-8.0_cgs-0.1_ViT-g-14--e90.png">
+</p>
+
+
+As can be observed our CLIP+SD ensemble does a pretty good job with the first 2 texts, the Teddy Bears and the polarbear.
+
+The “doghouse made out of sushi” text is already more challenging, but still could solve the tasks decently in some cases. We are confident that by generating more candidate images and cherry picking from them could have yielded even better results.
  
-After training several MLPs with different numbers of layers and parameters and different activation functions, we found that a simple linear model on the top of CLIP ViT/14 produced in our subjective view the visually most appealing results when used to rank images of LAION-5B. ( Even though other MLPs with e.g. Relu functions produced slightly lower MSE and MAE loss values. )
+The “Elon Musk waving goodbye” text has obviously a composition too complex for our ensemble to understand. At least it managed to draw cute images of Teddy Bear astronauts and Elon Musk. 
 
-We call the resulting model trained on SAC, LAION-Logos and AVA LAION-Aesthetics_Predictor V2.
+We will release our CLIP guidance code for Stable Diffusion here within the next few weeks.
 
-It can be found here:
-https://github.com/christophschuhmann/improved-aesthetic-predictor 
-
-Visualizations of sorting all 2.37B images from LAION 5B that have English captions into 40 buckets with the LAION-Aesthetics_Predictor V2 can be found here: 
-
-http://captions.christoph-schuhmann.de/aesthetic_viz_laion_sac+logos+ava1-l14-linearMSE-en-2.37B.html
+In the future it would certainly be interesting to train Text-to-Image models like Stable Diffusion or Image with more powerful text encoders than the one Stable Diffusion V1 uses (the OpenAI CLIP L 14 text encoder). Google’s Imagen e.g. uses T5XXL’s encoder module and using this as text encoder for open source Text-to-Image models, as well as for CLIP models seems a promising path for improvements with texts that contain complex compositions.
 
 
-Using LAION-Aesthetics_Predictor V2, we created the following subsets of the LAION 5B samples with English captions. 
-
-
-1,2B image-text pairs with predicted aesthetics scores of 4.5 or higher:
-
-http://captions.christoph-schuhmann.de/2B-en-4.5.html 
-https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_4.5plus 
-
-939M image-text pairs with predicted aesthetics scores of 4.75 or higher:
-
-http://captions.christoph-schuhmann.de/2B-en-4.75.html 
-https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_4.75plus 
-
-600M image-text pairs with predicted aesthetics scores of 5 or higher:
-
-http://captions.christoph-schuhmann.de/2B-en-5.html 
-https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_5plus 
-
-12M image-text pairs with predicted aesthetics scores of 6 or higher:
-
-http://captions.christoph-schuhmann.de/2B-en-6.html 
-https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6plus  
-
-3M image-text pairs with predicted aesthetics scores of 6.25 or higher:
-
-http://captions.christoph-schuhmann.de/2B-en-6.25.html  
-https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.25plus 
-
-625K image-text pairs with predicted aesthetics scores of 6.5 or higher:
-
-http://captions.christoph-schuhmann.de/2B-en-6.5.html   
-https://huggingface.co/datasets/ChristophSchuhmann/improved_aesthetics_6.5plus  
-
-These subsets overlap. 5 fully includes 6 which includes 6.25 and so on.
-
-We call the collection of these subsets **LAION-Aesthetics V2**.
-
-We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train [Stable Diffusion V1]( https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1 ) model. 
 
 ## What's next?
 
