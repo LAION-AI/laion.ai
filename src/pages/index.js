@@ -62,7 +62,8 @@ export default function Home() {
                   <p className="text-2xl pb-1">Clip H/14</p>
                   <hr />
                   <p className="pt-2">
-                    The largest clip vision transformer model.
+                    The largest CLIP (Contrastive Language-Image Pre-training)
+                    vision transformer model.
                   </p>
                 </div>
               </Link>
