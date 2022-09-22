@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <>
       <Slider className="md:hidden" />
-      <div className="pt-16 md:pt-0 full-container md:h-screen w-full sm:flex flex-col items-center justify-center text-center px-5  relative child:absolute">
+      <div className="pt-16 md:pt-0 full-container md:h-screen w-full sm:flex flex-col items-center justify-center text-center sm:px-5  relative child:absolute">
         <Slider className="hidden md:block" />
         <Tags />
         <div className="w-auto sm:pb-8 md:pb-0 ">
