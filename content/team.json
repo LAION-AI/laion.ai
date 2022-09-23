@@ -42,14 +42,15 @@
     "img": "mehdi"
   },
   {
+    "name": "Irina Rish",
+    "title": "Core faculty member of MILA - Quebec AI Institute",
+    "desc": "Prof. at MILA with strong interest in Scaling Laws for ML",
+    "img": "irina"
+  },
+  {
     "name": "Jan Ebert",
     "title": "HelmholtzAI",
     "desc": "Software engineer and researcher, responsible for scaling up deep learning."
-  },
-  {
-    "name": "Aarush Katta",
-    "title": "Founding Member",
-    "desc": "Programmer with lots of enthusiasm for AI & ML."
   },
   {
     "name": "Katherine Crowson",
@@ -57,8 +58,8 @@
     "desc": "AI / generative artist"
   },
   {
-    "name": "Irina Rish",
-    "title": "Core faculty member of MILA - Quebec AI Institute",
-    "desc": "Prof. at MILA with strong interest in Scaling Laws for ML"
+    "name": "Aarush Katta",
+    "title": "Founding Member",
+    "desc": "Programmer with lots of enthusiasm for AI & ML."
   }
 ]
