@@ -57,7 +57,7 @@ Using LAION-Aesthetics_Predictor V2, we created the following subsets of the LAI
 
 These subsets overlap. 5 fully includes 6 which includes 6.25 and so on. We call the collection of these subsetsLAION-Aesthetics V2.
 
-We provided Stable Diffusion - team led by Robin Rombach and Patrick Esser with LAION-Aesthetics V2, who used the 5+ subset to train [Stable Diffusion V1](https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1) model.
+We provided the dataset to the [CompViz](https://github.com/CompVis) team led by Robin Rombach and Patrick Esser. They used the 5+ subset to train [Stable Diffusion V1](https://github.com/CompVis/stable-diffusion/tree/ce05de28194041e030ccfc70c635fe3707cdfc30#stable-diffusion-v1) model.
 
 ## What's next?
 
