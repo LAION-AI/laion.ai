@@ -72,8 +72,8 @@ export default function Home() {
                   <p className="text-2xl pb-1">LAION-Aesthetics</p>
                   <hr />
                   <p className="pt-2">
-                      A subset of LAION-5B that has been estimated by a model trained on top of 
-                      clip embeddings to contain only aestheticly pleasing images.
+                      A subset of LAION-5B filtered by a model trained to 
+                      score aesthetically pleasing images.
                   </p>
                 </div>
               </Link>
