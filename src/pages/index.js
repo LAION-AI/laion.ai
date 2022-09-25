@@ -72,8 +72,8 @@ export default function Home() {
                   <p className="text-2xl pb-1">LAION-Aesthetics</p>
                   <hr />
                   <p className="pt-2">
-                    A dataset consisting of 5.85 billion multilingual
-                    CLIP-filtered image-text pairs.
+                      A subset of LAION-5B that has been estimated by a model trained on top of 
+                      clip embeddings to contain only aestheticly pleasing images.
                   </p>
                 </div>
               </Link>
