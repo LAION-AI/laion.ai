@@ -25,7 +25,8 @@ export default function Nav() {
           <Link href="/blog">Blog</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
-          <Link href="/gdpr">GDPR</Link>
+          <Link href="/privacy-policy">Privacy Policy</Link>
+          {/* <Link href="/gdpr">GDPR</Link> */}
           <Link href="/impressum">Impressum</Link>
         </div>
       </div>
