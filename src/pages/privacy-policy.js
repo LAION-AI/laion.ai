@@ -132,7 +132,7 @@ export default function PRIVACYPOLICY() {
               </div>
               <div>
               <div>
-                <label htmlFor="agreeToGDPR">Agree to LAION's privacy policy by checking the following box</label>
+                <label htmlFor="agreeToGDPR">Agree to LAION&apos;s privacy policy by checking the following box</label>
                 <input
                     type="checkbox"
                     id="agreeToGDPR"
