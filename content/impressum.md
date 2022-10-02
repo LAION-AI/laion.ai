@@ -2,7 +2,7 @@
 title: "Impressum"
 ---
 
-Angaben gemäß § 5 TMG
+### Angaben gemäß § 5 TMG
 
 LAION gemeinnütziger e.V.
 
