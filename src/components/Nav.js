@@ -147,9 +147,6 @@ function Hamburger() {
               <Link href="/faq">Privacy Policy</Link>
             </p>
             <p>
-              <Link href="/gdpr">GDPR</Link>
-            </p>
-            <p>
               <Link href="/impressum">Impressum</Link>
             </p>
           </div>
