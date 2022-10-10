@@ -26,6 +26,7 @@ export default function Nav() {
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
+          <Link href="/dataset-requests">Dataset Requests</Link>
           <Link href="/impressum">Impressum</Link>
         </div>
       </div>
@@ -144,7 +145,10 @@ function Hamburger() {
               <Link href="/faq">FAQ</Link>
             </p>
             <p>
-              <Link href="/faq">Privacy Policy</Link>
+              <Link href="/privacy-policy">Privacy Policy</Link>
+            </p>
+            <p>
+              <Link href="/dataset-requests">Dataset Requests</Link>
             </p>
             <p>
               <Link href="/impressum">Impressum</Link>
