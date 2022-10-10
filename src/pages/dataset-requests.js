@@ -1,5 +1,6 @@
 import Tags from "../components/Tags";
 import React, { useState } from "react";
+import Link from "next/link";
 
 import questions from "../../content/dataset-requests.json";
 import { useFormspark } from "@formspark/use-formspark";
@@ -121,8 +122,8 @@ export default function Faq() {
                 </div>
               </div>
             </div>
-            <div class="text-lg mt-2">
-              By submitting to the form, you agree to our <a href="/privacy-policy">privacy policy</a>.
+            <div className="text-lg mt-2">
+              By submitting to the form, you agree to our <Link href="/privacy-policy">privacy policy</Link>.
             </div>
             <div className="mt-4">
               <button

@@ -23,6 +23,7 @@ export default function Home() {
                   if (item.link.charAt(0) === `/`) {
                     return (
                       <a
+                        key={item.link}
                         className={
                           "no-underline " +
                           (item.desc === undefined
