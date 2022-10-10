@@ -117,7 +117,7 @@
         "modality": "image/text",
         "kind": "Contrastive",
         "status": "Released",
-        "desc": "A detctor for not safe for work content within images using CLIP.",
+        "desc": "A detector for not safe for work content within images using CLIP.",
         "link": "https://github.com/LAION-AI/CLIP-based-NSFW-Detector"
       },
       {
