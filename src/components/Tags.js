@@ -40,6 +40,49 @@ export default function Tags(props) {
       <meta name="theme-color" content="#1D374E" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+      <link
+        rel="preload"
+        href="/fonts/DinishCondensed-Bold.woff"
+        as="font"
+        type="font/woff"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="/fonts/DinishCondensed-Bold.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="/fonts/Dinish-Regular.woff"
+        as="font"
+        type="font/woff"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="/fonts/Dinish-Regular.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="/fonts/Dinish-Italic.woff"
+        as="font"
+        type="font/woff"
+        crossOrigin
+      />
+      <link
+        rel="preload"
+        href="/fonts/Dinish-Italic.woff2"
+        as="font"
+        type="font/woff2"
+        crossOrigin
+      />
     </Head>
   );
 }
