@@ -17,6 +17,13 @@
         "link": "/blog/laion-5b"
       },
       {
+        "name": "Laion translated",
+        "modality": "image/text",
+        "status": "Released",
+        "desc": "3B translated samples from Laion5B.",
+        "link": "/blog/laion-translated"
+      },
+      {
         "name": "Clip H/14",
         "modality": "image/text",
         "status": "Released",
