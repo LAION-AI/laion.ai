@@ -17,6 +17,13 @@
         "link": "/blog/laion-5b"
       },
       {
+        "name": "Laion-coco",
+        "modality": "image/text",
+        "status": "Released",
+        "desc": "600M captions generated using BLIP from Laion2B-en.",
+        "link": "/blog/laion-coco"
+      },
+      {
         "name": "Laion translated",
         "modality": "image/text",
         "status": "Released",
