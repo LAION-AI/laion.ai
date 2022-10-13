@@ -2,7 +2,7 @@
 title: "Laion translated: 3B captions translated to English from laion5B"
 author: "Marianna Nezhurina, Romain Beaumont, Richard Vencu and Christoph Schuhmann"
 date: "Sep 15, 2022"
-previewImg: "/images/blog/laion-2B-translated.png"
+previewImg: "/images/blog/laion-2B-translated-samples.png"
 ---
 
 Author: [Marianna Nezhurina](https://github.com/marianna13) [Romain Beaumont](https://github.com/rom1504/) [Richard Vencu](https://github.com/rvencu) [Christoph Schuhmann](https://github.com/christophschuhmann)  
