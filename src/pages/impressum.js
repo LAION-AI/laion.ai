@@ -15,7 +15,7 @@ export default function Post({ frontmatter, content }) {
 
         <div
           className=" article"
-          dangerouslySetInnerHTML={{ __html: md().render(content) }}
+          dangerouslySetInnerHTML={{ __html: md({ html: true }).render(content) }}
         />
       </div>
     </div>

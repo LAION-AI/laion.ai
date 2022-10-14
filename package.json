@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "next start --port 3005",
     "lint": "next lint",
     "export": "next export && next-image-export-optimizer",
     "deploy": "npm run build && npm run export  && touch ./out/.nojekyll"

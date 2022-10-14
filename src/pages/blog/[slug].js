@@ -12,7 +12,6 @@ export default function Post({ frontmatter, content, date, slug }) {
         desc={
           md({html: true,})
             .render(content)
-            .replace(/<[^>]+>/g, "")
             .slice(0, 157) + "..."
         }
         image={frontmatter.previewImg}
@@ -28,7 +27,7 @@ export default function Post({ frontmatter, content, date, slug }) {
         <hr />
         <div
           className="pt-2 article"
-          dangerouslySetInnerHTML={{ __html: md().render(content) }}
+          dangerouslySetInnerHTML={{ __html: md({ html: true }).render(content) }}
         />
       </div>
     </div>

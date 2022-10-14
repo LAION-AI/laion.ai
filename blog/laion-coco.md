@@ -31,7 +31,7 @@ The 600M samples are provided in parquet files. Columns include the original cap
 
 
 
-<img src="/images/blog/ring.png" width="200px" />
+<img src="/images/blog/ring.png" style="height:250px; width: auto;"/>
 
 
 **Original: **LGSY 925 Sterling Silver Double Heart Rings Infinity Love Thin Rings Wedding Engagement Promise Engraved Love Rings for Women for Dainty Gift
@@ -40,7 +40,7 @@ The 600M samples are provided in parquet files. Columns include the original cap
 
 
 
-<img src="/images/blog/boot.png" width="200px" />
+<img src="/images/blog/boot.png" style="height:250px; width: auto;"/>
          
 
 **Original:** Female Thick with Pointy Head High Heel Chelsea Ankle Boots
@@ -49,7 +49,7 @@ The 600M samples are provided in parquet files. Columns include the original cap
 
 
 
-<img src="/images/blog/laion_coco_beach.png" width="200px" />
+<img src="/images/blog/laion_coco_beach.png" style="height:250px; width: auto;"/>
 
 
 **Original:** a group of people on horses on a beach
@@ -59,7 +59,7 @@ The 600M samples are provided in parquet files. Columns include the original cap
 
 
 
-<img src="/images/blog/laion_coco_tags.png" width="200px" />
+<img src="/images/blog/laion_coco_tags.png" style="height:250px; width: auto;"/>
 
 
 **Original:** a wall with a bunch of graffiti on it
@@ -70,7 +70,7 @@ The 600M samples are provided in parquet files. Columns include the original cap
 
 
 
-<img src="/images/blog/sheeple.png" width="200px" />
+<img src="/images/blog/sheeple.png" style="height:250px; width: auto;"/>
 
 
 **Original:** sheeple family
@@ -109,7 +109,7 @@ In a first round we presented the evaluators each 200 samples, that contained 10
 
  
 
-<img src="/images/blog/eval_laion_coco.png" width="200px" />
+<img src="/images/blog/eval_laion_coco.png" style="width:400px" />
 
 
 GT: Y-Axis
@@ -152,14 +152,14 @@ But sometimes the captioning model obviously fails and the quality of the result
 
 
 
-<img src="/images/blog/laion_coco_umbrella.png" width="200px" />
+<img src="/images/blog/laion_coco_umbrella.png" style="height:250px; width: auto;"/>
 
 
 _“Two people posing for the camera in their wedding attire, one with an umbrella over his head and another with long red hair.”_
 
 
 
-<img src="/images/blog/laion_coco_man.png" width="200px" />
+<img src="/images/blog/laion_coco_man.png" style="height:250px; width: auto;"/>
 
 
 _“An older man having a heart attack, with his hand on the chest.”_
