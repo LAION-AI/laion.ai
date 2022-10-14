@@ -2,7 +2,7 @@
 title: "Laion coco: 600M synthetic captions from Laion2B-en"
 author: "Christoph Schuhmann, Andreas Köpf, Richard Vencu, Theo Coombes, Romain Beaumont"
 date: "Sep 15, 2022"
-previewImg: "/images/blog/aerial.png"
+previewImg: "/images/blog/laion_coco_beach.png"
 ---
 
 Author: [Christoph Schuhmann](https://github.com/christophschuhmann), [Andreas Köpf](https://github.com/andreaskoepf) , [Theo Coombes](https://github.com/TheoCoombes), [Richard Vencu](https://github.com/rvencu/), [Benjamin Trom](https://github.com/limiteinductive) , [Romain Beaumont](https://github.com/rom1504) 
