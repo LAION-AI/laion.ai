@@ -7,13 +7,6 @@ previewImg: "/images/blog/500m.png"
 
 We present LAION-400M: 400M English (image, text) pairs
 
-### Sponsors
-
-We made it so far due to the generosity of these donors:
-| ![](https://imgur.com/z6K7kSq) |![](https://i.imgur.com/KYvncYl.png)|![](https://i.imgur.com/y2yNLm8.png)|
-|--|--|--|
-|[doodlebot.ai](http://doodlebot.ai/)|[Gentec Data](https://gentec.ro/)|[the-eye.eu](http://the-eye.eu/)|
-
 ## Concept and Content
 
 The LAION-400M dataset is entirely openly, freely accessible.
@@ -264,3 +257,10 @@ Useful links:
 
 [  
 ](https://laion.ai/laion-5b-a-new-era-of-open-large-scale-multi-modal-datasets/)
+
+### Sponsors
+
+We made it so far due to the generosity of these donors:
+| ![](https://i.imgur.com/z6K7kSq.png) |![](https://i.imgur.com/KYvncYl.png)|![](https://i.imgur.com/y2yNLm8.png)|
+|--|--|--|
+|[doodlebot.ai](http://doodlebot.ai/)|[Gentec Data](https://gentec.ro/)|[the-eye.eu](http://the-eye.eu/)|
