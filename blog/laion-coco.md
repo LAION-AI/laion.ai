@@ -34,9 +34,9 @@ The 600M samples are provided in parquet files. Columns include the original cap
 <img src="/images/blog/ring.png" style="height:250px; width: auto;"/>
 
 
-**Original: **LGSY 925 Sterling Silver Double Heart Rings Infinity Love Thin Rings Wedding Engagement Promise Engraved Love Rings for Women for Dainty Gift
+**Original:** LGSY 925 Sterling Silver Double Heart Rings Infinity Love Thin Rings Wedding Engagement Promise Engraved Love Rings for Women for Dainty Gift
 
-**Generated: **An open ring with two hearts on it.
+**Generated:** An open ring with two hearts on it.
 
 
 
