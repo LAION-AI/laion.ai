@@ -7,7 +7,7 @@ previewImg: "/images/blog/aerial.png"
 
 Author: [Christoph Schuhmann](https://github.com/christophschuhmann), [Andreas Köpf](https://github.com/andreaskoepf) , [Theo Coombes](https://github.com/TheoCoombes), [Richard Vencu](https://github.com/rvencu/), [Benjamin Trom](https://github.com/limiteinductive) , [Romain Beaumont](https://github.com/rom1504) 
 
-**We present LAION-COCO, the world’s largest dataset of 600M generated high-quality captions for publicly available web-images **
+**We present LAION-COCO, the world’s largest dataset of 600M generated high-quality captions for publicly available web-images**
 
 Laion5B has five billion natural captions. They provide a lot of information, but could synthetic captions complement them ?
 
