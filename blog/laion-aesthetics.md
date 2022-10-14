@@ -12,7 +12,7 @@ We present LAION-Aesthetics, several collections of subsets from LAION 5B with h
 
 ![](https://raw.githubusercontent.com/LAION-AI/laion.ai/Chris/blog/LAION-Aesthetics.jpg)
 
-To create LAION-Aesthetics we trained several lightweight models that predicts the rating people gave when they were asked _“How much do you like this image on a scale from 1 to 10?”_.
+To create LAION-Aesthetics we trained several lightweight models that predict the rating people gave when they were asked _“How much do you like this image on a scale from 1 to 10?”_.
 
 ## LAION-Aesthetics V1
 
