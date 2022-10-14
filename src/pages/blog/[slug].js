@@ -10,7 +10,7 @@ export default function Post({ frontmatter, content, date, slug }) {
       <Tags
         title={frontmatter.title}
         desc={
-          md()
+          md({html: true,})
             .render(content)
             .replace(/<[^>]+>/g, "")
             .slice(0, 157) + "..."
