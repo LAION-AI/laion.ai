@@ -89,14 +89,14 @@ The 600M samples are provided in parquet files. Columns include the original cap
 
 The method we used to generate these captions was to
 
-
-
 1. We use Blip L/14 to generate 40 captions
 2. Rank them using openai Clip Open AI L/14 ; selected the best 5 captions
 3. Rank using Open AI RN50x64 Clip model to select the best one
 4. Use a small, fine-tuned T0 model to roughly repair grammar and punctuation of the texts
 
 The hyperparameters were chosen through a [grid search](https://wandb.ai/andreaskoepf/blip_coco_val_sample_sweep_bayes_02/sweeps/1bsha6b0) ([settings](https://github.com/andreaskoepf/CLIP-Image-Captioning/blob/blip_test/blip_coco_val_sample_sweep_bayes_02.yaml)) by Andreas Köpf to best match the style ( ROUGE scores ) of MS COCO texts.
+
+[laion_idle_cap](https://github.com/andreaskoepf/laion_idle_cap/tree/main/docker) is the script that was used for this processing.
 
 
 ## Evaluation
