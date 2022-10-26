@@ -37,7 +37,7 @@
   },
   {
     "name": "Mehdi Cherti",
-    "title": "HelmholtzAI",
+    "title": "Founding Member",
     "desc": "Researcher on Machine Learning and Deep Generative Models. PhD in Computer Science.",
     "img": "mehdi"
   },
@@ -49,13 +49,14 @@
   },
   {
     "name": "Jan Ebert",
-    "title": "HelmholtzAI",
-    "desc": "Software engineer and researcher, responsible for scaling up deep learning."
+    "title": "Founding member",
+    "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
   },
   {
     "name": "Katherine Crowson",
-    "title": "AI / generative artist",
-    "desc": "AI / generative artist"
+    "title": "Member",
+    "desc": "AI researcher working on generative models. Generative artist",
+    "img": "katherine"
   },
   {
     "name": "Aarush Katta",
