@@ -48,9 +48,9 @@
     "img": "irina"
   },
   {
-    "name": "Jan Ebert",
-    "title": "Founding member",
-    "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
+    "name": "Aran Komatzusaki",
+    "title": "PhD student of Machine Learning at GaTech",
+    "desc": "Interest in RL, representation learning and generative modeling in general"
   },
   {
     "name": "Katherine Crowson",
@@ -62,5 +62,10 @@
     "name": "Aarush Katta",
     "title": "Founding Member",
     "desc": "Programmer with lots of enthusiasm for AI & ML."
+  },
+  {
+    "name": "Jan Ebert",
+    "title": "Founding member",
+    "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
   }
 ]
