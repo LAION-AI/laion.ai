@@ -65,6 +65,11 @@
     "desc": "Programmer with lots of enthusiasm for AI & ML."
   },
   {
+    "name": "Robin Rombach",
+    "title": "Stable Diffusion Trainer",
+    "desc": "AI researcher with a focus on deep generative models. Author of VQGAN, Latent Diffusion, Stable Diffusion."
+  },
+  {
     "name": "Jan Ebert",
     "title": "Founding member",
     "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
