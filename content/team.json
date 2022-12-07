@@ -67,7 +67,8 @@
   {
     "name": "Robin Rombach",
     "title": "Stable Diffusion Trainer",
-    "desc": "AI researcher with a focus on deep generative models. Author of VQGAN, Latent Diffusion, Stable Diffusion."
+    "desc": "AI researcher with a focus on deep generative models. Author of VQGAN, Latent Diffusion, Stable Diffusion.",
+    "img": "robin"
   },
   {
     "name": "Jan Ebert",
