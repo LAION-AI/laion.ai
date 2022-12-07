@@ -54,6 +54,12 @@
     "img": "aran"
   },
   {
+    "name": "Robin Rombach",
+    "title": "Stable Diffusion Trainer",
+    "desc": "AI researcher with a focus on deep generative models. Author of VQGAN, Latent Diffusion, Stable Diffusion.",
+    "img": "robin"
+  },
+  {
     "name": "Katherine Crowson",
     "title": "Member",
     "desc": "AI researcher working on generative models. Generative artist",
@@ -63,12 +69,6 @@
     "name": "Aarush Katta",
     "title": "Founding Member",
     "desc": "Programmer with lots of enthusiasm for AI & ML."
-  },
-  {
-    "name": "Robin Rombach",
-    "title": "Stable Diffusion Trainer",
-    "desc": "AI researcher with a focus on deep generative models. Author of VQGAN, Latent Diffusion, Stable Diffusion.",
-    "img": "robin"
   },
   {
     "name": "Jan Ebert",
