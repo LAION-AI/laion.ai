@@ -33,6 +33,11 @@ export default function Home() {
             <p className="text-2xl">
               TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.
             </p>
+            <p className="text-lg py-4 max-w-lg flex m-auto">
+              LAION, as a non-profit organization, provides datasets, tools and models to liberate machine learning research.
+              By doing so, we encourage open public education and a more environment-friendly
+              use of resources by reusing existing datasets and models.
+            </p>
             <div
               className=" pt-5 flex-col lg:flex-row w-full items-center grid sm:grid-cols-2 gap-4
                   child:border child:border-paper child:bg-sky child:p-3 child:w-64 hover:child:bg-paper hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
