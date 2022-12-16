@@ -38,6 +38,12 @@ export default function Home() {
               By doing so, we encourage open public education and a more environment-friendly
               use of resources by reusing existing datasets and models.
             </p>
+            <div>
+              <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">Join our community on discord!</a>
+            </div>
+            <div class="my-2">
+              <a href="https://docs.google.com/document/d/1V3Td6btwSMkZIV22-bVKsa3Ct4odHgHjnK-BrcNJBWY/edit#" className="text-xl">Help building an Open Source ChatGPT!</a>
+            </div>
             <div
               className=" pt-5 flex-col lg:flex-row w-full items-center grid sm:grid-cols-2 gap-4
                   child:border child:border-paper child:bg-sky child:p-3 child:w-64 hover:child:bg-paper hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
