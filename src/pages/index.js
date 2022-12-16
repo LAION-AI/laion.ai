@@ -41,7 +41,7 @@ export default function Home() {
             <div>
               <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">Join our community on discord!</a>
             </div>
-            <div class="my-2">
+            <div className="my-2">
               <a href="https://docs.google.com/document/d/1V3Td6btwSMkZIV22-bVKsa3Ct4odHgHjnK-BrcNJBWY/edit#" className="text-xl">Help building an Open Source ChatGPT!</a>
             </div>
             <div
