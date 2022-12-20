@@ -40,10 +40,25 @@ In particular, we release this data:
 - 5.85 billion pairs of image URLs and the corresponding metadata at [laion2B-en](https://huggingface.co/datasets/laion/laion2B-en) [laion2B-multi](https://huggingface.co/datasets/laion/laion2B-multi) [laion1B-nolang](https://huggingface.co/datasets/laion/laion1B-nolang) (800GB)
 - A [knn index](https://huggingface.co/datasets/laion/laion5B-index) that enables quick search in the laion5B dataset (1.6TB)
 - [Indices](https://mystic.the-eye.eu/public/AI/cah/laion5b/indices/vit-l-14/) for laion2B-en, laion2B-multi, laion1B-nolang (2TB)
-- Clip ViT-L/14 [image embeddings](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/) (9TB)
 - Web demo of image-text search on LAION-5B [clip-retrieval](https://rom1504.github.io/clip-retrieval/)
 - Safety tags at [laion2B-en-safety](https://huggingface.co/datasets/laion/laion2B-en-safety) [laion2B-multi-safety](https://huggingface.co/datasets/laion/laion2B-multi-safety) [laion1B-nolang-safety](https://huggingface.co/datasets/laion/laion1B-nolang-safety) (50GB)
 - Watermark tags at [laion2B-en-watermark](https://huggingface.co/datasets/laion/laion2B-en-watermark) [laion2B-multi-watermark](https://huggingface.co/datasets/laion/laion2B-multi-watermark) [laion1B-nolang-watermark](https://huggingface.co/datasets/laion/laion1B-nolang-watermark) (50GB)
+
+
+Pre-Computed Embeddings
+| Clip Model | Dataset  | URL                                                                                                                 | Size       | Host      |
+|------------|----------|----------------------------------------------------------------------------------------------------------------------|------------|-----------|
+| Vit-L/14   | laion2b-en  | [image embeddings, text embeddings, & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/) | 6.2TB        | the eye   |
+| Vit-L/14   | laion2b-multi  | [image embeddings & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-multi/) | 3.2TB        | the eye   |
+| Vit-L/14   | laion1b-nolang  | [image embeddings & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion1B-nolang/) | 2TB        | the eye   |
+| Vit-L/14   | laion2b-en  | [image embeddings , text embeddings, & metadata](https://huggingface.co/datasets/laion/laion2b-en-vit-l-14-embeddings) | 6.2TB           | huggingface        |
+| Vit-L/14   | laion2b-multi  | [image embeddings & metadata](https://huggingface.co/datasets/laion/laion2b-multi-vit-l-14-embeddings)              |         3.2TB   | huggingface        |
+| Vit-L/14   | laion1b-nolang  | [image embeddings & metadata](https://huggingface.co/datasets/laion/laion1b-nolang-vit-l-14-embeddings)              |   2TB         | huggingface        |
+| Vit-H/14   | laion2b-en  | [image embeddings, text embeddings, & metadata](https://huggingface.co/datasets/laion/laion2b-en-vit-h-14-embeddings) | 9.5TB           | huggingface        |
+| Vit-H/14   | laion2b-multi  | [image embeddings & metadata](https://huggingface.co/datasets/laion/laion2b-multi-vit-h-14-embeddings)              | 4.5TB           | huggingface        |
+| Vit-H/14   | laion1b-nolang  | [image embeddings & metadata](https://huggingface.co/datasets/laion/laion1b-nolang-vit-h-14-embeddings)              | 2.5TB         | huggingface        |
+
+
 
 The metadata files are parquet files that contain the following attributes: URL, TEXT, the cosine similarity score between the text and image embedding and height and width of the image. Watermark and safety tags can be joined with the metadata prior to downloading by using [this script](https://github.com/rom1504/laion-prepro/blob/main/laion5B/safety/join.py). Once that is done, they can easily be filtered upon with a probability threshold at your choice (we recommend 0.5 for safety and 0.8 for watermark).
 
