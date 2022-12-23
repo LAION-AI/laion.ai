@@ -16,11 +16,11 @@ export default function Home() {
   return (
     <>
       <Slider className="md:hidden" />
-      <div className="pt-16 md:pt-0 full-container md:h-screen w-full sm:flex flex-col items-center justify-center text-center sm:px-5  relative child:absolute">
+      <div className="pt-20 md:pt-0 full-container md:h-screen w-full md:flex flex-col items-center justify-center text-center   relative child:absolute">
         <Slider className="hidden md:block" />
         <Tags />
-        <div className="w-auto sm:pb-8 md:pb-0 ">
-          <div className="z-10 h-full md:max-h-screen md:bg-sky p-8 md:shadow-md md:shadow-neutral-800/20 ">
+        <div className="w-auto md:pb-0 flex flex-col md:flex-row items-center gap-4 px-4 overflow-x-hidden">
+          <div className="bg-sky border-white border p-3">
             <div className="flex justify-center">
               <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
               <div className="flex items-center">
@@ -34,61 +34,71 @@ export default function Home() {
               TRULY OPEN AI. 100% NON-PROFIT. 100% FREE.
             </p>
             <p className="text-lg py-4 max-w-lg flex m-auto">
-              LAION, as a non-profit organization, provides datasets, tools and models to liberate machine learning research.
-              By doing so, we encourage open public education and a more environment-friendly
+              LAION, as a non-profit organization, provides datasets, tools and
+              models to liberate machine learning research. By doing so, we
+              encourage open public education and a more environment-friendly
               use of resources by reusing existing datasets and models.
             </p>
             <div>
-              <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">Join our community on discord!</a>
+              <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">
+                Join our community on discord!
+              </a>
             </div>
             <div className="my-2">
-              <a href="https://docs.google.com/document/d/1V3Td6btwSMkZIV22-bVKsa3Ct4odHgHjnK-BrcNJBWY/edit#" className="text-xl">Help building an Open Source ChatGPT!</a>
+              <a
+                href="https://docs.google.com/document/d/1V3Td6btwSMkZIV22-bVKsa3Ct4odHgHjnK-BrcNJBWY/edit#"
+                className="text-xl"
+              >
+                Help building an Open Source ChatGPT!
+              </a>
             </div>
-            <div
-              className=" pt-5 flex-col lg:flex-row w-full items-center grid sm:grid-cols-2 gap-4
-                  child:border child:border-paper child:bg-sky child:p-3 child:w-64 hover:child:bg-paper hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
-            >
-              <Link href="/blog/laion-400-open-dataset">
-                <div className="">
-                  <p className="text-2xl pb-1">LAION-400M</p>
-                  <hr />
-                  <p className="pt-2">
-                    An open dataset containing 400 million English image-text
-                    pairs.
-                  </p>
-                </div>
-              </Link>
-              <Link href="/blog/laion-5b">
-                <div className="">
-                  <p className="text-2xl pb-1">LAION-5B</p>
-                  <hr />
-                  <p className="pt-2">
-                    A dataset consisting of 5.85 billion multilingual
-                    CLIP-filtered image-text pairs.
-                  </p>
-                </div>
-              </Link>
-              <Link href="/blog/large-openclip">
-                <div className="">
-                  <p className="text-2xl pb-1">Clip H/14</p>
-                  <hr />
-                  <p className="pt-2">
-                    The largest CLIP (Contrastive Language-Image Pre-training)
-                    vision transformer model.
-                  </p>
-                </div>
-              </Link>
-              <Link href="/blog/laion-aesthetics">
-                <div className="">
-                  <p className="text-2xl pb-1">LAION-Aesthetics</p>
-                  <hr />
-                  <p className="pt-2">
-                      A subset of LAION-5B filtered by a model trained to 
-                      score aesthetically pleasing images.
-                  </p>
-                </div>
-              </Link>
-            </div>
+          </div>
+
+          <div
+            className="w-fit h-fit items-center grid sm:grid-cols-2 gap-4
+            child:h-full child:flex child:flex-col child:justify-center
+                      child:border child:border-paper child:bg-sky child:p-3 child:max-w-[16rem] hover:child:bg-paper hover:child:text-sky child:transition-colors child:cursor-pointer child:mx-auto md:child:mx-0"
+          >
+            <Link href="/blog/laion-400-open-dataset">
+              <div className="">
+                <p className="text-2xl pb-1">LAION-400M</p>
+                <hr />
+                <p className="pt-2">
+                  An open dataset containing 400 million English image-text
+                  pairs.
+                </p>
+              </div>
+            </Link>
+            <Link href="/blog/laion-5b">
+              <div className="">
+                <p className="text-2xl pb-1">LAION-5B</p>
+                <hr />
+                <p className="pt-2">
+                  A dataset consisting of 5.85 billion multilingual
+                  CLIP-filtered image-text pairs.
+                </p>
+              </div>
+            </Link>
+            <Link href="/blog/large-openclip">
+              <div className="">
+                <p className="text-2xl pb-1">Clip H/14</p>
+                <hr />
+                <p className="pt-2">
+                  The largest CLIP (Contrastive Language-Image Pre-training)
+                  vision transformer model.
+                </p>
+              </div>
+            </Link>
+            <Link href="/blog/laion-aesthetics">
+              <div className="">
+                <p className="text-2xl pb-1">LAION-Aesthetics</p>
+                <hr />
+                <p className="pt-2">
+                  A subset of LAION-5B filtered by a model trained to score
+                  aesthetically pleasing images.
+                </p>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
