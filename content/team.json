@@ -74,5 +74,10 @@
     "name": "Jan Ebert",
     "title": "Founding member",
     "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
+  },
+  {
+    "name": "Marianna Nezhurina",
+    "title": "Member",
+    "desc": "Coder and ML researcher with strong interest in multi-modal datasets and learning."
   }
 ]
