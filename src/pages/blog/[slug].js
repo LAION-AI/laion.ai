@@ -22,7 +22,7 @@ export default function Post({ frontmatter, content, date, slug }) {
           {frontmatter.title.toUpperCase()}
         </h1>
         <p className="text-2xl pb-2">
-          by: {frontmatter.author}, {dateFormat(date, "m mmm, yyyy")}
+          by: {frontmatter.author}, {dateFormat(frontmatter.date, "m mmm, yyyy")}
         </p>
         <hr />
         <div
