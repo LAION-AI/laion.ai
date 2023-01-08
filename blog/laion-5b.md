@@ -39,7 +39,7 @@ In particular, we release this data:
 
 - 5.85 billion pairs of image URLs and the corresponding metadata at [laion2B-en](https://huggingface.co/datasets/laion/laion2B-en) [laion2B-multi](https://huggingface.co/datasets/laion/laion2B-multi) [laion1B-nolang](https://huggingface.co/datasets/laion/laion1B-nolang) (800GB)
 - A [knn index](https://huggingface.co/datasets/laion/laion5B-index) that enables quick search in the laion5B dataset (1.6TB)
-- [Indices](https://mystic.the-eye.eu/public/AI/cah/laion5b/indices/vit-l-14/) for laion2B-en, laion2B-multi, laion1B-nolang (2TB)
+- [Indices](https://mystic.the-eye.eu/public/AI/cah/laion5b/indices/vit-l-14/) (or [here](https://the-eye.eu/public/AI/cah/laion5b/indices/vit-l-14/) for laion2B-en, laion2B-multi, laion1B-nolang (2TB)
 - Web demo of image-text search on LAION-5B [clip-retrieval](https://rom1504.github.io/clip-retrieval/)
 - Safety tags at [laion2B-en-safety](https://huggingface.co/datasets/laion/laion2B-en-safety) [laion2B-multi-safety](https://huggingface.co/datasets/laion/laion2B-multi-safety) [laion1B-nolang-safety](https://huggingface.co/datasets/laion/laion1B-nolang-safety) (50GB)
 - Watermark tags at [laion2B-en-watermark](https://huggingface.co/datasets/laion/laion2B-en-watermark) [laion2B-multi-watermark](https://huggingface.co/datasets/laion/laion2B-multi-watermark) [laion1B-nolang-watermark](https://huggingface.co/datasets/laion/laion1B-nolang-watermark) (50GB)
@@ -48,9 +48,9 @@ In particular, we release this data:
 Pre-Computed Embeddings
 | Clip Model | Dataset  | URL                                                                                                                 | Size       | Host      |
 |------------|----------|----------------------------------------------------------------------------------------------------------------------|------------|-----------|
-| Vit-L/14   | laion2b-en  | [image embeddings, text embeddings, & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/) | 6.2TB        | the eye   |
-| Vit-L/14   | laion2b-multi  | [image embeddings & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-multi/) | 3.2TB        | the eye   |
-| Vit-L/14   | laion1b-nolang  | [image embeddings & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion1B-nolang/) | 2TB        | the eye   |
+| Vit-L/14   | laion2b-en  | [image embeddings, text embeddings, & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/) (or [here](https://the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-en/) ) | 6.2TB        | the eye   |
+| Vit-L/14   | laion2b-multi  | [image embeddings & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-multi/) (or [here](https://the-eye.eu/public/AI/cah/laion5b/embeddings/laion2B-multi/) ) | 3.2TB        | the eye   |
+| Vit-L/14   | laion1b-nolang  | [image embeddings & metadata](https://mystic.the-eye.eu/public/AI/cah/laion5b/embeddings/laion1B-nolang/) (or [here](https://the-eye.eu/public/AI/cah/laion5b/embeddings/laion1B-nolang/) ) | 2TB        | the eye   |
 | Vit-L/14   | laion2b-en  | [image embeddings , text embeddings, & metadata](https://huggingface.co/datasets/laion/laion2b-en-vit-l-14-embeddings) | 6.2TB           | huggingface        |
 | Vit-L/14   | laion2b-multi  | [image embeddings & metadata](https://huggingface.co/datasets/laion/laion2b-multi-vit-l-14-embeddings)              |         3.2TB   | huggingface        |
 | Vit-L/14   | laion1b-nolang  | [image embeddings & metadata](https://huggingface.co/datasets/laion/laion1b-nolang-vit-l-14-embeddings)              |   2TB         | huggingface        |
