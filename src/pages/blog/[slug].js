@@ -9,25 +9,28 @@ export default function Post({ frontmatter, content, date, slug }) {
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags
         title={frontmatter.title}
-        desc={
-          md({html: true,})
-            .render(content)
-            .slice(0, 157) + "..."
-        }
+        desc={md({ html: true }).render(content).slice(0, 157) + "..."}
         image={frontmatter.previewImg}
         slug={"/blog/" + slug}
       />
-      <div className="container px-5">
-        <h1 className="text-8xl md:text-8xl font-bold title-flow">
+      <div className="container px-5" lang="en">
+        <h1
+          lang="en"
+          style={{ hyphens: "auto" }}
+          className="text-8xl md:text-8xl w-full font-bold title-flow break-words"
+        >
           {frontmatter.title.toUpperCase()}
         </h1>
         <p className="text-2xl pb-2">
-          by: {frontmatter.author}, {dateFormat(frontmatter.date, "m mmm, yyyy")}
+          by: {frontmatter.author},{" "}
+          {dateFormat(frontmatter.date, "m mmm, yyyy")}
         </p>
         <hr />
         <div
           className="pt-2 article"
-          dangerouslySetInnerHTML={{ __html: md({ html: true }).render(content) }}
+          dangerouslySetInnerHTML={{
+            __html: md({ html: true }).render(content),
+          }}
         />
       </div>
     </div>
