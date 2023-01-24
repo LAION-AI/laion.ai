@@ -5,7 +5,7 @@ date: "January 24, 2022"
 previewImg: "/images/blog/scaling_vit_giant.png"
 ---
 
-We have trained a new [ViT-G/14 CLIP](https://huggingface.co/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k) model with [OpenCLIP](https://github.com/mlfoundations/open_clip) which achieves **80.1%*** zero-shot accuracy on ImageNet and **74.9%** zero-shot image retrieval (Recall@5) on MS COCO. As of January 2023, this is the best open source CLIP model.
+We have trained a new [ViT-G/14 CLIP](https://huggingface.co/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k) model with [OpenCLIP](https://github.com/mlfoundations/open_clip) which achieves **80.1%** zero-shot accuracy on ImageNet and **74.9%** zero-shot image retrieval (Recall@5) on MS COCO. As of January 2023, this is the best open source CLIP model.
 
 We believe this is interesting because:
 * CLIP models are useful for zero-shot classification, retrieval, and for guidance/conditioning in generative models (OpenCLIP is used in Stable Diffusion V2 and currently the third most downloaded model on HuggingFace is a CLIP model). The approach underlying CLIP—self supervised learning on a large, heterogeneous dataset—has been shown to produce models which are more [robust](https://openai.com/blog/clip/) and [fair](https://ai.facebook.com/blog/seer-10b-better-fairer-computer-vision-through-self-supervised-learning-training-on-diverse-datasets/).
@@ -41,8 +41,6 @@ To scale up model size while reducing compute we used [Fast Language-Image Pre-t
 To scale up the batch size to 160k, we used [gradient checkpointing](https://arxiv.org/abs/1604.06174v2) and 80GM VRAM A100s. For the unmasked tuning portion, we also used gradient accumulation (see our implementation for the contrastive objective [here](https://github.com/mlfoundations/open_clip/pull/267)). Finally, we used a 2x higher learning rate of 2e-3 compared to our experiments with batch size 80k. The combination of scaling up model, batch size, and learning rate resulted in training instability during the warmup phase. Accordingly, we increased warm-up to 13k steps, trained with layer scale, and used AdamW beta2 0.95. All runs used AMP bfloat16, after previously switching from float16 in prior experiments with L/14 and H/14.
 
 ## Training notes
-
-The ViT-G/14 model is trained with the contrastive infoNCE loss on text-image pairs.
 
 ### Phase 1: Patch dropout
 
