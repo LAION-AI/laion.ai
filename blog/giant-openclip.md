@@ -97,7 +97,7 @@ Thanks to:
 * [Romain Beaumont](https://github.com/rom1504), [Ross Wightman](https://github.com/rwightman), [Mehdi Cherti](https://github.com/mehdidc), [Gabriel Ilharco](https://gabrielilharco.com/), and [Jenia Jitsev](https://github.com/JeniaJitsev) for providing extensive ideas, advice, engineering support, evaluating the model, and maintaining the openclip repository used for model training.
 * [Christoph Schuhmann](https://github.com/christophschuhmann) for encouragement and support
 * [Richard Vencu](https://github.com/rvencu) for cluster support
-* [Phil Wang](https://github.com/lucidrains) and [Haoqi Fan](https://haoqifan.github.io/) for the implementation and and discussion regarding patch dropout
+* [Phil Wang](https://github.com/lucidrains) and [Haoqi Fan](https://haoqifan.github.io/) for the implementation and discussion regarding patch dropout
 [Sho Yaida](https://www.shoyaida.com/), [Jong Wook Kim](https://jongwook.kim/), [Ari Morcos](http://www.arimorcos.com/) and [Saining Xie](https://www.sainingxie.com/) for helpful remarks regarding hyperparameters
 * [Sarah Pratt](https://sarahpratt.github.io/) for implementing CuPL
 * [Ludwig Schmidt](https://github.com/ludwigschmidt) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/) for helpful discussions, and to the [RAIVN](https://raivn.cs.washington.edu/) and [EFML](https://github.com/mlfoundations/) labs at the University of Washington
