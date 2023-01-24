@@ -9,7 +9,7 @@ We’ve trained a new ViT-G/14 CLIP model with [OpenCLIP](https://github.com/mlf
 
 We believe this is interesting because:
 * CLIP models are useful for zero-shot classification, retrieval, and for guidance/conditioning in generative models (currently the third most downloaded model on HuggingFace is a CLIP model). The approach underlying CLIP—self supervised learning on a large, heterogeneous dataset—has been shown to produce models which are more [robust](https://openai.com/blog/clip/) and [fair](https://ai.facebook.com/blog/seer-10b-better-fairer-computer-vision-through-self-supervised-learning-training-on-diverse-datasets/).
-* This ViT-G model achieves the highest zero-shot imagenet accuracy using only image and natural language text pairs and without labels, pseudo-labels, or any form of pretrained image or text tower weights.
+* This ViT-G model achieves the highest zero-shot ImageNet accuracy using only image and natural language text pairs and without labels, pseudo-labels, or any form of pretrained image or text tower weights.
 * We used new techniques for this run, including [FLIP](https://arxiv.org/abs/2212.00794) to accelerate training and [model soups](https://arxiv.org/abs/2203.05482) to surpass 80.
 
 ## Main Results
