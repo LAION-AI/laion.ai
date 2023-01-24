@@ -1,7 +1,7 @@
 ---
 title: "Reaching 80% zero-shot accuracy with OpenCLIP: ViT-G/14 trained on LAION-2B"
 author: "Mitchell Wortsman"
-date: "January 24, 2022"
+date: "Jan 24, 2022"
 previewImg: "/images/blog/scaling_vit_giant.png"
 ---
 
