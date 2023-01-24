@@ -9,22 +9,22 @@ We’ve trained a new ViT-G/14 CLIP model with [OpenCLIP](https://github.com/mlf
 
 We believe this is interesting because:
 * CLIP models are useful for zero-shot classification, retrieval, and for guidance/conditioning in generative models (currently the third most downloaded model on HuggingFace is a CLIP model). The approach underlying CLIP—self supervised learning on a large, heterogeneous dataset—has been shown to produce models which are more [robust](https://openai.com/blog/clip/) and [fair](https://ai.facebook.com/blog/seer-10b-better-fairer-computer-vision-through-self-supervised-learning-training-on-diverse-datasets/).
-* This ViT-G model achieves the highest zero-shot imagenet accuracy using only language supervision and without labels, pseudo-labels, or any form of pretrained image or text tower weights.
+* This ViT-G model achieves the highest zero-shot imagenet accuracy using only image and natural language text pairs and without labels, pseudo-labels, or any form of pretrained image or text tower weights.
 * We used new techniques for this run, including [FLIP](https://arxiv.org/abs/2212.00794) to accelerate training and [model soups](https://arxiv.org/abs/2203.05482) to surpass 80.
 
 ## Main Results
 The following results are with image resolution 224x224 except for CoCa which uses 576x576.
 
-| Model name       | Batch size |               Samples seen              | Text Params | Image params | Imagenet top1 | Mscoco image retrieval at 5 | Flickr30k image retrieval at 5 |
+| Model name       | Batch size |               Samples seen              | Text Params | Image params | ImageNet top1 | Mscoco image retrieval at 5 | Flickr30k image retrieval at 5 |
 |------------------|:----------:|:---------------------------------------:|:-----------:|:------------:|:-------------:|:---------------------------:|:------------------------------:|
-| OpenAI CLIP L/14 | 32k        | 13B                                     | 123.65M     | 303.97M      | 75.4%         | 61%                         | 87%                            |
+| OpenAI CLIP L/14 | 32k        | 13B                                     | 123.65M     | 303.97M      | 75.4%         | 61.0%                         | 87.0%                            |
 | OpenCLIP H/14    | 79k        | 32B (16 epochs of laion2B)              | 354.0M      | 632.08M      | 78.0%         | 73.4%                       | 94%                            |
 | OpenCLIP G/14    | 160k       | 32B +unmasked fine-tune (details below) | 694.7M      | 1844.9M      | 80.1%*        | 74.9%                       | 94.9%                          |
 | CoCa            | 66k        | 33B                                     | 1100M       | 1000M        | 86.3%**       | 74.2                        | 95.7                           |
 
 \* When using [CuPL](https://arxiv.org/abs/2209.03320) prompts instead of the standard prompts from OpenAI, the zero-shot accuracy is 80.3%. When evaluating at 280x280 and changing resize to squash, Ross Wightman found the model achieves 80.4%.
 
-** In addition to natural language supervision, [CoCa](https://arxiv.org/abs/2205.01917) uses synthetic captions constructed with the labels from the JFT-3B dataset. For reference, a correspondence can be identified between 973 out of the 1000 imagenet classes with a class in JFT (e.g., see [here](https://arxiv.org/abs/2109.01903) sec C.7.2).
+** In addition to natural language supervision, [CoCa](https://arxiv.org/abs/2205.01917) uses synthetic captions constructed with the labels from the JFT-3B dataset. For reference, a correspondence can be identified between 973 out of the 1000 ImageNet classes with a class in JFT (e.g., see [here](https://arxiv.org/abs/2109.01903) sec C.7.2).
 
 ![](/images/blog/scaling_vit_giant.png)
 
@@ -40,6 +40,8 @@ To scale up the batch size to 160k we used [gradient checkpointing](https://arxi
 
 ## Training notes
 
+The ViT-G/14 model is trained with the contrastive infoNCE loss on text-image pairs.
+
 ### Phase 1: Patch dropout
 
 For phase 1 we trained ViT-G with [patch dropout](https://arxiv.org/abs/2212.00794) 0.5 on LAION-2B for 32B samples seen. We used batch size 160k, learning rate 2e-3, and a cosine decay schedule. After this phase the model reached 79.07 zero-shot top1 accuracy on ImageNet.
@@ -48,9 +50,9 @@ Training was mainly done on 512 to 760 A100s depending on availability. When cha
 
 ### Phase 2: Unmasked tuning + Model soups
 
-For phase 2 we followed [FLIP](https://arxiv.org/abs/2212.00794) in conducting a short unmasked tuning phase. We fell short of 80% in our first unmasked fine-tuning phase, reaching only 79.43%. So we tried twice more with different settings to obtain 79.45% and 79.2%, respectively. Next, we followed [model soups](https://arxiv.org/abs/2203.05482) and averaged the weights of three checkpoints produced by these runs to achieve our final accuracy of 80.1%. This use of model soups for better pre-training was also used by [LIMoE](https://arxiv.org/abs/2206.02770) and [PaLI](https://ai.googleblog.com/2022/09/pali-scaling-language-image-learning-in.html).
+For phase 2 we followed [FLIP](https://arxiv.org/abs/2212.00794) in conducting a short unmasked tuning phase. We fell short of 80% in our first unmasked fine-tuning phase, reaching only 79.43%. So we tried twice more with different settings (described below) to obtain 79.45% and 79.2%, respectively. Next, we followed [model soups](https://arxiv.org/abs/2203.05482) and averaged the weights of three checkpoints produced by these runs to achieve our final accuracy of 80.1%. This use of model soups for better pre-training was also used by [LIMoE](https://arxiv.org/abs/2206.02770) and [PaLI](https://ai.googleblog.com/2022/09/pali-scaling-language-image-learning-in.html).
 
-For our first unmasked fine-tuning run we did not modify the learning rate schedule, but instead doubled the base LR and extended the number of iterations so that the run would proceed for an additional 2B samples seen. LR started at 3.8e-5. For the second run we used LR 5.5e-5 with a full cosine schedule (warmup for roughly 200M samples and a total of 4B samples). The third run had identical hyperparameters to the first but used the LAION-A subset of LAION-2B. LAION-A is a 900M subset of LAION-2B filtered with aesthetic V2 4.5+ and pHash deduplicated. Instead of completing the third run we use the checkpoint after approximately 700M samples which, when “[souped](https://arxiv.org/abs/2203.05482)” with the final checkpoints from the two proceeding runs, allowed us to surpass our goal of 80.
+For our first unmasked fine-tuning run we did not modify the learning rate schedule, but instead doubled the base LR and extended the number of iterations so that the run would proceed for an additional 2B samples seen. LR started at 3.8e-5. For the second run we used LR 5.5e-5 with a full cosine schedule (warmup for roughly 200M samples and a total of 4B samples). The third run had identical hyperparameters to the first but used the LAION-A subset of LAION-2B. LAION-A is a 900M subset of LAION-2B filtered with aesthetic V2 4.5+ and pHash deduplicated. Instead of waiting for the third run to complete we use the checkpoint after approximately 700M samples which, when “[souped](https://arxiv.org/abs/2203.05482)” with the final checkpoints from the two proceeding runs, already allowed us to surpass our goal of 80% accuracy. This indiviual checkpoint achieved 79.2%.
 
 Unmasked fine-tuning was done on 512 A100 gpus at a speed of roughly 10450 samples/s or 20.4 samples/s/gpu.
 
@@ -80,7 +82,7 @@ Zero-shot accuracies at resolution 224x224 computed with [CLIP Benchmark](https:
 | Country211      | 30.01         | 33.81         |
 | Cars            | 93.46         | 94.60         |
 
-Here is a summary figure comparing G/14 and H/14 made by Romain Beaumont. You can also find the results file used to produce this figure.
+Here is a summary figure comparing G/14 and H/14 made by Romain Beaumont.
 
 ![](/images/blog/summary_vit_giant.png)
 
@@ -96,7 +98,7 @@ Thanks to:
 * [Christoph Schuhmann](https://github.com/christophschuhmann) for encouragement and support
 * [Richard Vencu](https://github.com/rvencu) for cluster support
 * [Phil Wang](https://github.com/lucidrains) and [Haoqi Fan](https://haoqifan.github.io/) for the implementation and and discussion regarding patch dropout
-[Sho Yaida](https://www.shoyaida.com/), [Jong Wook Kim](https://jongwook.kim/), and [Saining Xie](https://www.sainingxie.com/) for helpful remarks regarding hyperparameters
+[Sho Yaida](https://www.shoyaida.com/), [Jong Wook Kim](https://jongwook.kim/), [Ari Morcos](http://www.arimorcos.com/) and [Saining Xie](https://www.sainingxie.com/) for helpful remarks regarding hyperparameters
 * [Sarah Pratt](https://sarahpratt.github.io/) for implementing CuPL
 * [Ludwig Schmidt](https://github.com/ludwigschmidt) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/) for helpful discussions, and to the [RAIVN](https://raivn.cs.washington.edu/) and [EFML](https://github.com/mlfoundations/) labs at the University of Washington
 
