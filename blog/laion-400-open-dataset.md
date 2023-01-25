@@ -5,7 +5,7 @@ date: "Aug 20, 2021"
 previewImg: "/images/blog/500m.png"
 ---
 
-We present LAION-400M: 400M English (image, text) pairs
+We present LAION-400M: 400M English (image, text) pairs - see also our [Data Centric AI NeurIPS Workshop 2021 paper](https://arxiv.org/abs/2111.02114)
 
 ## Concept and Content
 
