@@ -82,7 +82,7 @@ Zero-shot accuracies at resolution 224x224 computed with [CLIP Benchmark](https:
 | Country211      | 30.0         | 33.8         |
 | Cars            | 93.5         | 94.6         |
 
-Here is a summary figure comparing G/14 and H/14 made by Romain Beaumont.
+Here is a summary figure comparing G/14 and H/14 made with evals by Romain Beaumont.
 
 ![](/images/blog/summary_vit_giant.png)
 
