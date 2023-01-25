@@ -66,21 +66,21 @@ Zero-shot accuracies at resolution 224x224 computed with [CLIP Benchmark](https:
 
 | Dataset         | OpenCLIP H/14 | OpenCLIP G/14 |
 |-----------------|---------------|---------------|
-| ImageNet        | 77.97         | 80.12         |
-| ImageNet-V2     | 70.82         | 73.65         |
-| ImageNet-R      | 89.32         | 92.11         |
-| ImageNet-Sketch | 66.57         | 68.91         |
-| ObjectNet       | 69.70         | 73.01         |
-| ImageNet-A      | 59.23         | 69.09         |
-| CIFAR-10        | 97.42         | 98.24         |
-| CIFAR-100       | 84.68         | 87.53         |
-| MNIST           | 72.94         | 71.59         |
-| SVHN            | 56.13         | 62.54         |
-| Caltech-101     | 85.04         | 86.37         |
-| SUN397          | 75.22         | 74.54         |
-| FGVC Aircraft   | 42.75         | 49.65         |
-| Country211      | 30.01         | 33.81         |
-| Cars            | 93.46         | 94.60         |
+| ImageNet        | 78.0         | 80.1         |
+| ImageNet-V2     | 70.8         | 73.6         |
+| ImageNet-R      | 89.3         | 92.1         |
+| ImageNet-Sketch | 66.6         | 68.9         |
+| ObjectNet       | 69.7         | 73.0         |
+| ImageNet-A      | 59.2         | 69.3         |
+| CIFAR-10        | 97.4         | 98.2         |
+| CIFAR-100       | 84.7         | 87.5         |
+| MNIST           | 72.9         | 71.6         |
+| SVHN            | 56.1         | 62.5         |
+| Caltech-101     | 85.0         | 86.4         |
+| SUN397          | 75.2         | 74.5         |
+| FGVC Aircraft   | 42.8         | 49.7         |
+| Country211      | 30.0         | 33.8         |
+| Cars            | 93.5         | 94.6         |
 
 Here is a summary figure comparing G/14 and H/14 made by Romain Beaumont.
 
@@ -97,7 +97,7 @@ Thanks to:
 * [Christoph Schuhmann](https://github.com/christophschuhmann) for encouragement and support
 * [Richard Vencu](https://github.com/rvencu) for cluster support
 * [Phil Wang](https://github.com/lucidrains) and [Haoqi Fan](https://haoqifan.github.io/) for the implementation and discussion regarding patch dropout
-[Sho Yaida](https://www.shoyaida.com/), [Jong Wook Kim](https://jongwook.kim/), [Ari Morcos](http://www.arimorcos.com/) and [Saining Xie](https://www.sainingxie.com/) for helpful remarks regarding hyperparameters
+* [Sho Yaida](https://www.shoyaida.com/), [Jong Wook Kim](https://jongwook.kim/), [Ari Morcos](http://www.arimorcos.com/) and [Saining Xie](https://www.sainingxie.com/) for helpful remarks regarding hyperparameters
 * [Sarah Pratt](https://sarahpratt.github.io/) for implementing CuPL
 * [Ludwig Schmidt](https://github.com/ludwigschmidt) and [Ali Farhadi](https://homes.cs.washington.edu/~ali/) for helpful discussions, and to the [RAIVN](https://raivn.cs.washington.edu/) and [EFML](https://github.com/mlfoundations/) labs at the University of Washington
 
