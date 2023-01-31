@@ -1,4 +1,9 @@
-# Clip-Retrieval Update: H-14 Index & SLURM Inference
+---
+title: "Clip-Retrieval Update: H-14 Index & SLURM Inference"
+author: "no usr"
+date: "Jan 31 2023"
+previewImg: "/images/blog/h_14_clip_front.png"
+---
 
 Today we release a KNN index for LAION-5B that allows for fast queries of the dataset with the open clip ViT-H-14 CLIP model. This means that users can search through billions of samples quickly and easily, making it a powerful tool for various applications such as image and text retrieval, data filtering and more. With this update also comes a brand new SLURM based inference backend for high-compute environments.
 
