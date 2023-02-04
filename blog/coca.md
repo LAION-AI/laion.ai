@@ -1,5 +1,10 @@
+---
+title: "Training Contrastive Captioners"
+author: "Giovanni Puccetti, Maciej Kilian, Romain Beaumont"
+date: "Feb 2 2023"
+previewImg: "/images/blog/eval_coca_clip.jpg"
+---
 
-# Training Contrastive Captioners
 
 We introduce a new model type to [OpenClip](https://github.com/mlfoundations/open_clip) Contrastive Captioners (CoCa) [1]. This model adds an autoregressive objective (generation) on top of the CLIP contrastive one. The architecture is composed of three parts, the first two are similar to those composing a CLIP model and the third is a text decoder that stands on top of the text encoder. The additional decoder takes as input the encoded images (through cross-attention) and the previous tokens to predict the next most probable one. One of the few architecture changes, compared to CLIP, is attentional pooling [2], used to aggregate image representations and pass them to both the contrastive loss and the decoder cross-attention.
 
@@ -13,7 +18,7 @@ This is interesting for several reasons:
 
 ## Benchmarks
 
-On a comparable model size and with the same training data available, CoCa outperforms a CLIP model on several zero-shot tasks (Figure 1). Most notably on _imagenet1k_ there is a 2.6% gap between the two models in favour of CoCa.
+On a comparable model size and with the same training data available, CoCa outperforms a CLIP model on several zero-shot tasks (Figure 1). Most notably on _imagenet1k_ CoCa achieves 75.5 and CLIP 73.1 (2.6% improvement).
 
 
 |(a) ![](/public/images/blog/eval_coca_clip.jpg) |(b) ![](/public/images/blog/eval_coca_clip.jpg) |
@@ -30,102 +35,7 @@ Table 1 shows the results achieved on the imagenet1k from both CoCa and CLIP, th
 
 <table>
   <tr>
-   <td>
-   </td>
-   <td colspan="3" >Acc@1
-   </td>
-   <td colspan="3" >Acc@5
-   </td>
-   <td colspan="3" >Mean per class recall
-   </td>
-   <td>Mean avg precision
-   </td>
-  </tr>
-  <tr>
-   <td>
-   </td>
-   <td>mean
-   </td>
-   <td>std
-   </td>
-   <td>median
-   </td>
-   <td>mean
-   </td>
-   <td>std
-   </td>
-   <td>median
-   </td>
-   <td>mean
-   </td>
-   <td>std
-   </td>
-   <td>median
-   </td>
-   <td>mean
-   </td>
-  </tr>
-  <tr>
-   <td>coca_ViT-L-14
-   </td>
-   <td>55.5
-   </td>
-   <td>30.0
-   </td>
-   <td>64.2
-   </td>
-   <td>83.0
-   </td>
-   <td>24.0
-   </td>
-   <td>92.8
-   </td>
-   <td>56.3
-   </td>
-   <td>29.5
-   </td>
-   <td>63.2
-   </td>
-   <td>79.9
-   </td>
-  </tr>
-  <tr>
-   <td>ViT-L-14
-   </td>
-   <td>53.0
-   </td>
-   <td>28.5
-   </td>
-   <td>54.5
-   </td>
-   <td>80.7
-   </td>
-   <td>23.8
-   </td>
-   <td>88.5
-   </td>
-   <td>53.5
-   </td>
-   <td>26.5
-   </td>
-   <td>56.2
-   </td>
-   <td>80.7
-   </td>
-  </tr>
-  </tr>
-</table>
-
-_Table 1:_ **Top1** and **Top5** accuracy and average  per class recall and precision for _coca_ViT-L-14_ and _ViT-L-14_ on _imagenet1k_ dataset.
-
-
-
-Table 2 shows the performance in image text retrieval for both coca_ViT-L-14 and ViT-L-14, also in this task CoCa outperforms CLIP in all datasets with differences ranging from 0.3% to 1.5%.
-
-
-<table>
-  <tr>
-   <td colspan="4" >Recall@1
+   <td colspan="4" align="center" > Image Retrieval Recall@5
    </td>
   </tr>
   <tr>
@@ -159,7 +69,7 @@ Table 2 shows the performance in image text retrieval for both coca_ViT-L-14 and
    </td>
   </tr>
   <tr>
-   <td colspan="4" >Recall@5
+   <td colspan="4" align="center">Text Retrieval Recall@5
    </td>
   </tr>
   <tr>
@@ -194,7 +104,7 @@ Table 2 shows the performance in image text retrieval for both coca_ViT-L-14 and
   </tr>
 </table>
 
-_Table 2:_ **Recall@1** and **Recall@5** for image-text retrieval on _flickr30k_, _flickr8k_ and _Mscoco captions_.
+_Table 2:_ Image retrieval and Text retrieval **Recall@5** on _flickr30k_, _flickr8k_ and _Mscoco captions_.
 
 
 
@@ -213,6 +123,19 @@ Try generation [here](https://huggingface.co/spaces/gpucce/CoCa)!
    </td>
    <td>B/32
    </td>
+   <td>CoCa (from paper)
+   </td>
+  </tr>
+  <tr>
+  <td># Params Image Encoder
+   </td>
+   <td>306.72M
+   </td>
+   <td>89.16M
+   </td>
+   <td>
+    1B
+   </td>
   </tr>
   <tr>
    <td># Params Text Encoder
@@ -221,13 +144,8 @@ Try generation [here](https://huggingface.co/spaces/gpucce/CoCa)!
    </td>
    <td>63.42M
    </td>
-  </tr>
-  <tr>
-   <td># Params Image Encoder
-   </td>
-   <td>306.72M
-   </td>
-   <td>89.16M
+   <td rowspan="2">
+    1.1B
    </td>
   </tr>
   <tr>
@@ -240,7 +158,7 @@ Try generation [here](https://huggingface.co/spaces/gpucce/CoCa)!
   </tr>
 </table>
 
-_Table 3:_ Number of parameters for each encoder/decoder component for **coca_ViT-L-14** and **coca_ViT-B-32**.
+_Table 3:_ Number of parameters for each encoder/decoder component for _coca_ViT-L-14_, _coca_ViT-B-32_ and the CoCa model from the original paper (M=millions, B=billions).
 
 
 
@@ -251,12 +169,12 @@ _Table 3:_ Number of parameters for each encoder/decoder component for **coca_Vi
 
 We train both model configurations on 13B samples seen from [LAION-2B](https://laion.ai/blog/laion-5b/) [3] with a batch size of 90k, learning rate of 1e-3, and a cosine decay learning rate schedule. Experiments were performed on 384 A100’s and over the course of training we maintained 75.5 samples/s/gpu (~29k samples/s in total).
 
-When it comes to cost, even though CoCa has more capabilities than single-task captioning models there’s a minimal increase (as reported by Table 8b of the paper). This is due to the fact that the first half of the text decoder (i.e. the text encoder) is unimodal and is computed in parallel to the image encoder, once the encoders are done we simply continue the forward pass of the text embeddings through the text decoder and also include the image embeddings via cross attention. The trainig report can be found [here](https://wandb.ai/iejmac/open-clip/reports/CoCa-L-14--VmlldzozNDEwMDIx).
+When it comes to cost, even though CoCa has more capabilities than single-task captioning models there’s a minimal increase ~20% (as reported by Table 8b of the paper). This is due to the fact that the first half of the text decoder (i.e. the text encoder) is unimodal and is computed in parallel to the image encoder, once the encoders are done we simply continue the forward pass of the text embeddings through the text decoder and also include the image embeddings via cross attention. The trainig report can be found [here](https://wandb.ai/iejmac/open-clip/reports/CoCa-L-14--VmlldzozNDEwMDIx).
 
 
 ### Fine-tuning
 
-For image captioning tasks fine-tuning is a straightforward extension of pretraining with few hyper parameters changes. The crucial one is contrastive loss weight, which has to be set to zero to let the backward pass only account for the generative loss, besides  there are no additional fine-tuning oriented components nor changes in the loss. We use a batch size of 128 with a learning rate of 1e-5 and a cosine learning rate schedule. Experiments are performed on 4 A100's. Table 4 shows the language generation scores achieved by _coca_ViT-L-14_.
+For image captioning tasks fine-tuning is a straightforward extension of pretraining with few hyper parameters changes. The crucial one is contrastive loss weight, which has to be set to zero to let the backward pass only account for the generative loss, besides  there are no additional fine-tuning oriented components nor changes in the loss. We use a batch size of 128 with a learning rate of 1e-5 and a cosine learning rate schedule. Experiments are performed on 4 A100's. Table 4 shows the language generation scores achieved by _coca_ViT-L-14_, this is still far from the results from the CoCa paper where they train a larger model.
 
 It is noteworthy that after fine-tuning with a generative only loss these models lose their contrastive skills entirely.
 
@@ -273,6 +191,11 @@ It is noteworthy that after fine-tuning with a generative only loss these models
    </td>
    <td>Spice
    </td>
+  </tr>
+  <tr>
+    <td colspan="5" align="center">
+    coca_ViT-L-14
+    </td>
   </tr>
   <tr>
    <td>Karpathy val
@@ -296,6 +219,47 @@ It is noteworthy that after fine-tuning with a generative only loss these models
    <td>106.5
    </td>
    <td>14.7
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>Bleu@4
+   </td>
+   <td>METEOR
+   </td>
+   <td>CIDEr
+   </td>
+   <td>Spice
+   </td>
+  </tr>
+  <tr>
+    <td colspan="5" align="center">
+    Original CoCa (from paper)
+    </td>
+  </tr>
+  <tr>
+   <td>Karpathy val
+   </td>
+   <td>40.9
+   </td>
+   <td>33.9
+   </td>
+   <td>143.6
+   </td>
+   <td>24.7
+   </td>
+  </tr>
+  <tr>
+   <td>NoCaps
+   </td>
+   <td> -
+   </td>
+   <td>-
+   </td>
+   <td>122.4
+   </td>
+   <td>15.5
    </td>
   </tr>
 </table>
