@@ -25,12 +25,12 @@ On a comparable model size and with the same training data available, CoCa outpe
 |:-|:-|
 
 
-__Figure 1:__ Scores achieved by _coca_ViT-L-14_ and _ViT-L-14_ on several zeroshot classification tasks **(a)**, together with the performance gap between the two models, in the same tasks sorted by magnitude **(b)**.
+_Figure 1:_ Scores achieved by _coca_ViT-L-14_ and _ViT-L-14_ on several zeroshot classification tasks **(a)**, together with the performance gap between the two models, in the same tasks sorted by magnitude **(b)**.
 
 
 
 
-Table 1 shows the results achieved on the imagenet1k from both CoCa and CLIP, the per class accuracy is consistently better for CoCa and this is driven by improvements in recall, while CLIP has a (slightly) higher precision (>1% difference).
+Table 2 shows the results achieved on image and text retrieval by both CoCa and CLIP. In this case too, CoCa outperforms CLIP on all tasks with differences ranging from 0.3 to 1.3.
 
 
 <table>
@@ -106,8 +106,6 @@ Table 1 shows the results achieved on the imagenet1k from both CoCa and CLIP, th
 
 _Table 2:_ Image retrieval and Text retrieval **Recall@5** on _flickr30k_, _flickr8k_ and _Mscoco captions_.
 
-
-
 ## Released Checkpoint
 
 We release checkpoints for two model configs, _coca_ViT-B-32_ and _coca_ViT-L-14_. We also release the MSCOCO finetunes of those models which are much better at captioning but unfortunately lose their contrastive capabilities during fine tuning.
@@ -158,7 +156,7 @@ Try generation [here](https://huggingface.co/spaces/gpucce/CoCa)!
   </tr>
 </table>
 
-_Table 3:_ Number of parameters for each encoder/decoder component for _coca_ViT-L-14_, _coca_ViT-B-32_ and the CoCa model from the original paper (M=millions, B=billions).
+_Table 3:_ Number of parameters for each encoder/decoder component for _coca_ViT-L-14_, _coca_ViT-B-32_ and the _CoCa_ model from the original paper (M=millions, B=billions).
 
 
 
@@ -174,9 +172,9 @@ When it comes to cost, even though CoCa has more capabilities than single-task c
 
 ### Fine-tuning
 
-For image captioning tasks fine-tuning is a straightforward extension of pretraining with few hyper parameters changes. The crucial one is contrastive loss weight, which has to be set to zero to let the backward pass only account for the generative loss, besides  there are no additional fine-tuning oriented components nor changes in the loss. We use a batch size of 128 with a learning rate of 1e-5 and a cosine learning rate schedule. Experiments are performed on 4 A100's. Table 4 shows the language generation scores achieved by _coca_ViT-L-14_, this is still far from the results from the CoCa paper where they train a larger model.
+For image captioning tasks fine-tuning is a straightforward extension of pretraining with few hyper parameters changes. The crucial one is contrastive loss weight, which has to be set to zero to let the backward pass only account for the generative loss, besides  there are no additional fine-tuning oriented components nor changes in the loss. We use a batch size of 128 with a learning rate of 1e-5 and a cosine learning rate schedule. Experiments are performed on 4 A100's. Table 4 shows the language generation scores achieved by _coca_ViT-L-14_ and by CoCa in the original paper, _coca_ViT-L-14 performance is still far from the original CoCa model one.
 
-It is noteworthy that after fine-tuning with a generative only loss these models lose their contrastive skills entirely.
+It is noteworthy that (in our experiments) after fine-tuning with a generative only loss these models lose their contrastive skills entirely.
 
 
 <table>
@@ -222,18 +220,6 @@ It is noteworthy that after fine-tuning with a generative only loss these models
    </td>
   </tr>
   <tr>
-   <td>
-   </td>
-   <td>Bleu@4
-   </td>
-   <td>METEOR
-   </td>
-   <td>CIDEr
-   </td>
-   <td>Spice
-   </td>
-  </tr>
-  <tr>
     <td colspan="5" align="center">
     Original CoCa (from paper)
     </td>
@@ -264,7 +250,7 @@ It is noteworthy that after fine-tuning with a generative only loss these models
   </tr>
 </table>
 
-**Table 4:** Visual captioning scores achieved with _coca_ViT-L-14_ on _karpathy_ validation set and _NoCaps_.
+_Table 4:_ Visual captioning scores achieved with _coca_ViT-L-14_ on _karpathy_ validation set and _NoCaps_.
 
 
 
