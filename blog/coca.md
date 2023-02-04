@@ -21,7 +21,7 @@ This is interesting for several reasons:
 On a comparable model size and with the same training data available, CoCa outperforms a CLIP model on several zero-shot tasks (Figure 1). Most notably on _imagenet1k_ CoCa achieves 75.5 and CLIP 73.1 (2.6% improvement).
 
 
-|(a) ![](/public/images/blog/eval_coca_clip.jpg) |(b) ![](/public/images/blog/eval_coca_clip_diff.jpg) |
+|(a) ![](/images/blog/eval_coca_clip.jpg) |(b) ![](/images/blog/eval_coca_clip_diff.jpg) |
 |:-|:-|
 
 
@@ -258,7 +258,7 @@ _Table 4:_ Visual captioning scores achieved with _coca_ViT-L-14_ on _karpathy_ 
 
 
 
-|<img src="/public/images/blog/ipod_apple.png" alt="cao" width="500">|<img src="/public/images/blog/space_raccoon.png" alt="cao" width="500">|
+|<img src="/images/blog/ipod_apple.png" alt="cao" width="500">|<img src="/images/blog/space_raccoon.png" alt="cao" width="500">|
 |:-|:-|
 |An apple sitting on top of a wooden table.|A painting of a raccoon in a space suit.|
 
