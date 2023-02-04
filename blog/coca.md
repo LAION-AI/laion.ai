@@ -110,7 +110,7 @@ _Table 2:_ Image retrieval and Text retrieval **Recall@5** on _flickr30k_, _flic
 
 We release checkpoints for two model configs, _coca_ViT-B-32_ and _coca_ViT-L-14_. We also release the MSCOCO finetunes of those models which are much better at captioning but unfortunately lose their contrastive capabilities during fine tuning.
 
-Try generation [here](https://huggingface.co/spaces/gpucce/CoCa)!
+Try generation in this [Space](https://huggingface.co/spaces/laion/CoCa) or in this [colab notebook](https://colab.research.google.com/github/mlfoundations/open_clip/blob/master/docs/Interacting_with_open_coca.ipynb)!
 
 
 <table>
