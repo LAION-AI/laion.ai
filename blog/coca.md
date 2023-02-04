@@ -21,7 +21,7 @@ This is interesting for several reasons:
 On a comparable model size and with the same training data available, CoCa outperforms a CLIP model on several zero-shot tasks (Figure 1). Most notably on _imagenet1k_ CoCa achieves 75.5 and CLIP 73.1 (2.6% improvement).
 
 
-|(a) ![](/public/images/blog/eval_coca_clip.jpg) |(b) ![](/public/images/blog/eval_coca_clip.jpg) |
+|(a) ![](/public/images/blog/eval_coca_clip.jpg) |(b) ![](/public/images/blog/eval_coca_clip_diff.jpg) |
 |:-|:-|
 
 
@@ -30,12 +30,12 @@ _Figure 1:_ Scores achieved by _coca_ViT-L-14_ and _ViT-L-14_ on several zerosho
 
 
 
-Table 2 shows the results achieved on image and text retrieval by both CoCa and CLIP. In this case too, CoCa outperforms CLIP on all tasks with differences ranging from 0.3 to 1.3.
+Table 2 shows the results achieved on Text to Image and Image to Text retrieval by both CoCa and CLIP. In this case too, CoCa outperforms CLIP on all tasks with differences ranging from 0.3 to 1.3.
 
 
 <table>
   <tr>
-   <td colspan="4" align="center" > Image Retrieval Recall@5
+   <td colspan="4" align="center" > Text to Image Retrieval Recall@5
    </td>
   </tr>
   <tr>
@@ -69,7 +69,7 @@ Table 2 shows the results achieved on image and text retrieval by both CoCa and 
    </td>
   </tr>
   <tr>
-   <td colspan="4" align="center">Text Retrieval Recall@5
+   <td colspan="4" align="center"> Image to Text Retrieval Recall@5
    </td>
   </tr>
   <tr>
@@ -104,7 +104,7 @@ Table 2 shows the results achieved on image and text retrieval by both CoCa and 
   </tr>
 </table>
 
-_Table 2:_ Image retrieval and Text retrieval **Recall@5** on _flickr30k_, _flickr8k_ and _Mscoco captions_.
+_Table 2:_ Text to Image and Image to Text retrieval **Recall@5** on _flickr30k_, _flickr8k_ and _Mscoco captions_.
 
 ## Released Checkpoint
 
