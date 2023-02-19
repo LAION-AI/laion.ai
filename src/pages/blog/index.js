@@ -38,7 +38,7 @@ export default function Blog({ posts }) {
                 <div className="p-5 basis-3/5">
                   <p className="text-3xl">{frontmatter.title}</p>
                   <p className="text-lg pb-1">
-                    by: {frontmatter.author}, {dateFormat(date, "m mmm, yyyy")}
+                    by: {frontmatter.author}, {dateFormat(date, "dd mmm, yyyy")}
                   </p>
                   <hr />
                   <p className="pt-2">{cont}</p>

@@ -4,7 +4,7 @@ import md from "markdown-it";
 import Tags from "../../components/Tags";
 import dateFormat from "dateformat";
 
-export default function Post({ frontmatter, content, date, slug }) {
+export default function Post({ frontmatter, content, slug }) {
   return (
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags
@@ -23,7 +23,7 @@ export default function Post({ frontmatter, content, date, slug }) {
         </h1>
         <p className="text-2xl pb-2">
           by: {frontmatter.author},{" "}
-          {dateFormat(frontmatter.date, "m mmm, yyyy")}
+          {dateFormat(frontmatter.date, "dd mmm, yyyy")}
         </p>
         <hr />
         <div
