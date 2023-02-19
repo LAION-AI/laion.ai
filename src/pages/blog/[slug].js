@@ -1,6 +1,7 @@
 import fs from "fs";
 import matter from "gray-matter";
 import md from "markdown-it";
+import mdgh from "markdown-it-github-headings";
 import Tags from "../../components/Tags";
 import dateFormat from "dateformat";
 
@@ -9,7 +10,7 @@ export default function Post({ frontmatter, content, slug }) {
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
       <Tags
         title={frontmatter.title}
-        desc={md({ html: true }).render(content).slice(0, 157) + "..."}
+        desc={md({ html: true }).use(mdgh, {prefixHeadingIds: false}).render(content).slice(0, 157) + "..."}
         image={frontmatter.previewImg}
         slug={"/blog/" + slug}
       />
@@ -29,7 +30,7 @@ export default function Post({ frontmatter, content, slug }) {
         <div
           className="pt-2 article"
           dangerouslySetInnerHTML={{
-            __html: md({ html: true }).render(content),
+            __html: md({ html: true }).use(mdgh, {prefixHeadingIds: false}).render(content),
           }}
         />
       </div>

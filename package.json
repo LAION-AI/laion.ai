@@ -16,6 +16,7 @@
     "framer-motion": "^6.3.11",
     "gray-matter": "^4.0.3",
     "markdown-it": "^13.0.1",
+    "markdown-it-github-headings": "^2.0.1",
     "next": "12.1.6",
     "next-image-export-optimizer": "^0.10.1",
     "react": "18.1.0",
