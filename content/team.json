@@ -49,13 +49,13 @@
   },
   {
     "name": "Aran Komatzusaki",
-    "title": "PhD student of Machine Learning at GaTech",
+    "title": "Member. PhD student of Machine Learning at GaTech",
     "desc": "Interest in RL, representation learning and generative modeling in general",
     "img": "aran"
   },
   {
     "name": "Robin Rombach",
-    "title": "Stable Diffusion Trainer",
+    "title": "Member. Stable Diffusion Trainer",
     "desc": "AI researcher with a focus on deep generative models. Author of VQGAN, Latent Diffusion, Stable Diffusion.",
     "img": "robin"
   },
@@ -80,5 +80,11 @@
     "title": "Member. Multi-Modal Data Batgirl",
     "desc": "Coder and ML researcher with strong interest in multi-modal datasets and learning.",
     "img": "marianna"
+  }
+  {
+    "name": "Ludwig Schmidt",
+    "title": "Member. Professor in computer science at the University of Washington.",
+    "desc": "Research on datasets, reliable generalization, and large models.",
+    "img": "ludwig"
   }
 ]
