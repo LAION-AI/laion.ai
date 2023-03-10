@@ -66,7 +66,7 @@ LAION’s [Open Assistant (OA)](https://github.com/LAION-AI/Open-Assistant) proj
 
 ## Models*
 
-The LAION community member @Rallio67 has trained several [models](https://huggingface.co/Rallio67) based on a subset of the OIG datasets including:
+The community has trained several models based on a subset of the OIG datasets including:
 
 * Rallio67/joi2_(20,12,7)B_instruct_alpha
 * Rallio67/chip2_(20,12,7)B_instruct_alpha
@@ -78,12 +78,14 @@ The LAION community member @Rallio67 has trained several [models](https://huggin
 
 * SummerSigh/T5-Base-Rule-Of-Thumb
 * SummerSigh/Safety-Policy
+* SummerSigh/BART-Base-Rule-Of-Thumb 
 * shahules786/prosocial-classifier
 * shahules786/Safetybot-mt5-base
 * shahules786/Safetybot-T5-base
 * togethercomputer/GPT-JT-Moderation-6B
 
 [Together](https://www.together.xyz/) has finetuned a GPT-JT model on v.01 of OIG-moderation, and other LAION volunteers have trained many other models on different subsets of the OIG-moderation v.02 dataset. 
+
 Note: All the models above can be found at [https://huggingface.co/](https://huggingface.co/)
 
 *We will update this section as more OIG based models are trained and released. 
