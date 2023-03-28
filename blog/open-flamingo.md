@@ -1,5 +1,5 @@
 ---
-title: "Announcing OpenFlamingo: An open-source framework for training vision-language models with in-context learning (like GPT-4!)"
+title: "Announcing OpenFlamingo: An open-source framework for training vision-language models with in-context learning"
 author: "Anas Awadalla and Irena Gao"
 date: "Mar 28 2023"
 previewImg: "/images/blog/flamingo-logo.png"
