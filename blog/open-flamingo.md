@@ -5,7 +5,7 @@ date: "Mar 28 2023"
 previewImg: "/images/blog/flamingo-logo.png"
 ---
 
-**Overview**
+**Overview.**
 We are thrilled to announce the release of OpenFlamingo, an open-source reproduction of DeepMind's Flamingo model. At its core, OpenFlamingo is a framework that enables training and evaluation of large multimodal models (LMMs). Check out our [GitHub repository](https://github.com/mlfoundations/open_flamingo) and [demo](https://7164d2142d11.ngrok.app) to get started!
 
 For this first release, our contributions are as follows:
@@ -19,13 +19,13 @@ For this first release, our contributions are as follows:
 The recent progress in open-source LMMs with the release of [BLIP-2](https://arxiv.org/abs/2301.12597) and [FROMAGe](https://jykoh.com/fromage) has shown the exciting potential of multimodal systems. We hope that OpenFlamingo will help drive progress in multimodal machine learning, and we have more exciting contributions in the pipeline, so stay tuned! 
 
 
-**Goal**
+**Goal.**
 Our goal with OpenFlamingo is to develop a multimodal system that can tackle a diverse range of vision-language tasks. Ultimately, we aim to match the power and versatility of GPT-4 in handling visual and text input. To achieve this goal, we are creating an open-source version of [DeepMind's Flamingo](https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model) model, a LMM capable of processing and reasoning about images, videos, and text. We are committed to build fully open-source models, and believe this transparency is essential for fostering collaboration, accelerating progress, and democratizing access to state-of-the-art LMMs. Our release is the first step towards this goal.
 
 We are sharing the first checkpoint of our OpenFlamingo-9B model. While the model is not yet fully optimized, it demonstrates the potential of this project. By working together and receiving feedback from the community, we can train better LMMs. We encourage the community to participate in the development process by providing feedback and contributing to the repository. 
 
 
-**Technical Details**
+**Technical Details.**
 Our implementation largely follows that of [Flamingo](https://arxiv.org/abs/2204.14198). Flamingo models are trained on large-scale web corpora containing interleaved text and images, which is crucial for endowing them with in-context few-shot learning capabilities. OpenFlamingo implements the same architecture (Perceiver resamplers, cross-attention layers) proposed in the original Flamingo paper. However, since the training data for Flamingo is not available to the public, we use open-source datasets for training our models. Specifically, the released OpenFlamingo-9B checkpoint is trained on 5M samples from our new Multimodal C4 dataset and 10M samples from [LAION-2B](https://huggingface.co/datasets/laion/laion2B-en). 
 
 
