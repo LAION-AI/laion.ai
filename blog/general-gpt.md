@@ -1,21 +1,21 @@
 ---
 title: "General-GPT: Breaking the Modality Constraint"
-author: "Shivaen Ramshetty & Christoph Schuhmann"
+author: "Shivaen Ramshetty and Christoph Schuhmann"
 date: "March 28 2023"
 previewImg: "/images/blog/general-gpt-logo.png"
 ---
 ## Introduction
 
-With the rapid explosion of large language models and utilization of their encompassing applications, most notably [ChatGPT](https://openai.com/blog/chatgpt), there is a clear promise of more capable and useful AI models/systems. Often, such models are compared to us as humans and using the Turing test they always seem to fall short. Whether that be a result of moving the goal posts of the test itself and/or our own understanding of these models, this failure elucidates a variety of opportunities for exploration and possibly discovery.  
+With the rapid explosion of large language models and utilization of their encompassing applications, most notably [ChatGPT](https://openai.com/blog/chatgpt), there is a clear promise of more capable and useful AI models/systems. Often, such models are compared to us as humans and using the Turing test they always seem to fall short. Whether that be a result of moving the goal posts of the test itself and/or our own understanding of these models, these failures elucidate a variety of opportunities for exploration and possibly discovery.  
 
-With this in mind, we wish to introduce a relatively new project at [LAION](https://laion.ai/) called General-GPT.
+With this in mind, we are excited to introduce a relatively new project at [LAION](https://laion.ai/) called General-GPT.
 
 
 ## Goals
 
 In an effort to keep this concise, we enumerate our goals as follows:
 
-1. Explore the ability to directly intertwine any modality into a large language model (LLM), such that expression of ideas and responses can be more natural and expressive.
+1. Explore the ability to directly intertwine any modality into a large language model (LLM), such that expression of ideas and responses can be more natural and informative.
 2. Allow longer contexts by inputting embedded sequences rather than operating directly on the sequences themselves. Though we may lose fine-grained details of the original sequences, it may prove useful for higher-level tasks.
 3. Provide open-source tools, methods, and models that we hope extend our bigger picture goal of "democratizing AI."
 
