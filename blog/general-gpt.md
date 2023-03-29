@@ -77,7 +77,7 @@ Table 3: Results of sentence reconstruction with *all-mpnet-base-v2* and GPT-2.
 It is quite clear from the results that inputs that are out-of-distribution in both experiments leads to poor results. Though this isn't unexpected for the scale and goals of our experiments, it does hint at poor generalization in such a configuration. Further experiments will be essential in diagnosing the impacts of richer data and scale.
 
 If you wish to contribute, stay updated, or learn a bit more about the current work, please check out the following links:
-- 🧑‍💻 [GitHub Repository](https://github.com/LAION-AI/CLIP-GPT)
+- 🧑‍💻 [GitHub Repository](https://github.com/LAION-AI/General-GPT)
 - 💬 [LAION Discord](https://discord.gg/HzJU2kuC)
 - 🎥 [Introduction Video](https://www.youtube.com/watch?v=LA3AC8gM6hw)
 
