@@ -1,9 +1,10 @@
 ---
 title: "General-GPT: Breaking the Modality Constraint"
 author: "Shivaen Ramshetty & Christoph Schuhmann"
-date: "March 25 2023"
-previewImg: "/images/blog/____"
+date: "March 28 2023"
+previewImg: "/images/blog/general-gpt-logo.png"
 ---
+## Introduction
 
 With the rapid explosion of large language models and utilization of their encompassing applications, most notably [ChatGPT](https://openai.com/blog/chatgpt), there is a clear promise of more capable and useful AI models/systems. Often, such models are compared to us as humans and using the Turing test they always seem to fall short. Whether that be a result of moving the goal posts of the test itself and/or our own understanding of these models, this failure elucidates a variety of opportunities for exploration and possibly discovery.  
 
@@ -36,9 +37,10 @@ In regards to training itself, we follow [CLIP prefix captioning](https://github
 
 | Encoded Image | Generated Caption | Original Caption|
 |  :----: | :----: | :----: |
-| ![Catch Example](../public/images/blog/general-gpt_captioning_example-1.png) | A man and a child playing baseball. | A man and a boy are playing catch in a yard. |
-| ![Sleeping Dog](../public/images/blog/general-gpt_captioning_example-2.png) | A dog laying on a sidewalk next to a bike. | a white dog is sleeping on a street and a bicycle |
-<center>Table 1: Results of image captioning with CLIP embeddings as input into GPT-2.</center>
+| ![Catch Example](/images/blog/general-gpt_captioning_example-1.png) | A man and a child playing baseball. | A man and a boy are playing catch in a yard. |
+| ![Sleeping Dog](/images/blog/general-gpt_captioning_example-2.png) | A dog laying on a sidewalk next to a bike. | a white dog is sleeping on a street and a bicycle |
+
+Table 1: Results of image captioning with CLIP embeddings as input into GPT-2.
 
 
 #### Image Retrieval: $y \rightarrow x$
@@ -50,9 +52,10 @@ An interesting difference between the two task arises in the training procedure.
 
 | Caption      | MS-COCO | LAION-5B
 | :---: | :---: | :---: |
-| Birds flying over the beach. | ![Beach Birds](../public/images/blog/general-gpt_coco-retrieval_example-1.png)| <img src="../public/images/blog/general-gpt_laion-retrieval_example-1.jpg" width=600></src> |
-| A nightstand with a collection of books. |  ![Room with Books](../public/images/blog/general-gpt_coco-retrieval_example-2.png) | <img src="../public/images/blog/general-gpt_laion-retrieval_example-2.jpg" width=300></src> |
-<center>Table 2: Nearest neighbors of GPT-2 image embedding prediction within MS-COCO and LAION-5B [5]. </center>
+| Birds flying over the beach. | ![Beach Birds](/images/blog/general-gpt_coco-retrieval_example-1.png)| <img src="/images/blog/general-gpt_laion-retrieval_example-1.jpg" width=600></src> |
+| A nightstand with a collection of books. |  ![Room with Books](/images/blog/general-gpt_coco-retrieval_example-2.png) | <img src="/images/blog/general-gpt_laion-retrieval_example-2.jpg" width=300></src> |
+
+Table 2: Nearest neighbors of GPT-2 image embedding prediction within MS-COCO and LAION-5B [5].
 
 
 ### Sentence Reconstruction
@@ -65,6 +68,7 @@ To model this behavior, we followed a method similar to how we performed the afo
 | A man riding a motorcycle down the street. | A man riding a motorcycle down the street. |
 | Two animals chasing each other in a barn. | Two animals chasing each other in a barn. |
 | Two animals chasing each other in a farmhouse. | Two animals chase after a flock of farm animals in a barn. |
+
 Table 3: Results of sentence reconstruction with *all-mpnet-base-v2* and GPT-2.
 
 
@@ -72,17 +76,29 @@ Table 3: Results of sentence reconstruction with *all-mpnet-base-v2* and GPT-2.
 
 It is quite clear from the results that inputs that are out-of-distribution in both experiments leads to poor results. Though this isn't unexpected for the scale and goals of our experiments, it does hint at poor generalization in such a configuration. Further experiments will be essential in diagnosing the impacts of richer data and scale.
 
+If you wish to contribute, stay updated, or learn a bit more about the current work, please check out the following links:
+- 🧑‍💻 [GitHub Repository](https://github.com/LAION-AI/CLIP-GPT)
+- 💬 [LAION Discord](https://discord.gg/HzJU2kuC)
+- 🎥 [Introduction Video](https://www.youtube.com/watch?v=LA3AC8gM6hw)
+
 ## Next Steps
 
+In the coming weeks and months we hope to iterate on our design and validate more thoroughly the capabilities of General-GPT.
+
 ### Scale
+In terms of scale, there are a few dimensions of the experimental setup that we will modify. Three such dimensions include larger models, larger datasets, and more complex data, which we expect will improve the generalization across inputs. In order to tune these larger models on richer data we also need to expand our computational resources, possibly in a distributed setting. Current trends suggest that these modifications will improve our results, but greater complexity may lead to instability. If that is the case, additional modifications or redesigns will be necessary; all of which will be shared as they arise.
 
 ### New Tasks
+Some obvious directions we plan to investigate include the extrapolation of the current design into other modalities such as audio and video. Additionally, we wish to understand whether a LLM can generate both text and images that play off one another. In such a case, the LLM wouldn't necessarily generate the images directly, but rather condition an image generation model. If we are able to show that image generation can be guided in an interleaved manner, then other modalities will again be an extension. 
 
+Part of what makes us excited for this project is all the ideas that the open-source community may come up with and even implement. For that reason, we would love any suggestions, feedback, and help!
 
 ## Acknowledgements
 We further thank the authors and contributors of the following works/repositories:
 - [HuggingFace](https://github.com/huggingface/transformers)
 - [CLIP Retrieval](https://github.com/rom1504/clip-retrieval)
+
+Logo generated with [Craiyon](https://www.craiyon.com/)
 
 
 ## References
