@@ -49,7 +49,7 @@ export default function Home() {
                   href="https://laion.ai/blog/petition/"
                   className="text-xl"
                 >
-                  See our blog post for Open Source AI reserach!
+                  See our blog post for Open Source AI research!
                 </a>
               </div>
               <div className="my-2">
@@ -57,7 +57,7 @@ export default function Home() {
                   href="https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety"
                   className="text-xl"
                 >
-                  Sign our petition for Open Source AI reserach!
+                  Sign our petition for Open Source AI research!
                 </a>
               </div>
               <div>
