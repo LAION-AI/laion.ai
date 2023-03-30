@@ -46,6 +46,14 @@ export default function Home() {
               </div>
               <div className="my-2">
                 <a
+                  href="https://laion.ai/blog/petition/"
+                  className="text-xl"
+                >
+                  See our blog post for Open Source AI reserach!
+                </a>
+              </div>
+              <div className="my-2">
+                <a
                   href="https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety"
                   className="text-xl"
                 >
