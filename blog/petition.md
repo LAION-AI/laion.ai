@@ -1,5 +1,5 @@
 ---
-title: "Petition for accelerating AI research"
+title: "Petition for keeping up the progress tempo on AI research while securing its transparency and safety."
 author: "LAION.ai"
 date: "March 29 2023"
 previewImg: "/images/blog/laion-black.png"
@@ -7,11 +7,11 @@ previewImg: "/images/blog/laion-black.png"
 
 [LINK TO OUR PETITION](https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety)
 
-## Securing Our Digital Future: Calling for CERN like international organization to transparently coordinate and progress on large-scale AI Research and its Safety
+## Securing Our Digital Future: Calling for CERN like international organization to transparently coordinate and progress on large-scale AI research and its safety
 
 In an era of unparalleled technological advancements, humanity stands on the precipice of a new epoch characterized by the profound influence of artificial intelligence (AI) and its foundational models, such as GPT-4. The potential applications of these technologies are vast, spanning scientific research, education, governance, and small and medium-sized enterprises. To harness their full potential as tools for societal betterment, it is vital to democratize research on and access to them, lest we face severe repercussions for our collective future.
 
-### Corporate dominance
+### Dominance of few large corporations in state-of-the art AI development
 
 Increasingly, we are witnessing the emergence of a system wherein educational institutions, government agencies, and entire nations become dependent on the AI technology of a select few large corporations that operate with little transparency or public accountability. To secure our society's technological independence, foster innovation, and safeguard the democratic principles that underpin our way of life, we must act now.
 We call upon the global community, particularly the European Union, the United States, the United Kingdom, Canada, Australia and other willing countries, to collaborate on a monumental initiative: the establishment of an international, publicly funded, open-source supercomputing research facility. This facility, analogous to the CERN project in scale and impact, should house a diverse array of machines equipped with at least 100,000 high-performance state-of-the-art accelerators (GPUs or ASICs), operated by experts from the machine learning and supercomputing research community and overseen by democratically elected institutions in the participating nations.
