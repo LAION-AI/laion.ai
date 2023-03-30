@@ -42,14 +42,14 @@ export default function Home() {
                 datasets and models.
               </p>
               <div className="text-2xl text-yellow-400 font-bold">
-                WE NEED A CERN FOR OPEN SOURCE LARGE-SCALE AI RESEARCH!
+                A CERN FOR OPEN SOURCE LARGE-SCALE AI RESEARCH!
               </div>
               <div className="my-2">
                 <a
                   href="https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety"
                   className="text-xl"
                 >
-                  Sign our petition for open source AI reserach!
+                  Sign our petition for Open Source AI reserach!
                 </a>
               </div>
               <div>
