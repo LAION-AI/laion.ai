@@ -41,17 +41,28 @@ export default function Home() {
                 environment-friendly use of resources by reusing existing
                 datasets and models.
               </p>
-              <div>
-                <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">
-                  Join our community on discord!
+              <div className="text-2xl text-yellow-400 font-bold">
+                A CERN FOR OPEN SOURCE LARGE-SCALE AI RESEARCH!
+              </div>
+              <div className="my-2">
+                <a
+                  href="https://laion.ai/blog/petition/"
+                  className="text-xl"
+                >
+                  See our blog post for Open Source AI research!
                 </a>
               </div>
               <div className="my-2">
                 <a
-                  href="https://docs.google.com/document/d/1V3Td6btwSMkZIV22-bVKsa3Ct4odHgHjnK-BrcNJBWY/edit#"
+                  href="https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety"
                   className="text-xl"
                 >
-                  Help building an Open Source ChatGPT!
+                  Sign our petition for Open Source AI research!
+                </a>
+              </div>
+              <div>
+                <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">
+                  Join our community on discord!
                 </a>
               </div>
             </div>
