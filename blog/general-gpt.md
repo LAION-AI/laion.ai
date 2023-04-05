@@ -23,11 +23,11 @@ In an effort to keep this concise, we enumerate our goals as follows:
 ## Experiments
 
 ### Text-Image Expression
-Currently, our efforts have been primarily centered around experimenting with whether or not we can format our first goal into a trainable and functioning model. In order to do so, we first simplified the problem in a three ways. First, we choose to focus on tackling only the text-image domain rather than the full gamut that we hope to include. Secondly, we format the problem as a straightforward mapping from $x \rightarrow y$ or $y \rightarrow x$. Where $x$ represents an image embedding and $y$ represents the accompanying text. Finally, we tune on just the [MS-COCO](https://cocodataset.org/#home) [1] 2017 training set of 591753 image-caption pairs.
+Currently, our efforts have been primarily centered around experimenting with whether or not we can format our first goal into a trainable and functioning model. In order to do so, we first simplified the problem in a three ways. First, we choose to focus on tackling only the text-image domain rather than the full gamut that we hope to include. Secondly, we format the problem as a straightforward mapping from x toy or y to x. Where x represents an image embedding and y represents the accompanying text. Finally, we tune on just the [MS-COCO](https://cocodataset.org/#home) [1] 2017 training set of 591753 image-caption pairs.
 
-To construct $x$ we utilize [CLIP](https://openai.com/research/clip) [2], specifically CLIP *ViT-L/14*, to encode the images. On the other hand, we utilize [GPT-2](https://huggingface.co/gpt2) [3] as our LLM that receives mixed inputs and grounds for multimodal understanding or expression. The choice of these two models as baselines comes from their relatively reasonable scale, existing work and research, and the common dimensionality of their encodings. 
+To construct x we utilize [CLIP](https://openai.com/research/clip) [2], specifically CLIP *ViT-L/14*, to encode the images. On the other hand, we utilize [GPT-2](https://huggingface.co/gpt2) [3] as our LLM that receives mixed inputs and grounds for multimodal understanding or expression. The choice of these two models as baselines comes from their relatively reasonable scale, existing work and research, and the common dimensionality of their encodings. 
 
-#### Image Captioning: $x \rightarrow y$ 
+#### Image Captioning: x to x
 For this task, we introduce two specific tokens into the vocab so that the model may recognize when an embedding is being input and what that embedding is. Intuitively, the first token ("[CLIP IN]") should signal that there is an image embedding before the second token ("[\CLIP IN]"). Therefore, the training data for this task is structured as follows:
 
 *<center>[CLIP IN] **embedding** [\CLIP IN] Caption: [MS-COCO caption ...].</center>*
@@ -43,7 +43,7 @@ In regards to training itself, we follow [CLIP prefix captioning](https://github
 Table 1: Results of image captioning with CLIP embeddings as input into GPT-2.
 
 
-#### Image Retrieval: $y \rightarrow x$
+#### Image Retrieval: y to x
 Similar to the first task, we also introduce two additional tokens: "[CLIP OUT]" and "[\CLIP OUT]." As there text suggests, they represent the position and container for the CLIP image embedding. The training data for task is formatted as such:
 
 *<center>Caption: [MS-COCO caption ...]. [CLIP OUT][\CLIP OUT] </center>*
