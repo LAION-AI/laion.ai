@@ -1,7 +1,7 @@
 ---
 title: "General-GPT: Breaking the Modality Constraint"
 author: "Shivaen Ramshetty and Christoph Schuhmann"
-date: "March 28 2023"
+date: "April 5 2023"
 previewImg: "/images/blog/general-gpt-logo.png"
 ---
 ## Introduction
