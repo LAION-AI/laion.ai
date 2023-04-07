@@ -12,7 +12,7 @@ export default function Blog({ posts }) {
       <Tags title="Blog" />
       <div className="container px-5">
         <h1 className="text-8xl md:text-8xl font-bold pb-2">BLOG</h1>
-        <div className="text-md pb-4">Welcome to our LAION blog! Here, you will find commentaries, news, and updates on current research projects and progress in the field of AI research. These blog posts are not meant to be full scientific research papers, but work in progress to encourage further reserach / discussions on our discord server and the open scientific community.</div>
+        <div className="text-md pb-4">Welcome to our LAION blog! Here, you will find commentaries, news, and updates on our current research projects and progress in the field of AI research. These blog posts are not meant to be full scientific research papers, but work in progress to encourage further reserach / discussions on our discord server and the open scientific community.</div>
         <hr className="mb-5  md:hidden" />
 
         {posts.map(({ slug, frontmatter, content, date }) => {
