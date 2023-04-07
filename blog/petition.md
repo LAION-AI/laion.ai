@@ -7,6 +7,8 @@ previewImg: "/images/blog/laion-black.png"
 
 [LINK TO OUR PETITION](https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety)
 
+_Authors: Christoph Schuhmann, Huu Nguyen, Robert Kaczmarczyk, Jenia Jitsev & LAION community_
+
 ## Securing Our Digital Future: Calling for CERN like international organization to transparently coordinate and progress on large-scale AI research and its safety
 
 In an era of unparalleled technological advancements, humanity stands on the precipice of a new epoch characterized by the profound influence of artificial intelligence (AI) and its foundational models, such as GPT-4. The potential applications of these technologies are vast, spanning scientific research, education, governance, and small and medium-sized enterprises. To harness their full potential as tools for societal betterment, it is vital to democratize research on and access to them, lest we face severe repercussions for our collective future.
