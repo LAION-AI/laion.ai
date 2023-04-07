@@ -6,12 +6,13 @@ import Tags from "../../components/Tags";
 import dateFormat from "dateformat";
 import ExportedImage from "next-image-export-optimizer";
 
-export default function Blog({ posts }) {
+export default function Notes({ posts }) {
   return (
     <div className="w-full flex justify-center pt-16 md:pt-5">
       <Tags title="Blog" />
       <div className="container px-5">
-        <h1 className="text-8xl md:text-8xl font-bold pb-2">BLOG</h1>
+        <h1 className="text-8xl md:text-8xl font-bold pb-2">NOTES</h1>
+        <div className="text-md pb-4">Welcome to our LAION notes section! Here, you will find quick overviews or work in progress of our recent research by our community!</div>
         <hr className="mb-5  md:hidden" />
 
         {posts.map(({ slug, frontmatter, content, date }) => {
@@ -24,7 +25,7 @@ export default function Blog({ posts }) {
           }
 
           return (
-            <Link href={"/blog/" + slug} key={slug}>
+            <Link href={"/notes/" + slug} key={slug}>
               <div className="border mb-5 hover:bg-paper hover:text-sky transition-colors cursor-pointer bg-sky border-paper flex flex-col lg:flex-row items-stretch shadow-lg shadow-neutral-800/20">
                 <div className="basis-2/5 team-wrap">
                   <ExportedImage
@@ -53,11 +54,11 @@ export default function Blog({ posts }) {
 }
 
 export async function getStaticProps() {
-  const files = fs.readdirSync("blog");
+  const files = fs.readdirSync("notes");
 
   const posts = files.map((fileName) => {
     const slug = fileName.replace(".md", "");
-    const readFile = fs.readFileSync(`blog/${fileName}`, "utf-8");
+    const readFile = fs.readFileSync(`notes/${fileName}`, "utf-8");
     const { data: frontmatter, content } = matter(readFile);
     const date = Date.parse(frontmatter.date);
 
