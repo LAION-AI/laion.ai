@@ -118,40 +118,5 @@ better than this!
 * [Romain Beaumont](https://github.com/rom1504/) and [Christoph Schuhmann](https://github.com/christophschuhmann) 
 for constant help on datasets and giving useful advice.
 * [Richard Vencu](https://github.com/rvencu) for an incredible amount of help regarding hardware issues.
-* [StabilityAI](https://stability.ai/) for providing GPU-Cluster access and faith in Paella
+* [StabilityAI](https://stability.ai/) for providing GPU-Cluster access and faith in Paella.
 
-
-### Acknowledgements
-
-
-
-
-
-
-
-
-
-
-
-
-```python
-for images, captions in dataloader:
-    with torch.no_grad():
-        if np.random.rand() < 0.05: # 5% of the time drop all the captions
-            byt5_captions = [''] * len(captions)
-        else:
-            byt5_captions = captions
-        byt5_tokens = byt5_tokenizer(byt5_captions, padding="longest", return_tensors="pt", max_length=768, truncation=True).input_ids
-        byt_embeddings = byt5(input_ids=byt5_tokens).last_hidden_state
-
-        t = (1-torch.rand(images.size(0)))
-        latents = vqmodel.encode(images)[2]
-        noised_latents, _ = model.add_noise(latents, t)
-
-    pred = model(noised_latents, t, byt_embeddings)
-    loss = criterion(pred, latents)
-    
-    loss.backward()
-    optimizer.step()
-    optimizer.zero_grad()
-```
