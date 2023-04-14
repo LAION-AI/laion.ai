@@ -8,21 +8,25 @@ previewImg: "/images/blog/paella.png"
 ### Overview.
 We are releasing a new Paella model which builds on top of our initial paper https://arxiv.org/abs/2211.07292.
 Paella is a text-to-image model that works in a quantized latent space and learns similarly to MUSE and Diffusion models.
+Paella is similar to MUSE as it also works on discrete tokens, but is different in the way tokens are noised as well as
+the architecture. MUSE uses a transformer, whereas we use a CNN, which comes with many benefits. There are also subtle
+differences in the conditioning Paella uses as well how images are sampled. And on the other hand, it can also be seen
+as a discrete diffusion process, which noises images during training and iteratively removes noise during sampling.
 Since the paper-release we worked intensively to bring Paella to a similar level as other 
 state-of-the-art models. With this release we are coming a step closer to that goal. However, our main intention is not
 to make the greatest text-to-image model out there (at least for now), it is to bring text-to-image models closer
 to people outside the field on a technical basis. For example, many models have codebases with many thousand lines of 
-code, that make it pretty hard for people to dive into the code and easily understand it. And that is the contribution
-we are the proudest of with Paella. The training and sampling code for Paella is minimalistic and can be understood in 
+code, that make it pretty hard for people to dive into the code and easily understand it. And that is our proudest
+achievement with Paella. The training and sampling code for Paella is minimalistic and can be understood in 
 a few minutes, making further extensions, quick tests, idea testing etc. extremely fast. For instance, the entire
 sampling code can be written in just **12 lines** of code.
 In this blog post we will talk about how Paella works in short, give technical details and release the model.
 
 ### How does Paella work?
 Paella works in a quantized latent space, just like StableDiffusion etc., to reduce the computational power needed.
-Images will be encoded to a smaller latent space and converted to visual tokens of shape *h x w*. Now during training,
-these visual tokens will be noised, by replacing a random amount of tokens with other randomly selected tokens
-from the codebook of the VQGAN. The noised image will be given to the model, along with a timestep and the conditional
+Images are encoded to a smaller latent space and converted to visual tokens of shape *h x w*. During training,
+these visual tokens are noised, by replacing a random amount of tokens with other randomly selected tokens
+from the codebook of the VQGAN. The noised image are given to the model, along with a timestep and the conditional
 information, which is text in our case. The model is tasked to predict the un-noised version of the tokens. 
 And that's it. The model is optimized with the CrossEntropy loss between the original tokens and the predicted tokens.
 The amount of noise added during the training is just a linear schedule, meaning that we uniformly sample a percentage 
@@ -39,13 +43,13 @@ the timestep and the condition into the model and let it predict the final image
 over every token, which we sample from with standard multinomial sampling.  
 Since there are infinite possibilities for the result to look like, just doing a single step results in very basic 
 shapes without any details. That is why we add noise to the image again and feed it back to the model. And we repeat
-that process for a number of times with less noise being added every time and slowly get our final image.
+that process for a number of times, with less noise being added every time, and slowly get our final image.
 You can see how images emerge [here](https://user-images.githubusercontent.com/61938694/231252449-d9ac4d15-15ef-4aed-a0de-91fa8746a415.png).<br>
 The following is the entire sampling code needed to generate images:
 ```python
 def sample(model_inputs, latent_shape, unconditional_inputs, steps=12, renoise_steps=11, temperature=(0.7, 0.3), cfg=8.0):
     with torch.inference_mode():
-        sampled = torch.randint(0, model.num_labels, size=latent_shape)
+        sampled = torch.randint(low=0, high=model.num_labels, size=latent_shape)
         initial_noise = sampled.clone()
         timesteps = torch.linspace(1.0, 0.0, steps+1)
         temperatures = torch.linspace(temperature[0], temperature[1], steps)
@@ -72,7 +76,7 @@ Since Paella is also conditioned on CLIP image embeddings the following things a
 <img src="https://user-images.githubusercontent.com/61938694/231287119-42fe496b-e737-4dc5-8e53-613bdba149da.png">
 
 ### Technical Details.
-Model-Architecture: U-Net (Mix of....) <br>
+Model-Architecture: U-Net (Mix of ConvNeXt, DiT etc.) <br>
 Dataset: Laion-A, Laion Aesthetic > 6.0 <br>
 Training Steps: 1.3M <br>
 Batch Size: 2048 <br>
@@ -90,11 +94,6 @@ Paper: https://arxiv.org/abs/2211.07292 <br>
 Code: https://github.com/dome272/Paella <br>
 Model: https://huggingface.co/dome272/Paella <br>
 
-### Goal
-So you see, there are no heavy math formulas or theorems needed to achieve good sampling qualities. Moreover,
-there are no constants such as alpha, beta, alpha_cum_prod etc. necessary as in diffusion models. This makes this
-method really suitable for people new to the field of generative AI. We hope we can set the foundation for further 
-research in that direction and hope to contribute to a world where AI is accessible and can be understood by everyone. 
 
 ### Limitations & Conclusion
 There are still many things to improve for Paella to get on par with standard diffusion models or to even outperform
@@ -107,8 +106,15 @@ continuing the training for longer. As a reference, Paella has only seen as many
 in regard to training collapse (which later turned to be negligible), trained with a 10x lower learning rate for the 
 first 700k steps. To conclude, this is still work in progress, but our first model that works reasonably well and
 a million times better than the first versions we trained months ago.
-We hope that more people become interested in this approach, since we believe it has a lot of potential to become much
-better than this!
+
+It is noteworthy that the design choices for Paella were based on trying to make a simple architecture and 
+model for text-to-image synthesis, drawing inspiration from existing techniques such as MaskGIT. Furthermore, this 
+approach eliminates the need for hyperparameters such as alpha, beta, and alpha_cum_prod, which are typically required 
+in diffusion models. As a result, this methodology is particularly well-suited for individuals who are new to the field 
+of generative artificial intelligence. Our aim is to lay the groundwork for future research in this domain, fostering
+a landscape where AI is accessible and comprehensible to a broader audience. We encourage further exploration of this
+approach, as we are confident in its potential to contribute useful insights and potentially advance the state of the 
+art in text-to-image synthesis.
 
 
 ### Contributions
