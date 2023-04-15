@@ -123,6 +123,8 @@ art in text-to-image synthesis.
 
 * [Romain Beaumont](https://github.com/rom1504/) and [Christoph Schuhmann](https://github.com/christophschuhmann) 
 for constant help on datasets and giving useful advice.
+* [Jenia Jitsev](https://scholar.google.de/citations?user=p1FuAMkAAAAJ&hl=en) for help on writing the blog post and
+useful discussions.
 * [Richard Vencu](https://github.com/rvencu) for an incredible amount of help regarding hardware issues.
 * [StabilityAI](https://stability.ai/) for providing GPU-Cluster access and faith in Paella.
 
