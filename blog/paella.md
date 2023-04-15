@@ -1,7 +1,7 @@
 ---
 title: "A new Paella: Simple & Efficient Text-To-Image generation"
 author: "Dominic Rampas and Pablo Pernias"
-date: "April 10, 2023"
+date: "April 15, 2023"
 previewImg: "/images/blog/paella.png"
 ---
 ![](https://user-images.githubusercontent.com/61938694/231021615-38df0a0a-d97e-4f7a-99d9-99952357b4b1.png)
