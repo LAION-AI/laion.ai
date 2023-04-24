@@ -24,6 +24,7 @@ export default function Nav() {
           <Link href="/team">Team</Link>
           <Link href="/blog">Blog</Link>
           <Link href="/notes">Notes</Link>
+          <Link href="/press">Press</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
