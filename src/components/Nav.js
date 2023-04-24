@@ -27,6 +27,7 @@ export default function Nav() {
           <Link href="/press">Press</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
+          <Link href="/donations">Donations</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/dataset-requests">Dataset Requests</Link>
           <Link href="/impressum">Impressum</Link>
