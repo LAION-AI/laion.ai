@@ -41,17 +41,25 @@ export default function Home() {
                 environment-friendly use of resources by reusing existing
                 datasets and models.
               </p>
+              <div className="mb-2 text-red-400">
+                  <a
+                      href="https://laion.ai/donations"
+                      className="text-xl"
+                    >
+                  Support us with a donation!
+                </a>
+              </div>
               <div className="text-2xl text-yellow-400 font-bold">
                 A CERN FOR OPEN SOURCE LARGE-SCALE AI RESEARCH!
               </div>
-              <div className="my-2">
+              {/* <div className="my-2">
                 <a
                   href="https://laion.ai/blog/petition/"
                   className="text-xl"
                 >
                   See our blog post for Open Source AI research!
                 </a>
-              </div>
+              </div> */}
               <div className="my-2">
                 <a
                   href="https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety"
