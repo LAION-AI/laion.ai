@@ -1,7 +1,7 @@
 ---
 title: "WIP notes section!"
 author: "LAION.ai"
-date: "March 29 2023"
+date: "March 11 2023"
 previewImg: "/images/blog/laion-black.png"
 ---
 
