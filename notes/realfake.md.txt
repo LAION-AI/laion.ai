@@ -2,7 +2,7 @@
 title: "Training a Binary Classifier to Distinguish Images Generated with Stable Diffusion (v1.4) from Real Ones"
 author: "Christoph Schuhmann, Ilia Zaitsev"
 date: "Apr 12 2023"
-previewImg: "/images/blog/realfake-classifier-front.png"
+previewImg: "https://raw.githubusercontent.com/LAION-AI/laion.ai/e095bb080a77443cc6a7e07d97b412af53beebc0/public/images/blog/realfake-classifier-artifacts.png"
 ---
 
 We present the development and assessment of a binary classifier designed to distinguish between authentic images and images generated 
