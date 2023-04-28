@@ -7,4 +7,4 @@ bic: "GENODEM1GLS"
 ---
 LAION is a non-profit organizaton solely relying on donations.
         
-If you want to help us democraticising AI research, you can donate to the following bank account:
+If you want to help us democraticising AI research, head over to our [gofundme page](https://gofund.me/0d9f2b7d) or donate directly to the following bank account:
