@@ -77,7 +77,7 @@ Our website [www.datacomp.ai/](https://www.datacomp.ai/) contains further docume
 
 ## DataComp ICCV Workshop
 
-Our workshop **Towards the Next Generation of Computer Vision Datasets** will be held at [ICCV 2023](https://iccv2023.thecvf.com/) in Paris. The workshop will showcase a series of DataComp submissions, along with other data-centric papers and multiple invited talks by experts in the field. Our call for papers is available at [https://www.datacomp.ai/workshop.html](https://www.datacomp.ai/workshop.html).
+In conjunction with DataComp, we are also organizing a workshop at [ICCV 2023](https://iccv2023.thecvf.com/), titled **Towards the Next Generation of Computer Vision Datasets**. The workshop will showcase a series of DataComp submissions, along with other data-centric papers and multiple invited talks by experts in the field. Our call for papers is available at [https://www.datacomp.ai/workshop.html](https://www.datacomp.ai/workshop.html).
 
 ## Acknowledgements
 
