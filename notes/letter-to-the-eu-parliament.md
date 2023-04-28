@@ -42,8 +42,7 @@ With numerous esteemed supporters, including the European Laboratory for Learnin
 ## Supporters
 
 
-- European Laboratory for Learning and Intelligent Systems (ELLIS)
-- Pan-European AI Network of Excellence
+- European Laboratory for Learning and Intelligent Systems (ELLIS) - Pan-European AI Network of Excellence
 - German AI Association (KI-Bundesverband) - With more than 400 companies, the largest AI network in Germany
 - **Prof. Jürgen Schmidhuber**: Scientific Director of the Swiss AI Lab IDSIA (USI & SUPSI), Co-Founder & Chief Scientist of NNAISENSE, Inventor of LSTM Networks
 - **Prof. Sepp Hochreiter**: JKU Linz, Inventor of LSTM Networks
