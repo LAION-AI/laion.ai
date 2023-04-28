@@ -2,7 +2,7 @@
 title: "Announcing DataComp: In search of the next generation of multimodal datasets"
 author: "Gabriel Ilharco"
 date: "April 27, 2023"
-previewImg: "/images/blog/datacomp.png"
+previewImg: "/images/blog/datacomp_samples.png"
 ---
 
 
