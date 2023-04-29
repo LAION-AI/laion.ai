@@ -2,7 +2,7 @@
 title: "A Call to Protect Open-Source AI in Europe"
 author: "LAION.ai"
 date: "April 28, 2023"
-previewImg: "/images/blog/laion-black.png"
+previewImg: "/images/blog/laion-eu-ai-act.png"
 ---
 
 **An Open Letter to the European Parliament: Protecting Open-Source AI for a Safe, Secure, and Sovereign Digital Future**
