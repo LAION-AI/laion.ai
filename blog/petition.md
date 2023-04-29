@@ -2,7 +2,7 @@
 title: "Petition for keeping up the progress tempo on AI research while securing its transparency and safety."
 author: "LAION.ai"
 date: "March 29 2023"
-previewImg: "/images/blog/laion-color.png"
+previewImg: "/images/blog/laion-blue.png"
 ---
 
 [LINK TO OUR PETITION](https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety)
