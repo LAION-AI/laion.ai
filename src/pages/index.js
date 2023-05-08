@@ -23,7 +23,6 @@ export default function Home() {
           <div className="w-auto  md:pb-0 flex flex-col md:flex-row items-center gap-4 px-4 overflow-x-hidden">
             <div className="bg-sky border-white border p-3">
               <div className="flex justify-center">
-                <h1 className="text-8xl md:text-8xl font-bold">LAION</h1>
                 <div className="flex items-center">
                   <img src={"/images/logo.svg"} className="pl-4 pb-1 h-16" />
                 </div>
