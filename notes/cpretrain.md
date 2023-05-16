@@ -48,10 +48,10 @@ We have developed a fine tuned LoRA model based on the open source FLAN-UL2 that
 Below you can find a toy example of how to control the behavior of the conditional language model. In this example, the conditional labels are used to create a very unhelpful chatbot or one that is helpful. These outputs are from the base conditional pretrained model, without any explicit instruction tuning or examples of chatbots in the training data.
 
 **<center>An unhelpful chatbot</center>**
-![](./cond_pretrain_im2.png)
+![](./cond_pretrain_im2.PNG)
 
 **<center>A helpful chatbot</center>**
-![](./cond_pretrain_im3b.png)
+![](./cond_pretrain_im3b.PNG)
 
 ## **How to Use The Models and Contribute to This Project**
 
