@@ -13,7 +13,7 @@ Large language models (LLMs), such as OpenAI's ChatGPT and similar chatbot produ
 
 Two primary approaches have been employed to better align large language models with human expectations. The first is known as supervised finetuning (SFT) on natural instructions, while the second is called reinforcement learning from human feedback (RLHF). Both methods aim to improve the performance and usability of LLMs, but they differ in their implementation. SFT involves training the model using labeled datasets that contain natural instructions, which helps the model understand and respond more accurately to user queries. RLHF, on the other hand, is a technique that uses human preferences as a reward signal to fine-tune models. It involves collecting a dataset of human-written demonstrations on prompts, training supervised learning baselines, and then gathering a dataset of human-labeled comparisons between two model outputs on a larger set of prompts. A reward model (RM) is trained on this dataset to predict which output labelers would prefer, and this RM is used as a reward function to fine-tune the LLM using the PPO algorithm. However, there is an "alignment tax" associated with this approach, which can result in worse performance in some situations.
 
-![](/images/blog/cond_pretrain_im1.png)
+![](./cond_pretrain_im1.png)
 **Figure 1.** An example of document tagging on a popular user generated content website. The tags inform potential readers what kind of content will be in the text without spoiling the story.
 
 
@@ -28,7 +28,7 @@ By leveraging conditional pretraining, language models could be better adapted t
 
 The prevailing method for training LLMs involves collecting vast quantities of text from the internet and feeding this minimally processed text into the LLM. The pretraining objective is to predict the subsequent word given all prior words in the training example. Often, the text is divided in a manner that allows documents to be fragmented at any point, such as in the middle of a paragraph. These fragments are then randomly incorporated into larger batches of training examples, typically ranging from 2 to 4 million examples per training step. Although this approach has proven effective, it may not be the most optimal way to train these models.
 
-![](/images/blog/cond_pretrain_im2.png)
+![](./cond_pretrain_im2.png)
 **Figure 2.** Comparison of existing LLM training strategies and the conditional pretraining approach. Theoretically every example used to train the model could be tagged.
 
 In contrast, conditional pretraining aims to prepend each training example with a set of descriptive tags and a brief synopsis that accurately represents the text in the training example (Figure 2). These tags and synopses can be efficiently generated using fine tuned NLU models such as BERT or T5. Although there is considerable computational cost associated with processing all the training examples, once the conditional pretraining examples are generated, they become reusable and easily understandable by humans. This approach enhances the training process, resulting in more accurate and user-friendly language models.
@@ -42,15 +42,15 @@ Another significant advantage of conditional pretraining is the transparency of 
 ## **How to Prepare a Conditional Pretraining Dataset**
 
 We have developed a fine tuned LoRA model based on the open source FLAN-UL2 that takes as input about 2000 words of text and outputs the conditional pretraining labels for the document. An example output from this conditional tagging model for a recent news article about LAION in [Forbes](https://www.forbes.com/sites/hessiejones/2023/04/19/amid-growing-call-to-pause-ai-research-laion-petitions-governments-to-keep-agi-research-open-active-and-responsible/) is below. To generate these document tags only text from the body of the article was used.
-![](/images/blog/cond_pretrain_im4a.png)
+![](./cond_pretrain_im4a.png)
 ## **Example Outputs from a New Conditional Pretrained Model**
 
 Below you can find a toy example of how to control the behavior of the conditional language model. In this example, the conditional labels are used to create a very unhelpful chatbot or one that is helpful. These outputs are from the base conditional pretrained model, without any explicit instruction tuning or examples of chatbots in the training data.
 
 **<center>An unhelpful chatbot</center>**
-![](/images/blog/cond_pretrain_im3a.png)
+![](./cond_pretrain_im3a.png)
 **<center>A helpful chatbot</center>**
-![](/images/blog/cond_pretrain_im3b.png)
+![](./cond_pretrain_im3b.png)
 
 ## **How to Use The Models and Contribute to This Project**
 
