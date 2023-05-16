@@ -47,10 +47,13 @@ We have developed a fine tuned LoRA model based on the open source FLAN-UL2 that
 
 Below you can find a toy example of how to control the behavior of the conditional language model. In this example, the conditional labels are used to create a very unhelpful chatbot or one that is helpful. These outputs are from the base conditional pretrained model, without any explicit instruction tuning or examples of chatbots in the training data.
 
-**<center>An unhelpful chatbot</center>**
+**<center>Adorable baby chatbot</center>**
+![image](https://github.com/LAION-AI/laion.ai/assets/22318853/85aca1d8-2243-467b-a5b1-d2abc7ffad09)
+
+**<center>Unhelpful chatbot</center>**
 ![](./cond_pretrain_im2.PNG)
 
-**<center>A helpful chatbot</center>**
+**<center>Helpful chatbot</center>**
 ![](./cond_pretrain_im3b.PNG)
 
 ## **How to Use The Models and Contribute to This Project**
@@ -61,6 +64,7 @@ We are in the process of converting very large pretraining datasets from the int
 
 
 If you are interested, please check out the following links:
+- [Demo-Colab-Notebook](https://colab.research.google.com/drive/1fbXOqeEkqygnWKSPKddQtaMiZEc0KYFY?usp=sharing) - Colab for playing with our models.
 - [7B-redpajama-conditional-alpha](https://huggingface.co/Rallio67/7B-redpajama-conditional-alpha) - Redpajama base 7B model finetuned on ~2 million 2048 context conditional pretraining examples.
 - [3B-redpajama-conditional-alpha](https://huggingface.co/Rallio67/3B-redpajama-conditional-alpha) - Redpajama base 3B model finetuned on ~2 million 2048 context conditional pretraining examples.
 - [neox-20b-conditional-alpha](https://huggingface.co/Rallio67/neox-20b-conditional-alpha) - gpt-neox-20B base model finetuned on ~600 thousand 2048 context conditional pretraining examples.
