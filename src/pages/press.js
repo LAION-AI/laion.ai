@@ -20,7 +20,7 @@ export default function Press() {
               key={i}
             >
               <p className="text-3xl pb-2">{dateFormat(item.dt, "d mmmm, yyyy")} - <b className="tracking-wider">{item.url.split("www.")[1].split('/')[0].toUpperCase()}</b></p>
-              <a className="pt-3" href={item.url}>{item.url}</a>
+              <a className="pt-3 break-all" href={item.url}>{item.url}</a>
             </div>
           );
         })}

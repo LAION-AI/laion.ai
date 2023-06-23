@@ -132,6 +132,7 @@ function Hamburger() {
               setOpen(false);
             }}
           >
+            
             <p>
               <Link href="/projects">Projects</Link>
             </p>
@@ -142,10 +143,19 @@ function Hamburger() {
               <Link href="/blog">Blog</Link>
             </p>
             <p>
+              <Link href="/notes">Notes</Link>
+            </p>
+            <p>
+              <Link href="/press">Press</Link>
+            </p>
+            <p>
               <Link href="/about">About</Link>
             </p>
             <p>
               <Link href="/faq">FAQ</Link>
+            </p>
+            <p>
+              <Link href="/donations">Donations</Link>
             </p>
             <p>
               <Link href="/privacy-policy">Privacy Policy</Link>
