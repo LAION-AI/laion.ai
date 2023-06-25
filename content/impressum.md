@@ -6,11 +6,9 @@ title: "Impressum"
 
 LAION gemeinnütziger e.V.
 
-c/o Christoph Schuhmann
+Marlowring 26
 
-Hermann-Lange-Weg 26
-
-21035 Hamburg
+22525 Hamburg
 
 ### Vertreten durch
 

@@ -41,7 +41,7 @@
         "name": "LAION5B High-Res",
         "modality": "image/text",
         "status": "Released",
-        "desc": "A subset of the LAION5B database, with high resolution images oveer 1024x1024, containing 170 million samples.",
+        "desc": "A subset of the LAION5B database, with high resolution images over 1024x1024, containing 170 million samples.",
         "link": "https://huggingface.co/datasets/laion/laion-high-resolution"
       },
       {
