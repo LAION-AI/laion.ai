@@ -41,17 +41,39 @@ export default function Home() {
                 environment-friendly use of resources by reusing existing
                 datasets and models.
               </p>
+              {/* <div className="mb-2 text-red-400">
+                  <a
+                      href="https://laion.ai/donations"
+                      className="text-xl"
+                    >
+                  Support us with a donation!
+                </a>
+              </div> */}
+              <a href="https://gofund.me/244600b3">
+                <button className="rounded-xl w-5/6 bg-gradient-to-b py-2 from-orange-400 to-orange-300 mb-4 tracking-wider text-xl font-bold text-black" type="button">Donate</button>               
+              </a>
+              <div className="text-2xl text-yellow-400 font-bold">
+                A CERN FOR OPEN SOURCE LARGE-SCALE AI RESEARCH!
+              </div>
+              {/* <div className="my-2">
+                <a
+                  href="https://laion.ai/blog/petition/"
+                  className="text-xl"
+                >
+                  See our blog post for Open Source AI research!
+                </a>
+              </div> */}
+              <div className="my-2">
+                <a
+                  href="https://www.openpetition.eu/petition/online/securing-our-digital-future-a-cern-for-open-source-large-scale-ai-research-and-its-safety"
+                  className="text-xl"
+                >
+                  Sign our petition for Open Source AI research!
+                </a>
+              </div>
               <div>
                 <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">
                   Join our community on discord!
-                </a>
-              </div>
-              <div className="my-2">
-                <a
-                  href="https://docs.google.com/document/d/1V3Td6btwSMkZIV22-bVKsa3Ct4odHgHjnK-BrcNJBWY/edit#"
-                  className="text-xl"
-                >
-                  Help building an Open Source ChatGPT!
                 </a>
               </div>
             </div>

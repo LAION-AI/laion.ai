@@ -23,8 +23,11 @@ export default function Nav() {
           <Link href="/projects">Projects</Link>
           <Link href="/team">Team</Link>
           <Link href="/blog">Blog</Link>
+          <Link href="/notes">Notes</Link>
+          <Link href="/press">Press</Link>
           <Link href="/about">About</Link>
           <Link href="/faq">FAQ</Link>
+          <Link href="/donations">Donations</Link>
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/dataset-requests">Dataset Requests</Link>
           <Link href="/impressum">Impressum</Link>
@@ -129,6 +132,7 @@ function Hamburger() {
               setOpen(false);
             }}
           >
+            
             <p>
               <Link href="/projects">Projects</Link>
             </p>
@@ -139,10 +143,19 @@ function Hamburger() {
               <Link href="/blog">Blog</Link>
             </p>
             <p>
+              <Link href="/notes">Notes</Link>
+            </p>
+            <p>
+              <Link href="/press">Press</Link>
+            </p>
+            <p>
               <Link href="/about">About</Link>
             </p>
             <p>
               <Link href="/faq">FAQ</Link>
+            </p>
+            <p>
+              <Link href="/donations">Donations</Link>
             </p>
             <p>
               <Link href="/privacy-policy">Privacy Policy</Link>
