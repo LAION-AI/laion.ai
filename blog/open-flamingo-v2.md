@@ -65,15 +65,15 @@ We were thrilled by the many cool projects building off of our first release suc
 
 If you’re interested in contributing to our codebase, including our evaluation suite, please join us at the [OpenFlamingo github repository](https://github.com/mlfoundations/open_flamingo).
 
-## Safety and ethical considerations
+**Safety and ethical considerations**
 
 OpenFlamingo models inherit the risks of their parent models, especially the language model. As an open-source research effort, we highly value open, accessible, reproducible multimodal model research; however, it is crucial to be aware that these models are trained on web data and have not been finetuned for safety, and thus may produce unintended, inappropriate, unreliable, and/or inaccurate outputs. Please use caution before deploying OpenFlamingo models in real applications. We also hope that OpenFlamingo enables further safety and reliability research to address these issues.
 
 
-## Contributors
+### Contributors
 Thanks to:
 [Josh Gardner](https://homes.cs.washington.edu/~jpgard/), [Jack Hessel](https://jmhessel.com/), [Yusuf Hanafy](https://www.linkedin.com/in/yusufhanafy/), [Wanrong Zhu](https://wanrong-zhu.com/), [Kalyani Marathe](https://kalyani7195.github.io/), [Yonatan Bitton](https://yonatanbitton.github.io/), [Samir Gadre](https://sagadre.github.io/), [Shiori Sagawa](https://cs.stanford.edu/~ssagawa/), [Jenia Jitsev](https://scholar.google.de/citations?user=p1FuAMkAAAAJ&hl=en), [Simon Kornblith](https://simonster.com/), [Pang Wei Koh](https://koh.pw/), [Gabriel Ilharco](https://gabrielilharco.com/), [Mitchell Wortsman](https://mitchellnw.github.io/), and [Ludwig Schmidt](https://people.csail.mit.edu/ludwigs/)
 
-## Acknowledgements
+### Acknowledgements
 
 We would like to thank Jean-Baptiste Alayrac and Antoine Miech for their advice and Stability AI for providing us with compute resources to train these models.
