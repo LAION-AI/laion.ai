@@ -5,7 +5,9 @@ date: "June 28 2023"
 previewImg: "/images/blog/flamingo-family.png"
 ---
 
-## Introduction
+
+[[GitHub]](https://github.com/mlfoundations/open_flamingo) [[Demo]](https://huggingface.co/spaces/openflamingo/OpenFlamingo) [[Models]](https://huggingface.co/openflamingo)
+
 About three months ago, [we announced OpenFlamingo](https://laion.ai/blog/open-flamingo/), an open-source effort to replicate [DeepMind's Flamingo](https://www.deepmind.com/blog/tackling-multiple-tasks-with-a-single-visual-language-model) models.
 
 **Today, we are excited to release five trained OpenFlamingo models across the 3B, 4B, and 9B scales.** These models are based on Mosaic’s [MPT-1B and 7B](https://www.mosaicml.com/blog/mpt-7b) and Together.xyz’s [RedPajama-3B](https://www.together.xyz/blog/redpajama-models-v1), meaning they are built on open-source models with less restrictive licenses than LLaMA.
