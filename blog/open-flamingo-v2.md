@@ -45,7 +45,7 @@ We evaluated our models on vision-language datasets across captioning, VQA, and 
 
 Below, we aggregate model performances across 7 evaluation datasets and 5 in-context evaluation settings (0-shot, 4-shot, 8-shot, 16-shot, and 32-shot). Averaged across these settings, OpenFlamingo (OF) models attain more than 80% of corresponding Flamingo performance, where we compare OF-3B and OF-4B with Flamingo-3B, and OF-9B with Flamingo-9B. Error bars are standard deviations over datasets and evaluation settings.
 
-![](/images/blog/flamingo-avg-performance.jpg)
+![](/images/blog/flamingo-avg-performance.png)
 
 Next, we report performance relative to fine-tuned SoTAs listed on PapersWithCode\*. With 32 in-context examples, OpenFlamingo-3B and OpenFlamingo-9B models attain more than 55% of fine-tuned performance, despite only being pre-trained on web data. On average, OpenFlamingo models trail their DeepMind counterparts by around 10% 0-shot and 15% 32-shot.  
 
