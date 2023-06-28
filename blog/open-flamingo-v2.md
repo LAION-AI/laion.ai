@@ -47,7 +47,7 @@ Below, we aggregate model performances across 7 evaluation datasets and 5 in-con
 
 ![](/images/blog/flamingo-avg-performance.jpg)
 
-Next, we report performance relative to fine-tuned SOTAs listed on PapersWithCode\*. With 32 in-context examples, OpenFlamingo-3B and OpenFlamingo-9B models attain more than 60% of fine-tuned performance, despite only being pre-trained on web data. On average, OpenFlamingo models trail their DeepMind counterparts by around 10% 0-shot and 15% 32-shot. 
+Next, we report performance relative to fine-tuned SOTAs listed on PapersWithCode\*. With 32 in-context examples, OpenFlamingo-3B and OpenFlamingo-9B models attain more than 50% of fine-tuned performance, despite only being pre-trained on web data. On average, OpenFlamingo models trail their DeepMind counterparts by around 10% 0-shot and 15% 32-shot. 
 
 ![](/images/blog/flamingo-aggregated-performance.png)
 
