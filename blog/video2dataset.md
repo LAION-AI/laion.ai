@@ -12,6 +12,7 @@ previewImg: "make an image with a few rows of unrolled videos"
   Once this gap is closed there are many possibilities - high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
 
 (INSERT GIF OF MANY VIDEOS)
+
 Figure 1:	Sample videos from a large video dataset
 
 ## Solution: Flexible dataset curation tooling
@@ -20,7 +21,7 @@ We introduce video2dataset, an open-source tool designed to curate video and aud
 
 	We’ve also used video2dataset to build upon existing video datasets by downloading them individually, combining them, and transforming them into more convenient shapes with new features and considerably more samples. See the examples section for a more detailed explanation of this chain-processing. The tool’s effectiveness is showcased through the results we obtained by training various models on the datasets produced by video2dataset. An in-depth analysis of the new dataset and results will be included in our upcoming paper.
 
-(INSERT ARCHITECUTRE DIAGRAM)
+![](/images/blog/video2dataset_diagram.png)
 Figure 2: video2dataset architecture
 
 # Architecture
