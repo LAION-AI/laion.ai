@@ -28,7 +28,7 @@ We’ve also used video2dataset to build upon existing video datasets by downloa
 
 ## Architecture
 
-video2dataset is built on the foundation of img2dataset and is designed to transform a table of URLs and metadata into an easily loadable WebDataset (https://github.com/webdataset/webdataset) in just one command. Furthermore, it allows you to reprocess the WebDataset for additional transformations while retaining the same shard contents. Let's break down how video2dataset operates.
+video2dataset is built on the foundation of img2dataset and is designed to transform a table of URLs and metadata into an easily loadable [WebDataset](https://github.com/webdataset/webdataset) in just one command. Furthermore, it allows you to reprocess the WebDataset for additional transformations while retaining the same shard contents. Let's break down how video2dataset operates.
 
 ### Input Sharding
 The process begins with sharding the input data, a step that enables easy distribution among the workers. These input shards are temporarily stored, and the 1-1 correspondence between input and output shards ensures seamless resumption following any failures. If a dataset processing run stops prematurely, we can conveniently bypass processing the input shards for which the output shard already exists.
@@ -41,6 +41,8 @@ Once the video is read and the worker has the video bytes, they are sent through
 
 ### Logging
 Throughout the entire process, video2dataset meticulously logs vital information at various stages. Upon completion of each shard a corresponding {ID}\_stats.json file is generated. This file contains key details, such as the number of samples processed, the number of successful operations, and a log of any failures along with their associated error messages. For added functionality, video2dataset also supports integration with Weights & Biases (wandb). This integration can be activated with a single argument and, when enabled, it provides extensive performance reporting, along with success and failure metrics. Such features are helpful for benchmarking and cost-estimating tasks related to full jobs. 
+
+![](/images/blog/video2dataset_wandb_logs.png)
 
 ### Writing
 Finally, video2dataset saves the transformed data to output shards in specified locations, where they can be utilized for training or reprocessing with video2dataset or other tools. The output format of the dataset is shards of N samples each where the shards can be formatted in multiple ways - directories, tar files, tfrecords, or parquet files. The most useful ones are the directories format for smaller datasets and debugging and tar files which is used by the WebDataset format for loading. Here is a visualization of the output datasets:
@@ -114,7 +116,7 @@ _YouTube provides a large amount of metadata for each video so we only select a 
 
 ### Contributing
 
-video2dataset is a fully open-source project and we are committed to developing it in the open. This means all the relevant TODO’s and future directions can be found in the issues tab of the repository. Contributions are welcomed and the best way of doing that is to pick out an issue and submit a pull request.
+video2dataset is a fully open-source project and we are committed to developing it in the open. This means all the relevant TODO’s and future directions can be found in the issues tab of the repository. Contributions are welcomed and the best way of doing that is to pick out an issue, address it, and submit a pull request.
 
 ### License
 
