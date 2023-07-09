@@ -12,13 +12,13 @@ previewImg: "make an image with a few rows of unrolled videos"
 
   Once this gap is closed there are many possibilities - high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
 
-![](/images/blog/videos_figure.gif)
+![VideosFigure](/images/blog/videos_figure.gif)
 
 _Figure 1:_	Sample videos from a large video dataset
 
 ### Solution: Flexible dataset curation tooling
 
-![](/images/blog/video2dataset_diagram.png)
+![Architecture](/images/blog/video2dataset_diagram.png)
 _Figure 2:_ video2dataset architecture
 
 We introduce video2dataset, an open-source tool designed to curate video and audio datasets efficiently and at scale. It's flexible, extendable, offers a wide variety of transformations, and has been successfully tested on various large video datasets. All these examples are available in the repository, along with instructions for replicating our process.
@@ -92,7 +92,7 @@ The individual steps are:
 Doing dataset curation using video2dataset is very convenient across projects since datasets with the same contents can share metadata shards - the audio dataset from step 6 can use the same captions as the contrastive video-text model in step 4; we may filter that audio dataset with the same optical flow scores produced in step 5.
 
 ### Dataset processing jobs
-We have used video2dataset to process many popular datasets and we include instructions for how to reproduce these jobs in the [dataset\_examples section](https://github.com/iejMac/video2dataset/tree/main/dataset_examples) of the repository. One such dataset is WebVid (https://m-bain.github.io/webvid-dataset/) (10M samples) which can be downloaded in 12h on a single cpu16 EC2 instance which costs 8.16$ in total. 
+We have used video2dataset to process many popular datasets and we include instructions for how to reproduce these jobs in the [dataset\_examples section](https://github.com/iejMac/video2dataset/tree/main/dataset_examples) of the repository. One such dataset is [WebVid](https://m-bain.github.io/webvid-dataset/) (10M samples) which can be downloaded in 12h on a single cpu16 EC2 instance which costs 8.16$ in total. 
 To further test video2dataset’s capabilities, we create the largest video-text dataset (570M pairs) available by combining existing large datasets and performing extensive processing on them using video2dataset transformations. Specifically, we take the ACAV, HD-VILA, and VideoCC datasets, combine them, perform scene detection, clip according to scenes, add synthetic captions, and compute optical flow for each scene.
 
 ### Metadata and Statistics
