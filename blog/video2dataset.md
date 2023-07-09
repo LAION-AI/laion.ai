@@ -9,7 +9,7 @@ previewImg: "make an image with a few rows of unrolled videos"
 
   Currently, multimodal deep learning is dominated by the image-text intersection, even though the underlying algorithms are usually modality agnostic. For image processing, there exist datasets like LAION-5B, DataComp, and COYO-700M, which supply these pre-training algorithms with adequate data and can be easily processed with convenient tools like img2dataset. Unfortunately for other modalities like video there exists a large gap in tooling quality and data availability.
 
-  Once this gap is closed there are many possibilities - [high quality video and audio generation](https://research.nvidia.com/labs/toronto-ai/VideoLDM/, https://google-research.github.io/seanet/audiolm/examples/), [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
+  Once this gap is closed there are many possibilities - high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
 
 (INSERT GIF OF MANY VIDEOS)
 Figure 1:	Sample videos from a large video dataset
