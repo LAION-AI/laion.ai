@@ -14,7 +14,7 @@ previewImg: "make an image with a few rows of unrolled videos"
 
 ![VideosFigure](/images/blog/videos_figure.gif)
 
-_Figure 1:_	Sample videos from a large video dataset
+_Figure 1:_	Sample of videos from a large video dataset
 
 ### Solution: Flexible dataset curation tooling
 
@@ -43,6 +43,7 @@ Once the video is read and the worker has the video bytes, they are sent through
 Throughout the entire process, video2dataset meticulously logs vital information at various stages. Upon completion of each shard a corresponding {ID}\_stats.json file is generated. This file contains key details, such as the number of samples processed, the number of successful operations, and a log of any failures along with their associated error messages. For added functionality, video2dataset also supports integration with Weights & Biases (wandb). This integration can be activated with a single argument and, when enabled, it provides extensive performance reporting, along with success and failure metrics. Such features are helpful for benchmarking and cost-estimating tasks related to full jobs. 
 
 ![](/images/blog/video2dataset_wandb_logs.png)
+_Figure 3:_ Part of a wandb report from a large video2dataset run
 
 ### Writing
 Finally, video2dataset saves the transformed data to output shards in specified locations, where they can be utilized for training or reprocessing with video2dataset or other tools. The output format of the dataset is shards of N samples each where the shards can be formatted in multiple ways - directories, tar files, tfrecords, or parquet files. The most useful ones are the directories format for smaller datasets and debugging and tar files which is used by the WebDataset format for loading. Here is a visualization of the output datasets:
