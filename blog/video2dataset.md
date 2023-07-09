@@ -1,5 +1,9 @@
-# video2dataset: A simple tool for large video dataset curation
-By: Maciej Kilian
+---
+title: "video2dataset: A simple tool for large video dataset curation"
+author: "Maciej Kilian"
+date: "July 10 2023"
+previewImg: ""
+---
 
   Advancements like CLIP, Stable Diffusion, and Flamingo have changed the way we look at multimodal deep learning. These models learn powerful data representations which can be used to generate beautiful samples or perform well on various downstream tasks. At the core of each of these methods is a simple pre-training objective applied at-scale on a large, diverse dataset.
 
