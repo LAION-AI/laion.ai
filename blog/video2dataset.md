@@ -92,10 +92,10 @@ video2dataset can be used to gather various metadata and statistics about the pr
 (INSERT METADATA TABLE)
 
 ## What’s next?
-We plan on releasing a paper about the video-text dataset we created using video2dataset which contains analysis on the dataset composition as well as results of pre-training generative and discriminative models on that data. 
-Improved synthetic captioning. Synthetic captioning for videos is still underexplored and there’s many exciting ideas to try. Soon in video2dataset we will have more interesting methods to produce captions for videos that make use of image captioning models and LLMs.
-Since its release people have been talking about using Whisper to obtain many text tokens from video. This is possible with video2dataset and we are working on transcribing a large corpus of podcasts which we will soon release as a text dataset (we are aiming at 50B tokens).
-Many exciting modeling ideas. Hopefully with the improvement of dataset curation tooling more people will attempt to push the SOTA in the video and audio modality.
+- We plan on releasing a paper about the video-text dataset we created using video2dataset which contains analysis on the dataset composition as well as results of pre-training generative and discriminative models on that data. 
+- Improved synthetic captioning. Synthetic captioning for videos is still underexplored and there’s many exciting ideas to try. Soon in video2dataset we will have more interesting methods to produce captions for videos that make use of image captioning models and LLMs.
+- Since its release people have been talking about using Whisper to obtain many text tokens from video. This is possible with video2dataset and we are working on transcribing a large corpus of podcasts which we will soon release as a text dataset (we are aiming at 50B tokens).
+- Many exciting modeling ideas. Hopefully with the improvement of dataset curation tooling more people will attempt to push the SOTA in the video and audio modality.
 
 ## Contributing
 
