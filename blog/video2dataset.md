@@ -38,6 +38,7 @@ Throughout the entire process, video2dataset meticulously logs vital information
 ## Writing
 Finally, video2dataset saves the transformed data to output shards in specified locations, where they can be utilized for training or reprocessing with video2dataset or other tools. The output format of the dataset is shards of N samples each where the shards can be formatted in multiple ways - directories, tar files, tfrecords, or parquet files. The most useful ones are the directories format for smaller datasets and debugging and tar files which is used by the WebDataset format for loading. Here is a visualization of the output datasets:
 
+```
 video-dataset
  ├── 00000.tar
  |     ├── 00000.mp4
@@ -56,6 +57,7 @@ video-dataset
  |     ├── 10001.json
  │     ...
  ...
+ ```
 
 ## Reprocessing
 video2dataset can reprocess previous output datasets by reading the output shards and passing the samples inside through new transformations. This capability is particularly beneficial for video datasets, given their often hefty size and unwieldy nature. It allows us to conservatively downsample our data to avoid multiple downloads of large datasets. We delve into a practical example of this in the next section.
