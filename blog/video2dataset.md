@@ -87,6 +87,7 @@ The individual steps are:
 8. We can further process the audio and extract transcripts (using our WhisperX CITE subsampler)
 9. The transcripts can be used to train text-only or vision-text models
 
+
 Doing dataset curation using video2dataset is very convenient across projects since datasets with the same contents can share metadata shards - the audio dataset from step 6 can use the same captions as the contrastive video-text model in step 4; we may filter that audio dataset with the same optical flow scores produced in step 5.
 
 ### Dataset processing jobs
@@ -96,7 +97,11 @@ To further test video2dataset’s capabilities, we create the largest video-text
 ### Metadata and Statistics
 video2dataset can be used to gather various metadata and statistics about the processed data. Some subsamplers have the goal of taking a given modality (video, audio) and extracting metadata from it like compression/video information, optical flow scores, audio transcripts etc. Additionally during downloading if the source already has associated metadata, like f.e. Youtube videos do, video2dataset will try to extract that metadata and place it in the webdataset so you can later access it easily. Here are some examples:
 
-(INSERT METADATA TABLE)
+| Video | Optical Flow | Synthetic Caption | Whisper Transcript | YouTube Metadata |
+|---|---|---|---|---|
+| concert video | flow | cap1| Transcript1 | md1 |
+| math video | flow | cap2 | t2 | md2 |
+| rocket video | flow | cap3 | t3 | md3 |
 
 ## What’s next?
 - We plan on releasing a paper about the video-text dataset we created using video2dataset which contains analysis on the dataset composition as well as results of pre-training generative and discriminative models on that data. 
