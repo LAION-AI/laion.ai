@@ -12,14 +12,14 @@ previewImg: "make an image with a few rows of unrolled videos"
 
   Once this gap is closed there are many possibilities - high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
 
-(INSERT GIF OF MANY VIDEOS)
+![](/images/blog/videos_figure.gif)
 
-Figure 1:	Sample videos from a large video dataset
+_Figure 1:_	Sample videos from a large video dataset
 
 ### Solution: Flexible dataset curation tooling
 
 ![](/images/blog/video2dataset_diagram.png)
-Figure 2: video2dataset architecture
+_Figure 2:_ video2dataset architecture
 
 We introduce video2dataset, an open-source tool designed to curate video and audio datasets efficiently and at scale. It's flexible, extendable, offers a wide variety of transformations, and has been successfully tested on various large video datasets. All these examples are available in the repository, along with instructions for replicating our process.
 
@@ -72,9 +72,10 @@ video2dataset can reprocess previous output datasets by reading the output shard
 ## Examples
 
 ### Tree of Datasets
+
 Each video is a rich source of data that can be decomposed into many forms - different resolutions, the audio, the motion (optical flow), individual frames - and dataset tooling should reflect this flexibility. One initial download of raw videos can be efficiently expanded into a variety of datasets for many different projects. For example, a research group might use video2dataset and its chain-processing capabilities in the following way to accommodate many research projects with diverse data:
 
-(INSERT VIDEO WITH TREE OF DATASETS)
+![TreeOfDatasets](/images/blog/video2dataset_tree_of_datasets.mp4)
 
 The individual steps are:
 1. Download an HD video dataset for a generative video modeling project.
