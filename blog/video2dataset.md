@@ -6,11 +6,9 @@ previewImg: "/images/blog/video2dataset-preview.png"
 ---
 [[GitHub]](https://github.com/iejMac/video2dataset)
 
-
-
 Within only two years large foundational models like [CLIP](https://arxiv.org/abs/2103.00020), [Stable Diffusion](https://arxiv.org/abs/2112.10752), and [Flamingo](https://arxiv.org/abs/2204.14198) have fundamentally transformed multimodal deep learning. Because of such models and their impressive capabilities to either create stunning, high-resolution imagery or to solve complex downstream tasks, joint text-image modeling has emerged from a niche application to one of the (or maybe _the_) most relevant topics in today’s AI landscape. Remarkably, all these models, despite addressing very different tasks and being very different in design, share three fundamental properties as the main drivers behind their strong performance:  A simple and stable objective function during (pre-)training, a well-investigated scalable model architecture, and - probably most importantly - a large diverse dataset.
 
-As of 2023, multi-modal deep learning is still heavily focusing on text-image modeling, while other modalities such as video (and audio) are only sparsely investigated. Since the algorithms to train the above models are usually modality agnostic, one might wonder why there aren’t strong foundational models for these additional modalities. The reason for this is – plain and simple – the lacking availability of large scale, annotated datasets. As opposed to image modeling, where there are established datasets for scaling such as [LAION-5B](https://arxiv.org/abs/2210.08402), [DataComp](https://arxiv.org/abs/2304.14108), and [COYO-700M](https://github.com/kakaobrain/coyo-dataset) and scalable tools as [img2dataset](https://github.com/rom1504/img2dataset), this lack of clean data hinders research and development of large multimodal models especially for the video domain.
+As of 2023, multimodal deep learning is still heavily focusing on text-image modeling, while other modalities such as video (and audio) are only sparsely investigated. Since the algorithms to train the above models are usually modality agnostic, one might wonder why there aren’t strong foundational models for these additional modalities. The reason for this is – plain and simple – the lacking availability of large scale, annotated datasets. As opposed to image modeling, where there are established datasets for scaling such as [LAION-5B](https://arxiv.org/abs/2210.08402), [DataComp](https://arxiv.org/abs/2304.14108), and [COYO-700M](https://github.com/kakaobrain/coyo-dataset) and scalable tools as [img2dataset](https://github.com/rom1504/img2dataset), this lack of clean data hinders research and development of large multimodal models especially for the video domain.
 
 We argue that overcoming this data problem is a core interest of (open source) multi-modal research since it can foster important previously impossible projects such as high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
 
@@ -96,7 +94,7 @@ Doing dataset curation using video2dataset is very convenient across projects si
 
 ### Dataset processing jobs
 We have used video2dataset to process many popular datasets and we include instructions for how to reproduce these jobs in the [dataset\_examples section](https://github.com/iejMac/video2dataset/tree/main/dataset_examples) of the repository. One such dataset is [WebVid](https://m-bain.github.io/webvid-dataset/) (10M samples) which can be downloaded in 12h on a single cpu16 EC2 instance which costs 8.16$ in total. 
-To further test video2dataset’s capabilities, we create the largest video-text dataset (570M pairs) available by combining existing large datasets and performing extensive processing on them using video2dataset transformations. Specifically, we take the ACAV, HD-VILA, and VideoCC datasets, combine them, perform scene detection, clip according to scenes, add synthetic captions, and compute optical flow for each scene.
+To further test video2dataset’s capabilities, we create a large scale video-text dataset (590M pairs) by combining existing large datasets and performing extensive processing on them using video2dataset transformations. Specifically, we perform [scene detection](https://github.com/Breakthrough/PySceneDetect), clip according to those scenes, add synthetic captions and add optical flow estimates for each clip. The dataset will be released soon along with a discovery study on its applicability
 
 ### Metadata and Statistics
 video2dataset can be used to gather various metadata and statistics about the processed data. Some subsamplers have the goal of taking a given modality (video, audio) and extracting metadata from it like compression/video information, optical flow scores, audio transcripts etc. Additionally during downloading if the source already has associated metadata, like f.e. Youtube videos do, video2dataset will try to extract that metadata and place it in the webdataset so you can later access it easily. Here are some examples:
@@ -110,7 +108,7 @@ video2dataset can be used to gather various metadata and statistics about the pr
 _YouTube provides a large amount of metadata for each video so we only select a few keys for display here. For a full example of a youtube metadata dictionary see [this example](https://github.com/iejMac/video2dataset/blob/main/examples/yt_metadata.md)._
 
 ## What’s next?
-- We plan on releasing a paper about the video-text dataset we created using video2dataset which contains analysis on the dataset composition as well as results of pre-training generative and discriminative models on that data. 
+- Scientific analysis and release of a large scale dataset created with the tool presented in this blog post.
 - Improved synthetic captioning. Synthetic captioning for videos is still underexplored and there’s many exciting ideas to try. Soon in video2dataset we will have more interesting methods to produce captions for videos that make use of image captioning models and LLMs.
 - Since its release people have been talking about using Whisper to obtain many text tokens from video. This is possible with video2dataset and we are working on transcribing a large corpus of podcasts which we will soon release as a text dataset (we are aiming at 50B tokens).
 - Many exciting modeling ideas. Hopefully with the improvement of dataset curation tooling more people will attempt to push the SOTA in the video and audio modality.
@@ -123,16 +121,10 @@ video2dataset is a fully open-source project and we are committed to developing 
 
 MIT
 
-### Acknowledgements
-
-- Rom for building out img2dataset and providing much advice during the process.
-Insert more...
-
-### Citations
-CLIP
-SD
-Flamingo
-AutoAD
-LAION-5B
-DataComp
-Img2dataset
+### Contributions
+Big thanks to everyone involved, most notably:
+- [Romain](https://github.com/rom1504) for building out img2dataset, helping with the initial design of video2dataset, and giving lots of advice during the process of building video2dataset.
+- [Marianna](https://github.com/marianna13) for helping create the audio functionality.
+- [Daniel](twitter.com/danielmend_) for building the cut detection and optical flow capabilities. Also for extensive help with testing and runs at scale, and feedback on the blogpost.
+- [Andreas](https://github.com/ablattmann) for greatly improving the video2dataset dataloader and implementing slurm distribution.
+- [Sumith](https://github.com/Sumith1896) for implementing synthetic captioning and lots of help during writing the blogpost (especially with visualizations).
