@@ -2,19 +2,20 @@
 title: "video2dataset: A simple tool for large video dataset curation"
 author: "Maciej Kilian"
 date: "July 10 2023"
-previewImg: "make an image with a few rows of unrolled videos"
+previewImg: "/images/blog/video2dataset-preview.png"
 ---
 [[GitHub]](https://github.com/iejMac/video2dataset)
 
-  Advancements like CLIP, Stable Diffusion, and Flamingo have changed the way we look at multimodal deep learning. These models learn powerful data representations which can be used to generate beautiful samples or perform well on various downstream tasks. At the core of each of these methods is a simple pre-training objective applied at-scale on a large, diverse dataset.
 
-  Currently, multimodal deep learning is dominated by the image-text intersection, even though the underlying algorithms are usually modality agnostic. For image processing, there exist datasets like LAION-5B, DataComp, and COYO-700M, which supply these pre-training algorithms with adequate data and can be easily processed with convenient tools like img2dataset. Unfortunately for other modalities like video there exists a large gap in tooling quality and data availability.
 
-  Once this gap is closed there are many possibilities - high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
+Within only two years large foundational models like [CLIP](https://arxiv.org/abs/2103.00020), [Stable Diffusion](https://arxiv.org/abs/2112.10752), and [Flamingo](https://arxiv.org/abs/2204.14198) have fundamentally transformed multimodal deep learning. Because of such models and their impressive capabilities to either create stunning, high-resolution imagery or to solve complex downstream tasks, joint text-image modeling has emerged from a niche application to one of the (or maybe _the_) most relevant topics in today’s AI landscape. Remarkably, all these models, despite addressing very different tasks and being very different in design, share three fundamental properties as the main drivers behind their strong performance:  A simple and stable objective function during (pre-)training, a well-investigated scalable model architecture, and - probably most importantly - a large diverse dataset.
 
-![VideosFigure](/images/blog/videos_figure.gif)
+As of 2023, multi-modal deep learning is still heavily focusing on text-image modeling, while other modalities such as video (and audio) are only sparsely investigated. Since the algorithms to train the above models are usually modality agnostic, one might wonder why there aren’t strong foundational models for these additional modalities. The reason for this is – plain and simple – the lacking availability of large scale, annotated datasets. As opposed to image modeling, where there are established datasets for scaling such as [LAION-5B](https://arxiv.org/abs/2210.08402), [DataComp](https://arxiv.org/abs/2304.14108), and [COYO-700M](https://github.com/kakaobrain/coyo-dataset) and scalable tools as [img2dataset](https://github.com/rom1504/img2dataset), this lack of clean data hinders research and development of large multimodal models especially for the video domain.
 
-_Figure 1:_	Sample of videos from a large video dataset
+We argue that overcoming this data problem is a core interest of (open source) multi-modal research since it can foster important previously impossible projects such as high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
+
+![ManyVideos](/images/blog/videos_figure.gif)
+_Figure 1:_	video2dataset allows to easily create large scale collections of videos as the ones in the above sample created from available research datasets.
 
 ### Solution: Flexible dataset curation tooling
 
@@ -25,10 +26,9 @@ We introduce video2dataset, an open-source tool designed to curate video and aud
 
 We’ve also used video2dataset to build upon existing video datasets by downloading them individually, combining them, and transforming them into more convenient shapes with new features and considerably more samples. See the examples section for a more detailed explanation of this chain-processing. The tool’s effectiveness is showcased through the results we obtained by training various models on the datasets produced by video2dataset. An in-depth analysis of the new dataset and results will be included in our upcoming paper.
 
-
 ## Architecture
 
-video2dataset is built on the foundation of img2dataset and is designed to transform a table of URLs and metadata into an easily loadable [WebDataset](https://github.com/webdataset/webdataset) in just one command. Furthermore, it allows you to reprocess the WebDataset for additional transformations while retaining the same shard contents. Let's break down how video2dataset operates.
+video2dataset is built on the foundation of [img2dataset](https://github.com/rom1504/img2dataset) and is designed to transform a table of URLs and metadata into an easily loadable [WebDataset](https://github.com/webdataset/webdataset) in just one command. Furthermore, it allows you to reprocess the WebDataset for additional transformations while retaining the same shard contents. Let's break down how video2dataset operates.
 
 ### Input Sharding
 The process begins with sharding the input data, a step that enables easy distribution among the workers. These input shards are temporarily stored, and the 1-1 correspondence between input and output shards ensures seamless resumption following any failures. If a dataset processing run stops prematurely, we can conveniently bypass processing the input shards for which the output shard already exists.
