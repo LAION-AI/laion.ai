@@ -111,7 +111,7 @@ _YouTube provides a large amount of metadata for each video so we only select a 
 ## What’s next?
 - Scientific analysis and release of a large scale dataset created with the tool presented in this blog post.
 - Improved synthetic captioning. Synthetic captioning for videos is still underexplored and there’s many exciting ideas to try. Soon in video2dataset we will have more interesting methods to produce captions for videos that make use of image captioning models and LLMs.
-- Since its release people have been talking about using Whisper to obtain many text tokens from video. This is possible with video2dataset and we are working on transcribing a large corpus of podcasts which we will soon release as a text dataset (we are aiming at 50B tokens).
+- Since its release people have been talking about using [Whisper](https://arxiv.org/abs/2212.04356) to obtain many text tokens from video. This is possible with video2dataset and we are working on transcribing a large corpus of podcasts which we will soon release as a text dataset (we are aiming at 50B tokens).
 - Many exciting modeling ideas. Hopefully with the improvement of dataset curation tooling more people will attempt to push the SOTA in the video and audio modality.
 
 ### Contributing
