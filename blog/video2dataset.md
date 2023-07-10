@@ -10,7 +10,7 @@ Within only two years large foundational models like [CLIP](https://arxiv.org/ab
 
 As of 2023, multimodal deep learning is still heavily focusing on text-image modeling, while other modalities such as video (and audio) are only sparsely investigated. Since the algorithms to train the above models are usually modality agnostic, one might wonder why there aren’t strong foundational models for these additional modalities. The reason for this is – plain and simple – the lacking availability of large scale, annotated datasets. As opposed to image modeling, where there are established datasets for scaling such as [LAION-5B](https://arxiv.org/abs/2210.08402), [DataComp](https://arxiv.org/abs/2304.14108), and [COYO-700M](https://github.com/kakaobrain/coyo-dataset) and scalable tools as [img2dataset](https://github.com/rom1504/img2dataset), this lack of clean data hinders research and development of large multimodal models especially for the video domain.
 
-We argue that overcoming this data problem is a core interest of (open source) multi-modal research since it can foster important previously impossible projects such as high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
+We argue that overcoming this data problem is a core interest of (open source) multimodal research since it can foster important previously impossible projects such as high quality [video](https://research.nvidia.com/labs/toronto-ai/VideoLDM/) and [audio](https://google-research.github.io/seanet/audiolm/examples/) generation, [better pre-trained models for robotics](https://twitter.com/comma_ai/status/1666959310310752257?s=20), [movie AD for the blind community](https://www.robots.ox.ac.uk/~vgg/research/autoad/), and more.
 
 ![ManyVideos](/images/blog/videos_figure.gif)
 _Figure 1:_	video2dataset allows to easily create large scale collections of videos as the ones in the above sample created from available research datasets.
@@ -86,7 +86,7 @@ The individual steps are:
 5. Extract audio and useful metadata out of the downscaled dataset.
 6. The audio can be used to train various audio models (generative or discriminative)
 7. The metadata can be used to filter the dataset. For example one could use the optical flow to filter out low-motion videos.
-8. We can further process the audio and extract transcripts (using our WhisperX CITE subsampler)
+8. We can further process the audio and extract transcripts (using our [WhisperX](https://github.com/m-bain/whisperX) subsampler)
 9. The transcripts can be used to train text-only or vision-text models
 
 
