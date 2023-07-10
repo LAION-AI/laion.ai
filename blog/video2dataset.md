@@ -76,7 +76,11 @@ video2dataset can reprocess previous output datasets by reading the output shard
 
 Each video is a rich source of data that can be decomposed into many forms - different resolutions, the audio, the motion (optical flow), individual frames - and dataset tooling should reflect this flexibility. One initial download of raw videos can be efficiently expanded into a variety of datasets for many different projects. For example, a research group might use video2dataset and its chain-processing capabilities in the following way to accommodate many research projects with diverse data:
 
-![TreeOfDatasets](/images/blog/video2dataset_tree_of_datasets.mp4)
+<video width="640" height="480" controls>
+  <source src="/images/blog/video2dataset_tree_of_datasets.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 _Figure 4:_ You can efficiently extract many types of datasets from an initial base set of video links using video2dataset
 
 The individual steps are:
