@@ -8,7 +8,7 @@
   {
     "name": "Jenia Jitsev",
     "title": "Scientific Lead / Founder",
-    "desc": "Senior researcher. Leads Scalable Learning and Multi-Purpose AI (SLAMPAI) Lab at Juelich Supercomputing Center (JSC). PhD in Computer Science.",
+    "desc": "Senior researcher. Leads Scalable Learning and Multi-Purpose AI (SLAMPAI) Lab at Juelich Supercomputing Center (JSC). PhD in Computer Science, with background in Neuroscience & Machine Learning.",
     "img": "jenia"
   },
   {
@@ -43,8 +43,8 @@
   },
   {
     "name": "Irina Rish",
-    "title": "Computer Science and Operations Research, Université de Montréal",
-    "desc": "Prof. at UdeM with strong interest in Scaling Laws for ML",
+    "title": "Member, senior researcher.",
+    "desc": "Professor, Computer Science and Operations Research, Université de Montréal.Strong interest in Scaling Laws for ML",
     "img": "irina"
   },
   {
@@ -83,8 +83,20 @@
   },
   {
     "name": "Ludwig Schmidt",
-    "title": "Member. Professor in computer science at the University of Washington.",
+    "title": "Member, senior researcher. Professor in computer science at the University of Washington.",
     "desc": "Research on datasets, reliable generalization, and large models.",
     "img": "ludwig"
+  },
+  {
+    "name": "Hilde Kuehne",
+    "title": "Member, senior researcher. Professor in computer science at the University of Bonn, affiliated  Llamar Institute & MIT-IBM Watson AI Lab",
+    "desc": "Research on Multimodal Self-supervised Learning & Video Understanding.",
+    "img": "hildekuehne"
+  },
+  {
+    "name": "Lucia Cipolina-Kun",
+    "title": "Member. PhD Student at the University of Bristol.",
+    "desc": "AI researcher specialized on diffusion models, reinforcement learning and mathematics. Researching on art restoration and preservation of cultural heritage.",
+    "img": "luciacipkun"
   }
 ]
