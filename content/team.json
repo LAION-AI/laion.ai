@@ -66,16 +66,6 @@
     "img": "katherine"
   },
   {
-    "name": "Aarush Katta",
-    "title": "Founding Member",
-    "desc": "Programmer with lots of enthusiasm for AI & ML."
-  },
-  {
-    "name": "Jan Ebert",
-    "title": "Founding Member",
-    "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
-  },
-  {
     "name": "Marianna Nezhurina",
     "title": "Member. Multi-Modal Data Batgirl",
     "desc": "Coder and ML researcher with strong interest in multi-modal datasets and learning.",
@@ -98,5 +88,27 @@
     "title": "Member. PhD Student at the University of Bristol.",
     "desc": "AI researcher specialized on diffusion models, reinforcement learning and mathematics. Researching on art restoration and preservation of cultural heritage.",
     "img": "luciacipkun"
+  },
+  {
+    "name": "Dominic Rampas",
+    "title": "Technische Hochschule Ingolstadt",
+    "desc": "AI researcher, passionate about generative models as means to enhance human creative processes. Author of Paella & Würstchen.",
+    "img": "dome"
+  },
+  {
+    "name": "Pablo Pernias",
+    "title": "Machine Learning Research en Disney Parks",
+    "desc": "AI researcher, passionate about generative models as means to enhance human creative processes. Author of Paella & Würstchen.",
+    "img": "pablo"
+  },
+  {
+    "name": "Aarush Katta",
+    "title": "Founding Member",
+    "desc": "Programmer with lots of enthusiasm for AI & ML."
+  },
+  {
+    "name": "Jan Ebert",
+    "title": "Founding Member",
+    "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
   }
 ]
