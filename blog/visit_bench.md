@@ -33,17 +33,16 @@ To maximize the variety of skills needed for evaluation, VisIT-Bench draws from 
 **VisIT-Bench** is a benchmark consisting of 679 vision-language instructions. Each instruction pairs an image with a corresponding request or question. For example, an image might depict a storefront with two portable wedge ramps, accompanied by the question: *Would a disabled wheelchair-bound individual find it easy to go into this store?* Contrary to prevalent zero-shot evaluations, many instructions emphasize open-ended generation requests, like *write a poem...* or *what should I bring if I were to visit here?*.
 
 VisIT-Bench employs a structured data collection strategy encompassing four steps.
-![](/images/blog/visit_bench/3_dataset_collection.png)
 
-1. **Instruction Generation**: Convert a single example from a skill category into multiple instances. Using references from an instruction family (instruction, image, model output), annotators craft new instructions linked to a public image URL. For instance, under the *Contextual Knowledge of Events* family, an instance about a related event might be generated.
+(1) **Instruction Generation**: Convert a single example from a skill category into multiple instances. Using references from an instruction family (instruction, image, model output), annotators craft new instructions linked to a public image URL. For instance, under the *Contextual Knowledge of Events* family, an instance about a related event might be generated.
 ![](/images/blog/visit_bench/3_1_collection.png)
 
-2. **Instruction-Conditioned Caption Generation**: Annotators produce detailed captions for each image, based on the given instruction and image. The aim is a text-rich caption enabling text-only comprehension, which serves as a foundation for GPT-4 outputs and text-only evaluations.
+(2) **Instruction-Conditioned Caption Generation**: Annotators produce detailed captions for each image, based on the given instruction and image. The aim is a text-rich caption enabling text-only comprehension, which serves as a foundation for GPT-4 outputs and text-only evaluations.
 ![](/images/blog/visit_bench/3_2_collection.png)
 
-3. **Generating GPT4 Responses**: Response candidates from GPT-4 are fetched for later human validation. Using the prompt: “Consider an image depicted by: `<caption>`. Follow this instruction: `<instruction>`. Response: “.
+(3) **Generating GPT4 Responses**: Response candidates from GPT-4 are fetched for later human validation. Using the prompt: “Consider an image depicted by: `<caption>`. Follow this instruction: `<instruction>`. Response: “.
 
-4. **Model Output Evaluation**: GPT-4's instruction-following ability is assessed using text-only pairs. With the image, dense caption, instruction, and GPT-4's prediction, annotators evaluate GPT-4's adherence to instructions, pinpointing errors in captions or responses and flagging inappropriate content.
+(4) **Model Output Evaluation**: GPT-4's instruction-following ability is assessed using text-only pairs. With the image, dense caption, instruction, and GPT-4's prediction, annotators evaluate GPT-4's adherence to instructions, pinpointing errors in captions or responses and flagging inappropriate content.
 ![](/images/blog/visit_bench/3_3_collection.png)
 
 ### Repurposing Existing Datasets
@@ -81,8 +80,8 @@ Our GPT-4 based metric surpasses others, closely mirroring majority-vote human j
 This effort was made possible thanks to the amazing team of:
 
 - [Yonatan Bitton*](https://yonatanbitton.github.io/), The Hebrew University of Jerusalem, Google Research
-- [Hritik Bansal*](https://sites.google.com/view/hbansal), University of California
-- [Jack Hessel](https://jmhessel.com/), Allen Institute for AI
+- [Hritik Bansal*](https://sites.google.com/view/hbansal), University of California, Los Angeles
+- [Jack Hessel*](https://jmhessel.com/), Allen Institute for AI
 - [Rulin Shao](https://rulinshao.github.io/), University of Washington
 - [Wanrong Zhu](https://wanrong-zhu.com/), University of California, Santa Barbara
 - [Anas Awadalla](https://anas-awadalla.streamlit.app/), University of Washington
@@ -97,4 +96,3 @@ This effort was made possible thanks to the amazing team of:
 **VisIT-Bench** offers a comprehensive lens on VLMs by utilizing 70 carefully curated instruction families, mirroring a wide range of real-world scenarios. This approach allows an in-depth assessment of model understanding but paves the way for enhancing VLMs' performance across various tasks. VisIT-Bench is dynamic to participate, practitioners simply submit their model's response on the project website; Data, code and leaderboard is available at the [project website](https://visit-bench.github.io/).
 
 ![](/images/blog/visit_bench/13_leaderboard.png)
---- 
