@@ -10,7 +10,7 @@ previewImg: "/images/blog/visit_bench/1_fig1.png"
 We are thrilled to introduce **VisIT-Bench**, a benchmark for evaluating instruction-following vision-language models (VLMs). The central goal of VisIT-Bench is to provide a more accurate and meaningful assessment of VLMs, particularly in the context of human-chatbot interactions inspired by real-world scenarios.
 
 VisIT-Bench comprises 678 examples. Each example includes:
-- An image
+- An image (or multiple images)
 - An instruction
 - An "instruction-conditioned caption" - a detailed caption allowing a text-only entity to follow the instruction 
 - A GPT-4 response suggestion
