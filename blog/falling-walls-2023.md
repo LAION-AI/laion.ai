@@ -2,7 +2,7 @@
 title: "LAION Triumphs at the Falling Walls Science Breakthrough of the Year 2023 Awards"
 author: "Christoph Schuhmann, Jenia Jitsev, Robert Kaczmarczyk"
 date: "September 14, 2023"
-previewImg: "/images/blog/fw23.jpg"
+previewImg: "/images/blog/FW23.jpg"
 ---
 We happily announce that we, LAION, won the Falling Walls Science Breakthrough of the Year 2023 Award in the category Science and Innovation Management for "democratizing AI research by providing open access to advanced AI models, tools, and datasets, fostering public engagement and awareness, and promoting international collaboration to create a transparent and inclusive AI ecosystem that benefits everyone." This recognition is not just for the select few but for our entire LAION community of hobby scientists, university professors, students, and enthusiasts all united with a shared vision - the democratization of AI research.
 
