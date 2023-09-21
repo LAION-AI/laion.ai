@@ -1,6 +1,6 @@
 ---
 title: "Towards a transparent AI Future: The Call for less regulatory hurdles on Open-Source AI in Europe"
-author: "LAION.ai"
+author: "LAION"
 date: "September 21, 2023"
 previewImg: "/images/blog/laion-blue.png"
 ---
@@ -17,6 +17,10 @@ The transparency of open-source AI is its strength. It ensures robustness and se
 #### Countering Redundancy and Upholding Sustainability
 
 With the environmental toll of extensive AI training becoming a major concern, open-source models have shown a clear path forward. By minimizing redundant training, they reduce computational and energy overheads, reflecting a commitment to a sustainable future.
+
+#### Ensuring Scientific Reproducibility
+
+Reproducibility and validation is pivotal to scientific trustworthiness. With open-source AI models, results are transparent and verifiable across the global research spectrum. As AI permeates sectors from healthcare to finance, this reproducibility ensures reliable and trustworthy outcomes, cementing the indispensable role of open-source foundations.
 
 #### A Catalyst for Innovation
 
