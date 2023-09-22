@@ -44,7 +44,7 @@ European sovereignty in AI is crucial, and open-source AI research is key to add
 |----------|----------|
 | Board of the European Laboratory for Learning and Intelligent Systems (ELLIS): Serge Belongie, Nicolò Cesa-Bianchi, Florence d'Alché-Buc, Nada Lavrac, Neil D. Lawrence, Nuria Oliver, Bernhard Schölkopf, Josef Sivic, Sepp Hochreiter| [European Lab for Learning & Intelligent Systems (ellis.eu)](https://ellis.eu/board)   |
 | Yann André LeCun | Chief AI Scientist at Facebook & Silver Professor at the Courant Institute, New York University |
-| Jürgen Schmidhuber | Prof. Jürgen Schmidhuber : Scientific Director of the Swiss AI Lab IDSIA (USI & SUPSI), Co-Founder & Chief Scientist of NNAISENSE, Inventor of LSTM Networks |
+| Jürgen Schmidhuber | Prof. Jürgen Schmidhuber : Scientific Director of the Swiss AI Lab IDSIA (USI & SUPSI), Co-Founder & Chief Scientist of NNAISENSE, Father of Modern AI |
 | Kristian Kersting | Full Professor at Technical University of Darmstadt, Co-Director, Hessian Center for AI (hessian.AI) and member of the German Center for Artificial Intelligence (DFKI)   |
 | Björn Ommer   | Full professor and head of the Computer Vision & Learning Group at the Ludwig-Maximilians-University of Munich   |
 | Hilde Kuehne   | Professor, Institute for Computer Science II, Head of Multimodal Learning, University of Bonn   |
