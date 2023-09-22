@@ -8,7 +8,6 @@ import dateFormat from "dateformat";
 export default function Post({ frontmatter, content, slug }) {
   return (
     <div className="w-full flex justify-center py-5 pt-16 md:pt-5">
-
       <Tags
         title={frontmatter.title}
         desc={md({ html: true }).use(mdgh, {prefixHeadingIds: false}).render(content).slice(0, 157) + "..."}
@@ -34,7 +33,6 @@ export default function Post({ frontmatter, content, slug }) {
             __html: md({ html: true }).use(mdgh, {prefixHeadingIds: false}).render(content),
           }}
         />
-        
       </div>
     </div>
   );
