@@ -43,6 +43,7 @@ European sovereignty in AI is crucial, and open-source AI research is key to add
 | Name | Description |
 |----------|----------|
 | Board of the European Laboratory for Learning and Intelligent Systems (ELLIS): Serge Belongie, Nicolò Cesa-Bianchi, Florence d'Alché-Buc, Nada Lavrac, Neil D. Lawrence, Nuria Oliver, Bernhard Schölkopf, Josef Sivic, Sepp Hochreiter| [European Lab for Learning & Intelligent Systems (ellis.eu)](https://ellis.eu/board)   |
+| Yann André LeCun | Chief AI Scientist at Facebook & Silver Professor at the Courant Institute, New York University |
 | Jürgen Schmidhuber | Prof. Jürgen Schmidhuber : Scientific Director of the Swiss AI Lab IDSIA (USI & SUPSI), Co-Founder & Chief Scientist of NNAISENSE, Inventor of LSTM Networks |
 | Kristian Kersting | Full Professor at Technical University of Darmstadt, Co-Director, Hessian Center for AI (hessian.AI) and member of the German Center for Artificial Intelligence (DFKI)   |
 | Björn Ommer   | Full professor and head of the Computer Vision & Learning Group at the Ludwig-Maximilians-University of Munich   |
@@ -54,6 +55,8 @@ European sovereignty in AI is crucial, and open-source AI research is key to add
 | Tim Dettmers   | PhD Student at The University of Washington. Creator of the bitsandbytes library.   |
 | Mark Schutera   | PhD Student Karlsruhe Institute of Technology within Unsupervised Deep Learning for Cognitive Perception Systems   |
 | Andreas Hochlehnert   | PhD Student, University of Tübingen, International Max-Planck Research School for Intelligent Systems (IMPRS-IS)   |
+| Irina Rish | Full Professor at the Université de Montréal, a core member of Mila - Quebec AI Institute. Canada Excellence Research Chair (CERC) in Autonomous AI and CIFAR Chair. PI on a collaborative INCITE project on the Summit supercomputer at OLCF (supported by the U.S. DoE, Office of Science ), aiming to build open-source large-scale language and multimodal models (e.g., RedPajama-INCITE was trained as a part of this project). |
+| Huu Nguyen | Former big-law partner, CEO and co-founder of Ontocord.AI, LAION volunteer, co-author of Data Governance in the Age of Large-Scale Data-Driven Language Technology, FAccT ’22, and co-author of resolution 112 of the ABA on encouraging lawyers to understand the risks and benefits of AI. |
+| Hessie Jones | Writer, Forbes, Data Privacy, Ethical AI Practitioner, Advocating for Human-centred AI and Ethical Distribution of AI Systems, BOA Women in AI Ethics, Cofounder MyData Canada, Cofounding Member Personally Identifiable Information Standards Architecture (PIISA); former COO Beacon Trust Network, BOD Technology for Good Canada  |
 | Christoph Schuhmann    | Organizational Lead & Co-Founder of the Large-scale AI Open Network (LAION), Neurips 2022 Outstanding Paper Award & Falling Walls Breakthrough of the Year 2023 Award Winner   |
 | Robert Kaczmarczyk   | Medical Lead & Co-Founder of the Large-scale AI Open Network (LAION), Neurips 2022 Outstanding Paper Award & Falling Walls Breakthrough of the Year 2023 Award Winner   |
-| Irina Rish | Full Professor at the Université de Montréal, a core member of Mila - Quebec AI Institute. Canada Excellence Research Chair (CERC) in Autonomous AI and CIFAR Chair. PI on a collaborative INCITE project on the Summit supercomputer at OLCF (supported by the U.S. DoE, Office of Science ), aiming to build open-source large-scale language and multimodal models (e.g., RedPajama-INCITE was trained as a part of this project). |
