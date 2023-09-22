@@ -1,7 +1,7 @@
 ---
 title: "Introducing VisIT-Bench, a new benchmark for instruction-following vision-language models inspired by real-world use"
 author: "Yonatan Bitton"
-date: "August 15, 2023"
+date: "August 15 2023"
 previewImg: "/images/blog/visit_bench/1_fig1.png"
 ---
 
