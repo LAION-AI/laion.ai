@@ -9,6 +9,7 @@ import ExportedImage from "next-image-export-optimizer";
 export default function Blog({ posts }) {
   return (
     <div className="w-full flex justify-center pt-16 md:pt-5">
+      
       <Tags title="Blog" />
       <div className="container px-5">
         <h1 className="text-8xl md:text-8xl font-bold pb-2">BLOG</h1>
@@ -48,6 +49,7 @@ export default function Blog({ posts }) {
             </Link>
           );
         })}
+
       </div>
     </div>
   );

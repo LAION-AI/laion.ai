@@ -7,7 +7,7 @@ previewImg: "/images/blog/laion-blue.png"
 
 Following our previous open letter to the European Parliament on the significance of open-source AI, LAION, backed by European Laboratory for Learning and Intelligent Systems (ELLIS) and a long list of very impactful AI researchers, we submit this new open letter to the European Parliament:
 
-| [Link to the PDF](/documents/transparent-ai-eu.pdf) |
+| [Link to the PDF](/documents/transparent-ai.pdf) |
 |----------|
 
 #### Why Open-Source is the Gold Standard for AI Security
