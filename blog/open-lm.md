@@ -7,7 +7,7 @@ previewImg: "/images/blog/openlm_teaser.png"
 
 ## Introduction
 
-We release OpenLM, a simple and minimalist PyTorch codebase for training medium-sized language models. OpenLM is designed to maximize GPU utilization and training speed, and is easy to modify for new language model research and applications.
+We release [OpenLM](https://github.com/mlfoundations/open_lm) a simple and minimalist PyTorch codebase for training medium-sized language models. OpenLM is designed to maximize GPU utilization and training speed, and is easy to modify for new language model research and applications.
 
 
 We validate OpenLM by training two language models, OpenLM-1B and OpenLM-7B, on 1.6T and 1.25T tokens of text, respectively. We evaluate these models on standard zero-shot text classification and multiple choice tasks and find that OpenLM-1B outperforms many popular, similarly sized models such as OPT-1.3B and Pythia-1B.  OpenLM-7B achieves similar performance to LLAMA-7B and MPT-7B.
