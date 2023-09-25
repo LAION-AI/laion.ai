@@ -62,10 +62,10 @@ After training, we use the LLM-foundry to  evaluate model performance on the 13 
 
 Here, we display the validation loss for up to 1T tokens of training for both the OpenLM-1B and 7B models:
 
-![validation loss of 1b model](plots/1B_loss.png)
+![validation loss of 1b model](/images/blog/1B_loss.png)
 
 
-![validation loss of 7b model](plots/7B_loss.png)
+![validation loss of 7b model](/images/blog/7B_loss.png)
 
 
 ## Downstream Evaluations
