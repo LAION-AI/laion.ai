@@ -21,6 +21,8 @@ All models and training data (tokenized and shuffled) are available on Huggingfa
 * [OpenLM-1B](https://huggingface.co/mlfoundations/open_lm_1B)
 * [OpenLM-7B](https://huggingface.co/mlfoundations/open_lm_7B_1.25T)
 * [Training and validation data](https://huggingface.co/datasets/mlfoundations/open_lm_example_data)
+
+We are working on releasing intermediate checkpoints.
   
 ## Data
 We train our models on a collection of text totaling 1.6T tokens. The training data comes from the following sources:
@@ -157,4 +159,4 @@ The OpenLM team currently consists of: Suchin Gururangan*, Mitchell Wortsman*, S
 
 Code is based heavily on [open-clip](https://github.com/mlfoundations/open_clip) developed by a team including Ross Wightman, Romain Beaumont, Cade Gordon, Mehdi Cherti, Jenia Jitsev, and [open-flamingo](https://github.com/mlfoundations/open_flamingo), developed by a team including Anas Awadalla and Irena Gao. Additional inspiration is from [lit-llama](https://github.com/Lightning-AI/lit-llama).
 
-We thank Stability AI for providing the compute for this project, the RedPajama team for their dataset, Sarah Pratt for logo design and the following people for helpful advice and feedback throughout the project: Jonathan Frankle, Daniel King, Luca Soldaini.
+We thank Stability AI for providing the compute for this project, the RedPajama team for their dataset, Sarah Pratt for logo design, [IFML](https://www.ifml.institute/), and Toyota Research Institute. We also thank the following people for helpful advice and feedback throughout the project: Jonathan Frankle, Daniel King, Luca Soldaini.
