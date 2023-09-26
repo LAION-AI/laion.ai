@@ -4,7 +4,6 @@ author: "OpenLM team"
 date: "September 26 2023"
 previewImg: "/images/blog/new_openlm_teaser.png"
 ---
-
 ## Introduction
 
 We release [OpenLM](https://github.com/mlfoundations/open_lm) a simple and minimalist PyTorch codebase for training medium-sized language models. OpenLM is designed to maximize GPU utilization and training speed, and is easy to modify for new language model research and applications.
@@ -14,7 +13,7 @@ We validate OpenLM by training two language models, OpenLM-1B and OpenLM-7B, on 
 
 In this blogpost, we briefly describe the training data, model, evaluation setup, and overall results. We also describe exciting future work we plan to pursue with these models and our OpenLM framework. 
 
-<img src="/images/blog/openlm_teaser_wide.png">
+![](/images/blog/wide_openlm_teaser.png)
 
 ## Model and Data Release
 
