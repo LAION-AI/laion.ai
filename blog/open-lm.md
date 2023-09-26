@@ -2,8 +2,13 @@
 title: "Introducing OpenLM"
 author: "OpenLM team"
 date: "September 26 2023"
-previewImg: "/images/blog/openlm_teaser.png"
+previewImg: "/images/blog/new_openlm_teaser.png"
 ---
+
+<div style="display: flex;">
+    <img src="/images/blog/openlm_teaser.png" style="width: 50%; object-fit: cover;"/>
+    <img src="/images/blog/new_openlm_teaser.png" style="width: 50%; object-fit: cover;"/>
+</div>
 
 ## Introduction
 
@@ -157,4 +162,4 @@ The OpenLM team currently consists of: Suchin Gururangan*, Mitchell Wortsman*, S
 
 Code is based heavily on [open-clip](https://github.com/mlfoundations/open_clip) developed by a team including Ross Wightman, Romain Beaumont, Cade Gordon, Mehdi Cherti, Jenia Jitsev, and [open-flamingo](https://github.com/mlfoundations/open_flamingo), developed by a team including Anas Awadalla and Irena Gao. Additional inspiration is from [lit-llama](https://github.com/Lightning-AI/lit-llama).
 
-We thank Stability AI for providing the compute for this project, the RedPajama team for their dataset, and the following people for helpful advice and feedback throughout the project: Jonathan Frankle, Daniel King, Luca Soldiani.
+We thank Stability AI for providing the compute for this project, the RedPajama team for their dataset, Sarah Pratt for logo design and the following people for helpful advice and feedback throughout the project: Jonathan Frankle, Daniel King, Luca Soldaini.
