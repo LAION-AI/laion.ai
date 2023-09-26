@@ -50,13 +50,15 @@ European sovereignty in AI is crucial, and open-source AI research is key to add
 | Hilde Kuehne   | Professor, Institute for Computer Science II, Head of Multimodal Learning, University of Bonn   |
 | Mira Mezini   | Professor of Computer Science at Technical University of Darmstadt, Co-Director of Hessian Center for AI (hessian.AI)   |
 | Patrick Schramowski   | Senior Researcher at the German Center for Artificial Intelligence (DFKI) and Hessian Center for AI (hessian.AI)   |
-| Jenia Jitsev   | Senior Researcher and Lab Lead at Juelich Supercomputing Center, Research Center Juelich. Scientific Lead and Co-Founder at LAION; Member of European Laboratory for Learning and Intelligent Systems (ELLIS)   |
+| Jenia Jitsev   | Expert in multi-modal foundation models and datasets. LAION core member and contributor. Member OpenBioML. Researcher at Helmholtz Juelich Supercomputing Center, Germany.  |
+| Marianna Nezhurina | Senior Researcher and Lab Lead at Juelich Supercomputing Center, Helmholtz Research Center Juelich. Scientific Lead and Co-Founder at LAION; Member of European Laboratory for Learning and Intelligent Systems (ELLIS)   |
 | Dominik L. Michels   | Full Professor of Intelligent Algorithms in Modeling and Simulation at the Technical University of Darmstadt   |
 | Tim Dettmers   | PhD Student at The University of Washington. Creator of the bitsandbytes library.   |
 | Mark Schutera   | PhD Student Karlsruhe Institute of Technology within Unsupervised Deep Learning for Cognitive Perception Systems   |
 | Andreas Hochlehnert   | PhD Student, University of Tübingen, International Max-Planck Research School for Intelligent Systems (IMPRS-IS)   |
 | Irina Rish | Full Professor at the Université de Montréal, a core member of Mila - Quebec AI Institute. Canada Excellence Research Chair (CERC) in Autonomous AI and CIFAR Chair. PI on a collaborative INCITE project on the Summit supercomputer at OLCF (supported by the U.S. DoE, Office of Science ), aiming to build open-source large-scale language and multimodal models (e.g., RedPajama-INCITE was trained as a part of this project). |
 | Huu Nguyen | Former big-law partner, CEO and co-founder of Ontocord.AI, LAION volunteer, co-author of Data Governance in the Age of Large-Scale Data-Driven Language Technology, FAccT ’22, and co-author of resolution 112 of the ABA on encouraging lawyers to understand the risks and benefits of AI. |
+| David Ha | Co-Founder and CEO of sakana.ai and Sampo Pyysalo, Associate Professor at the Department of Computing, University of Turku  |
 | Hessie Jones | Writer, Forbes, Data Privacy, Ethical AI Practitioner, Advocating for Human-centred AI and Ethical Distribution of AI Systems, BOA Women in AI Ethics, Cofounder MyData Canada, Cofounding Member Personally Identifiable Information Standards Architecture (PIISA); former COO Beacon Trust Network, BOD Technology for Good Canada  |
 | Christoph Schuhmann    | Organizational Lead & Co-Founder of the Large-scale AI Open Network (LAION), Neurips 2022 Outstanding Paper Award & Falling Walls Breakthrough of the Year 2023 Award Winner   |
 | Robert Kaczmarczyk   | Medical Lead & Co-Founder of the Large-scale AI Open Network (LAION), Neurips 2022 Outstanding Paper Award & Falling Walls Breakthrough of the Year 2023 Award Winner   |
