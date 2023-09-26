@@ -7,7 +7,6 @@ previewImg: "/images/blog/new_openlm_teaser.png"
 
 <div style="display: flex;">
     <img src="/images/blog/openlm_teaser.png" style="width: 50%; object-fit: cover;"/>
-    <img src="/images/blog/new_openlm_teaser.png" style="width: 50%; object-fit: cover;"/>
 </div>
 
 ## Introduction
