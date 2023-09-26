@@ -13,7 +13,7 @@ We validate OpenLM by training two language models, OpenLM-1B and OpenLM-7B, on 
 
 In this blogpost, we briefly describe the training data, model, evaluation setup, and overall results. We also describe exciting future work we plan to pursue with these models and our OpenLM framework. 
 
-![](/images/blog/openlm_teaser_wide.png.png)
+![](/images/blog/openlm_teaser_wide.png)
 
 ## Model and Data Release
 
