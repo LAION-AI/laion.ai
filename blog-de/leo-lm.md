@@ -93,10 +93,9 @@ Insgesamt ist die LeoLM-Modellsuite ein Proof-of-Concept für den Spracherwerb f
 Dieses Projekt wurde von Björn Plüster (Universität Hamburg) geleitet mit Unterstützung, Anleitung und
 Supervision von Christoph Schuhmann (LAION), Patrick Schramowski (LAION, Hessian AI, DFKI) und Jenia Jitsev (LAION, Juelich Supercomputing Center, Helmholtz Research Center Juelich).
 Wir danken den Leuten bei hessian.AI, insbesondere Wolfgang Stille, Kristian Kersting, Florian Kieser und Patrick Diem
-für ihre großzügige Rechenzeitvergabe über das Hessian AI Innovation Lab (gefördet vom Hessischen Ministerium für Digitale Strategie und Entwicklung) und das AI Service Center hessian.AISC (gefördert vom Bundesministerium für Bildung und Forschung (BMBF)),
-und Unterstützung während des gesamten Trainingsprozesses!  Vielen Dank auch an Jae Hee Lee von der
-Universität Hamburg und Community-Mitglieder bei LAION für ihr hilfreiches Feedback. Weiterhin danken wir dem hessian.AI's
-Innovationslabor, dem AI Servicezentrum hessian.AISC und dem Deutschen Zentrum für Künstliche Intelligenz (DFKI) für ihre Unterstützung.
+für ihre großzügige Rechenzeitvergabe über das Hessian AI Innovation Lab (gefördet vom Hessischen Ministerium für Digitale Strategie und Entwicklung) und das AI Service Center hessian.AISC (gefördert vom Bundesministerium für Bildung und Forschung (BMBF)), und Unterstützung während des gesamten Trainingsprozesses!  Vielen Dank auch an Jae Hee Lee von der Universität Hamburg, Andreas Köpf von Open-Assistant und Community-Mitglieder bei LAION für ihr hilfreiches Feedback. Weiterhin danken wir dem hessian.AI's Innovationslabor, dem AI Servicezentrum hessian.AISC und dem Deutschen Zentrum für Künstliche Intelligenz (DFKI) für ihre Unterstützung.
+
+Außerdem danken wir den Gruppen, die die Datensätze für unser Chat-finetuning ursprünglich erstellt haben: [OpenAssistant](https://huggingface.co/OpenAssistant), [FreedomIntelligence](https://huggingface.co/FreedomIntelligence), [garage-bAInd](https://huggingface.co/garage-bAInd), [WizardLM](https://huggingface.co/WizardLM) and [Instruction-Tuning-with-GPT-4](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM).
 
 ---
 

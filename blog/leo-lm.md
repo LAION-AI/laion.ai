@@ -94,9 +94,9 @@ Overall, the LeoLM model suite is a proof-of-concept of language acquisition for
 
 This project was led by Björn Plüster with support, guidance and supervision by Christoph Schuhmann (LAION), Patrick Schramowski (LAION, Hessian.AI, DFKI) and Jenia Jitsev (LAION, Juelich Supercomputing Center, Helmholtz Research Center Juelich).
 We would like to thank the folks at hessian.AI, especially Wolfgang Stille, Kristian Kersting, Florian Kieser and Patrick Diem
-for their generous compute sponsorship via the Hessian.AI Innovation Lab (funded by the Hessian Ministry for Digital Strategy and Innovation) and the hessian.AISC Service Center (funded by the Federal Ministry of Education and Research (BMBF)), and their support throughout the training process!  Many thanks also to Jae Hee Lee from the
-University of Hamburg and community members at LAION for their helpful feedback. Special thanks also go to hessian.AI's
-Innovation Lab, the AI service centre hessian.AISC and the German Center for Artificial Intelligence (DFKI).
+for their generous compute sponsorship via the Hessian.AI Innovation Lab (funded by the Hessian Ministry for Digital Strategy and Innovation) and the hessian.AISC Service Center (funded by the Federal Ministry of Education and Research (BMBF)), and their support throughout the training process!  Many thanks also to Jae Hee Lee from the University of Hamburg, Andreas Köpf from Open-Assistant, and community members at LAION for their helpful feedback. Special thanks also go to hessian.AI's Innovation Lab, the AI service centre hessian.AISC and the German Center for Artificial Intelligence (DFKI).
+
+Moreover, we would like to explicitly thank the creators of the datasets we use for finetuning: [OpenAssistant](https://huggingface.co/OpenAssistant), [FreedomIntelligence](https://huggingface.co/FreedomIntelligence), [garage-bAInd](https://huggingface.co/garage-bAInd), [WizardLM](https://huggingface.co/WizardLM) and [Instruction-Tuning-with-GPT-4](https://github.com/Instruction-Tuning-with-GPT-4/GPT-4-LLM).
 
 ---
 
