@@ -13,6 +13,8 @@ Thanks to a compute grant at [HessianAI](https://hessian.ai/)'s new supercompute
 [`LeoLM/leo-hessianai-7b`](https://huggingface.co/LeoLM/leo-hessianai-7b) and [`LeoLM/leo-hessianai-13b`](https://huggingface.co/LeoLM/leo-hessianai-13b) (70b also coming soon! 👀) under the [Llama-2 community license](https://ai.meta.com/llama/license/). In addition, we construct evaluation set for benchmarking capabilities of german language models to standardize model comparison, similar to widely adopted english based evals, as provided for instance by [lm-harness-eval](https://github.com/EleutherAI/lm-evaluation-harness) or [LLM-Foundry](https://github.com/mosaicml/llm-foundry).
 With this release, LAION and Hessian.AI are poised to significantly enhance German open-source and commercial LLM research, fostering new opportunities and expediting widespread adoption.
 
+Try out  [**LeoLM/leo-hessianai-7b-chat**](https://huggingface.co/spaces/LeoLM/leo-hessianai-7b-chat) and [**LeoLM/leo-hessianai-13b-chat**](https://huggingface.co/spaces/LeoLM/leo-hessianai-13b-chat) on HuggingFace Spaces!
+
 *[[Read in German]](/blog-de/leo-lm)*
 
 ## Introduction

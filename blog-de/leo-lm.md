@@ -11,6 +11,8 @@ Dank eines Compute-Grants auf dem neuen Supercomputer **42** von [HessianAI](htt
 [`LeoLM/leo-hessianai-7b`](https://huggingface.co/LeoLM/leo-hessianai-7b) und [`LeoLM/leo-hessianai-13b`](https://huggingface.co/LeoLM/leo-hessianai-13b) (70b folgt auch bald! 👀) unter der [Llama-2 Community-Lizenz](https://ai.meta.com/llama/license/). Zusätzlich konstruieren wir einen Evaluierungssatz für Benchmarks zur Überprüfung der Fähigkeiten deutscher Sprachmodelle, um den Modellvergleich zu standardisieren, ähnlich zu den weit verbreiteten auf Englisch basierten Evaluierungen, wie sie beispielsweise von [lm-evaluation-harness](https://github.com/EleutherAI/lm-evaluation-harness) oder [LLM-Foundry](https://github.com/mosaicml/llm-foundry) bereitgestellt werden.
 Mit dieser Veröffentlichung sind LAION und Hessian.AI bereit, die deutsche Open-Source und kommerzielle LLM-Forschung erheblich zu verbessern und so neue Möglichkeiten zu fördern und die weite Verbreitung zu beschleunigen.
 
+Probieren Sie [**LeoLM/leo-hessianai-7b-chat**](https://huggingface.co/spaces/LeoLM/leo-hessianai-7b-chat) und [**LeoLM/leo-hessianai-13b-chat**](https://huggingface.co/spaces/LeoLM/leo-hessianai-13b-chat) auf HuggingFace Spaces aus!
+
 *[[Auf Englisch lesen]](/blog/leo-lm)*
 
 ## Einleitung
@@ -87,6 +89,7 @@ Unsere Forschung hat mehrere Schlüsselbeiträge:
 Insgesamt ist die LeoLM-Modellsuite ein Proof-of-Concept für den Spracherwerb für vortrainierte Modelle. Darüber hinaus präsentiert sie sich als das erste offen verfügbare deutsche Foundation-Modell, das den heutigen Standards entspricht. Wir bei LAION hoffen, die deutsche Open-Source-Forschungsgemeinschaft anstoßen zu können, um die Abhängigkeit von geschlossenen kommerziellen Quellen wie OpenAI zu verringern. Viel Spaß mit LeoLM!
 
 ## Danksagungen
+
 Dieses Projekt wurde von Björn Plüster (Universität Hamburg) geleitet mit Unterstützung, Anleitung und
 Supervision von Christoph Schuhmann (LAION), Patrick Schramowski (LAION, Hessian AI, DFKI) und Jenia Jitsev (LAION, Juelich Supercomputing Center, Helmholtz Research Center Juelich).
 Wir danken den Leuten bei hessian.AI, insbesondere Wolfgang Stille, Kristian Kersting, Florian Kieser und Patrick Diem
