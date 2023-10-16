@@ -2,7 +2,7 @@
 title: "CLARA: Advancing Machines in Understanding Speech Nuances"
 author: "Knoriy, Christoph, Robert"
 date: "Oct 16 2023"
-previewImg: "/images/blog/clasp.png"
+previewImg: "/images/blog/clara.png"
 ---
 
 Voices carry not only words but also convey emotions, emphasis, and nuance through aspects like tone and accent. However, existing speech technology only partially comprehends these intricate components of human speech.

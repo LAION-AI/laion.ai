@@ -1,6 +1,6 @@
 ---
 title: "LAION Triumphs at the Falling Walls Science Breakthrough of the Year 2023 Awards"
-author: "Christoph Schuhmann, Jenia Jitsev, Robert Kaczmarczyk"
+author: "Christoph, Jenia, Robert"
 date: "September 14, 2023"
 previewImg: "/images/blog/FW23.jpg"
 ---
