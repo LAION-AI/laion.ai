@@ -29,7 +29,7 @@ Preliminary findings indicate CLARA's capabilities in multilingual speech repres
 
 For instance, in the CREMA-D dataset for emotional English speech, CLARA achieved an 88.44% accuracy using a linear probe classifier, nearing the existing best accuracy of 95.17% derived from a fully supervised and labelled model. This accomplishment is attained through self-supervised pre-training with unlabeled data and minimal subsequent tuning.
 
-CLARA also adeptly generalises to unfamiliar languages. Testing for emotion recognition in French, using the EMODB dataset, achieved a 75.2% accuracy using a linear probe. Moreover, its transfer learning capabilities showcase a rapid adaptation to new languages and tasks by leveraging its foundational representations.
+CLARA also adeptly generalises to unfamiliar languages. Testing for emotion recognition in French, using the EmoV-DB dataset, achieved a 75.2% accuracy using a linear probe. Moreover, its transfer learning capabilities showcase a rapid adaptation to new languages and tasks by leveraging its foundational representations.
 
 To fully unlock CLARA's potential, we're concentrating on enhancing the diversity and volume of the training data, especially in languages with limited resources. Your contributions to our multilingual datasets will be pivotal in achieving universal speech understanding.
 
