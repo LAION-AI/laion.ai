@@ -15,15 +15,15 @@ The field of AI has observed a pivotal shift toward foundation generalist models
 
 ### 1. Chess
 
-The [chess dataset](https://huggingface.co/datasets/lfsm/chess) comprises 3.2 billion games, equating to approximately 608 billion individual moves. These games, generated via self-play by the Stockfish engine, emulate a high strategic complexity, reflective of a 2500 Elo rating. Each entry contains detailed move sequences, termination status, and game results.
+The [chess dataset](https://huggingface.co/datasets/laion/strategic_game_chess) comprises 3.2 billion games, equating to approximately 608 billion individual moves. These games, generated via self-play by the Stockfish engine, emulate a high strategic complexity, reflective of a 2500 Elo rating. Each entry contains detailed move sequences, termination status, and game results.
 
 ### 2. Rubik's Cube (3x3x3)
 
-The [rubik's cube dataset](https://huggingface.co/datasets/lfsm/cube) features 1.64 billion Rubik's Cube solves, totaling roughly 236.39 billion moves. It provides initial scrambled states and the ensuing solve sequences, offering a [complex problem-solving scenario for models to navigate](https://github.com/trincaog/magiccube/).
+The [rubik's cube dataset](https://huggingface.co/datasets/laion/strategic_game_cube) features 1.64 billion Rubik's Cube solves, totaling roughly 236.39 billion moves. It provides initial scrambled states and the ensuing solve sequences, offering a [complex problem-solving scenario for models to navigate](https://github.com/trincaog/magiccube/).
 
 ### 3. Mazes
 
-The [maze dataset](https://huggingface.co/datasets/lfsm/maze), while smaller at 350,000 mazes, represents over 39.29 billion moves. Each maze is a 30x30 ASCII representation, with solutions derived using the A* algorithm, challenging pathfinding and planning algorithms.
+The [maze dataset](https://huggingface.co/datasets/laion/strategic_game_maze), while smaller at 350,000 mazes, represents over 39.29 billion moves. Each maze is a 30x30 ASCII representation, with solutions derived using the A* algorithm, challenging pathfinding and planning algorithms.
 
 ## Methodology
 
