@@ -2,7 +2,7 @@
 title: "Conditional Pretraining of Large Language Models"
 author: "Rallio"
 date: "May 16 2023"
-previewImg: "https://aeiljuispo.cloudimg.io/v7/https://s3.amazonaws.com/moonup/production/uploads/1674247492314-noauth.png?w=200&h=200&f=face"
+previewImg: "/images/blog/wolf-round.jpg"
 ---
 
 
