@@ -1,7 +1,7 @@
 ---
 title: "Open Empathic Launch"
 author: "Christoph, Knoriy, Robert"
-date: "Oct 22, 2023"
+date: "Oct 23, 2023"
 previewImg: "/images/blog/open-empathic.png"
 ---
 
