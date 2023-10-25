@@ -13,7 +13,8 @@ In an increasingly AI-driven world, it is of paramount importance that AI system
 
 | **Ready to Make a Difference?** |
 |:------------------------------:|
-| Dive into our [tutorial video](https://youtu.be/GZqYr8_Q7DE) and head over to the [Open Empathic website](https://dct.openempathic.ai/) to help the **Open Empathic** movement through emotional annotation. Together, let's craft an era where AI resonates with human emotions. Join our [Open Empathic Discord server](https://discord.gg/nFdG99UAav)|
+|Join our [Open Empathic Discord server](https://discord.gg/nFdG99UAav)|
+| Dive into our [tutorial video](https://youtu.be/GZqYr8_Q7DE) and head over to the [Open Empathic website](https://dct.openempathic.ai/) to help the **Open Empathic** movement through emotional annotation. Together, let's craft an era where AI resonates with human emotions.|
 
 ## Why is Emotional Intelligence Essential for AI?
 
