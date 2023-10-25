@@ -9,7 +9,7 @@ Voices carry not only words but also convey emotions, emphasis, and nuance throu
 
 Introducing **CLARA (Multilingual Contrastive Learning for Audio Representation Acquisition)** – a project designed to enhance machines' understanding of the implicit aspects of speech. It aspires to develop a comprehensive pre-trained model dedicated to auditory communication.
 
-Explore our [CLARA project on GitHub](https://github.com/knoriy/CLARA) and its [interactive Demo Notebook](https://github.com/knoriy/CLARA/blob/master/clara/demo.ipynb). The corresponding research article can be found on [arxiv](https://arxiv.org/abs/2310.11830). Join our [Open Empathic Discord server](https://discord.gg/vpy76eCR).
+Explore our [CLARA project on GitHub](https://github.com/knoriy/CLARA) and its [interactive Demo Notebook](https://github.com/knoriy/CLARA/blob/master/clara/demo.ipynb). The corresponding research article can be found on [arxiv](https://arxiv.org/abs/2310.11830). Join our [Open Empathic Discord server](https://discord.gg/nFdG99UAav).
 
 ## The Driving Force Behind CLARA
 
