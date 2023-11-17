@@ -9,6 +9,9 @@ LAION POP is a subset of LAION 5B: This subset comprises 600,000 high-resolution
 
 | [SampleOverview](/documents/llava-caption-sample.html) |
 |:------------------------------:|
+|[LAION-POP Dataset on HuggingFace](https://huggingface.co/datasets/laion/laion-pop)|
+
+<img src="/images/blog/laion_pop.jpg" style="height:384px; width: auto;"/>
 
 ## Dataset and Methodology
 
