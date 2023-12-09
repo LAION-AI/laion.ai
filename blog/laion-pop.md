@@ -7,7 +7,7 @@ previewImg: "/images/blog/laion_pop.jpg"
 
 LAION POP is a subset of LAION 5B: This subset comprises 600,000 high-resolution images, each equipped with detailed descriptions. The selection of images was based on 10,000 different concepts popular on the image generation site "Midjourney".
 
-| [SampleOverview](/documents/llava-caption-sample.html) |
+| [SampleOverview](/documents/llava_cogvlm_pop.html) |
 |:------------------------------:|
 |[LAION-POP Dataset on HuggingFace](https://huggingface.co/datasets/laion/laion-pop)|
 
@@ -17,9 +17,9 @@ LAION POP is a subset of LAION 5B: This subset comprises 600,000 high-resolution
 
 4.25 million Midjourney images were downloaded from [this huggingface repository](https://huggingface.co/datasets/tarungupta83/MidJourney_v5_Prompt_dataset), and CLIP L14 vectors were generated for each image. Using the k-means clustering method, these vectors were assigned to 10,000 centroids. The CLIP vectors of these centroids were then used to retrieve nearest neighbors from the LAION-5B dataset using the [image search website](https://rom1504.github.io), focusing on those with aesthetic values of at least 0.5 and a minimum resolution of 768 pixels on the shortest side. Additionally, images suspected of containing watermarks were filtered out. NSFW values were calculated for each image using the LAION CLIP-based-NSFW-Detector, and these are released with the data.
 
-## Generation of LLAVA 1.5 Captions
+## Generation of Captions
 
-Detailed image descriptions were created for the selected images using the LLAVA 1.5 model. These descriptions focus on objects, backgrounds, scenery, interactions, and gestures, as well as the appearance and emotions of the depicted people or characters.
+Two sets of detailed image descriptions were created for the images using the models CogVLM and LLaVA-v1.5-13b. These descriptions focus on objects, backgrounds, text, scenery, interactions, and gestures, as well as the appearance and emotions of the depicted people or characters. The CogVLM captions are empirically recommended as higher quality captions, but systematic comparisons of these captions are encouraged and welcomed.
 
 ## PROMPT
 
@@ -30,8 +30,3 @@ Detailed image descriptions were created for the selected images using the LLAVA
 ## Future Application and Improvements
 
 Although no text-to-image model has been tuned with these data so far, we expect that the use of these data could significantly improve the aesthetic quality of the outputs.
-
-
-
-
-
