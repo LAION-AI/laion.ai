@@ -5,14 +5,14 @@ date: "December 19 2023"
 previewImg: "/images/blog/laion-blue.png"
 ---
 
-LAION has a zero tolerance policy for illegal content. LAION and partners like [IWF](https://www.iwf.org.uk/) are working together to continually monitor and validate links in publically available LAION datasets. Therefore, links contained in LAION datasets are both validated through intensive filtering by tools developed by LAION and partner organizations that make sure all the links comply with the law.
+LAION has a zero tolerance policy for illegal content. We work with organizations like [IWF](https://www.iwf.org.uk/) and others to continually monitor and validate links in the publicly available LAION datasets. LAION datasets are also validated through intensive filtering tools developed by our community and partner organizations to ensure they are safe and comply with the law.
 
-## What is the LAION dataset update?
+## Recent developments and maintenance of LAION 5B
 
-We would like to announce that we will conduct regular maintanence procedures, in case our cooperation partners signal links in LAION datasets that still point to suspicious, potentially unlawful content on public internet. We will also update datasets by new validated best practicies in safety filtering that promise further dataset improvement. During such maintenance procedure, the public datasets will be temporarily taken down, to return back after update filtering.
+Yesterday, we received a copy of a report from Stanford that claimed to find links to illegal content in the LAION 5B dataset. We are evaluating the report findings. In an abundance of caution we have taken LAION 5B offline and are working quickly with the IWF and others to remove any links that may still point to suspicious, potentially unlawful content on the public web.
 
-## What is the next maintenance procedure?
+Our goal is to complete maintenance of LAION 5B by the second half of January and hope to republish the dataset at that time. Will keep you posted.
 
-While currently there is no clear evidence for any links in the LAION datasets pointing to unlawful material, we would like to test the workflow for the maintenance procedure and follow the hints provided by our cooperation partners to update the datasets. We also will take the opportunity to test further new tools for dataset safety filtering developed by LAION & partners. Once the procedure is finished, we will provide the updated versions of the LAION datasets to the public.
+## Our commitment to transparency
 
-The next maintenance procedure will be conducted on 19.12 and will finish approximately in the second half of January.
+Open datasets must be accessible and transparent to facilitate ethical AI development. Our goal at LAION is to democratize access to AI resources and promote responsible AI research. We believe the safest approach to AI development is through an open system, where transparency and community engagement are key to ensuring ethical standards and legal compliance. We believe the safest approach to AI development is through an open system.
