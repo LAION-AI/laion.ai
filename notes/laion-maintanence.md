@@ -1,5 +1,5 @@
 ---
-title: "Introducing safety review procedures for LAION dataset updates"
+title: "Safety Review for LAION 5B"
 author: "LAION.ai"
 date: "December 19 2023"
 previewImg: "/images/blog/laion-blue.png"
