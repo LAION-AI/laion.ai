@@ -11,7 +11,7 @@ LAION has a zero tolerance policy for illegal content. We work with organization
 
 Yesterday, we received a copy of a report from Stanford that claimed to find links to illegal content in LAION 5B. We are evaluating the report findings. In an abundance of caution we have taken LAION 5B offline and are working quickly with the IWF and others to find and remove links that may still point to suspicious, potentially unlawful content on the public web.
 
-Our goal is to complete safety review of LAION 5B by the second-half of January and will republish the dataset at that time.
+Our goal is to complete the safety review of LAION 5B by the second-half of January and will republish the dataset at that time.
 
 ## Open datasets enable AI safety
 
