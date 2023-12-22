@@ -13,6 +13,6 @@ LAION datasets (more than 5.85 billion entries) are sourced from the freely avai
 
 LAION collaborates with universities, researchers and NGOs to improve these filters and are currently working with the [Internet Watch Foundation (IWF)](https://www.iwf.org.uk/) to identify and remove content suspected of violating laws. LAION invites the Stanford researchers to join its Community to improve our datasets and to develop efficient filters for detecting harmful content.
 
-LAION has a zero tolerance policy for illegal content and in an abundance of caution, we are temporarily taking down the LAION 5B dataset to ensure it is safe before republishing them.
+LAION has a zero tolerance policy for illegal content and in an abundance of caution, we are temporarily taking down the LAION datasets to ensure it is safe before republishing them.
 
 Following a discussion with the Hamburg State Data Protection Commissioner, we would also like to point out that the CSAM data is data that must be deleted immediately for data protection reasons in accordance with Art. 17 GDPR.
