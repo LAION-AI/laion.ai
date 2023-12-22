@@ -7,7 +7,7 @@ previewImg: "/images/blog/laion-blue.png"
 
 There have been reports in the press about the results of a research project at Stanford University, according to which the LAION training set 5B contains potentially illegal content in the form of CSAM. We would like to comment on this as follows:
 
-LAION is a non-profit organization that provides datasets, tools and models for the advancement of machine learning research. Our clients are committed to open public education and the environmentally safe use of resources through the reuse of existing datasets and models.
+LAION is a non-profit organization that provides datasets, tools and models for the advancement of machine learning research. We are committed to open public education and the environmentally safe use of resources through the reuse of existing datasets and models.
 
 LAION datasets (more than 5.85 billion entries) are sourced from the freely available Common Crawl web index and offer only links to content on the public web, with no images. We developed and published our own rigorous filters to detect and remove illegal content from LAION datasets before releasing them.
 
