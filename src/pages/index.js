@@ -43,12 +43,12 @@ export default function Home() {
               </p>
               <p>
                 <a className="rounded-xl w-5/6 bg-gradient-to-b py-2 mb-4 tracking-wider text-2xl font-bold text-yellow-400" href="notes/laion-maintanence/">
-                  Current LAION-5B Safety Review
+                  IMPORTANT NOTICE<br/>Current LAION-5B Safety Review
                 </a>
               </p>
-              <a href="https://gofund.me/244600b3">
+              {/* <a href="https://gofund.me/244600b3">
                 <button className="rounded-xl mt-4 w-5/6 bg-gradient-to-b py-2 from-orange-400 to-orange-300 mb-4 tracking-wider text-xl font-bold text-black" type="button">Donate</button>               
-              </a>
+              </a> */}
               {/* <div className="text-2xl text-yellow-400 font-bold">
                 A CERN FOR OPEN SOURCE LARGE-SCALE AI RESEARCH!
               </div>
@@ -60,11 +60,11 @@ export default function Home() {
                   Sign our petition for Open Source AI research!
                 </a>
               </div> */}
-              <div>
+              {/* <div>
                 <a href="https://discord.gg/xBPBXfcFHd" className="text-xl">
                   Join our community on discord!
                 </a>
-              </div>
+              </div> */}
             </div>
 
             <div
