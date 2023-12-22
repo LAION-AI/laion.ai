@@ -5,16 +5,14 @@ date: "December 19 2023"
 previewImg: "/images/blog/laion-blue.png"
 ---
 
-LAION has a zero tolerance policy for illegal content. We work with organizations like [IWF](https://www.iwf.org.uk/) and others to continually monitor and validate links in the publicly available LAION datasets. Datasets are also validated through intensive filtering tools developed by our community and partner organizations to ensure they are safe and comply with the law.
+There have been reports in the press about the results of a research project at Stanford University, according to which the LAION training set 5B contains potentially illegal content in the form of CSAM. We would like to comment on this as follows:
 
-## Recent developments and safety review of LAION 5B
+LAION is a non-profit organization that provides datasets, tools and models for the advancement of machine learning research. Our clients are committed to open public education and the environmentally safe use of resources through the reuse of existing datasets and models.
 
-Yesterday, we received a copy of a report from Stanford that claimed to find links to illegal content in LAION 5B. We are evaluating the report findings. In an abundance of caution we have taken LAION 5B offline and are working quickly with the IWF and others to find and remove links that may still point to suspicious, potentially unlawful content on the public web.
+LAION datasets (more than 5.85 billion entries) are sourced from the freely available Common Crawl web index and offer only links to content on the public web, with no images. We developed and published our own rigorous filters to detect and remove illegal content from LAION datasets before releasing them.
 
-Our goal is to complete the safety review of LAION 5B by the second-half of January and will republish the dataset at that time.
+LAION collaborates with universities, researchers and NGOs to improve these filters and are currently working with the [Internet Watch Foundation (IWF)](https://www.iwf.org.uk/) to identify and remove content suspected of violating laws. LAION invites the Stanford researchers to join its Community to improve our datasets and to develop efficient filters for detecting harmful content.
 
-## Open datasets enable AI safety
+LAION has a zero tolerance policy for illegal content and in an abundance of caution, we are temporarily taking down the LAION 5B dataset to ensure it is safe before republishing them.
 
-Our mission at LAION is to democratize access to AI resources and to promote responsible AI research. And we believe the safest approach is through open systems that empower the community to inspect and validate the resources we publish. Transparency and community engagement are essential to ensuring ethical standards and legal compliance.
-
-We call on Stanford to share with us the hashes for the URLs to these claimed illegal content so we can improve safety for everyone and we invite the community to join LAION in the effort to build open AI systems for the betterment of the world. [Join the LAION discord channel](https://discord.gg/GakwZTJz). [Make a contribution](https://www.gofundme.com/f/democratize-artificial-intelligence?utm_campaign=p_lico+share-sheet&utm_medium=copy_link&utm_source=customer). [Learn more](https://laion.ai/).
+Following a discussion with the Hamburg State Data Protection Commissioner, we would also like to point out that the CSAM data is data that must be deleted immediately for data protection reasons in accordance with Art. 17 GDPR.
