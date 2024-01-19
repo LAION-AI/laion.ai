@@ -17,33 +17,8 @@ We have filtered all images and texts in the LAION-400M dataset with OpenAI‘s 
 
 The image-text-pairs have been extracted from the [Common Crawl](https://commoncrawl.org/) web data dump and are from random web pages crawled between 2014 and 2021.
 
-### Download Information
-
-###### UPDATE 16 dec 2021
-
-While **the eye** experiences technical difficulties, we provide an alternate download server for this dataset at this link: [laion400m at deploy.laion.ai](http://deploy.laion.ai/8f83b608504d46bb81708ec86e912220/)
-
 ###### Original information
 
-You can find
-
-- The CLIP image embeddings (NumPy files)
-- The parquet files
-- KNN index of image embeddings
-
-To download from **the eye**, run this command
-
-`aria2c "https://the-eye.eu/public/AI/cah/laion400m-met-release.torrent"`
-
-You may want to use the `–show-files` and `–select-file` options to download only some files.
-
-You can also find the files in [laion400m-met-release](https://the-eye.eu/public/AI/cah/laion400m-met-release/)
-
-Some more significant knn indices are present in [laion400m-indexes](https://the-eye.eu/public/AI/cah/laion400m-indexes/). We advise using the 128GB ones.
-
-The parquet files in Kaggle: [laion400m on Kaggle](https://www.kaggle.com/romainbeaumont/laion400m)
-
-After downloading the metadata as indicated above, you can run [this command](https://github.com/rom1504/laion-prepro/blob/main/laion400m/download_images/download_images.sh) to download the images and generate the webdataset files (command using [img2dataset](https://github.com/rom1504/img2dataset) )
 
 ### LAION-400M Dataset Statistics
 
