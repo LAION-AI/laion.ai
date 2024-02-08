@@ -17,6 +17,8 @@ Wouldn’t it be awesome to have a fully open voice assistant that can
 
 To realize this vision, LAION teamed up with the ELLIS Institute Tübingen, Collabora and the Tübingen AI Center to build **BUD-E (Buddy for Understanding and Digital Empathy)**.
 
+[![BUD-E Demo](/images/blog/bud-e-video.png)](https://youtu.be/SYWDucn8RL8)
+
 We started the development by creating a baseline voice assistant with very low latency. To reach that point, we carefully evaluated latency and quality of a large range of Speech-to-Text, Large Language and Text-to-Speech models on consumer hardware and carefully control how the models interact. Right now (January 2024) we reach latencies of 300 to 500 ms (with a Phi 2 model). We are confident that response times below 300 ms are possible even with larger models like LLama 2 30B  in the near future.
 
 Here is a demo (running on a 4090 GPU): [BUD-E Demo](https://youtu.be/SYWDucn8RL8)
