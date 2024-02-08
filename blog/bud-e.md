@@ -7,6 +7,8 @@ previewImg: "/images/blog/bud-e.webp"
 
 AI voice assistants have revolutionized our interaction with technology, answering queries, performing tasks, and making life easier. However, the stilted, mechanical nature of their responses is a barrier to truly immersive conversational experiences. Unlike human conversation partners, they often struggle with fully understanding and adapting to the nuanced, emotional, and contextually rich nature of human dialogue, leading to noticeable latencies and a disjointed conversational flow. Consequently, users often experience unsatisfactory exchanges, lacking emotional resonance and context familiarity.
 
+![BUD-E](/images/blog/bud-e.webp)
+
 Wouldn’t it be awesome to have a fully open voice assistant that can
 
 1. reply to user requests in real-time
@@ -78,4 +80,4 @@ Continuous Integration. Build continuous integration pipeline with cross-platfor
 
 The development of BUD-E is an ongoing process that requires the collective effort of a diverse community. We invite open-source developers, researchers, and enthusiasts to join us in refining BUD-E's individual modules and contributing to its growth. Together, we can create an AI voice assistants that engage with us in natural, intuitive, and empathetic conversations.
 
-If you're interested in contributing to this project, join [our Discord community](https://discord.com/invite/eq3cAMZtCC) or reach out to us at <contact@laion.ai>.
+If you're interested in contributing to this project, join [our Discord community](https://discord.com/invite/eq3cAMZtCC) or reach out to us at <bud-e@laion.ai>.
