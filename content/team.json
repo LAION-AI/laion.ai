@@ -67,7 +67,7 @@
   },
   {
     "name": "Marianna Nezhurina",
-    "title": "Member. Multi-Modal Data Batgirl",
+    "title": "Member, core researcher multi-modal learning. PhD student JSC/Tuebingen",
     "desc": "Coder and ML researcher with strong interest in multi-modal datasets and learning.",
     "img": "marianna"
   },
@@ -82,6 +82,12 @@
     "title": "Member, senior researcher. Professor in computer science at the University of Bonn, affiliated  Llamar Institute & MIT-IBM Watson AI Lab",
     "desc": "Research on Multimodal Self-supervised Learning & Video Understanding.",
     "img": "hildekuehne"
+  },
+  {
+    "name": "Rio Yokota",
+    "title": "Member, senior researcher. Professor at Tokyo Institute of Technology, RIKEN. Large-scale machine learning on supercomputers.",
+    "desc": "Research in intersect of high performance computing, linear algebra, and machine learning. Strong interest in open foundation models.",
+    "img": "rioyokota"
   },
   {
     "name": "Lucia Cipolina-Kun",
