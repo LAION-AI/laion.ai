@@ -19,7 +19,6 @@ The image-text-pairs have been extracted from the [Common Crawl](https://commonc
 
 ###### Original information
 
-
 ### LAION-400M Dataset Statistics
 
 The LAION-400M and future even bigger ones are, in fact, datasets of datasets. For instance, we can filter it out by image sizes into smaller datasets like this:
@@ -55,7 +54,7 @@ We produced the dataset in several formats to address the various use cases:
 - a 1TB set of the 400M text and image clip embeddings, useful to rebuild new knn indices
 - pairs of 16G, 32G, 64G and 128G knn indices (running in the web demo)
 
-#### URL and caption metadata dataset.
+#### URL and caption metadata dataset
 
 We provide 32 parquet files of size around 1GB (total 50GB) with the image URLs, the associated texts and additional metadata in the following format:
 
@@ -121,8 +120,8 @@ The matching is excellent, thanks to CLIP. We could improve the NSFW automatic t
 
 The dataset acquisition has into two significant parts:
 
-1.  a distributed processing of the vast (many PBs) Common Crawl datasets, which produces a collection of matching URL and caption
-2.  a single node much lighter post-processing of the data that anyone can run in a few days and which produces the final dataset
+1. a distributed processing of the vast (many PBs) Common Crawl datasets, which produces a collection of matching URL and caption
+2. a single node much lighter post-processing of the data that anyone can run in a few days and which produces the final dataset
 
 ### 1. Distributed processing of Common Crawl
 
@@ -136,15 +135,15 @@ We download the raw images from the URLs we parsed from Common Crawl with asynch
 
 After downloading the WAT files from Common Crawl, we filter the samples in the following steps:
 
-1.  We dropped all samples with less than five character alt text length
-2.  We dropped all samples with less than 5 KB image size
-3.  We use continuously updated bloom filters to drop samples that are already in our dataset. The bloom filters deduplicate by concatenating the URL and the alt text.
-4.  We use continuously updated bloom filters to drop samples from URLs that had timed out previously and therefore seem unreachable (or at least not reachable in an efficient way)
-5.  We use OpenAI’s CLIP model (the ‘_ViT-B-32_‘ version) to compute the image and alt text embeddings. Then we calculate the cosine similarity of both embedding vectors and drop all samples with a similarity below 0.3. We chose this threshold after trying different values and using human evaluations of how well the texts fit the images. Lower values like 0.28 or 0.29 also seemed okay in many cases, but after further inspections, we decided to choose the conservative value of 0.3.
-6.  We use the CLIP embeddings of the images to estimate if their contents contain NSFW content. We do this by calculating CLIP embeddings for a list of image categories like, e.g. “selfie”, “illustration”, or “landscape”, which also contains categories that indicate NSFW content like “porn” and “sex”.
-7.  Then we compute the cosine similarities between the embedding image we are currently filtering and each of these category keywords. If the category with the highest similarity and the keyword with the second-highest similarity belong both to NSFW keywords, we tag the sample as “NSFW”. If only one of them belongs to an NSFW keyword, we categorise the sample as “UNSURE”. If both keywords with the highest similarities are not NSFW, we tag the sample as “UNLIKELY”.
-8.  In the next step, we look at all samples with either the “NSFW” or “UNSURE” tag and drop those with any keywords in their text related to kids, teens, or other semantically related content.
-9.  In step 8, we repeat the procedure of computing the cosine similarities from step 6 with the difference that we now use category texts that indicate contents semantically related to kids and teens on a CLIP embedding level. If either the highest similarity or the second-highest similarity between a sample’s image embedding and a text of the precomputed categories belongs to a text that indicates content related to under-aged persons, we drop this sample.
+1. We dropped all samples with less than five character alt text length
+2. We dropped all samples with less than 5 KB image size
+3. We use continuously updated bloom filters to drop samples that are already in our dataset. The bloom filters deduplicate by concatenating the URL and the alt text.
+4. We use continuously updated bloom filters to drop samples from URLs that had timed out previously and therefore seem unreachable (or at least not reachable in an efficient way)
+5. We use OpenAI’s CLIP model (the ‘_ViT-B-32_‘ version) to compute the image and alt text embeddings. Then we calculate the cosine similarity of both embedding vectors and drop all samples with a similarity below 0.3. We chose this threshold after trying different values and using human evaluations of how well the texts fit the images. Lower values like 0.28 or 0.29 also seemed okay in many cases, but after further inspections, we decided to choose the conservative value of 0.3.
+6. We use the CLIP embeddings of the images to estimate if their contents contain NSFW content. We do this by calculating CLIP embeddings for a list of image categories like, e.g. “selfie”, “illustration”, or “landscape”, which also contains categories that indicate NSFW content like “porn” and “sex”.
+7. Then we compute the cosine similarities between the embedding image we are currently filtering and each of these category keywords. If the category with the highest similarity and the keyword with the second-highest similarity belong both to NSFW keywords, we tag the sample as “NSFW”. If only one of them belongs to an NSFW keyword, we categorise the sample as “UNSURE”. If both keywords with the highest similarities are not NSFW, we tag the sample as “UNLIKELY”.
+8. In the next step, we look at all samples with either the “NSFW” or “UNSURE” tag and drop those with any keywords in their text related to kids, teens, or other semantically related content.
+9. In step 8, we repeat the procedure of computing the cosine similarities from step 6 with the difference that we now use category texts that indicate contents semantically related to kids and teens on a CLIP embedding level. If either the highest similarity or the second-highest similarity between a sample’s image embedding and a text of the precomputed categories belongs to a text that indicates content related to under-aged persons, we drop this sample.
 10. Finally, we repeat the procedure from step 8 with texts semantically related to animal categories like e.g. “animal”, “bird”, etc.
 
 We perform these rigorous filtering steps for NSFW with potentially illegal content because we cannot guarantee that the contents of Common Crawl are free of such. We feel obligated to try our best to filter out such content. Inspections of samples filtered out by steps 7 to 9 have shown that our filtering procedure is very conservative and produces many false positives (samples it drops, which are not problematic). This process is okay because the number of potential samples waiting for us to crawl is vast.
@@ -218,9 +217,9 @@ You can contribute to the project to help us release the following dataset sizes
 
 Choose one or more methods that suit you or your company:
 
-1.  donate either [cash](https://laion.ai/laion-400-open-dataset/#) or [computing time](https://laion.ai/how-to-donate-computing-time/). We also launched a [Go Get Funding campaign](https://gogetfunding.com/help-us-build-the-worlds-largest-open-billion-scale-image-text-dataset-perfect-for-training-dall-e-clip-other-multimodal-models/).
-2.  participate in the development effort
-3.  spread the word. At best, use the dataset, get nice results and mention it in your papers
+1. donate either [cash](https://laion.ai/laion-400-open-dataset/#) or [computing time](https://laion.ai/how-to-donate-computing-time/). We also launched a [Go Get Funding campaign](https://gogetfunding.com/help-us-build-the-worlds-largest-open-billion-scale-image-text-dataset-perfect-for-training-dall-e-clip-other-multimodal-models/).
+2. participate in the development effort
+3. spread the word. At best, use the dataset, get nice results and mention it in your papers
 
 Useful links:
 
@@ -235,6 +234,6 @@ Useful links:
 ### Sponsors
 
 We made it so far due to the generosity of these donors:
-| ![](https://i.imgur.com/z6K7kSq.png) |![](https://i.imgur.com/KYvncYl.png)|![](https://i.imgur.com/y2yNLm8.png)|
-|--|--|--|
+| ![](https://i.imgur.com/z6K7kSq.png) |![](https://i.imgur.com/KYvncYl.png)|
+|--|--|
 |[doodlebot.ai](http://doodlebot.ai/)|[Gentec Data](https://gentec.ro/)|

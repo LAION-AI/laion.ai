@@ -42,7 +42,7 @@ export default function Home() {
                 datasets and models.
               </p>
               <p>
-                <a className="rounded-xl w-5/6 bg-gradient-to-b py-2 mb-4 tracking-wider text-2xl font-bold text-yellow-400" href="notes/laion-maintanence/">
+                <a className="rounded-xl w-5/6 bg-gradient-to-b py-2 mb-4 tracking-wider text-2xl font-bold text-yellow-400" href="notes/laion-maintenance/">
                   IMPORTANT NOTICE<br/>Current LAION-5B Safety Review
                 </a>
               </p>
