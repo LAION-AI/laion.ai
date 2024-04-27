@@ -178,7 +178,6 @@ We want to thank :
 
 - the [LAION folks](https://laion.ai/#team), via so many worker nodes everywhere in the cloud
 - [the data hoarders](https://www.reddit.com/r/DataHoarder/comments/oyta8q/crawlinghome_help_build_the_worlds_largest/) Reddit community
-- [the-eye](https://the-eye.eu/) community
 - as well as all our friends and relatives that did not know what they were helping with
 
 for running the workers to produce this vast dataset in a few months.
@@ -238,4 +237,4 @@ Useful links:
 We made it so far due to the generosity of these donors:
 | ![](https://i.imgur.com/z6K7kSq.png) |![](https://i.imgur.com/KYvncYl.png)|![](https://i.imgur.com/y2yNLm8.png)|
 |--|--|--|
-|[doodlebot.ai](http://doodlebot.ai/)|[Gentec Data](https://gentec.ro/)|[the-eye.eu](http://the-eye.eu/)|
+|[doodlebot.ai](http://doodlebot.ai/)|[Gentec Data](https://gentec.ro/)|
