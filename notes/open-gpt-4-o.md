@@ -5,7 +5,7 @@ date: "May 24, 2024"
 previewImg: "/images/blog/gpt-4-omni.webp"
 ---
 
-Technologies like the recently introduced GPT-4-OMNI from OpenAI show have again the potential which strong multi-modal models might have to positively transform many aspects of our lives. A particularly impressive example of this is in the field of education. Imagine every person in the world having their own personal learning assistant that acts like a attentive , caregiving, patient, and empathetic tutorfriendolder sibling. The demo from OpenAI last Monday showed that such a vision of the future is not too far off and is within reach.
+Technologies like the recently introduced GPT-4-OMNI from OpenAI show again the potential which strong multi-modal models might have to positively transform many aspects of our lives. A particularly impressive example of this is in the field of education. Imagine every person in the world having their own personal learning assistant that acts like a attentive, caring, patient, and empathetic tutor. The demo from OpenAI last Monday showed that such a vision of the future is not too far off and is within reach.
 
 ## The Path to Open Multi-Modal Models
 
