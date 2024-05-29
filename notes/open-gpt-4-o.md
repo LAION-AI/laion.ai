@@ -23,7 +23,7 @@ SNAC (Multi-Scale Neural Audio Codec) compresses audio into discrete codes at a 
 
  For instance, with coarse tokens of ~10 Hz and a context window of 2048, SNAC can effectively model the consistent structure of an audio track for up to three minutes. SNAC offers different types of codecs optimized for specific use cases: the 24 kHz version is tailored for speech, while the 32 kHz and 44 kHz versions are designed for general-purpose audio, including music and sound effects. This versatility and efficiency make SNAC an advantageous choice for integrating audio processing capabilities into large language models.
 
-Additionally, SNAC can flatten its hierarchical structure segment-wise for each coarse token, allowing segments of approximately ~100 ms to be decoded individually and later reassembled. This depth-first flattening method facilitates low-latency streaming, [making it possible to stream high-quality audio in near real-time](https://youtu.be/NwZufAJxmMA?si=WVA2H05m3xypRncc).
+Additionally, SNAC can flatten its hierarchical structure segment-wise for each coarse token, allowing segments of approximately ~100 ms to be decoded individually and later reassembled. This depth-first flattening method facilitates low-latency streaming, making it possible to stream high-quality audio in near real-time ( [Tutorial](https://youtu.be/NwZufAJxmMA?si=WVA2H05m3xypRncc) ).
 
 ![Audio Palm Pipeline](/images/blog/gpt-4-omni-3.png)
 
@@ -34,7 +34,7 @@ Notebooks about how to use SNAC:
 | [24kHz Speech Version](https://colab.research.google.com/drive/11qUfQLdH8JBKwkZIJ3KWUsBKtZAiSnhm?usp=sharing) |
 | [32kHz General Purpose Version](https://colab.research.google.com/drive/1g1H0bBWRhKzHutCJZNxtavpRamw1uaXr#scrollTo=pBiT7Jx6rxmm) |
 
-To advance research in this area, we have converted the [following dataset](https://huggingface.co/datasets/blanchon/snac_llm_parler_tts) into 24kHz SNAC tokens.
+To advance research in this area, we have converted the [parler-tts/mls-eng-10k-tags_tagged_10k_generated dataset](https://huggingface.co/datasets/blanchon/snac_llm_parler_tts) into 24kHz SNAC tokens.
 
 ## SNAC Tokenized Dataset
 
@@ -46,9 +46,9 @@ Once we can reliably perform functions like transcribing audio segments and gene
 
 ## Audio-to-Audio Instruction Tuning Datasets
 
-As potential sources for extended pre training of LLMs, we collected video links from sources common crawl.
+As potential sources for extended pre training of LLMs, we collected video links from sources common crawl:
 
-[High quality podcasts, lectures & shows (330657) can be downloaded from Hugging Face.](https://huggingface.co/datasets/laion/links_to_pocasts_lecture_and_shows_for_tts):
+[High quality podcasts, lectures & shows (330657)](https://huggingface.co/datasets/laion/links_to_pocasts_lecture_and_shows_for_tts)
 
 For initial tests, it would be beneficial to generate both the instruction and its execution  through the chatbot using TTS systems. First, we create a conventional instruction tuning dataset with a text-based LLM and then generate audio files for both the user's and the chatbot's roles with different voices. These are then converted into SNAC tokens or other audio tokens.
 
@@ -67,3 +67,6 @@ Additional ideas for audio text tuning datasets are:
 As a community of volunteers and hobbyists, we cannot conduct all these experiments simultaneously. Therefore, we officially call on the open-source community to start experimenting with the datasets we have converted and share their results with us. Once we achieve promising small-scale results and eventually derive scaling laws based on the small scale experiments predicting behavior on larger scales, we can discuss how to provide computing resources for larger-scale experiments.
 
 We look forward to your feedback and experiments. Together, we can create a future where advanced language models are accessible to all and have a positive impact on many lives.
+
+
+[Join our discord server](https://discord.com/invite/WugQF4YeT6)
