@@ -1,7 +1,7 @@
 ---
 title: "Call to Build Open Multi-Modal Models for Personal Assistants"
 author: "Christoph Schuhmann"
-date: "May 24, 2024"
+date: "May 29, 2024"
 previewImg: "/images/blog/gpt-4-omni.webp"
 ---
 
@@ -46,7 +46,7 @@ Once we can reliably perform functions like transcribing audio segments and gene
 
 ## Audio-to-Audio Instruction Tuning Datasets
 
-As potential sources for extended pre training of LLMs, we collected video links from sources common crawl:
+As potential sources for extended pre training of LLMs, we collected video links from sources common crawl.
 
 [High quality podcasts, lectures & shows (330657)](https://huggingface.co/datasets/laion/links_to_pocasts_lecture_and_shows_for_tts)
 
