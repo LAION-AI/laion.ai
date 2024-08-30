@@ -129,7 +129,8 @@ Matches URL hashes in LAION-5B:
 
 Total: 18 matches (11 from before + 6 when using “G” flag + 1 URL hash match)
 
-24.04.2024: David Thiel (Stanford Internet Observatory) - SHA hashes
+### 24.04.2024: David Thiel (Stanford Internet Observatory) - SHA hashes
+
 Total: 3114 unique SHA hashes provided by David Thiel  
 
 Matches in LAION-5B:
