@@ -8,6 +8,7 @@ previewImg: "/images/blog/laion-blue.png"
 Today, following [a safety revision procedure](https://laion.ai/notes/laion-maintenance/), we announce Re-LAION-5B, an updated version of LAION-5B, that is the first web-scale, text-link to images pair dataset to be thoroughly cleaned of known links to suspected CSAM.
 
 ## Highlights
+
 - Re-LAION-5B fixes the issues as reported by Stanford Internet Observatory in December 2023 for the original LAION-5B and is available for download in two versions, [Re-LAION-5B research](https://huggingface.co/datasets/laion/relaion2B-en-research/) and [Re-LAION-5B research-safe](https://huggingface.co/datasets/laion/relaion2B-en-research-safe/). The work was completed in partnership with the Internet Watch Foundation ([IWF](https://www.iwf.org.uk/)), the Canadian Center for Child Protection ([C3P](https://www.protectchildren.ca)), and Stanford Internet Observatory. For the work, we utilized lists of link and image hashes provided by our partners, as of July 2024.
 - In all, 2236 links were removed after matching with the lists of link and image hashes provided by our partners. These links also subsume 1008 links found by the Stanford Internet Observatory report in Dec 2023.  Note: A substantial fraction of these links known to IWF and C3P are most likely dead (as organizations make continual efforts to take the known material down from public web), therefore this number is an upper bound for links leading to potential CSAM.
 - Total number of text-link to images pairs in Re-LAION-5B: **5.5 B (5,526,641,167)**
@@ -73,9 +74,7 @@ Those are hashes we have used to conduct filtering procedures to filter out link
 We can report following:
 
 - Total amount of matches with links in LAION-5B using C3P, IWF and hashes provided by David Thiel (Stanford Internet Observatory): 1129 ([C3P](https://www.protectchildren.ca)) + 18 ([IWF](https://www.iwf.org.uk/)) + 1714 (Stanford Internet Observatory) = 2236 (0.000038 % of the total dataset)
-
 - For comparison: total amount of suspected “live” links to “CSAM” or “likely CSAM” samples as validated by David Thiel in Stanford Internet Observatory report: 1008 (0.000017 % of the total dataset; relying on the numbers in the investigation - those number have not been checked by any third party since the publication)
-
 - Thus, we have a total of 2236 matches with suspected links to CSAM or potential CSAM encountered in LAION-5B that we can report from our investigation using hashes provided by our partner organizations. These matches also contain 1008 links from Stanford Internet Observatory report .
 
 This number is a strict upper bound for the estimate of links leading to potential CSAM samples, as known by our partner organizations IWF and C3P in July 2024. It cannot be determined exactly which fraction of 2236 links indeed points to illegal samples, as we do not inspect links or the content they are leading to due to potential illegal nature and match only the precomputed hashes. Many of the matched links can be dead leading to nowhere. 2236 is thus the upper bound for the number of links leading to potential CSAM; the number of links indeed pointing to illegal material is most likely much lower, as those links are already known to organizations that clean the public web from CSAM material, which usually results in taking down the actual content links are pointing to or even removing the whole entity domain responsible for the hosting of that content, making access to it unavailable. To have some estimate, consider the following: Stanford Internet Observatory report claimed 1008 suspected links in LAION-5B that were validated to be “live” on public web in December 2023. The report has used the same C3P information as LAION, which makes it very likely that around 2236 - 1008 = 1228 of matched links are dead.
@@ -83,6 +82,7 @@ This number is a strict upper bound for the estimate of links leading to potenti
 As we have used a vast collection of over 16M hashes to images and links with suspected CSAM provided by C3P and IWF, which represents all CSAM or likely CSAM on public web currently known to these major organizations in 2024, we can state that 2236 is an upper boundary for the links to suspected CSAM in original LAION-5B. Our research thus supports the number of links to suspected CSAM to be in the order of magnitude of 1-2k, as reported by Stanford Internet Observatory, and not larger.
 
 ## Chronological protocol
+
 Following are details and chronological overview of the matching procedures we were conducting to determine matches in LAION-5B based on the provided hash lists:
 
 ### 20.02.2024: David Thiel - General Infos, SHA hashes
