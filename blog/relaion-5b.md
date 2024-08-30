@@ -52,7 +52,7 @@ Unfortunately, we learned about the report not from the representatives of  Stan
 
 ### Phase 2: Analysis using hash lists and filtering
 
-Using the established official cooperation with Internet Watch Foundation ([IWF](https://www.iwf.org.uk/)) and Canadian Children Protection organization ([C3P](https://www.protectchildren.ca)), LAION has obtained lists of MD5 image and URL hashes for the CSAM on public internet discovered by the organizations so far. LAION also used the established contact to David Thiel, the author of the Stanford Report, to obtain details on the nature of discovered CSAM samples and also lists of further hashes.  
+Using the established official cooperation with Internet Watch Foundation ([IWF](https://www.iwf.org.uk/)) and Canadian Children Protection organization ([C3P](https://www.protectchildren.ca)), LAION has obtained lists of MD5 image and URL hashes for the CSAM on public internet discovered by the organizations so far. LAION also used the established contact to David Thiel, the author of the Stanford Internet Observatory Report, to obtain details on the nature of discovered CSAM samples and also lists of further hashes.  
 
 LAION used the lists of hashes and other information obtained from our cooperation to remove links to all known suspected CSAM samples from the metadata of the dataset and to create updated dataset versions that are free of any links to suspected CSAM samples currently known to major organizations like IWF and C3P who were collecting evidence of those from public internet across a long period of time.
 
