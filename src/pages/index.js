@@ -42,8 +42,8 @@ export default function Home() {
                 datasets and models.
               </p>
               <p>
-                <a className="rounded-xl w-5/6 bg-gradient-to-b py-2 mb-4 tracking-wider text-2xl font-bold text-yellow-400" href="notes/laion-maintenance/">
-                  IMPORTANT NOTICE<br/>Current LAION-5B Safety Review
+                <a className="rounded-xl w-5/6 bg-gradient-to-b py-2 mb-4 tracking-wider text-2xl font-bold text-yellow-400 cursor-pointer" href="blog/relaion-5b/">
+                  Re-LAION 5B release (29.08.2024)
                 </a>
               </p>
               {/* <a href="https://gofund.me/244600b3">
