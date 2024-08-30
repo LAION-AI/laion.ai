@@ -1,7 +1,7 @@
 ---
 title: "Releasing Re-LAION 5B: transparent iteration on LAION-5B with additional safety fixes"
 author: "LAION e.V."
-date: "Aug 29, 2024"
+date: "Aug 30, 2024"
 previewImg: "/images/blog/laion-blue.png"
 ---
 
