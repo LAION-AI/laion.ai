@@ -1,5 +1,5 @@
 ---
-title: "Call to Build Open Multi-Modal Models for Personal Assistants"
+title: "LAION-Debate: dataset of competitive debates and discussions"
 author: "LAION"
 date: "June 28, 2024"
 previewImg: "/images/blog/laion-debate.png"
