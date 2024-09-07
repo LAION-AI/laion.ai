@@ -9,7 +9,7 @@ There have been reports in the press about the results of a research project at 
 
 LAION is a non-profit organization that provides datasets, tools and models for the advancement of machine learning research. We are committed to open public education and the environmentally safe use of resources through the reuse of existing datasets and models.
 
-LAION datasets (more than 5.85 billion entries) are sourced from the freely available Common Crawl web index and offer only links to content on the public web, with no images. We developed and published our own rigorous filters to detect and remove illegal content from LAION datasets before releasing them.
+LAION datasets (more than 5.85 billion entries) are sourced from the freely available Common Crawl web index and offer only links to content on the public web, with no images. We developed and published our own rigorous filters to detect and remove illegal content from LAION datasets before releasing them. [See our original announcement from 20.08.2021](https://laion.ai/blog/laion-400-open-dataset/#filtering-out-unsuitable-image-text-pairs), where points 6-8 describe the specific measures we took for filtering CSAM related material.
 
 LAION collaborates with universities, researchers and NGOs to improve these filters and are currently working with the [Internet Watch Foundation (IWF)](https://www.iwf.org.uk/) to identify and remove content suspected of violating laws. LAION invites the Stanford researchers to join its Community to improve our datasets and to develop efficient filters for detecting harmful content.
 
