@@ -7,9 +7,9 @@ previewImg: "/images/blog/intel-laion-cooperation.webp"
 
 Large-scale Artificial Intelligence Open Network (LAION) is honored to become an **Intel AI/oneAPI Center of Excellence** to advance the development of **BUD-E (Buddy for Understanding and Digital Empathy)**, an open source, empathetic AI education assistant aimed at democratizing personalized learning worldwide.
 
-Leading the Center are Christoph Schuhmann (LAION e.V.) and Dr. Robert Kaczmarczyk (LAION e.V., [DFKI](https://www.dfki.de/en/web/research/research-departments/foundations-of-systems-ai)), in collaboration with Intel's oneAPI experts.
+Leading the Center are Christoph Schuhmann (LAION e.V.) and Dr. Robert Kaczmarczyk (LAION e.V., DFKI), in collaboration with Intel's oneAPI experts.
 
-Leveraging open, standards-based oneAPI multiarchitecture programming, the Center will develop **BUD-E, a sophisticated AI-powered voice assistant designed to provide personalized education to learners across the globe**, with a special focus on children in developing countries. The project aims to create an AI companion that can interact with warmth, empathy, and high emotional intelligence, encouraging learners to explore the world and discover their potential.
+Leveraging open, standards-based oneAPI multiarchitecture programming, the Center will develop BUD-E, a sophisticated AI-powered voice assistant designed to provide personalized education to learners across the globe, with a special focus on children in developing countries. The project aims to create an AI companion that can interact with warmth, empathy, and high emotional intelligence, encouraging learners to explore the world and discover their potential.
 
 BUD-E is built on a client-server architecture, allowing for minimal hardware requirements on the client side. This enables the system to run on older smartphones and low-powered computers from multiple different vendors, making it accessible to a wide range of users across multiple countries. The server-side architecture is modular, incorporating various APIs and allowing for easy integration of different language models, text-to-speech models, and custom "skills" (Python functions that can be dynamically called by the assistant).
 
