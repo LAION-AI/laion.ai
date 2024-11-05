@@ -4,6 +4,10 @@
     "a": "LAION datasets are simply indexes to the internet, i.e. lists of URLs to the original images together with the ALT texts found linked to those images. While we downloaded and calculated CLIP embeddings of the pictures to compute similarity scores between pictures and texts, we subsequently discarded all the photos. Any researcher using the datasets must reconstruct the images data by downloading the subset they are interested in. For this purpose, we suggest the img2dataset tool."
   },
   {
+    "q": "Links in your dataset show to my copyrighted data. I would like to have them removed.",
+    "a": "LAION is a non-profit research organization that studies how learning algorithms work. Therefore, TDM exemptions are valid for LAION according to Art. 3 EU TDM exemption and §60d UrhG of German law, TDM exemption, for research. LAION is thus permitted to use any coopyrighted material as data for conducting research on learning algorithms and foundation models as training outcome."
+  },
+  {
     "q": "Do the datasets contain images that may be disturbing for viewers?",
     "a": "No, but links in the datasets can lead to images that are disturbing or discomforting depending on the filter or search method employed."
   },
