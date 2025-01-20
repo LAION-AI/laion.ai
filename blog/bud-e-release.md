@@ -13,8 +13,11 @@ BUD-E, which stands for Buddy for Understanding and Digital Empathy, represents 
 - Bud-E, a general-purpose, customizable web-based assistant.
 - Desktop Bud-E, a Python*-based desktop application that can be used as a smart Google Home/Alexa Replacement with wake word activation and the latest models in the backend.
 
-[![School Bud-E Video](/images/blog/school-bud-e-video.png)](https://www.youtube.com/watch?v=gcSPuZ7LtE0)
-[![School Bud-E Video 2](/images/blog/school-bud-e-example-2.png)](https://www.youtube.com/watch?v=IxHnpISMNPo)
+Overview (what it can do):
+[![School Bud-E Video](/images/blog/bud-e-1.0.png)](https://www.youtube.com/watch?v=gcSPuZ7LtE0)
+
+How to use Bud-E & School Bud-E:
+[![School Bud-E Video 2](/images/blog/bud-e-1.0.png)](https://www.youtube.com/watch?v=IxHnpISMNPo)
 
 ## BUD-E: A New Era of AI-Assisted Education
 
