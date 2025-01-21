@@ -55,7 +55,7 @@ These annotations were generated using Stockfish 16.1, one of the strongest ches
 
 Here's an example of our data format:
 
-| Example Data | P: | 6k1/7p/4P1q1/1pb1Q2p/2p1b3/2P4P/PP4P1/R6K w \- \- 9 38 | M: | e5g5 a1g1 e5b8 e5h2 e5e4 | E: | \-999.97 \-2.97 \-1.63 \-6.59 \-5.95 | B: | e5b8 |
+| Example Data | P: | 6k1/7p/4P1q1 /1pb1Q2p/2p1b3 /2P4P/PP4P1 /R6K w \- \- 9 38 | M: | e5g5 a1g1 e5b8 e5h2 e5e4 | E: | \-999.97 \-2.97 \-1.63 \-6.59 \-5.95 | B: | e5b8 |
 | :---- | ----- | :---- | ----- | :---- | :---- | :---- | :---- | ----- |
 | Field Explanation | Prefix | State ([FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)) \+ padding | Delimiter | Top 5 Moves, shuffled \+ padding | Delimiter | Top 5 Moves Eval \+ padding | Delimiter | Best Move |
 | Inference | Prompt |  | Generated Chain-of-Thought Tokens |  |  |  |  | Action |
@@ -87,7 +87,7 @@ We began by creating a new dataset arbiter-6m (inspired by the interface design 
 * A score-signal for reinforcement learning (reward)  
 * Whether the game ended and if the move was legal (termination, truncation)
 
-| Example Data | 5R2/6R1/8/3P4/p7/1b2R2P/2p3P1/6K1 b \- \- 0 58 | b3d5 | e1e3 a2b3 f7f2 b5b4 g5g7 b4c3 f2f8 c3c2 d4d5 b3d5 | 5R2/6R1/8/3b4/p7/4R2P/2p3P1/6K1 w \- \- 0 59 | 0.001 | 0 | 0 |
+| Example Data | 5R2/6R1/8/ 3P4/p7/1b2R2P/2p3P1 /6K1 b \- \- 0 58 | b3d5 | e1e3 a2b3 f7f2 b5b4 g5g7 b4c3 f2f8 c3c2 d4d5 b3d5 | 5R2/6R1/8/3b4/p7/4R2P/2p3P1/6K1 w \- \- 0 59 | 0.001 | 0 | 0 |
 | :---- | ----- | :---- | :---- | ----- | :---- | :---- | :---- |
 | Field Explanation | Last State ([FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)) | Action | Action History (maxlen 10\) for [repetitions](https://en.wikipedia.org/wiki/Threefold_repetition) | Observation (new State) | Reward (-1 loss or illegal, 0.5 draw, 1 win, 0.001 valid) | Termination (bool, True if game ends by [WLD](https://en.wikipedia.org/wiki/Chess_scoring)) | Truncation (bool, True if game ends by illegal action) |
 | Inference | Prompt |  |  | Generated Environment Update |  |  |  |
@@ -216,7 +216,7 @@ Let's dive into each of these components and explore their capabilities and impl
 
 ROOK is a decoder transformer model with a classification head trained from scratch to play chess like [Ruoss et al. 2024](https://arxiv.org/pdf/2402.04494). What sets ROOK apart is its training on a synthetic dataset that incorporates chain-of-thought evaluation from [Stockfish 16.1](https://github.com/official-stockfish/Stockfish), a leading chess engine \- improving sample efficiency over standard behavioral cloning.
 
-| Example Data | P: | 6k1/7p/4P1q1/1pb1Q2p/2p1b3/2P4P/PP4P1/R6K w \- \- 9 38 | M: | e5g5 a1g1 e5b8 e5h2 e5e4 | E: | \-999.97 \-2.97 \-1.63 \-6.59 \-5.95 | B: | e5b8 |
+| Example Data | P: | 6k1/7p/4P1q1 /1pb1Q2p/2p1b3 /2P4P/PP4P1 /R6K w \- \- 9 38 | M: | e5g5 a1g1 e5b8 e5h2 e5e4 | E: | \-999.97 \-2.97 \-1.63 \-6.59 \-5.95 | B: | e5b8 |
 | :---- | ----- | :---- | ----- | :---- | :---- | :---- | :---- | ----- |
 | Field Explanation | Prefix | State ([FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)) \+ padding | Delimiter | Top 5 Moves, shuffled \+ padding | Delimiter | Top 5 Moves Eval \+ padding | Delimiter | Best Move |
 | Inference | Prompt |  | Generated Chain-of-Thought Tokens |  |  |  |  | Action |
@@ -258,7 +258,7 @@ These results demonstrate ROOK's ability to understand chess positions and gener
 
 Using a generative GPT2 architecture, trained using the [karpathy/llm.c](https://github.com/karpathy/llm.c) library. ArbiterSim takes us a step further by learning to simulate the chess environment itself. Trained on rollouts from ROOK self-play in an environment based on the [python-chess library](https://github.com/niklasf/python-chess), ArbiterSim can predict the next board state, game outcomes, and legality of moves.
 
-| Example Data | 5R2/6R1/8/3P4/p7/1b2R2P/2p3P1/6K1 b \- \- 0 58 | b3d5 | e1e3 a2b3 f7f2 b5b4 g5g7 b4c3 f2f8 c3c2 d4d5 b3d5 | 5R2/6R1/8/3b4/p7/4R2P/2p3P1/6K1 w \- \- 0 59 | 0.001 | 0 | 0 |
+| Example Data | 5R2/6R1/8 /3P4/p7/1b2R2P /2p3P1/6K1 b \- \- 0 58 | b3d5 | e1e3 a2b3 f7f2 b5b4 g5g7 b4c3 f2f8 c3c2 d4d5 b3d5 | 5R2/6R1/8 /3b4/p7/4R2P /2p3P1/6K1 w \- \- 0 59 | 0.001 | 0 | 0 |
 | :---- | ----- | :---- | :---- | ----- | :---- | :---- | :---- |
 | Field Explanation | Last State ([FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)) | Action | Action History (maxlen 10\) for [repetitions](https://en.wikipedia.org/wiki/Threefold_repetition) | Observation (new State) | Reward (-1 loss or illegal, 0.5 draw, 1 win, 0.001 valid) | Termination (bool, True if game ends by [WLD](https://en.wikipedia.org/wiki/Chess_scoring)) | Truncation (bool, True if game ends by illegal action) |
 | Inference | Prompt |  |  | Generated Environment Update |  |  |  |
@@ -289,7 +289,7 @@ After training from scratch on 2 million samples, ArbiterSim achieves sufficient
 
 RookWorld represents a significant leap forward by combining the capabilities of ROOK and ArbiterSim into a single language model. Through use of prompt prefixes, RookWorld can switch tasks between acting as a chess player and simulating the chess environment.
 
-| Example Data | P: | 6k1/7p/4P1q1/1pb1Q2p/2p1b3/2P4P/PP4P1/R6K w \- \- 9 38 | M: | e5g5 a1g1 e5b8 e5h2 e5e4 | E: | \-999.97 \-2.97 \-1.63 \-6.59 \-5.95 | B: | e5b8 |
+| Example Data | P: | 6k1/7p/4P1q1 /1pb1Q2p/2p1b3 /2P4P/PP4P1 /R6K w \- \- 9 38 | M: | e5g5 a1g1 e5b8 e5h2 e5e4 | E: | \-999.97 \-2.97 \-1.63 \-6.59 \-5.95 | B: | e5b8 |
 | :---- | ----- | :---- | ----- | :---- | :---- | :---- | :---- | ----- |
 | Field Explanation | Prefix | State ([FEN](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)) \+ padding | Delimiter | Top 5 Moves, shuffled \+ padding | Delimiter | Top 5 Moves Eval \+ padding | Delimiter | Best Move |
 | Inference | Prompt |  | Generated Chain-of-Thought Tokens |  |  |  |  | Action |
