@@ -12,9 +12,9 @@ export default function Nav() {
     >
       <div>
         <Link href="/">
-          <p className="text-4xl md:text-7xl cursor-pointer font-bold pl-0 md:pb-3">
-            LAION
-          </p>
+         
+           <img src={"/images/logo.svg"} className=" cursor-pointer pl-0 md:pb-3 h-16" />
+         
         </Link>
         <div
           className="md:flex child:pl-3 md:text-xl child:md:pl-1 child:md:pt-2 hidden md:flex-col 
