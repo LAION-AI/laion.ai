@@ -37,8 +37,8 @@
   },
   {
     "name": "Mehdi Cherti",
-    "title": "Founding Member",
-    "desc": "Researcher on Machine Learning and Deep Generative Models. PhD in Computer Science.",
+    "title": "Founding Member, senior core researcher",
+    "desc": "Researcher on Machine Learning and Deep Generative Models. Open multi-modal foundation models and datasets, scaling laws. PhD in Computer Science.",
     "img": "mehdi"
   },
   {
@@ -68,12 +68,12 @@
   {
     "name": "Marianna Nezhurina",
     "title": "Member, core researcher multi-modal learning. PhD student JSC/Tuebingen",
-    "desc": "Coder and ML researcher with strong interest in multi-modal datasets and learning.",
+    "desc": "Coder and ML researcher with strong interest in open multi-modal foundation models and datasets, scaling laws.",
     "img": "marianna"
   },
   {
     "name": "Ludwig Schmidt",
-    "title": "Member, senior core researcher. Professor in computer science at Stanford University.",
+    "title": "Member, senior lead researcher. Professor in computer science at Stanford University.",
     "desc": "Research on datasets, reliable generalization, strong reasoning, evaluation and large models.",
     "img": "ludwig"
   },
