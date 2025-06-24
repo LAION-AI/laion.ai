@@ -78,12 +78,6 @@
     "img": "ludwig"
   },
   {
-    "name": "Hilde Kuehne",
-    "title": "Member, senior researcher. Professor in computer science at the University of Bonn, affiliated  Llamar Institute & MIT-IBM Watson AI Lab",
-    "desc": "Research on Multimodal Self-supervised Learning & Video Understanding.",
-    "img": "hildekuehne"
-  },
-  {
     "name": "Rio Yokota",
     "title": "Member, senior researcher. Professor at Tokyo Institute of Technology, RIKEN. Large-scale machine learning on supercomputers.",
     "desc": "Research in intersect of high performance computing, linear algebra, and machine learning. Strong interest in open foundation models.",
