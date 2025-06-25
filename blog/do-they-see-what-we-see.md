@@ -52,7 +52,7 @@ A novel, expert-annotated benchmark for fine-grained facial emotion estimation, 
 
 > **📊 Dataset:** [EMONET-FACE hosted by Hugging Face](https://huggingface.co/datasets/laion/EmoNet-Face_Big)
 
-![][image3]
+![][image5]
 
 **Figure 2:** Samples from our EmoNet-Face datasets generated with different SOTA T2I models.
 
@@ -60,13 +60,15 @@ A novel, expert-annotated benchmark for fine-grained facial emotion estimation, 
 
 A similarly fine-grained, expert-verified benchmark for speech emotion detection. Built upon our 40-category taxonomy and leveraging state-of-the-art synthetic voice generation for privacy and diversity. It includes 4,692 high-agreement audio samples.
 
+![][image7]
+
 **Table 1:** Comparison of SER datasets. Key aspects include licensing, scale, emotional range, speaker diversity, synthetic origin, multilingual support and defining characteristics.
 
 ### 3. EMPATHIC INSIGHT-FACE Model
 
 A state-of-the-art model for facial emotion estimation trained on our EMONET-FACE suite, surpassing the performance of leading models like Gemini 2.5 Pro and proprietary APIs like Hume AI on our benchmarks.
 
-![][image5]
+![][image6]
 
 **Figure 3:** Mean Spearman's Rho correlation between various model annotators and human annotations.
 
@@ -76,7 +78,7 @@ This figure highlights the strength of facial emotion recognition correlation be
 > - [Large Empathic-Insight-Face Model](https://huggingface.co/laion/Empathic-Insight-Face-Large)
 > - [Small Empathic-Insight-Face Model](https://huggingface.co/laion/Empathic-Insight-Face-Small)
 
-![][image6]
+![][image9]
 
 **Figure 4:** EMPATHIC INSIGHT-FACE Model prediction example
 
@@ -86,7 +88,7 @@ This figure highlights the strength of facial emotion recognition correlation be
 
 A state-of-the-art model for speech emotion estimation, setting a new benchmark for nuanced understanding of vocal emotional cues, similarly outperforming established systems on our EMONET-VOICE benchmark.
 
-![][image7]
+![][image8]
 
 **Table 2:** Performance Comparison of Audio Language Models on the EmoNet-Voice Benchmark.
 
@@ -124,7 +126,7 @@ EMONET-FACE provides a rich resource for visual emotion understanding:
 
 The synthetic images were generated using state-of-the-art text-to-image models with explicit prompts to ensure diverse demographic representation (across ethnicity, age, and gender) and clear, full-face expressions. This approach not only allows for controlled diversity but also sidesteps the ethical concerns associated with using real individuals' images.
 
-![][image8]
+![][image2]
 
 **Figure 5:** Mapping Facial Expression Emotional Understanding
 
@@ -152,7 +154,7 @@ The **Theory of Constructed Emotion (TCE)**, a prominent psychological framework
 
 This understanding underscores the need for **emotion estimation** rather than simple recognition. We need AI that can assess the *likelihood* and *intensity* of various emotions being present, rather than forcing a single label onto a complex human state.
 
-![][image9]
+![][image10]
 
 **Figure 6:** Mapping Voice Emotional Understanding
 
@@ -166,7 +168,7 @@ Our approach to defining the emotional landscape for these datasets was systemat
 
 ### Full Emotion Taxonomy
 
-![][image10]
+![][image13]
 
 **Table 3:** Taxonomy Listing of Emotions Captured in Datasets
 
@@ -200,12 +202,12 @@ The power of these benchmarks is demonstrated by our **EMPATHIC INSIGHT** models
 These models, are permissively licensed (Creative Commons for the models, Apache 2.0 for the code), prove that with focused dataset construction and careful modeling, AI can indeed learn to "see" and "hear" emotions with a level of nuance approaching human perception.
 
 ![][image12]
-![][image13]
 ![][image14]
+![][image15]
 
 **Figure 7:** More EMPATHIC INSIGHT-FACE Model prediction examples
 
-![][image15]
+![][image16]
 
 **Figure 8:** LAION's Empathic Insights Face Models Closely Track with Human Annotators
 
@@ -315,7 +317,6 @@ This ambitious undertaking would not be possible without the incredible support 
 
 [image1]: /images/blog/do_they_see/image1.jpg
 [image2]: /images/blog/do_they_see/image2.png
-[image3]: /images/blog/do_they_see/image3.png
 [image4]: /images/blog/do_they_see/image4.png
 [image5]: /images/blog/do_they_see/image5.png
 [image6]: /images/blog/do_they_see/image6.png
@@ -328,3 +329,4 @@ This ambitious undertaking would not be possible without the incredible support 
 [image13]: /images/blog/do_they_see/image13.png
 [image14]: /images/blog/do_they_see/image14.png
 [image15]: /images/blog/do_they_see/image15.png
+[image16]: /images/blog/do_they_see/image16.png
