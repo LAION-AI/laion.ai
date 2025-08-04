@@ -1,5 +1,5 @@
 ---
-title: "Releasing Re-LAION 5B: transparent iteration on LAION-5B with additional safety fixes"
+title: "Releasing Re-LAION-5B: transparent iteration on LAION-5B with additional safety fixes"
 author: "LAION e.V."
 date: "Aug 30, 2024"
 previewImg: "/images/blog/laion-blue.png"
@@ -179,6 +179,21 @@ Following important insights were made in this study and during safety iteration
 ## Usage of Re-LAION datasets
 
 We release both Re-LAION-5B-research and Re-LAION-5B-research-safe under Apache 2.0 License, which ensures researchers can freely utilize datasets both for conducting basic or applied research. Our usage recommendation stays the [same as in our previous release](https://laion.ai/blog/laion-5b/#disclaimer-on-dataset-purpose-and-content-warning). The datasets are released for research purposes, especially for conducting basic research on various open multi-modal foundation models, e.g. openCLIP, in academic settings. **We strongly advise AGAINST using the datasets in industrial settings and even more so, we advise strongly AGAINST using datasets in their original form for creating end products.** We explicitly warn that Re-LAION datasets can contain links to various image samples that can be strongly discomforting dependent on the viewer and are NOT meant for casual viewing apart from inspection necessary for purposes of scientific and/or safety analysis performed by trained researchers.
+
+## Citation
+To refer to this work, please cite :
+
+```
+
+@misc{relaion,
+  author = {LAION},
+  title = {Releasing Re-LAION-5B: transparent iteration on LAION-5B with additional safety fixes},
+  howpublished = {\url{https://laion.ai/blog/relaion-5b/}},
+  note = {Accessed: 30 aug, 2024},
+  year = {2024}
+}
+
+```
 
 ## LEGAL DISCLAIMER
 
