@@ -1,32 +1,33 @@
 ---
-title: "Board Game Arena: A Framework for Evaluating Large Language Models Through Strategic Gameplay"
+title: "Game Reasoning Arena: Inside the Mind of AI: How LLMs Think, Strategize, and Compete in Real-Time"
+author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
+date: "Aug 11 2025"
+previewImg: "/images/blog/board_game_arena/strategic_ai.png"
+---
+---
+title: "Game Reasoning Arena: Inside the Mind of AI: How LLMs Think, Strategize, and Compete in Real-Time"
 author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
 date: "Aug 4 2025"
-previewImg: "/images/blog/board_game_arena/strategic_ai.png"
+previewImg: "/images/blog/game_reasoning_arena/strategic_ai.png"
 ---
 
 ### Access
-- **Repository**: [https://github.com/SLAMPAI/board_game_arena](https://github.com/SLAMPAI/board_game_arena)
-- **Documentation**: Complete installation, usage, and extension guides available at [Board Game Arena Documentation](https://board-game-arena.readthedocs.io/en/latest/index.html)
+- **Repository**: [https://github.com/SLAMPAI/game_reasoning_arena](https://github.com/SLAMPAI/game_reasoning_arena)
+- **Documentation**: Complete installation, usage, and extension guides available at [Game Reasoning Arena Documentation](https://board-game-arena.readthedocs.io/en/latest/index.html)
 
 
-A comprehensive research platform for evaluating Large Language Models through strategic gameplay, providing insights into AI decision-making in competitive environments
+What happens when we peek inside an AI's mind while it's making strategic decisions? For the first time, we can watch Large Language Models think in real-time as they compete, strategize, and adapt in dynamic game environments. Our Game Reasoning Arena doesn't just test what AI can do—it reveals *how* AI thinks, capturing every reasoning step as models battle each other in strategic gameplay.
 
-*Advancing our understanding of AI strategic reasoning*
-
-## Authors
-
-**Board Game Arena Research Team**
-Lucia Cipolina-Kun*, Marianna Nezhurina*, Jenia Jitsev
+*The first platform to expose AI's strategic DNA in action*
 
 
-![][strategic_ai]
+Game Reasoning Arena is a research platform where Large Language Models battle in board games against other LLMs, humans, or random bots—while exposing every step of their strategic reasoning. Built on Google’s OpenSpiel with a modular, Gymnasium-style interface, it supports custom games, agents, and analysis tools. Scalable Ray-based parallelization powers large tournaments, making it a fast, flexible testbed for studying how AI thinks under competition and uncertainty.
 
-Recent advancements in Large Language Models (LLMs) have emphasized the importance of understanding decision-making processes the models are capable of in complex environments. While LLMs excel in tasks like language generation and static problem solving, their performance in dynamic, competitive settings remains an area of active investigation. Strategic decision-making under pressure offers a valuable framework for assessing reasoning, adaptability, and interaction capabilities.
+---
+### Quick start with Google Colab
 
-We introduce **Board Game Arena** – a comprehensive research platform that enables the evaluation of LLMs through strategic gameplay. Rather than relying solely on traditional benchmarks, this framework provides insights into how LLMs navigate competition, uncertainty, and complex decision trees.
-
-Built on Google's OpenSpiel framework, Board Game Arena serves as a flexible and extensible platform for researchers and developers. By leveraging OpenSpiel's modular design, this framework can be customized to address a diverse range of research questions, enabling the addition of new games, agents, and analysis tools. Its adaptability makes it an invaluable resource for exploring varied aspects of strategic reasoning and decision-making in AI.
+**[Click here to try Game Reasoning Arena in our Colab now!](https://github.com/SLAMPAI/game_reasoning_arena/blob/main/colabs/game_reasoning_arena.ipynb)**
+---
 
 ## Why Strategic Games Matter for AI Evaluation
 
@@ -40,11 +41,11 @@ Strategic games offer unique evaluation opportunities that traditional benchmark
 
 This creates an ideal testing environment for evaluating the strategic reasoning capabilities that will be crucial as LLMs become more integrated into decision-making roles across industries.
 
-## Key Features of Board Game Arena
+## Key Features of Game Reasoning Arena
 
 ### Multi-Agent Testing Framework
 
-Board Game Arena supports comprehensive competitive scenarios:
+Game Reasoning Arena supports comprehensive competitive scenarios:
 
 - **LLM vs Random**: Establish baseline performance against unpredictable opponents.
 - **LLM vs LLM**: Direct strategic competitions between different language models.
@@ -60,13 +61,13 @@ The framework includes a carefully selected set of games that test different asp
 - **`kuhn_poker`** - Hidden information, bluffing, and probabilistic reasoning
 - **`prisoners_dilemma`** - Cooperation versus competition dynamics
 - **`matching_pennies`** - Zero-sum game theory and randomization strategies
-- **`matrix_rps`** - Rock-paper-scissors with strategic depth
+- **`matrix_rps`** - Rock-paper-scissors with matrix representation
 
 Each game challenges LLMs in unique ways, from spatial reasoning to probabilistic thinking to social dynamics.
 
 ### Flexible Inference Architecture
 
-One of Board Game Arena's key strengths is its dual-backend architecture:
+One of Game Reasoning Arena's key strengths is its dual-backend architecture:
 
 **LiteLLM Backend** - Access to over 100 language models through APIs:
 - **OpenAI**: GPT-3.5, GPT-4, GPT-4 Turbo
@@ -82,15 +83,17 @@ One of Board Game Arena's key strengths is its dual-backend architecture:
 - Custom fine-tuned models
 - Cost-effective large-scale experiments
 
+It also supports Hugging Face backends.
+
 The system allows researchers to mix different backends within the same experiment, enabling direct comparison between proprietary and open-source models, or between API-based and locally-hosted implementations.
 
 ## Reasoning Traces: Understanding AI Decision-Making
 
-A particularly valuable feature of Board Game Arena is its automatic reasoning traces capability. This functionality captures not only what move an LLM made, but also the reasoning behind that decision.
+A particularly valuable feature of Game Reasoning Arena is its automatic reasoning traces capability. This functionality captures not only what move an LLM made, but also the reasoning behind that decision.
 
 ### Data Collection
 
-For every move made by an LLM agent, Board Game Arena automatically records:
+For every move made by an LLM agent, Game Reasoning Arena automatically records:
 
 - **Board State**: The exact game position when the decision was made
 - **Agent Reasoning**: The LLM's complete thought process and explanation
@@ -129,7 +132,7 @@ Timestamp: 2025-08-04 14:23:17
 
 ### Analysis Tools
 
-Board Game Arena includes comprehensive analysis capabilities for reasoning traces:
+Game Reasoning Arena includes comprehensive analysis capabilities for reasoning traces:
 
 - **Reasoning Categorization**: Automatically classifies thinking patterns (Positional, Blocking, Winning Logic, Opponent Modeling, etc.)
 - **Pattern Visualization**: Word clouds showing common reasoning terms, pie charts of strategy types
@@ -140,7 +143,7 @@ This provides researchers with tools for understanding how different LLMs approa
 
 ## Distributed Computing and Scalability
 
-Board Game Arena supports large-scale experiments through distributed computing capabilities:
+Game Reasoning Arena supports large-scale experiments through distributed computing capabilities:
 
 ### Ray Integration
 
@@ -151,18 +154,18 @@ Board Game Arena supports large-scale experiments through distributed computing 
 
 ### SLURM Cluster Support
 
-Board Game Arena integrates seamlessly with SLURM clusters, enabling researchers to conduct large-scale academic experiments with ease. This includes:
+Game Reasoning Arena integrates seamlessly with SLURM clusters, enabling researchers to conduct large-scale academic experiments with ease. This includes:
 
 - **Parameter Sweeps**: Efficiently explore hyperparameter spaces across multiple nodes and GPUs.
 
 - **Scalable Tournaments**: Run extensive multi-agent tournaments across distributed computing environments.
 
 
-These capabilities make Board Game Arena a powerful tool for conducting rigorous and scalable academic research.
+These capabilities make Game Reasoning Arena a powerful tool for conducting rigorous and scalable academic research.
 
 ## Monitoring and Visualization via Tensorboard
 
-Board Game Arena includes native TensorBoard integration for experiment monitoring:
+Game Reasoning Arena includes native TensorBoard integration for experiment monitoring:
 
 - **Real-time Metrics**: Monitor win rates, reward progressions, and performance trends during gameplay
 - **Multi-Agent Comparison**: Side-by-side visualization of different LLM strategies
@@ -172,7 +175,7 @@ Board Game Arena includes native TensorBoard integration for experiment monitori
 
 ## Extensibility and Customization
 
-Board Game Arena's modular architecture facilitates easy extension:
+Game Reasoning Arena's modular architecture facilitates easy extension:
 
 * Adding new games
 * Adding new LLM providers
@@ -184,7 +187,7 @@ The reasoning traces database and analysis pipeline are designed to be extensibl
 
 ## Research Applications and Findings
 
-Board Game Arena has already enabled several interesting research observations:
+Game Reasoning Arena has already enabled several interesting research observations:
 
 - **Strategic Specialization**: Certain LLMs demonstrate strong tactical play but struggle with long-term strategic planning
 - **Reasoning Diversity**: Different models exhibit distinct strategic approaches and decision-making patterns
@@ -194,17 +197,104 @@ Board Game Arena has already enabled several interesting research observations:
 
 These findings contribute to our understanding of LLM capabilities and limitations in decision-making scenarios that parallel real-world strategic challenges.
 
+
 ## Example Results
-```
 
-ADD IMAGES HERE of the reasoning analysis
+Our analysis reveals fascinating insights into how different LLMs approach strategic thinking. Here are some key visualizations from our experiments:
+
+---
+
+### Reasoning Pattern Distribution Across Models
+
+![Reasoning Types Overview](/images/blog/game_reasoning_arena/0_reasoning_types.png)
+*Distribution of reasoning types across all LLM models and games, showing distinct strategic thinking patterns.*
+
+![Reasoning Patterns Across Games – Llama3 70B](/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png)
+*Radar plot showing the normalized distribution of reasoning types for each game played by Llama3 70B.*
 
 
+The radar chart reveals that Llama3 70B distributes its reasoning differently depending on the game context. For example, in **Matching Pennies** and **Matrix PD**, opponent modeling dominates, while **Connect Four** favors positional play. **Rule-based reasoning** emerges in **Matrix RPS**, showing that the model switches to more deterministic strategies when the game structure rewards fixed patterns.
+
+---
+
+### Strategic Diversity in Different Games
+
+![Game Entropy Analysis](/images/blog/game_reasoning_arena/avg_entropy_all_games.png)
+*Reasoning entropy across different games - higher entropy indicates more diverse strategic approaches.*
+
+![Entropy by Turn – Tic-Tac-Toe](/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png)
+*Entropy of reasoning distribution per turn for all agents in Tic-Tac-Toe.*
+
+While the first plot compares average diversity per game, the second shows per-turn changes.
+
+Entropy measures the diversity of reasoning patterns at each turn. Here we see  **Llama3 8B** spiking early in the game, suggesting exploration of different strategic avenues before quickly converging to a more fixed reasoning mode. In contrast, other models remain static, indicating a more rigid approach from the start.
+
+---
+
+### Evolution of Reasoning Patterns in Gameplay
+
+![Llama3 8B Tic-Tac-Toe Evolution](/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe_stacked_area.png)
+*How Llama3 8B's reasoning patterns evolve during tic-tac-toe gameplay - notice the shift from positional to blocking strategies.*
+
+![Reasoning Category Evolution – Llama3 8B Tic-Tac-Toe](/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
+*Proportion of reasoning categories as the game progresses.*
+
+Both views tell the same story: **Llama3 8B** starts with opponent modeling, shifts to positional play, then locks into blocking for the rest of the match. This suggests a defensive bias once the mid-game begins, perhaps prioritizing risk avoidance over creating winning opportunities.
+
+---
+
+### Model-Specific Strategic Preferences
+
+![Llama3 8B Reasoning Distribution](/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png)
+*Llama3 8B shows strong preference for positional reasoning and blocking strategies.*
+
+![Llama3 70B Reasoning Distribution](/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png)
+*Llama3 70B demonstrates more diverse reasoning patterns with increased opponent modeling.*
+
+![Reasoning by Game – Llama3 8B](/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png)
+*Reasoning type proportions for Llama3 8B across all games.*
+
+![Reasoning by Game – Llama3.1 8B Instruct](/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png)
+*Reasoning type breakdown for Llama3.1 8B Instruct.*
+
+While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct often commits to a single reasoning mode for an entire match (e.g., Winning Logic in Connect Four, Opponent Modeling elsewhere).
+
+---
+
+### Aggregated Reasoning Proportions with Labels
+
+![Stacked Reasoning Distribution – Llama3 8B](/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png)
+*Stacked bar chart of reasoning proportions per game, with percentage labels.*
+
+This view makes it clear that some games (like Tic-Tac-Toe) are dominated by one reasoning type, while others (like Connect Four, Kuhn Poker) exhibit a more balanced mix.
+
+---
+
+### Strategic Position Analysis
+
+![Tic-Tac-Toe Heatmap Llama3 8B](/images/blog/game_reasoning_arena/heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
+*Llama3 8B's positional preferences in tic-tac-toe - strong center bias with tactical edge play.*
+
+![Tic-Tac-Toe Heatmap Llama3 70B](/images/blog/game_reasoning_arena/heatmap_llm_litellm_groq_llama3_70b_8192_tic_tac_toe.png)
+*Llama3 70B shows more sophisticated spatial reasoning with balanced positional strategy.*
+
+---
+
+These visualizations demonstrate how Game Reasoning Arena enables researchers to:
+
+- **Compare strategic sophistication** between model sizes (8B vs 70B parameters)
+- **Identify reasoning pattern evolution** during gameplay
+- **Analyze positional and tactical preferences** across different games
+- **Quantify strategic diversity** and decision-making consistency
+
+Different LLMs not only vary in their strategic preferences but also in how flexible (or rigid) those preferences are over time. The data reveals that larger models (70B) tend to exhibit more adaptive, context-sensitive reasoning, while smaller models (8B) often commit early to a strategy and maintain it throughout the match.
+
+___
 
 ### Citation
 ```bibtex
-@article{cipolina-kun2025board_game_arena,
-    title={Board Game Arena: A Framework and Benchmark for Assessing Large Language Models},
+@article{cipolina-kun2025game_reasoning_arena,
+    title={Game Reasoning Arena: A Framework and Benchmark for Assessing Reasoning Capabilites of Large Language Models via Game Play},
     author={Lucia Cipolina-Kun and Marianna Nezhurina and Jenia Jitsev},
     year={2025},
     journal={arXiv},
@@ -228,6 +318,4 @@ We also would like to express gratitude to all the people who are working on mak
 
 We further acknowledge the contributions of the **OpenSpiel developers** – Marc Lanctot, John Schultz, and Michael Kaisers – whose framework provides the foundation for strategic AI evaluation.
 
-Board Game Arena is released under a **CC BY-NC 4.0 license**, making it freely available for research and non-commercial applications.
-
-[strategic_ai]: /images/blog/board_game_arena/strategic_ai.png
+Game Reasoning Arena is released under a **CC BY-NC 4.0 license**, making it freely available for research and non-commercial applications.
