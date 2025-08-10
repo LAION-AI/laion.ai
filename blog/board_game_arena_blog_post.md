@@ -62,6 +62,8 @@ The framework includes a carefully selected set of games that test different asp
 - **`prisoners_dilemma`** - Cooperation versus competition dynamics
 - **`matching_pennies`** - Zero-sum game theory and randomization strategies
 - **`matrix_rps`** - Rock-paper-scissors with matrix representation
+- **`hex`** -  Complex pathfinding and connection strategies on a hexagonal grid
+- **`chess`** - Deep combinatorial reasoning, multi-phase planning, and tactical foresight
 
 Each game challenges LLMs in unique ways, from spatial reasoning to probabilistic thinking to social dynamics.
 
