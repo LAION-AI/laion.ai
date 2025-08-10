@@ -1,9 +1,3 @@
-Board Game Arena Blog Draft
-===
-
-To be plugged in to  https://github.com/LAION-AI/laion.ai/tree/main/blog
-
-
 ---
 title: "Board Game Arena: A Framework for Evaluating Large Language Models Through Strategic Gameplay"
 author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
