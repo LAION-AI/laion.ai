@@ -227,15 +227,18 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 Aggregation of strategic decisions across all games.
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="550"/>
-
-*Llama3 8B shows strong preference for positional reasoning and blocking strategies.*
-
 <img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png" alt="Llama3 70B Reasoning Distribution" width="550"/>
 
 *Llama3 70B demonstrates more diverse reasoning patterns with increased opponent modeling.*
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png" alt="Reasoning by Game – Llama3 8B" width="600"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="550"/>
+
+*Llama3 8B shows strong preference for positional reasoning and blocking strategies.*
+
+
+Reasoning per game.
+
+<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_70b_8192.png" alt="Reasoning by Game – Llama3 8B" width="600"/>
 
 *Reasoning type proportions for Llama3 8B across all games.*
 
