@@ -23,6 +23,8 @@ Game Reasoning Arena is a research platform where Large Language Models battle i
 **[Click here to try Game Reasoning Arena in our Colab now!](https://github.com/SLAMPAI/game_reasoning_arena/blob/main/colabs/game_reasoning_arena.ipynb)**
 ---
 
+
+
 ## Why Strategic Games Matter for AI Evaluation
 
 Strategic games offer unique evaluation opportunities that traditional benchmarks cannot provide: genuine decision-making under uncertainty. When an LLM plays Tic-Tac-Toe, Connect Four, or Poker, it must:
