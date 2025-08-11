@@ -1,6 +1,3 @@
-Game Reasoning Arena Blog
-===
-
 ---
 title: "Game Reasoning Arena: Inside the Mind of AI: How LLMs Think, Strategize, and Compete in Real-Time"
 author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
