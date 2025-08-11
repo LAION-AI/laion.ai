@@ -253,6 +253,8 @@ While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct o
 
 ### Strategic Position Analysis
 
+How do LLMs change their strategic reasoning as the game progresses?
+
 <img src="../public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png" alt="Tic-Tac-Toe Heatmap Llama3 8B" width="700"/>
 
 *Llama3 8B's positional preferences in tic-tac-toe - sophisticated spatial reasoning with balanced positional strategy.*
