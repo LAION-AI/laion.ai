@@ -160,7 +160,7 @@ Game Reasoning Arena includes native TensorBoard integration for experiment moni
 
 ## Extensibility and Customization
 
-Game Reasoning Arena's modular architecture facilitates easy extension by adding new games, adding new LLM providers and adding custom policies such as reinforcement learning policies
+Game Reasoning Arena's modular architecture facilitates easy extension by adding new games, adding new LLM providers and adding custom policies such as reinforcement learning policies.
 
 
 ### Analysis Pipeline Extension
@@ -187,11 +187,11 @@ Our analysis reveals fascinating insights into how different LLMs approach strat
 
 ### Reasoning Pattern Distribution Across Models
 
-<img src="../public/images/blog/game_reasoning_arena/0_reasoning_types.png" alt="Reasoning Types Overview" width="750"/>
+<img src="../public/images/blog/game_reasoning_arena/0_reasoning_types.png" alt="Reasoning Types Overview" width="800"/>
 
 *Distribution of reasoning types across all LLM models and games, showing distinct strategic thinking patterns.*
 
-<img src="../public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png" alt="Reasoning Patterns Across Games – Llama3 70B" width="500"/>
+<img src="../public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png" alt="Reasoning Patterns Across Games – Llama3 70B" width="550"/>
 
 *Radar plot showing the normalized distribution of reasoning types for each game played by Llama3 70B.*
 
@@ -203,7 +203,7 @@ The radar chart reveals that Llama3 70B distributes its reasoning differently de
 ### Strategic Diversity in Different Games
 
 
-<img src="../public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png" alt="Entropy by Turn – Tic-Tac-Toe" width="700"/>
+<img src="../public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png" alt="Entropy by Turn – Tic-Tac-Toe" width="600"/>
 
 *Entropy of reasoning distribution per turn for all agents in Tic-Tac-Toe.*
 
