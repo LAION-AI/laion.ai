@@ -1,8 +1,11 @@
+Game Reasoning Arena Blog
+===
+
 ---
 title: "Game Reasoning Arena: Inside the Mind of AI: How LLMs Think, Strategize, and Compete in Real-Time"
 author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
 date: "Aug 4 2025"
-previewImg: "/images/blog/game_reasoning_arena/0_blog_logo.png"
+previewImg: "../public/images/blog/game_reasoning_arena/0_blog_logo.png"
 ---
 
 ### Access
@@ -22,8 +25,6 @@ Game Reasoning Arena is a research platform where Large Language Models battle i
 
 **[Click here to try Game Reasoning Arena in our Colab now!](https://github.com/SLAMPAI/game_reasoning_arena/blob/main/colabs/game_reasoning_arena.ipynb)**
 ---
-
-
 
 ## Why Strategic Games Matter for AI Evaluation
 
@@ -204,10 +205,10 @@ Our analysis reveals fascinating insights into how different LLMs approach strat
 
 ### Reasoning Pattern Distribution Across Models
 
-![Reasoning Types Overview](/images/blog/game_reasoning_arena/0_reasoning_types.png)
+<img src="../public/images/blog/game_reasoning_arena/0_reasoning_types.png" alt="Reasoning Types Overview" width="700"/>
 *Distribution of reasoning types across all LLM models and games, showing distinct strategic thinking patterns.*
 
-![Reasoning Patterns Across Games – Llama3 70B](/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png)
+<img src="../public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png" alt="Reasoning Patterns Across Games – Llama3 70B" width="500"/>
 *Radar plot showing the normalized distribution of reasoning types for each game played by Llama3 70B.*
 
 
@@ -218,7 +219,7 @@ The radar chart reveals that Llama3 70B distributes its reasoning differently de
 ### Strategic Diversity in Different Games
 
 
-![Entropy by Turn – Tic-Tac-Toe](/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png)
+<img src="../public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png" alt="Entropy by Turn – Tic-Tac-Toe" width="700"/>
 *Entropy of reasoning distribution per turn for all agents in Tic-Tac-Toe.*
 
 While the first plot compares average diversity per game, the second shows per-turn changes.
@@ -229,8 +230,8 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 ### Evolution of Reasoning Patterns in Gameplay
 
-![Reasoning Category Evolution – Llama3 8B Tic-Tac-Toe](/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
-*Proportion of reasoning categories as the game progresses. How Llama3 8B's reasoning patterns evolve during tic-tac-toe gameplay - notice the shift from positional to blocking strategies.*
+<img src="../public/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png" alt="Reasoning Category Evolution – Llama3 8B Tic-Tac-Toe" width="700"/>
+*Proportion of reasoning categories as the game progresses. How Llama3 8B's reasoning patterns evolve during tic-tac-toe gameplay.*
 
 **Llama3 8B** starts with opponent modeling, shifts to positional play, then locks into blocking for the rest of the match. This suggests a defensive bias once the mid-game begins, perhaps prioritizing risk avoidance over creating winning opportunities.
 
@@ -238,16 +239,16 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 ### Model-Specific Strategic Preferences
 
-![Llama3 8B Reasoning Distribution](/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png)
+<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="700"/>
 *Llama3 8B shows strong preference for positional reasoning and blocking strategies.*
 
-![Llama3 70B Reasoning Distribution](/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png)
+<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png" alt="Llama3 70B Reasoning Distribution" width="700"/>
 *Llama3 70B demonstrates more diverse reasoning patterns with increased opponent modeling.*
 
-![Reasoning by Game – Llama3 8B](/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png)
+<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png" alt="Reasoning by Game – Llama3 8B" width="700"/>
 *Reasoning type proportions for Llama3 8B across all games.*
 
-![Reasoning by Game – Llama3.1 8B Instruct](/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png)
+<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png" alt="Reasoning by Game – Llama3.1 8B Instruct" width="700"/>
 *Reasoning type breakdown for Llama3.1 8B Instruct.*
 
 While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct often commits to a single reasoning mode for an entire match (e.g., Winning Logic in Connect Four, Opponent Modeling elsewhere).
@@ -256,7 +257,7 @@ While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct o
 
 ### Aggregated Reasoning Proportions with Labels
 
-![Stacked Reasoning Distribution – Llama3 8B](/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png)
+<img src="../public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png" alt="Stacked Reasoning Distribution – Llama3 8B" width="700"/>
 *Stacked bar chart of reasoning proportions per game, with percentage labels.*
 
 This view makes it clear that some games (like Tic-Tac-Toe) are dominated by one reasoning type, while others (like Connect Four, Kuhn Poker) exhibit a more balanced mix.
@@ -265,7 +266,7 @@ This view makes it clear that some games (like Tic-Tac-Toe) are dominated by one
 
 ### Strategic Position Analysis
 
-![Tic-Tac-Toe Heatmap Llama3 8B](/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
+<img src="../public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png" alt="Tic-Tac-Toe Heatmap Llama3 8B" width="700"/>
 *Llama3 8B's positional preferences in tic-tac-toe - sophisticated spatial reasoning with balanced positional strategy.*
 
 
