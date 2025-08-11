@@ -225,11 +225,11 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 ### Model-Specific Strategic Preferences
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="600"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="550"/>
 
 *Llama3 8B shows strong preference for positional reasoning and blocking strategies.*
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png" alt="Llama3 70B Reasoning Distribution" width="600"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png" alt="Llama3 70B Reasoning Distribution" width="550"/>
 
 *Llama3 70B demonstrates more diverse reasoning patterns with increased opponent modeling.*
 
@@ -237,7 +237,7 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 *Reasoning type proportions for Llama3 8B across all games.*
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png" alt="Reasoning by Game – Llama3.1 8B Instruct" width="600"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png" alt="Reasoning by Game – Llama3.1 8B Instruct" width="700"/>
 
 *Reasoning type breakdown for Llama3.1 8B Instruct.*
 
@@ -247,7 +247,7 @@ While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct o
 
 ### Aggregated Reasoning Proportions with Labels
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png" alt="Stacked Reasoning Distribution – Llama3 8B" width="700"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png" alt="Stacked Reasoning Distribution – Llama3 8B" width="750"/>
 
 *Stacked bar chart of reasoning proportions per game, with percentage labels.*
 
