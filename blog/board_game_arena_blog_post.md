@@ -1,14 +1,8 @@
 ---
 title: "Game Reasoning Arena: Inside the Mind of AI: How LLMs Think, Strategize, and Compete in Real-Time"
 author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
-date: "Aug 11 2025"
-previewImg: "/images/blog/board_game_arena/strategic_ai.png"
----
----
-title: "Game Reasoning Arena: Inside the Mind of AI: How LLMs Think, Strategize, and Compete in Real-Time"
-author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
 date: "Aug 4 2025"
-previewImg: "/images/blog/game_reasoning_arena/strategic_ai.png"
+previewImg: "/images/blog/game_reasoning_arena/0_blog_logo.png""
 ---
 
 ### Access
@@ -221,8 +215,6 @@ The radar chart reveals that Llama3 70B distributes its reasoning differently de
 
 ### Strategic Diversity in Different Games
 
-![Game Entropy Analysis](/images/blog/game_reasoning_arena/avg_entropy_all_games.png)
-*Reasoning entropy across different games - higher entropy indicates more diverse strategic approaches.*
 
 ![Entropy by Turn – Tic-Tac-Toe](/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png)
 *Entropy of reasoning distribution per turn for all agents in Tic-Tac-Toe.*
@@ -235,13 +227,10 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 ### Evolution of Reasoning Patterns in Gameplay
 
-![Llama3 8B Tic-Tac-Toe Evolution](/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe_stacked_area.png)
-*How Llama3 8B's reasoning patterns evolve during tic-tac-toe gameplay - notice the shift from positional to blocking strategies.*
-
 ![Reasoning Category Evolution – Llama3 8B Tic-Tac-Toe](/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
-*Proportion of reasoning categories as the game progresses.*
+*Proportion of reasoning categories as the game progresses. How Llama3 8B's reasoning patterns evolve during tic-tac-toe gameplay - notice the shift from positional to blocking strategies.*
 
-Both views tell the same story: **Llama3 8B** starts with opponent modeling, shifts to positional play, then locks into blocking for the rest of the match. This suggests a defensive bias once the mid-game begins, perhaps prioritizing risk avoidance over creating winning opportunities.
+**Llama3 8B** starts with opponent modeling, shifts to positional play, then locks into blocking for the rest of the match. This suggests a defensive bias once the mid-game begins, perhaps prioritizing risk avoidance over creating winning opportunities.
 
 ---
 
@@ -274,11 +263,9 @@ This view makes it clear that some games (like Tic-Tac-Toe) are dominated by one
 
 ### Strategic Position Analysis
 
-![Tic-Tac-Toe Heatmap Llama3 8B](/images/blog/game_reasoning_arena/heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
-*Llama3 8B's positional preferences in tic-tac-toe - strong center bias with tactical edge play.*
+![Tic-Tac-Toe Heatmap Llama3 8B](/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
+*Llama3 8B's positional preferences in tic-tac-toe - sophisticated spatial reasoning with balanced positional strategy.*
 
-![Tic-Tac-Toe Heatmap Llama3 70B](/images/blog/game_reasoning_arena/heatmap_llm_litellm_groq_llama3_70b_8192_tic_tac_toe.png)
-*Llama3 70B shows more sophisticated spatial reasoning with balanced positional strategy.*
 
 ---
 
