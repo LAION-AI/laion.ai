@@ -62,26 +62,15 @@ The framework includes a carefully selected set of games that test different asp
 Each game challenges LLMs in unique ways, from spatial reasoning to probabilistic thinking to social dynamics.
 
 ### Flexible Inference Architecture
-
-One of Game Reasoning Arena's key strengths is its dual-backend architecture:
+The system allows researchers to mix different backends within the same experiment, enabling direct comparison between proprietary and open-source models, or between API-based and locally-hosted implementations.
 
 **LiteLLM Backend** - Access to over 100 language models through APIs:
-- **OpenAI**: GPT-3.5, GPT-4, GPT-4 Turbo
-- **Anthropic**: Claude 3, Claude 3.5 Sonnet
-- **Google**: Gemini Pro, Gemma models
-- **Groq**: Ultra-fast Llama 3 and Gemma inference
-- **Together AI**: Llama 3.1, Mixtral, Code Llama
-- **Additional providers**: Supporting over 90 other model providers for comprehensive comparison
 
-**vLLM Backend** - Local GPU inference for:
-- Complete control over model parameters
-- Privacy-sensitive research applications
-- Custom fine-tuned models
-- Cost-effective large-scale experiments
+**vLLM Backend** - Local GPU inference.
 
-It also supports Hugging Face backends.
+It also supports **Hugging Face** backends.
 
-The system allows researchers to mix different backends within the same experiment, enabling direct comparison between proprietary and open-source models, or between API-based and locally-hosted implementations.
+
 
 ## Reasoning Traces: Understanding AI Decision-Making
 
@@ -171,11 +160,7 @@ Game Reasoning Arena includes native TensorBoard integration for experiment moni
 
 ## Extensibility and Customization
 
-Game Reasoning Arena's modular architecture facilitates easy extension:
-
-* Adding new games
-* Adding new LLM providers
-* Adding custom policies such as reinforcement learning policies
+Game Reasoning Arena's modular architecture facilitates easy extension by adding new games, adding new LLM providers and adding custom policies such as reinforcement learning policies
 
 
 ### Analysis Pipeline Extension
@@ -202,10 +187,12 @@ Our analysis reveals fascinating insights into how different LLMs approach strat
 
 ### Reasoning Pattern Distribution Across Models
 
-<img src="../public/images/blog/game_reasoning_arena/0_reasoning_types.png" alt="Reasoning Types Overview" width="700"/>
+<img src="../public/images/blog/game_reasoning_arena/0_reasoning_types.png" alt="Reasoning Types Overview" width="750"/>
+
 *Distribution of reasoning types across all LLM models and games, showing distinct strategic thinking patterns.*
 
 <img src="../public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png" alt="Reasoning Patterns Across Games – Llama3 70B" width="500"/>
+
 *Radar plot showing the normalized distribution of reasoning types for each game played by Llama3 70B.*
 
 
@@ -217,6 +204,7 @@ The radar chart reveals that Llama3 70B distributes its reasoning differently de
 
 
 <img src="../public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png" alt="Entropy by Turn – Tic-Tac-Toe" width="700"/>
+
 *Entropy of reasoning distribution per turn for all agents in Tic-Tac-Toe.*
 
 While the first plot compares average diversity per game, the second shows per-turn changes.
@@ -228,6 +216,7 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 ### Evolution of Reasoning Patterns in Gameplay
 
 <img src="../public/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png" alt="Reasoning Category Evolution – Llama3 8B Tic-Tac-Toe" width="700"/>
+
 *Proportion of reasoning categories as the game progresses. How Llama3 8B's reasoning patterns evolve during tic-tac-toe gameplay.*
 
 **Llama3 8B** starts with opponent modeling, shifts to positional play, then locks into blocking for the rest of the match. This suggests a defensive bias once the mid-game begins, perhaps prioritizing risk avoidance over creating winning opportunities.
@@ -236,16 +225,20 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 ### Model-Specific Strategic Preferences
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="700"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="600"/>
+
 *Llama3 8B shows strong preference for positional reasoning and blocking strategies.*
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png" alt="Llama3 70B Reasoning Distribution" width="700"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png" alt="Llama3 70B Reasoning Distribution" width="600"/>
+
 *Llama3 70B demonstrates more diverse reasoning patterns with increased opponent modeling.*
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png" alt="Reasoning by Game – Llama3 8B" width="700"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png" alt="Reasoning by Game – Llama3 8B" width="600"/>
+
 *Reasoning type proportions for Llama3 8B across all games.*
 
-<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png" alt="Reasoning by Game – Llama3.1 8B Instruct" width="700"/>
+<img src="../public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png" alt="Reasoning by Game – Llama3.1 8B Instruct" width="600"/>
+
 *Reasoning type breakdown for Llama3.1 8B Instruct.*
 
 While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct often commits to a single reasoning mode for an entire match (e.g., Winning Logic in Connect Four, Opponent Modeling elsewhere).
@@ -255,6 +248,7 @@ While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct o
 ### Aggregated Reasoning Proportions with Labels
 
 <img src="../public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png" alt="Stacked Reasoning Distribution – Llama3 8B" width="700"/>
+
 *Stacked bar chart of reasoning proportions per game, with percentage labels.*
 
 This view makes it clear that some games (like Tic-Tac-Toe) are dominated by one reasoning type, while others (like Connect Four, Kuhn Poker) exhibit a more balanced mix.
@@ -264,6 +258,7 @@ This view makes it clear that some games (like Tic-Tac-Toe) are dominated by one
 ### Strategic Position Analysis
 
 <img src="../public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png" alt="Tic-Tac-Toe Heatmap Llama3 8B" width="700"/>
+
 *Llama3 8B's positional preferences in tic-tac-toe - sophisticated spatial reasoning with balanced positional strategy.*
 
 
