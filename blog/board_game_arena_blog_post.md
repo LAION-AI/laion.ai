@@ -223,7 +223,9 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 ---
 
-### Model-Specific Strategic Preferences
+### Model-Specific Strategic Reasoning Across all Games
+
+Aggregation of strategic decisions across all games.
 
 <img src="../public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png" alt="Llama3 8B Reasoning Distribution" width="550"/>
 
@@ -243,15 +245,6 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct often commits to a single reasoning mode for an entire match (e.g., Winning Logic in Connect Four, Opponent Modeling elsewhere).
 
----
-
-### Aggregated Reasoning Proportions with Labels
-
-<img src="../public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png" alt="Stacked Reasoning Distribution – Llama3 8B" width="750"/>
-
-*Stacked bar chart of reasoning proportions per game, with percentage labels.*
-
-This view makes it clear that some games (like Tic-Tac-Toe) are dominated by one reasoning type, while others (like Connect Four, Kuhn Poker) exhibit a more balanced mix.
 
 ---
 
