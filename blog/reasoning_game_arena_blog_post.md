@@ -7,7 +7,7 @@ previewImg: "../public/images/blog/game_reasoning_arena/0_blog_logo.png"
 
 ### Access
 - **Repository**: [https://github.com/SLAMPAI/game_reasoning_arena](https://github.com/SLAMPAI/game_reasoning_arena)
-- **Documentation**: Complete installation, usage, and extension guides available at [Game Reasoning Arena Documentation](https://board-game-arena.readthedocs.io/en/latest/index.html)
+- **Documentation**: Complete installation, usage, and extension guides available at [Game Reasoning Arena Documentation](https://game-reasoning-arena.readthedocs.io/en/latest/index.html)
 
 
 What happens when we peek inside an AI's mind while it's making strategic decisions? For the first time, we can watch Large Language Models think in real-time as they compete, strategize, and adapt in dynamic game environments. Our Game Reasoning Arena doesn't just test what AI can do—it reveals *how* AI thinks, capturing every reasoning step as models battle each other in strategic gameplay.
