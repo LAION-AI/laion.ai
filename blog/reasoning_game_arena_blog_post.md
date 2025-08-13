@@ -18,11 +18,11 @@ What happens when we peek inside an AI's mind while it's making strategic decisi
 
 Game Reasoning Arena is a research platform where Large Language Models battle in board games against other LLMs, humans, or random bots—while exposing every step of their strategic reasoning. Built on Google’s OpenSpiel with a modular, Gymnasium-style interface, it supports custom games, agents, and analysis tools. Scalable Ray-based parallelization powers large tournaments, making it a fast, flexible testbed for studying how AI thinks under competition and uncertainty.
 
----
+
 ### Quick start with Google Colab
 
 **[Click here to try Game Reasoning Arena in our Colab now!](https://github.com/SLAMPAI/game_reasoning_arena/blob/main/colabs/game_reasoning_arena.ipynb)**
----
+
 
 ## Why Strategic Games Matter for AI Evaluation
 
@@ -184,7 +184,7 @@ These findings contribute to our understanding of LLM capabilities and limitatio
 
 Our analysis reveals fascinating insights into how different LLMs approach strategic thinking. Here are some key visualizations from our experiments:
 
----
+
 
 ### Reasoning Pattern Distribution Across Models
 
@@ -199,7 +199,7 @@ Our analysis reveals fascinating insights into how different LLMs approach strat
 
 The radar chart reveals that Llama3 70B distributes its reasoning differently depending on the game context. For example, in **Matching Pennies** and **Matrix PD**, opponent modeling dominates, while **Connect Four** favors positional play. **Rule-based reasoning** emerges in **Matrix RPS**, showing that the model switches to more deterministic strategies when the game structure rewards fixed patterns.
 
----
+
 
 ### Strategic Diversity in Different Games
 
@@ -212,7 +212,7 @@ While the first plot compares average diversity per game, the second shows per-t
 
 Entropy measures the diversity of reasoning patterns at each turn. Here we see  **Llama3 8B** spiking early in the game, suggesting exploration of different strategic avenues before quickly converging to a more fixed reasoning mode. In contrast, other models remain static, indicating a more rigid approach from the start.
 
----
+
 
 ### Evolution of Reasoning Patterns in Gameplay
 
@@ -222,7 +222,7 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 **Llama3 8B** starts with opponent modeling, shifts to positional play, then locks into blocking for the rest of the match. This suggests a defensive bias once the mid-game begins, perhaps prioritizing risk avoidance over creating winning opportunities.
 
----
+
 
 ### Model-Specific Strategic Reasoning Across all Games
 
@@ -250,7 +250,7 @@ Reasoning per game.
 While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct often commits to a single reasoning mode for an entire match (e.g., Winning Logic in Connect Four, Opponent Modeling elsewhere).
 
 
----
+
 
 ### Strategic Position Analysis
 
@@ -261,7 +261,7 @@ How do LLMs change their strategic reasoning as the game progresses?
 *Llama3 8B's positional preferences in tic-tac-toe - sophisticated spatial reasoning with balanced positional strategy.*
 
 
----
+
 
 These visualizations demonstrate how Game Reasoning Arena enables researchers to:
 
@@ -272,7 +272,7 @@ These visualizations demonstrate how Game Reasoning Arena enables researchers to
 
 Different LLMs not only vary in their strategic preferences but also in how flexible (or rigid) those preferences are over time. The data reveals that larger models (70B) tend to exhibit more adaptive, context-sensitive reasoning, while smaller models (8B) often commit early to a strategy and maintain it throughout the match.
 
-___
+
 
 ### Citation
 ```bibtex
