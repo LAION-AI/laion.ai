@@ -188,11 +188,11 @@ Our analysis reveals fascinating insights into how different LLMs approach strat
 
 ### Reasoning Pattern Distribution Across Models
 
-![](/public/images/blog/game_reasoning_arena/0_reasoning_types.png)
+![](/images/blog/game_reasoning_arena/0_reasoning_types.png)
 
 *Distribution of reasoning types across all LLM models and games, showing distinct strategic thinking patterns.*
 
-![](/public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png)
+![](/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png)
 
 
 *Radar plot showing the normalized distribution of reasoning types for each game played by Llama3 70B.*
@@ -204,7 +204,7 @@ The radar chart reveals that Llama3 70B distributes its reasoning differently de
 
 ### Strategic Diversity in Different Games
 
-![](/public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png)
+![](/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png)
 
 *Entropy of reasoning distribution per turn for all agents in Tic-Tac-Toe.*
 
@@ -216,7 +216,7 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 ### Evolution of Reasoning Patterns in Gameplay
 
-![](/public/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
+![](/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
 
 *Proportion of reasoning categories as the game progresses. How Llama3 8B's reasoning patterns evolve during tic-tac-toe gameplay.*
 
@@ -228,12 +228,12 @@ Entropy measures the diversity of reasoning patterns at each turn. Here we see  
 
 Aggregation of strategic decisions across all games.
 
-![](/public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png)
+![](/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png)
 
 *Llama3 70B demonstrates more diverse reasoning patterns with increased opponent modeling.*
 
 
-![](/public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png)
+![](/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png)
 
 *Llama3 8B shows strong preference for positional reasoning and blocking strategies.*
 
@@ -241,11 +241,11 @@ Aggregation of strategic decisions across all games.
 **Reasoning per game.**
 
 
-![](/public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_70b_8192.png)
+![](/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_70b_8192.png)
 
 *Reasoning type proportions for Llama3 8B across all games.*
 
-![](/public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png)
+![](/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png)
 
 *Reasoning type breakdown for Llama3.1 8B Instruct.*
 
@@ -259,6 +259,8 @@ While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct o
 How do LLMs change their strategic reasoning as the game progresses?
 
 ![](/public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
+
+
 
 *Llama3 8B's positional preferences in tic-tac-toe - sophisticated spatial reasoning with balanced positional strategy.*
 
