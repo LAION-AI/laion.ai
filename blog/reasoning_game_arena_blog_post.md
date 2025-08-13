@@ -189,6 +189,7 @@ Our analysis reveals fascinating insights into how different LLMs approach strat
 ### Reasoning Pattern Distribution Across Models
 
 ![](/public/images/blog/game_reasoning_arena/0_reasoning_types.png)
+![](/public/images/blog/artbot-image-ratings.png)
 
 *Distribution of reasoning types across all LLM models and games, showing distinct strategic thinking patterns.*
 
