@@ -2,8 +2,10 @@
 title: "Game Reasoning Arena: Inside the Mind of AI: How LLMs Think, Strategize, and Compete in Real-Time"
 author: "Lucia Cipolina-Kun, Marianna Nezhurina, Jenia Jitsev"
 date: "Aug 4 2025"
-previewImg: "../public/images/blog/game_reasoning_arena/0_blog_logo.png"
+previewImg: "https://github.com/LAION-AI/laion.ai/blob/main/public/images/blog/game_reasoning_arena/0_blog_logo.png"
 ---
+
+
 
 ### Access
 - **Repository**: [https://github.com/SLAMPAI/game_reasoning_arena](https://github.com/SLAMPAI/game_reasoning_arena)
