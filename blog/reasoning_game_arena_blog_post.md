@@ -258,7 +258,7 @@ While Llama3 70B displays adaptive patterns across games, Llama3.1 8B Instruct o
 
 How do LLMs change their strategic reasoning as the game progresses?
 
-![](/public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
+![](/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png)
 
 
 
