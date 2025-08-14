@@ -5,18 +5,17 @@ date: "Aug 4 2025"
 previewImg: "/images/blog/game_reasoning_arena/0_blog_logo.png"
 ---
 
-
 ### Access
 - **Repository**: [https://github.com/SLAMPAI/game_reasoning_arena](https://github.com/SLAMPAI/game_reasoning_arena)
 - **Documentation**: Complete installation, usage, and extension guides available at [Game Reasoning Arena Documentation](https://game-reasoning-arena.readthedocs.io/en/latest/index.html)
+- **Paper**: [Game Reasoning Arena: A Framework and Benchmark for Assessing Reasoning Capabilites of Large Language Models via Game Play](https://arxiv.org/abs/2508.03368)
+- **Leaderboard**: [Game Reasoning Arena Leaderboard](https://huggingface.co/spaces/lcipolina/game_reasoning_arena)
 
 
-What happens when we peek inside an AI's mind while it's making strategic decisions? For the first time, we can watch Large Language Models think in real-time as they compete, strategize, and adapt in dynamic game environments. Our Game Reasoning Arena doesn't just test what AI can do—it reveals *how* AI thinks, capturing every reasoning step as models battle each other in strategic gameplay.
 
-*The first platform to expose AI's strategic DNA in action*
+## TL;DR *The first platform to expose AI's strategic DNA in action*
 
-
-Game Reasoning Arena is a research platform where Large Language Models battle in board games against other LLMs, humans, or random bots—while exposing every step of their strategic reasoning. Built on Google’s OpenSpiel with a modular, Gymnasium-style interface, it supports custom games, agents, and analysis tools. Scalable Ray-based parallelization powers large tournaments, making it a fast, flexible testbed for studying how AI thinks under competition and uncertainty.
+Game Reasoning Arena is the first platform to capture AI's strategic thinking in real-time. LLMs battle in board games (Tic-Tac-Toe, Connect Four, Khun-Poker, etc.) while we record every reasoning step. Built on OpenSpiel with Ray parallelization, it supports multi-agent tournaments and provides deep analysis of how different models strategize, adapt, and compete. Key finding: larger models show more adaptive reasoning patterns, while smaller models commit early to fixed strategies.
 
 
 ### Quick start with Google Colab
@@ -44,7 +43,6 @@ Game Reasoning Arena supports comprehensive competitive scenarios:
 
 - **LLM vs Random**: Establish baseline performance against unpredictable opponents.
 - **LLM vs LLM**: Direct strategic competitions between different language models.
-- **Self-Play**: Enable LLMs to develop strategies by playing against themselves.
 - **Cross-Provider Tournaments**: Compare models from different providers within the same game.
 
 ### Diverse Game Library
@@ -70,7 +68,6 @@ The system allows researchers to mix different backends within the same experime
 **vLLM Backend** - Local GPU inference.
 
 It also supports **Hugging Face** backends.
-
 
 
 ## Reasoning Traces: Understanding AI Decision-Making
@@ -140,14 +137,8 @@ Game Reasoning Arena supports large-scale experiments through distributed comput
 
 ### SLURM Cluster Support
 
-Game Reasoning Arena integrates seamlessly with SLURM clusters, enabling researchers to conduct large-scale academic experiments with ease. This includes:
+Game Reasoning Arena integrates seamlessly with SLURM clusters, enabling researchers to conduct large-scale tournaments.
 
-- **Parameter Sweeps**: Efficiently explore hyperparameter spaces across multiple nodes and GPUs.
-
-- **Scalable Tournaments**: Run extensive multi-agent tournaments across distributed computing environments.
-
-
-These capabilities make Game Reasoning Arena a powerful tool for conducting rigorous and scalable academic research.
 
 ## Monitoring and Visualization via Tensorboard
 
@@ -156,16 +147,12 @@ Game Reasoning Arena includes native TensorBoard integration for experiment moni
 - **Real-time Metrics**: Monitor win rates, reward progressions, and performance trends during gameplay
 - **Multi-Agent Comparison**: Side-by-side visualization of different LLM strategies
 - **Performance Evolution**: Track how agents perform over multiple episodes
-- **Strategy Analysis**: Identify successful patterns and strategic failures
 
 
 ## Extensibility and Customization
 
 Game Reasoning Arena's modular architecture facilitates easy extension by adding new games, adding new LLM providers and adding custom policies such as reinforcement learning policies.
 
-
-### Analysis Pipeline Extension
-The reasoning traces database and analysis pipeline are designed to be extensible, allowing researchers to develop custom analysis tools for specific research questions.
 
 ## Research Applications and Findings
 
@@ -176,8 +163,6 @@ Game Reasoning Arena has already enabled several interesting research observatio
 - **Cross-Game Learning**: Some strategic insights transfer between games, while others remain game-specific
 - **Opponent Modeling**: Varying capabilities in predicting and countering opponent strategies
 - **Decision Consistency**: Different levels of adherence to strategic principles under pressure
-
-These findings contribute to our understanding of LLM capabilities and limitations in decision-making scenarios that parallel real-world strategic challenges.
 
 
 ## Example Results
