@@ -59,6 +59,7 @@ After achieving the match and thus checking the training procedure sanity, we sw
 | 300B   | 2.09M                 | 143052 | $1 \cdot 10^{-3}$ | 5000   | 28610              |
 | 300B   | 4.12M                 | 72661  | $4 \cdot 10^{-3}$ | 25000  | 14532              |
 | 1T     | 4.12M                 | 242204 | $4 \cdot 10^{-3}$ | 25000  | 48440              |
+
 _Table 3:_ Hyperparameters for WSD learning rate schedule.
 
 ### Sanity check by comparing to existing open references
