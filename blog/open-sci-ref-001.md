@@ -29,11 +29,10 @@ We follow a custom design starting from Llama architecture. Different from stand
 
 | Params (B)<br>(Non-Emb + Emb) | Layers | Hidden | Heads | FFN<br>Hidd | Mem    | FLOPS<br>(6N)          |
 |--------------------------------|--------|--------|-------|-------------|--------|-------------------------|
-| 0.1 + 0.03 = 0.13              | 22     | 512    | 8     | 2256        | 0.89GB | $7.8 \times 10^{8}$    |
-| 0.35 + 0.05 = 0.40             | 22     | 1024   | 16    | 3840        | 2.88GB | $2.4 \times 10^{9}$    |
-| 1.21 + 0.10 = 1.31             | 24     | 2048   | 32    | 5440        | 7.544GB| $7.9 \times 10^{9}$    |
-| 1.61 + 0.10 = 1.71             | 24     | 2048   | 32    | 8192        | 9.884GB| $1.0 \times 10^{10}$   |
-
+| 0.1 + 0.03 = 0.13              | 22     | 512    | 8     | 2256        | 0.89GB | 7.8 × 10<sup>8</sup>   |
+| 0.35 + 0.05 = 0.40             | 22     | 1024   | 16    | 3840        | 2.88GB | 2.4 × 10<sup>9</sup>   |
+| 1.21 + 0.10 = 1.31             | 24     | 2048   | 32    | 5440        | 7.544GB| 7.9 × 10<sup>9</sup>   |
+| 1.61 + 0.10 = 1.71             | 24     | 2048   | 32    | 8192        | 9.884GB| 1.0 × 10<sup>10</sup>  |
 
 _Table 1:_ Open-sci-ref model architecture and scales. Tied embedding weights are used for all configs.
 
