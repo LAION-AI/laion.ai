@@ -1,5 +1,5 @@
 ---
-title: "Open-sci-ref 0.01: open and reproducible reference baselines for model training comparison on various scales and datasets"
+title: "Open-sci-ref 0.01: open baselines for language model and dataset comparison"
 author: "Marianna Nezhurina, Joerg Franke, David Salinas, Jenia Jitsev; open-sci collective, openEuroLLM team, LAION"
 date: "Aug 18, 2025"
 previewImg: "/images/blog/open-sci-ref-001/open-sci-ref-001-release.png"
