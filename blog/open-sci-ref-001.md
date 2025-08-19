@@ -41,23 +41,23 @@ _Table 1:_ Open-sci-ref model architecture and scales. Tied embedding weights ar
 We perform hyperparameter tuning measuring test loss on C4 and FineWeb-Edu, selecting hyperparameters that result in lowest test loss on the datasets using 50B training runs with 1.3B model scale. We first experimented with standard cosine learning rate schedule, tuning hyperparams  to match the HuggingFace reference models trained for 350B on C4 and FineWeb-Edu. 
 
 
-| Tokens | Global bs<br>(tokens) | iters  | lr                | warmup |
-|--------|-----------------------|--------|-------------------|--------|
-| 50B    | 2.65M                 | 18839  | $3 \times 10^{-3}$ | 6000   |
-| 50B    | 4.03M                 | 12406  | $6 \times 10^{-3}$ | 1000   |
-| 300B   | 2.09M                 | 143052 | $3 \times 10^{-3}$ | 5000   |
+| Tokens | Global bs<br>(tokens) | iters  | lr                  | warmup |
+|--------|-----------------------|--------|---------------------|--------|
+| 50B    | 2.65M                 | 18839  | 3 × 10<sup>-3</sup> | 6000   |
+| 50B    | 4.03M                 | 12406  | 6 × 10<sup>-3</sup> | 1000   |
+| 300B   | 2.09M                 | 143052 | 3 × 10<sup>-3</sup> | 5000   |
 
 _Table 2:_ Hyperparameters for cosine learning rate schedule.
 
 After achieving the match and thus checking the training procedure sanity, we switched to constant learning + cooldown (WSD) schedule and tuned hyperparameters until we matched or outperformed results obtained with cosine learning rate schedule on both 50B and 300B token budgets for 1.3B model scale, which is still small enough for the tuning experiments to be affordable. The tuned WSD schedule training procedure was then used for all follow up experiments and all model scales (0.13B, 0.4B, 1.3B, 1.7B). Tuned procedure uses weight decay of 0.05, global batch size of 4M tokens, cooldown of 20% of total training duration. Warmup and learning rate depend on the chosen total token budget. For larger token budgets > 300B, a large warmup of 25000 iterations turned out to give performance gains.  See Tab. 3 for the overview of tuned configurations with WSD lr schedule which we use in all follow up experiments.
 
-| Tokens | Global bs<br>(tokens) | iters  | learning<br>rate  | warmup | cooldown<br>(20\%) |
-| ------ | --------------------- | ------ | ----------------- | ------ | ------------------ |
-| 50B    | 2.65M                 | 18839  | $2 \cdot 10^{-3}$ | 6000   | 3767               |
-| 50B    | 4.12M                 | 11921  | $4 \cdot 10^{-3}$ | 1000   | 2384               |
-| 300B   | 2.09M                 | 143052 | $1 \cdot 10^{-3}$ | 5000   | 28610              |
-| 300B   | 4.12M                 | 72661  | $4 \cdot 10^{-3}$ | 25000  | 14532              |
-| 1T     | 4.12M                 | 242204 | $4 \cdot 10^{-3}$ | 25000  | 48440              |
+| Tokens | Global bs<br>(tokens) | iters  | learning<br>rate   | warmup | cooldown<br>(20%) |
+| ------ | --------------------- | ------ | ------------------ | ------ | ----------------- |
+| 50B    | 2.65M                 | 18839  | 2 × 10<sup>-3</sup> | 6000   | 3767              |
+| 50B    | 4.12M                 | 11921  | 4 × 10<sup>-3</sup> | 1000   | 2384              |
+| 300B   | 2.09M                 | 143052 | 1 × 10<sup>-3</sup> | 5000   | 28610             |
+| 300B   | 4.12M                 | 72661  | 4 × 10<sup>-3</sup> | 25000  | 14532             |
+| 1T     | 4.12M                 | 242204 | 4 × 10<sup>-3</sup> | 25000  | 48440             |
 
 _Table 3:_ Hyperparameters for WSD learning rate schedule.
 
@@ -65,12 +65,12 @@ _Table 3:_ Hyperparameters for WSD learning rate schedule.
 
 To make sure the training procedure we use for creating reference baseline models is good enough, we perform comparison to already established reference baselines on open datasets C4 and FineWeb-Edu, making use of open HuggingFace (HF) models with 1.7B scale, trained on 350B tokens (termed HF-ref). We evaluate both HF-ref and open-sci-ref on a broad set of standardized benchmarks (see Tab. 4). As we see that the scores for open-sci-ref matches or outperforms HF-ref (despite HF-ref having slight advantage of 50B more tokens), we can consider the training procedure to be well established and tuned for a given 1.7B model scale, which allows us to proceed with further experiments on other scales after ensuring basic training sanity. This highlights the importance of well established, open reference baselines for performing research.
 
-| Model              | Dataset      | Tokens | Params<br>(B) | Compute<br>(FLOPS)      | Avg   | arc-c<br>[10] | arc-e<br>[10] | hellaswag<br>[10] | mmlu<br>[5] | copa<br>[0] | lambada<br>[0] | wino<br>[0] | open<br>bookqa[0] |
-|--------------------|--------------|--------|---------------|-------------------------|-------|---------------|---------------|-------------------|-------------|-------------|----------------|-------------|-------------------|
-| HF-ref-1.7B        | C4           | 350B   | 1.7           | $3.57 \cdot 10^{21}$    | 0.506 | 0.32          | 0.66          | 0.64              | 0.25        | 0.74        | 0.56           | 0.58        | 0.30              |
-| open-sci-ref-1.7B  | C4           | 300B   | 1.7           | $3.06 \cdot 10^{21}$    | 0.548 | 0.34          | 0.67          | 0.68              | 0.26        | 0.81        | 0.59           | 0.63        | 0.40              |
-| HF-ref-1.7B        | FineWeb-Edu  | 350B   | 1.7           | $3.57 \cdot 10^{21}$    | 0.541 | 0.46          | 0.77          | 0.62              | 0.25        | 0.78        | 0.50           | 0.58        | 0.37              |
-| open-sci-ref-1.7B  | FineWeb-Edu  | 300B   | 1.7           | $3.06 \cdot 10^{21}$    | 0.549 | 0.44          | 0.75          | 0.63              | 0.26        | 0.76        | 0.52           | 0.61        | 0.42              |
+| Model              | Dataset      | Tokens | Params<br>(B) | Compute<br>(FLOPS)        | Avg   | arc-c<br>[10] | arc-e<br>[10] | hellaswag<br>[10] | mmlu<br>[5] | copa<br>[0] | lambada<br>[0] | wino<br>[0] | open<br>bookqa[0] |
+|--------------------|--------------|--------|---------------|---------------------------|-------|---------------|---------------|-------------------|-------------|-------------|----------------|-------------|-------------------|
+| HF-ref-1.7B        | C4           | 350B   | 1.7           | 3.57 × 10<sup>21</sup>    | 0.506 | 0.32          | 0.66          | 0.64              | 0.25        | 0.74        | 0.56           | 0.58        | 0.30              |
+| open-sci-ref-1.7B  | C4           | 300B   | 1.7           | 3.06 × 10<sup>21</sup>    | 0.548 | 0.34          | 0.67          | 0.68              | 0.26        | 0.81        | 0.59           | 0.63        | 0.40              |
+| HF-ref-1.7B        | FineWeb-Edu  | 350B   | 1.7           | 3.57 × 10<sup>21</sup>    | 0.541 | 0.46          | 0.77          | 0.62              | 0.25        | 0.78        | 0.50           | 0.58        | 0.37              |
+| open-sci-ref-1.7B  | FineWeb-Edu  | 300B   | 1.7           | 3.06 × 10<sup>21</sup>    | 0.549 | 0.44          | 0.75          | 0.63              | 0.26        | 0.76        | 0.52           | 0.61        | 0.42              |
 
 _Table 4:_  Comparing HuggingFace (HF) and open-sci-ref reference baselines on C4 and FineWeb-Edu-1.4T using standardized evals. \[n\] provides few shot numbers. Open-sci-ref (300B tokens) matches or outperforms the results of HF (350B tokens) reference baseline (despite slight advantage of having 50B tokens more for HF baseline), confirming the sanity of the training procedure using the same open reference datasets and same eval procedure.
 
@@ -106,18 +106,18 @@ _Figure 4:_ Scaling trends: open-sci-ref reference baselines (0.13, 0.4, 1.3, 1.
 
 To provide reference baselines at larger scales, we also release checkpoints trained on 1T tokens and report their average and per eval performance on Tab. 5, providing comparison with models of similar sizes (1.7B) and similar or different total token budgets, resulting in similar or different total compute in the pre-training. Interestingly, our reference baseline 1.7B model trained on Nemotron-cc HQ for 1T token matches SmolLM2-1.7B (both 0.66 average score), achieving competitive results despite being trained on a much smaller number of tokens (1T vs 11T), using thus much less (11x) compute. This is noteworthy, in particular given that we use a very simple single stage pipeline that does not change dataset mixture during different stages in pre-training or performs annealing mixing in further high-quality specialized data. This shows again that strong datasets like Nemotron-CC HQ are decisive for training quality and can enable strong models obtained in much more efficient manner with less data and less compute required for the given target quality than weaker datasets can deliver. As a reminder, our reference baselines are there to enable model and dataset comparison, and despite observed strong performance on standardized benchmarks should not be considered as competitors with current state-of-the-art models like SmolLM2/3, DCLM 1B, 7B or Qwen 2.5/3, which, apart from using substantially more compute, also use mixtures of further high quality math and code data for multi-stage training that are not used in our reference baseline training experiments.
 
-| Model             | Dataset     | Tokens | Params<br>(B) | Compute<br>(FLOPS)   | Avg  | copa<br>[0] | lambada<br>[0] | open<br>bookqa[0] | wino<br>grnd[0] | mmlu<br>[5] | arc-c<br>[10] | arc-e<br>[10] | boolq<br>[10] | common<br>sense[10] | hellaswag<br>[10] | piqa<br>[10] |
-|-------------------|-------------|--------|---------------|----------------------|------|-------------|----------------|-------------------|-----------------|-------------|---------------|---------------|---------------|----------------------|-------------------|--------------|
-| gemma-2-2b        | --          | 2.0T   | 2.60          | $3.12 \cdot 10^{22}$ | 0.68 | 0.88        | 0.70           | 0.37              | 0.69            | 0.53        | 0.52          | 0.82          | 0.80          | 0.65                 | 0.74              | 0.80         |
-| Qwen2.5-1.5B      | --          | 18.0T  | 1.50          | $1.62 \cdot 10^{23}$ | 0.67 | 0.83        | 0.62           | 0.36              | 0.63            | 0.61        | 0.52          | 0.81          | 0.78          | 0.76                 | 0.68              | 0.77         |
-| DCLM-1B           | DCLM        | 4.0T   | 1.40          | $3.36 \cdot 10^{22}$ | 0.66 | 0.90        | 0.67           | 0.43              | 0.68            | 0.47        | 0.48          | 0.78          | 0.75          | 0.62                 | 0.74              | 0.79         |
-| SmolLM2-1.7B      | smolLM2     | 11.0T  | 1.70          | $1.13 \cdot 10^{23}$ | 0.66 | 0.82        | 0.67           | 0.38              | 0.66            | 0.50        | 0.52          | 0.80          | 0.75          | 0.60                 | 0.73              | 0.78         |
-| open-sci-ref-1.7B | Nemotron    | 1T     | 1.70          | $1.02 \cdot 10^{22}$ | 0.66 | 0.84        | 0.60           | 0.43              | 0.63            | 0.50        | 0.51          | 0.80          | 0.79          | 0.62                 | 0.72              | 0.79         |
-| open-sci-ref-1.7B | DCLM        | 1T     | 1.70          | $1.02 \cdot 10^{22}$ | 0.57 | 0.79        | 0.68           | 0.40              | 0.64            | 0.24        | 0.44          | 0.76          | 0.69          | 0.19                 | 0.70              | 0.77         |
-| open-sci-ref-1.7B | FineWeb-Edu | 1T     | 1.70          | $1.02 \cdot 10^{22}$ | 0.56 | 0.81        | 0.54           | 0.43              | 0.63            | 0.26        | 0.47          | 0.76          | 0.67          | 0.20                 | 0.67              | 0.76         |
-| open-sci-ref-1.7B | FineWeb-Edu | 300B   | 1.70          | $3.06 \cdot 10^{21}$ | 0.55 | 0.76        | 0.52           | 0.42              | 0.61            | 0.26        | 0.44          | 0.75          | 0.67          | 0.19                 | 0.63              | 0.76         |
-| HF-ref-1.7B       | FineWeb-Edu | 350B   | 1.70          | $3.57 \cdot 10^{21}$ | 0.54 | 0.78        | 0.50           | 0.37              | 0.58            | 0.25        | 0.46          | 0.77          | 0.66          | 0.19                 | 0.62              | 0.75         |
-| EuroLLM-1.7B      | --          | 4.0T   | 1.70          | $4.08 \cdot 10^{22}$ | 0.52 | 0.74        | 0.53           | 0.33              | 0.59            | 0.27        | 0.39          | 0.73          | 0.61          | 0.19                 | 0.60              | 0.74         |
+| Model             | Dataset     | Tokens | Params<br>(B) | Compute<br>(FLOPS)       | Avg  | copa<br>[0] | lambada<br>[0] | open<br>bookqa[0] | wino<br>grnd[0] | mmlu<br>[5] | arc-c<br>[10] | arc-e<br>[10] | boolq<br>[10] | common<br>sense[10] | hellaswag<br>[10] | piqa<br>[10] |
+|-------------------|-------------|--------|---------------|--------------------------|------|-------------|----------------|-------------------|-----------------|-------------|---------------|---------------|---------------|----------------------|-------------------|--------------|
+| gemma-2-2b        | --          | 2.0T   | 2.60          | 3.12 × 10<sup>22</sup>   | 0.68 | 0.88        | 0.70           | 0.37              | 0.69            | 0.53        | 0.52          | 0.82          | 0.80          | 0.65                 | 0.74              | 0.80         |
+| Qwen2.5-1.5B      | --          | 18.0T  | 1.50          | 1.62 × 10<sup>23</sup>   | 0.67 | 0.83        | 0.62           | 0.36              | 0.63            | 0.61        | 0.52          | 0.81          | 0.78          | 0.76                 | 0.68              | 0.77         |
+| DCLM-1B           | DCLM        | 4.0T   | 1.40          | 3.36 × 10<sup>22</sup>   | 0.66 | 0.90        | 0.67           | 0.43              | 0.68            | 0.47        | 0.48          | 0.78          | 0.75          | 0.62                 | 0.74              | 0.79         |
+| SmolLM2-1.7B      | smolLM2     | 11.0T  | 1.70          | 1.13 × 10<sup>23</sup>   | 0.66 | 0.82        | 0.67           | 0.38              | 0.66            | 0.50        | 0.52          | 0.80          | 0.75          | 0.60                 | 0.73              | 0.78         |
+| open-sci-ref-1.7B | Nemotron    | 1T     | 1.70          | 1.02 × 10<sup>22</sup>   | 0.66 | 0.84        | 0.60           | 0.43              | 0.63            | 0.50        | 0.51          | 0.80          | 0.79          | 0.62                 | 0.72              | 0.79         |
+| open-sci-ref-1.7B | DCLM        | 1T     | 1.70          | 1.02 × 10<sup>22</sup>   | 0.57 | 0.79        | 0.68           | 0.40              | 0.64            | 0.24        | 0.44          | 0.76          | 0.69          | 0.19                 | 0.70              | 0.77         |
+| open-sci-ref-1.7B | FineWeb-Edu | 1T     | 1.70          | 1.02 × 10<sup>22</sup>   | 0.56 | 0.81        | 0.54           | 0.43              | 0.63            | 0.26        | 0.47          | 0.76          | 0.67          | 0.20                 | 0.67              | 0.76         |
+| open-sci-ref-1.7B | FineWeb-Edu | 300B   | 1.70          | 3.06 × 10<sup>21</sup>   | 0.55 | 0.76        | 0.52           | 0.42              | 0.61            | 0.26        | 0.44          | 0.75          | 0.67          | 0.19                 | 0.63              | 0.76         |
+| HF-ref-1.7B       | FineWeb-Edu | 350B   | 1.70          | 3.57 × 10<sup>21</sup>   | 0.54 | 0.78        | 0.50           | 0.37              | 0.58            | 0.25        | 0.46          | 0.77          | 0.66          | 0.19                 | 0.62              | 0.75         |
+| EuroLLM-1.7B      | --          | 4.0T   | 1.70          | 4.08 × 10<sup>22</sup>   | 0.52 | 0.74        | 0.53           | 0.33              | 0.59            | 0.27        | 0.39          | 0.73          | 0.61          | 0.19                 | 0.60              | 0.74         |
 
 _Table 5:_ Performance on various evals of our reference models trained on 1T tokens on Nemotron-cc-hq, DCLM, FineWeb-Edu (also for 300B tokens) and as well as several other baselines. Models are sorted by their average eval performance. HF-ref model is reference training run of 1.7B scale released by HuggingFace in the frame of their FineWeb study using 350B tokens. [n] for evaluation tasks indicate the number of shots. open-sci-ref 1.7B trained in Nemotron 1T tokens is a strong reference baseline, closely matching smolLM2 which uses 11x more compute, pointing to Nemotron-cc-hq as strong reference training dataset.
 
