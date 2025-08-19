@@ -2,7 +2,7 @@
 title: "Open-sci-ref 0.01: open baselines for language model and dataset comparison"
 author: "Marianna Nezhurina, Joerg Franke, David Salinas, Jenia Jitsev; open-sci collective, openEuroLLM team, LAION"
 date: "Aug 18, 2025"
-previewImg: "/images/blog/open-sci-ref-001/open-sci-ref-001-release.png"
+previewImg: "/images/blog/open-sci-ref-001/open-sci-ref-001-release-v2.png"
 ---
 
 We introduce and release open-sci-ref 0.01 - a research dense transformer model family with all the intermediate checkpoints trained on 8 different well established reference datasets on various model (0.13B - 0.4B - 1.3B - 1.7B) and token (50B, 300B, 1T) scales to serve as baselines for comparison and for studies on training dynamics. Our release includes all intermediate model weights, logs and training workflow code to enable easy learning procedure comparison on available reference scales and datasets and to support future research.
