@@ -70,3 +70,6 @@ Der Einstieg ist **unkompliziert**. Die IT richtet **Admin Bud-E** auf einem gem
 
 Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Treten Sie unserem **Discord** bei oder schreiben Sie uns: **[contact@laion.ai](mailto:contact@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
 
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/126d983a-febd-4afb-9808-ba02f4953631" />
+
+
