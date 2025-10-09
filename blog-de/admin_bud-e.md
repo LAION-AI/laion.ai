@@ -26,6 +26,7 @@ Viele Schulträger, Hochschulen und Organisationen wünschen sich **volle Datenk
 * **TLS-gesicherte Verarbeitung:** Bei Cloud-Anbietern (z. B. Vertex, Mistral) erfolgt die Übertragung **verschlüsselt**; es wird **kein Logging** personengebundener Inhalte erzwungen. Ein **DSGVO-konformer** Betrieb ist möglich.
 * **Offen & modular:** Alle Bud-E-Varianten (School, Web, Desktop) basieren auf einer **flexiblen Client-Server-Architektur**. Komponenten wie **ASR**, **LLM**, **TTS** oder **Vision** sind austauschbar und können an Ihre Umgebung angepasst werden.
 
+
 Auf dieser Basis – **lokale Speicherung**, **TLS-gesicherte Verarbeitung** und **offene, modulare Architektur** – fügt sich **Admin Bud-E** sauber in die Anforderungen der **Datenschutz-Grundverordnung (DSGVO)** und die **Leitlinien zur Nutzung von KI im Bildungsbereich** (LI Hamburg) ein. Ein zentrales Problem vieler kommerzieller Dienste besteht darin, dass **personenbezogene Daten** auf den Servern der Anbieter **persistiert und weiterverarbeitet** werden. Schulen, Behörden und öffentliche Träger nennen genau das regelmäßig als Grund für Zurückhaltung. Unternehmen wiederum sorgen sich, dass **sensible Informationen** oder **Betriebsgeheimnisse** in **Trainingsdaten** großer Anbieter einfließen könnten. **Admin Bud-E** setzt hier einen anderen Schwerpunkt: Verantwortliche behalten **volle Kontrolle** darüber, **wo** Daten **gespeichert und verarbeitet** werden – lokal, auf eigener Infrastruktur oder in **eindeutig DSGVO-konfigurierten EU-Cloud-Instanzen**. Das schafft **Vertrauen** und ermöglicht den **rechtskonformen** und **verantwortlichen** Einsatz von KI-Assistenz.
 
 ## Kernfunktionen in Admin Bud-E
@@ -45,10 +46,15 @@ Sie hinterlegen **mehrere Anbieter** mit **Name**, **Basis-URL** und **API-Key**
 **Usage (Nutzung & Exporte):**
 Eine **transparente Nutzungsübersicht** unterstützt **Audit-Anforderungen** und die **Kostenkontrolle**. Bei Bedarf exportieren oder restaurieren Sie den **SQLite-Datenstand** per Klick. Ein **Hard-Reset** ist möglich, wenn eine Instanz vollständig neu aufgesetzt werden soll.
 
+<img width="1374" height="588" alt="image" src="https://github.com/user-attachments/assets/6849a076-eead-4ed7-a4be-116436a1f950" />
+
 ## Kosten – fair & planbar
 
 Wenn eine Nachricht durch Bud-E läuft, passiert immer dasselbe in drei Schritten: Zuerst verwandelt die **Spracherkennung (ASR)** Gesprochenes in Text. Dann „denkt“ das **Sprachmodell (LLM)** nach und formuliert eine Antwort. Auf Wunsch liest die **Vorlesestimme (TTS)** die Antwort hörbar vor. Die Abrechnung erfolgt je nach Teilkomponente unterschiedlich. Das **LLM** rechnet in **Tokens** ab – das sind kleine Textstücke, in die Wörter zerlegt werden. Als Faustregel gilt: **Ein deutsches Wort entspricht im Schnitt 1–2 Tokens**. Eine Antwort mit etwa **250 Tokens** umfasst grob **150–200 Wörter**, **500 Tokens** entsprechen ungefähr **300–400 Wörtern**. **TTS** rechnet dagegen **Zeichen** (also Buchstaben). Dadurch wird **TTS** bei längeren Antworten schnell der **größte Kostenblock**, während **ASR** sehr günstig bleibt und **LLM** moderat ist. Deshalb ist im **Bud-E-Frontend** die **Sprachausgabe standardmäßig ausgeschaltet**. Im Unterricht, bei Recherche oder beim Verfassen von E-Mails ist **stilles Lesen** meist schneller und praktischer. Für **kurze Hinweise**, **freundliche Bestärkungen** oder **lockeres Plaudern** lässt sich **TTS gezielt manuell einschalten**.
 Zur **Modellwahl**: Der Betrieb ist **beispielsweise** mit Modellen wie **„Gemini Flash“** und **„Gemini Pro“** über die **Google Cloud (Vertex-Plattform)** möglich. Die **Abrechnung** läuft dann **zentral über Ihren Google-Cloud-Account**. In den Einstellungen kann festgelegt werden, dass **sämtliche Anfragen ausschließlich an EU-Regionen** gesendet werden und dass **keine Daten zu Trainingszwecken gespeichert** werden. Die Daten werden **nur kurzfristig** für die eigentliche **Inferenz** im Arbeitsspeicher gehalten. Alternativ können Sie **andere KI-Service-Provider** nutzen – etwa **Microsoft Azure**, **Mistral** – oder **eigene Modelle selbst hosten**. **Admin Bud-E** gibt Ihnen die Wahl und die Steuerbarkeit.
+
+<img width="1267" height="786" alt="image" src="https://github.com/user-attachments/assets/67103608-28a8-482e-9882-49a3f061cc47" />
+
 **Konkrete Größenordnung (Beispielrechnung mit Gemini + Chirp 3 HD):** Eine **kurze Antwort (~250 Tokens)** kostet **mit Vorlesen** etwa **$0.030–$0.034**; **ohne Vorlesen** fallen nur die kleinen **ASR-/LLM-Anteile** an (**≈ $0.00019–$0.00351**, je nach Modellstufe). Auf **1 000 Nachrichten** pro Person umgerechnet heißt das: **ohne TTS** insgesamt **≈ $0.19 (Flash-Lite)** bis **≈ $3.51 (Pro)**; **mit TTS nur in 25 % der Fälle** liegen die Gesamtkosten bei **≈ $7.70–$11.00**. Geht man davon aus, dass eine durchschnittliche Person **~1 000 Nachrichten pro Jahr** versendet, sind die jährlichen Kosten **deutlich geringer** als bei vielen Abo-Modellen **ohne** TTS (typisch **10–15 € pro Monat**). Die wichtigsten Stellschrauben bleiben **Antwortlänge** (Tokens) und **TTS-Anteil** (Zeichen) – beides ist in **Admin Bud-E** **gezielt steuerbar**.
 
 ## Skalierung & Betrieb
@@ -59,10 +65,9 @@ Zur **Modellwahl**: Der Betrieb ist **beispielsweise** mit Modellen wie **„Gem
 
 Der Einstieg ist **unkompliziert**. Die IT richtet **Admin Bud-E** auf einem gemieteten Cloud-Server ein (in der Regel ein einmaliger Aufwand von etwa einem Nachmittag). Anschließend erzeugt sie mit wenigen Klicks **anonyme API-Schlüssel** und verteilt diese als **CSV** an die Lehrkräfte oder Mitarbeitenden – **ohne** dass persönliche Konten angelegt werden müssen. Nutzende öffnen die **Einstellungen**, fügen ihren Schlüssel ein, laden **PDFs oder Bilder** hoch und erhalten **sofort Antworten** – wahlweise still lesbar oder, wenn gewünscht, **vorgelesen**. Über **Allowance** (ein persönliches, automatisch erneuerbares Guthaben) und den **Common Pool** (ein gemeinsamer Topf im Projekt) bleibt die Nutzung **fair**: Wer wenig braucht, verschenkt ungenutzte Credits nicht, sondern hält sie **im Projekt nutzbar**; wer viel arbeitet, hat **genug Spielraum**, ohne dass das **Gesamtbudget** überschritten wird. **Obergrenzen** stellen Organisationen selbst ein, damit die Kosten **stabil** bleiben. So wird KI im Unterricht und Arbeitsalltag **planbar, leise, wirksam**.
 
+<img width="1489" height="841" alt="image" src="https://github.com/user-attachments/assets/74af9dfa-c3d9-445f-bf2c-dc9a56373ce1" />
+
 ## Mitmachen
 
 Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Treten Sie unserem **Discord** bei oder schreiben Sie uns: **[contact@laion.ai](mailto:contact@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
 
-## Danksagung & Hintergrund
-
-**Bud-E** ist Teil unserer Mission, **Bildung** und **Künstliche Intelligenz** zu demokratisieren – **offen**, **datenschutzfreundlich** und **zugänglich**. Weitere Hintergründe zu Release, Architektur und Vision finden Sie im **LAION-Blog**. Wir danken allen Mitwirkenden in Community und Partnerinstitutionen, die diese Entwicklung durch Feedback, Tests und Infrastruktur unterstützt haben.
