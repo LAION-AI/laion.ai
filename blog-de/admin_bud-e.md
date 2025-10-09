@@ -3,7 +3,7 @@
 title: "Admin Bud-E V1.0 – Datenschutzfreundliche KI-Assistenz für Schulen, Universitäten & Unternehmen"
 author: "Christoph Schuhmann, Robert Kaczmarek"
 date: "October 9 2025"
-previewImg: "/images/blog/admin-bud-e.jpg" 
+previewImg: "/images/blog/admin-bud-e+.jpg" 
 ---------------------------------------------------
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b831b7ca-9386-42fc-b3cb-0fa4fc37e168" />
 
