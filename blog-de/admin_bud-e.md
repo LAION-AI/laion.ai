@@ -3,8 +3,9 @@
 title: "Admin Bud-E V1.0 – Datenschutzfreundliche KI-Assistenz für Schulen, Universitäten & Unternehmen"
 author: "Christoph Schuhmann, Robert Kaczmarek"
 date: "October 1 2025"
-previewImg: "/images/blog/admin-bude-v1-banner.jpg"
+previewImg: "[/images/blog/admin-bude-v1-banner.jpg](https://github.com/user-attachments/assets/b831b7ca-9386-42fc-b3cb-0fa4fc37e168)"
 ---------------------------------------------------
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b831b7ca-9386-42fc-b3cb-0fa4fc37e168" />
 
 **LAION** verfolgt seit seiner Gründung ein klares Ziel: die **Demokratisierung von Künstlicher Intelligenz** und **zugängliche, faire Bildung** für alle. Mit **Bud-E 1.0** und **School Bud-E 1.0** haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
 Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **School Bud-E** entsteht eine **durchgängige Lösung** für Organisationen, die **volle Kontrolle über Speicher- und Verarbeitungsort** ihrer Daten behalten – und dabei **einen Großteil der Kosten** im Vergleich zu klassischen, kommerziellen Angeboten einsparen.
