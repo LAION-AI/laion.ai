@@ -3,11 +3,12 @@
 title: "Admin Bud-E V1.0 – Datenschutzfreundliche KI-Assistenz für Schulen, Universitäten & Unternehmen"
 author: "Christoph Schuhmann, Robert Kaczmarek"
 date: "October 9 2025"
-previewImg: "/images/blog/admin-bud-e+.jpg" 
----------------------------------------------------
+previewImg: "/images/blog/admin-bud-e+.jpg"
+-------------------------------------------
+
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/babd1bd7-cca5-470e-ab5e-335a49585f4d" />
 
-**LAION** verfolgt seit seiner Gründung ein klares Ziel: die **Demokratisierung von Künstlicher Intelligenz** und **zugängliche, faire Bildung** für alle. Mit **Bud-E 1.0** und **School Bud-E 1.0** haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
+**LAION** verfolgt seit seiner Gründung ein klares Ziel: die **Demokratisierung von Künstlicher Intelligenz** und **zugängliche, faire Bildung** für alle. Mit **[Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** und **[School Bud-E 1.0](https://laion.ai/blog/bud-e-release/)**  haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
 Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **School Bud-E** entsteht eine **durchgängige Lösung** für Organisationen, die **volle Kontrolle über Speicher- und Verarbeitungsort** ihrer Daten behalten – und dabei **einen Großteil der Kosten** im Vergleich zu klassischen, kommerziellen Angeboten einsparen.
 
 ## Einleitung
@@ -25,7 +26,6 @@ Viele Schulträger, Hochschulen und Organisationen wünschen sich **volle Datenk
 * **Lokale Speicherung:** Schüler- und Nutzerdaten bleiben im **Browser**; die Middleware leitet Anfragen **flüchtig im RAM** weiter. Eine **persistente Server-Ablage** personenbezogener Inhalte findet nicht statt.
 * **TLS-gesicherte Verarbeitung:** Bei Cloud-Anbietern (z. B. Vertex, Mistral) erfolgt die Übertragung **verschlüsselt**; es wird **kein Logging** personengebundener Inhalte erzwungen. Ein **DSGVO-konformer** Betrieb ist möglich.
 * **Offen & modular:** Alle Bud-E-Varianten (School, Web, Desktop) basieren auf einer **flexiblen Client-Server-Architektur**. Komponenten wie **ASR**, **LLM**, **TTS** oder **Vision** sind austauschbar und können an Ihre Umgebung angepasst werden.
-
 
 Auf dieser Basis – **lokale Speicherung**, **TLS-gesicherte Verarbeitung** und **offene, modulare Architektur** – fügt sich **Admin Bud-E** sauber in die Anforderungen der **Datenschutz-Grundverordnung (DSGVO)** und die **Leitlinien zur Nutzung von KI im Bildungsbereich** (LI Hamburg) ein. Ein zentrales Problem vieler kommerzieller Dienste besteht darin, dass **personenbezogene Daten** auf den Servern der Anbieter **persistiert und weiterverarbeitet** werden. Schulen, Behörden und öffentliche Träger nennen genau das regelmäßig als Grund für Zurückhaltung. Unternehmen wiederum sorgen sich, dass **sensible Informationen** oder **Betriebsgeheimnisse** in **Trainingsdaten** großer Anbieter einfließen könnten. **Admin Bud-E** setzt hier einen anderen Schwerpunkt: Verantwortliche behalten **volle Kontrolle** darüber, **wo** Daten **gespeichert und verarbeitet** werden – lokal, auf eigener Infrastruktur oder in **eindeutig DSGVO-konfigurierten EU-Cloud-Instanzen**. Das schafft **Vertrauen** und ermöglicht den **rechtskonformen** und **verantwortlichen** Einsatz von KI-Assistenz.
 
@@ -65,12 +65,14 @@ Der Einstieg ist **unkompliziert**. Die IT richtet **Admin Bud-E** auf einem gem
 
 <img width="1484" height="851" alt="image" src="https://github.com/user-attachments/assets/e2b2044c-ed0e-4dc8-a32e-0e88eb93d98e" />
 
+## Ressourcen & Links
+
+* **School Bud-E Frontend (Live):** [https://school.bud-e.ai/](https://school.bud-e.ai/)
+* **Admin Bud-E Repository (GitHub):** [https://github.com/LAION-AI/Admin_Bud-E](https://github.com/LAION-AI/Admin_Bud-E)
+* **School Bud-E Frontend Repository (GitHub):** [https://github.com/LAION-AI/school-bud-e-frontend](https://github.com/LAION-AI/school-bud-e-frontend)
 
 ## Mitmachen
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/126d983a-febd-4afb-9808-ba02f4953631" />
 
-Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Treten Sie unserem **Discord** bei oder schreiben Sie uns: **[contact@laion.ai](mailto:contact@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
-
-
-
+Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Wir bieten **regelmäßig kostenlose Webinare** zum Einrichten von **Admin Bud-E** und **School Bud-E** für die eigene Organisation auf eigenen Servern an. Bei Interesse schreiben Sie uns bitte an **[contact@laion.ai](mailto:contact@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
