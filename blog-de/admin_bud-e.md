@@ -9,6 +9,7 @@ previewImg: "/images/blog/admin-bud-e+.jpg"
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/babd1bd7-cca5-470e-ab5e-335a49585f4d" />
 
 **LAION** verfolgt seit seiner Gründung ein klares Ziel: die **Demokratisierung von Künstlicher Intelligenz** und **zugängliche, faire Bildung** für alle. Mit **[Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** und **[School Bud-E 1.0](https://laion.ai/blog/bud-e-release/)**  haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
+Gleichzeitig adressiert **Bud-E** einen Punkt, den viele kommerzielle Angebote (z. B. Fobizz, Telli Chat) bislang nur eingeschränkt abdecken: **intuitive Spracheingabe und angenehme, natürlich klingende  Sprachausagbe**. **Bud-E versteht gesprochene Sprache**, **antwortet schnell** und kann – wenn gewünschdet – **in einer angenehmen, gut verständlichen Stimme vorlesen**. So werden nicht nur Fakten vermittelt, sondern es entsteht eine **angenehme, inspirierende Lernatmosphäre**. Ergänzend stehen **Wikipedia** sowie rund **80 Millionen Paper-Abstracts** über die **Open Research Knowledge Graph (ORKG) API** der Universität Hannover als Wissensquellen zur Verfügung – für Unterricht und Selbststudium gleichermaßen wertvoll.
 Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **School Bud-E** entsteht eine **durchgängige Lösung** für Organisationen, die **volle Kontrolle über Speicher- und Verarbeitungsort** ihrer Daten behalten – und dabei **einen Großteil der Kosten** im Vergleich zu klassischen, kommerziellen Angeboten einsparen.
 
 ## Einleitung
@@ -20,6 +21,7 @@ Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **Schoo
 ### Warum jetzt?
 
 Viele Schulträger, Hochschulen und Organisationen wünschen sich **volle Datenkontrolle**, **spürbare Kostenvorteile** gegenüber geschlossenen Komplettlösungen und ein **schnelles Onboarding** ganzer Gruppen ohne komplizierte Kontenerstellung. **Admin Bud-E** liefert genau das: Administratorinnen und Administratoren erzeugen **anonyme API-Schlüssel** in Sekunden, exportieren diese als **CSV**, verteilen **projektbezogene Budgets** und stellen das **Routing** zu unterschiedlichen Modellen und Anbietern mit wenigen Klicks ein – **ohne** dass die Clients geändert werden müssen.
+Zugleich profitieren alle Beteiligten von den **didaktischen Stärken** der Sprachschnittstelle: **Sprechen, Zuhören, Nachfragen** – Bud-E unterstützt Lernprozesse **interaktiv** und **niedrigschwellig** und kann bei Bedarf Quellenwissen aus **Wikipedia** und **ORKG** einbeziehen. Das unterscheidet die Lösung **spürbar** von reinen Text-Chat-Angeboten.
 
 ## Datenschutz & Architektur
 
@@ -62,6 +64,7 @@ Zur **Modellwahl**: Der Betrieb ist **beispielsweise** mit Modellen wie **„Gem
 ## Praxis: So läuft’s im Alltag
 
 Der Einstieg ist **unkompliziert**. Die IT richtet **Admin Bud-E** auf einem gemieteten Cloud-Server ein (in der Regel ein einmaliger Aufwand von etwa einem Nachmittag). Anschließend erzeugt sie mit wenigen Klicks **anonyme API-Schlüssel** und verteilt diese als **CSV** an die Lehrkräfte oder Mitarbeitenden – **ohne** dass persönliche Konten angelegt werden müssen. Nutzende öffnen die **Einstellungen**, fügen ihren Schlüssel ein, laden **PDFs oder Bilder** hoch und erhalten **sofort Antworten** – wahlweise still lesbar oder, wenn gewünscht, **vorgelesen**. Über **Allowance** (ein persönliches, automatisch erneuerbares Guthaben) und den **Common Pool** (ein gemeinsamer Topf im Projekt) bleibt die Nutzung **fair**: Wer wenig braucht, verschenkt ungenutzte Credits nicht, sondern hält sie **im Projekt nutzbar**; wer viel arbeitet, hat **genug Spielraum**, ohne dass das **Gesamtbudget** überschritten wird. **Obergrenzen** stellen Organisationen selbst ein, damit die Kosten **stabil** bleiben. So wird KI im Unterricht und Arbeitsalltag **planbar, leise, wirksam**.
+Ein praktischer Mehrwert im Alltag: **Sprechen statt tippen**, **zuhören statt suchen**. Bud-E kann **Fragen mündlich aufnehmen**, **Kontext verstehen** und bei Bedarf **in natürlicher Stimme zurückmelden** – ideal für **heterogene Klassen**, **sprachsensiblen Unterricht** und **inklusive Lernsettings**. Die **Anbindung an Wikipedia** und den **Open Research Knowledge Graph** erleichtert zudem **Quellenarbeit** und **kriteriengeleitetes Recherchieren**.
 
 <img width="1484" height="851" alt="image" src="https://github.com/user-attachments/assets/e2b2044c-ed0e-4dc8-a32e-0e88eb93d98e" />
 
