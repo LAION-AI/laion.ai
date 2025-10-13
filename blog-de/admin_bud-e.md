@@ -73,6 +73,9 @@ Ein praktischer Mehrwert im Alltag: **Sprechen statt tippen**, **zuhören statt 
 * **School Bud-E Frontend (Live):** [https://school.bud-e.ai/](https://school.bud-e.ai/)
 * **Admin Bud-E Repository (GitHub):** [https://github.com/LAION-AI/Admin_Bud-E](https://github.com/LAION-AI/Admin_Bud-E)
 * **School Bud-E Frontend Repository (GitHub):** [https://github.com/LAION-AI/school-bud-e-frontend](https://github.com/LAION-AI/school-bud-e-frontend)
+* **Admin Bud-E Image (Hugging Face):**
+  [https://huggingface.co/laion/Admin_Bud-E_image](https://huggingface.co/laion/Admin_Bud-E_image)
+  Fertiges Systemabbild für einen schnellen Start: Sie bekommen eine vorkonfigurierte Admin-Bud-E-Instanz zum Ermöglichen der Installation in wenigen Minuten, z.B. bei  [https://contabo.com](https://contabo.com).
 
 ## Mitmachen
 
