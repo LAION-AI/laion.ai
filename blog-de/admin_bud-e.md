@@ -9,7 +9,7 @@ previewImg: "/images/blog/admin-bud-e+.jpg"
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/babd1bd7-cca5-470e-ab5e-335a49585f4d" />
 
 **LAION** verfolgt seit seiner Gründung ein klares Ziel: die **Demokratisierung von Künstlicher Intelligenz** und **zugängliche, faire Bildung** für alle. Mit **[Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** und **[School Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
-Gleichzeitig adressiert **Bud-E** einen Punkt, den viele kommerzielle Angebote (z. B. Fobizz, Telli Chat) bislang nur eingeschränkt abdecken: **intuitive Spracheingabe** und **angenehme, natürlich klingende Sprachausgabe**. **Bud-E versteht gesprochene Sprache**, **antwortet schnell** und kann – wenn gewünscht – **in einer gut verständlichen Stimme vorlesen**. So werden nicht nur Fakten vermittelt, sondern es entsteht eine **inspirierende Lernatmosphäre**, die individuelle Lernstände, Sprachniveaus und Vorwissen berücksichtigt und damit besonders auch Lernende unterstützt, die vom **Digital Divide** betroffen sind[^voice-divide]. **Studien** zeigen, dass LLMs personalisiertes Feedback und motivierendere Lernumgebungen erleichtern – das stärkt Selbstwirksamkeit und Lernfortschritt und entlastet Lehrkräfte[^llm-evidence].
+Gleichzeitig adressiert **Bud-E** einen Punkt, den viele kommerzielle Angebote (z. B. Fobizz, Telli Chat) bislang nur eingeschränkt abdecken: **intuitive Spracheingabe** und **angenehme, natürlich klingende Sprachausgabe**. **Bud-E versteht gesprochene Sprache**, **antwortet schnell** und kann – wenn gewünscht – **in einer gut verständlichen Stimme vorlesen**. So werden nicht nur Fakten vermittelt, sondern es entsteht eine **inspirierende Lernatmosphäre**, die individuelle Lernstände, Sprachniveaus und Vorwissen berücksichtigt und damit besonders auch Lernende unterstützt, die vom **Digital Divide** betroffen sind<sup id="cite-voice-divide"><a href="#ref-voice-divide">[1]</a></sup>. **Studien** zeigen, dass LLMs personalisiertes Feedback und motivierendere Lernumgebungen erleichtern – das stärkt Selbstwirksamkeit und Lernfortschritt und entlastet Lehrkräfte<sup id="cite-llm-evidence"><a href="#ref-llm-evidence">[2]</a></sup>.
 Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **School Bud-E** entsteht eine **durchgängige Lösung** für Organisationen, die **volle Kontrolle über Speicher- und Verarbeitungsort** ihrer Daten behalten – und dabei **einen Großteil der Kosten** im Vergleich zu klassischen, kommerziellen Angeboten einsparen.
 
 ## Einleitung
@@ -78,10 +78,21 @@ Die IT setzt **Admin Bud-E** in einem **Nachmittag** auf, erzeugt **anonyme API-
 
 Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Wir bieten **regelmäßig kostenlose Webinare** zum Einrichten von **Admin Bud-E** und **School Bud-E** für die eigene Organisation auf eigenen Servern an. Bei Interesse schreiben Sie uns bitte an **[contact@laion.ai](mailto:contact@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
 
-[^llm-evidence]: Ma, W., Adesope, O. O., Nesbit, J. C., & Liu, Q. (2014). *Intelligent Tutoring Systems and Learning Outcomes: A Meta-Analysis*. **Review of Educational Research**. [https://doi.org/10.3102/0034654315581420](https://doi.org/10.3102/0034654315581420)
-    Meyer, J. et al. (2024). *Using LLMs to bring evidence-based feedback into the classroom*. **Computers & Education: X**. (LLM-Feedback → bessere kognitive & motivationale Outcomes.)
-    Zhang, K. et al. (2025). *Enhancing Critical Writing Through AI Feedback: A Randomized Controlled Trial*. **Behavioral Sciences**, 15(5), 600. (RCT: KI-Feedback > Kontrolle.)
-    Jia, Q. et al. (2024). *On Assessing the Faithfulness of LLM-generated Feedback*. **EDM 2024**. (Qualitätssicherung/Halluzinationsrisiken.)
+## Referenzen
 
-[^voice-divide]: Masina, F. et al. (2020). *Investigating the Accessibility of Voice Assistants with Cognitive and Linguistic Tests*. **Journal of Accessibility and Design for All**. [https://doi.org/10.17411/jacces.v10i2.265](https://doi.org/10.17411/jacces.v10i2.265)
-    Chemnad, K. et al. (2024). *Digital accessibility in the era of artificial intelligence — a systematic review*. **PLOS Digital Health**. (Voice/AI als Chance für inklusiven Zugang, mit Grenzen.)
+<ol>
+  <li id="ref-voice-divide">
+    Masina, F. et al. (2020). <em>Investigating the Accessibility of Voice Assistants with Cognitive and Linguistic Tests</em>. <strong>Journal of Accessibility and Design for All</strong>. 
+    <a href="https://doi.org/10.17411/jacces.v10i2.265" target="_blank" rel="noopener">https://doi.org/10.17411/jacces.v10i2.265</a><br>
+    Chemnad, K. et al. (2024). <em>Digital accessibility in the era of artificial intelligence — a systematic review</em>. <strong>PLOS Digital Health</strong>. 
+    <a href="https://doi.org/10.1371/journal.pdig.0000371" target="_blank" rel="noopener">https://doi.org/10.1371/journal.pdig.0000371</a>
+    &nbsp;<a href="#cite-voice-divide">↩︎</a>
+  </li>
+  <li id="ref-llm-evidence">
+    Ma, W., Adesope, O. O., Nesbit, J. C., &amp; Liu, Q. (2014). <em>Intelligent Tutoring Systems and Learning Outcomes: A Meta-Analysis</em>. <strong>Review of Educational Research</strong>. 
+    <a href="https://doi.org/10.3102/0034654315581420" target="_blank" rel="noopener">https://doi.org/10.3102/0034654315581420</a><br>
+    Meyer, J. et al. (2024). <em>Using LLMs to bring evidence-based feedback into the classroom</em>. <strong>Computers &amp; Education: X</strong>. (Preprint/open access, sofern verfügbar.)<br>
+    Zhang, K. et al. (2025). <em>Enhancing Critical Writing Through AI Feedback: A Randomized Controlled Trial</em>. <strong>Behavioral Sciences</strong>, 15(5), 600.
+    &nbsp;<a href="#cite-llm-evidence">↩︎</a>
+  </li>
+</ol>
