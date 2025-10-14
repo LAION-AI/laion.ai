@@ -1,16 +1,16 @@
 ---
-
 title: "Admin Bud-E V1.0 – Datenschutzfreundliche KI-Assistenz für Schulen, Universitäten & Unternehmen"
 author: "Christoph Schuhmann, Robert Kaczmarczyk"
 date: "October 9 2025"
 previewImg: "/images/blog/admin-bud-e+.jpg"
--------------------------------------------
+---
+
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/babd1bd7-cca5-470e-ab5e-335a49585f4d" />
 
 **LAION** verfolgt seit seiner Gründung ein klares Ziel: die **Demokratisierung von Künstlicher Intelligenz** und **zugängliche, faire Bildung** für alle. Mit **[Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** und **[School Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
-Gleichzeitig adressiert **Bud-E** einen Punkt, den viele kommerzielle Angebote (z. B. Fobizz, Telli Chat) bislang nur eingeschränkt abdecken: **intuitive Spracheingabe** und **angenehme, natürlich klingende Sprachausgabe**. **Bud-E versteht gesprochene Sprache**, **antwortet schnell** und kann – wenn gewünscht – **in einer gut verständlichen Stimme vorlesen**. So werden nicht nur Fakten vermittelt, sondern es entsteht eine **inspirierende Lernatmosphäre**, die individuelle Lernstände, Sprachniveaus und Vorwissen berücksichtigt und damit besonders auch Lernende unterstützt, die vom **Digital Divide** betroffen sind. **Studien** zeigen, dass LLMs personalisiertes Feedback und motivierendere Lernumgebungen erleichtern – das stärkt Selbstwirksamkeit und Lernfortschritt und entlastet Lehrkräfte. 
-Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **School Bud-E** entsteht eine **durchgängige Lösung** für Organisationen, die **volle Kontrolle über Speicher- und Verarbeitungsort** ihrer Daten behalten – und dabei **einen Großteil der Kosten** im Vergleich zu klassischen, kommerziellen Angeboten einsparen. 
+Gleichzeitig adressiert **Bud-E** einen Punkt, den viele kommerzielle Angebote (z. B. Fobizz, Telli Chat) bislang nur eingeschränkt abdecken: **intuitive Spracheingabe** und **angenehme, natürlich klingende Sprachausgabe**. **Bud-E versteht gesprochene Sprache**, **antwortet schnell** und kann – wenn gewünscht – **in einer gut verständlichen Stimme vorlesen**. So werden nicht nur Fakten vermittelt, sondern es entsteht eine **inspirierende Lernatmosphäre**, die individuelle Lernstände, Sprachniveaus und Vorwissen berücksichtigt und damit besonders auch Lernende unterstützt, die vom **Digital Divide** betroffen sind[^voice-divide]. **Studien** zeigen, dass LLMs personalisiertes Feedback und motivierendere Lernumgebungen erleichtern – das stärkt Selbstwirksamkeit und Lernfortschritt und entlastet Lehrkräfte[^llm-evidence].
+Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **School Bud-E** entsteht eine **durchgängige Lösung** für Organisationen, die **volle Kontrolle über Speicher- und Verarbeitungsort** ihrer Daten behalten – und dabei **einen Großteil der Kosten** im Vergleich zu klassischen, kommerziellen Angeboten einsparen.
 
 ## Einleitung
 
@@ -20,7 +20,7 @@ Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **Schoo
 
 ### Warum jetzt?
 
-Viele Schulträger, Hochschulen und Organisationen wünschen sich **volle Datenkontrolle**, **spürbare Kostenvorteile** gegenüber geschlossenen Komplettlösungen und ein **schnelles Onboarding** ganzer Gruppen ohne komplizierte Kontenerstellung. **Admin Bud-E** liefert genau das: Administratorinnen und Administratoren erzeugen **anonyme API-Schlüssel** in Sekunden, exportieren diese als **CSV**, verteilen **projektbezogene Budgets** und stellen das **Routing** zu unterschiedlichen Modellen und Anbietern mit wenigen Klicks ein – **ohne** dass die Clients geändert werden müssen. Zugleich profitieren alle Beteiligten von den **didaktischen Stärken** der Sprachschnittstelle: **Sprechen, Zuhören, Nachfragen** – Bud-E unterstützt Lernprozesse **interaktiv** und **niedrigschwellig** und kann bei Bedarf Quellenwissen aus **Wikipedia** und **ORKG** einbeziehen. Das unterscheidet die Lösung **spürbar** von reinen Text-Chat-Angeboten. 
+Viele Schulträger, Hochschulen und Organisationen wünschen sich **volle Datenkontrolle**, **spürbare Kostenvorteile** gegenüber geschlossenen Komplettlösungen und ein **schnelles Onboarding** ganzer Gruppen ohne komplizierte Kontenerstellung. **Admin Bud-E** liefert genau das: Administratorinnen und Administratoren erzeugen **anonyme API-Schlüssel** in Sekunden, exportieren diese als **CSV**, verteilen **projektbezogene Budgets** und stellen das **Routing** zu unterschiedlichen Modellen und Anbietern mit wenigen Klicks ein – **ohne** dass die Clients geändert werden müssen. Zugleich profitieren alle Beteiligten von den **didaktischen Stärken** der Sprachschnittstelle: **Sprechen, Zuhören, Nachfragen** – Bud-E unterstützt Lernprozesse **interaktiv** und **niedrigschwellig** und kann bei Bedarf Quellenwissen aus **Wikipedia** und **ORKG** einbeziehen. Das unterscheidet die Lösung **spürbar** von reinen Text-Chat-Angeboten.
 
 ## Datenschutz & Architektur
 
@@ -28,7 +28,7 @@ Viele Schulträger, Hochschulen und Organisationen wünschen sich **volle Datenk
 * **TLS-gesicherte Verarbeitung:** Bei Cloud-Anbietern (z. B. Vertex, Mistral) erfolgt die Übertragung **verschlüsselt**; es wird **kein Logging** personengebundener Inhalte erzwungen. Ein **DSGVO-konformer** Betrieb ist möglich.
 * **Offen & modular:** Alle Bud-E-Varianten (School, Web, Desktop) basieren auf einer **flexiblen Client-Server-Architektur**. Komponenten wie **ASR**, **LLM**, **TTS** oder **Vision** sind austauschbar und können an Ihre Umgebung angepasst werden.
 
-Auf dieser Basis – **lokale Speicherung**, **TLS-gesicherte Verarbeitung** und **offene, modulare Architektur** – fügt sich **Admin Bud-E** sauber in die Anforderungen der **Datenschutz-Grundverordnung (DSGVO)** und die **Leitlinien zur Nutzung von KI im Bildungsbereich** (LI Hamburg) ein. Weil viele kommerzielle Dienste **personenbezogene Daten** serverseitig **persistieren und weiterverarbeiten**, meiden Schulen und Behörden solche Systeme häufig. **Admin Bud-E** lässt die Entscheidung **wo** Daten **gespeichert und verarbeitet** werden – lokal, on-prem oder EU-Cloud – in der **Organisation**. Das schafft **Vertrauen** und ermöglicht den **rechtskonformen** Einsatz von KI. Zudem kann die Schul-IT mit Admin Bud-E legal und dezentral handeln, statt aus Kostengründen auf nicht genehmigte Tools ohne API auszuweichen, wie es nach LI-Hamburg-Hinweisen mancherorts vorkommt. 
+Auf dieser Basis – **lokale Speicherung**, **TLS-gesicherte Verarbeitung** und **offene, modulare Architektur** – fügt sich **Admin Bud-E** sauber in die Anforderungen der **Datenschutz-Grundverordnung (DSGVO)** und die **Leitlinien zur Nutzung von KI im Bildungsbereich** (LI Hamburg) ein. Weil viele kommerzielle Dienste **personenbezogene Daten** serverseitig **persistieren und weiterverarbeiten**, meiden Schulen und Behörden solche Systeme häufig. **Admin Bud-E** lässt die Entscheidung **wo** Daten **gespeichert und verarbeitet** werden – lokal, on-prem oder EU-Cloud – in der **Organisation**. Das schafft **Vertrauen** und ermöglicht den **rechtskonformen** Einsatz von KI. Zudem kann die Schul-IT mit Admin Bud-E legal und dezentral handeln, statt aus Kostengründen auf nicht genehmigte Tools ohne API auszuweichen, wie es nach LI-Hamburg-Hinweisen mancherorts vorkommt.
 
 ## Kernfunktionen in Admin Bud-E
 
@@ -51,17 +51,17 @@ Eine **transparente Nutzungsübersicht** unterstützt **Audits** und **Kostenkon
 
 ## Kosten – fair & planbar
 
-Wenn eine Nachricht durch Bud-E läuft, passiert immer dasselbe in drei Schritten: Zuerst verwandelt die **Spracherkennung (ASR)** Gesprochenes in Text. Dann „denkt“ das **Sprachmodell (LLM)** nach und formuliert eine Antwort. Auf Wunsch liest die **Vorlesestimme (TTS)** die Antwort hörbar vor. Das **LLM** rechnet in **Tokens** ab – kleine Textstücke; ein deutsches Wort entspricht im Schnitt **1–2 Tokens**. **250 Tokens** sind grob **150–200 Wörter**, **500 Tokens** etwa **300–400 Wörter**. **TTS** rechnet **Zeichen** (Buchstaben) und wird bei langen Antworten zum **größten Kostenblock**, während **ASR** sehr günstig bleibt und **LLM** moderat ist. Darum ist TTS im **Bud-E-Frontend** **standardmäßig aus**; stilles Lesen ist im Alltag häufig schneller. Für **kurze Hinweise** oder **motivierende Rückmeldungen** lässt sich TTS **gezielt einschalten**. Zur **Modellwahl**: Der Betrieb ist z. B. mit **Gemini Flash** und **Gemini Pro** über die **Google Cloud (Vertex)** möglich; Sie können EU-Regionen erzwingen und Trainingsspeicherung ausschließen. Alternativ sind **Microsoft Azure**, **Mistral** oder **self-hosted** Modelle möglich – **Admin Bud-E** gibt die Wahl und die Steuerbarkeit. 
+Wenn eine Nachricht durch Bud-E läuft, passiert immer dasselbe in drei Schritten: Zuerst verwandelt die **Spracherkennung (ASR)** Gesprochenes in Text. Dann „denkt“ das **Sprachmodell (LLM)** nach und formuliert eine Antwort. Auf Wunsch liest die **Vorlesestimme (TTS)** die Antwort hörbar vor. Das **LLM** rechnet in **Tokens** ab – kleine Textstücke; ein deutsches Wort entspricht im Schnitt **1–2 Tokens**. **250 Tokens** sind grob **150–200 Wörter**, **500 Tokens** etwa **300–400 Wörter**. **TTS** rechnet **Zeichen** (Buchstaben) und wird bei langen Antworten zum **größten Kostenblock**, während **ASR** sehr günstig bleibt und **LLM** moderat ist. Darum ist TTS im **Bud-E-Frontend** **standardmäßig aus**; stilles Lesen ist im Alltag häufig schneller. Für **kurze Hinweise** oder **motivierende Rückmeldungen** lässt sich TTS **gezielt einschalten**. Zur **Modellwahl**: Der Betrieb ist z. B. mit **Gemini Flash** und **Gemini Pro** über die **Google Cloud (Vertex)** möglich; Sie können EU-Regionen erzwingen und Trainingsspeicherung ausschließen. Alternativ sind **Microsoft Azure**, **Mistral** oder **self-hosted** Modelle möglich – **Admin Bud-E** gibt die Wahl und die Steuerbarkeit.
 
-**Konkrete Größenordnung (Beispielrechnung mit Gemini + Chirp 3 HD):** Eine **kurze Antwort (~250 Tokens)** kostet **mit Vorlesen** etwa **$0.030–$0.034**; **ohne Vorlesen** fallen nur **ASR/LLM**-Anteile an (**≈ $0.00019–$0.00351**, je nach Modellstufe). Auf **1 000 Nachrichten** pro Person umgerechnet: **ohne TTS** insgesamt **≈ $0.19 (Flash-Lite)** bis **≈ $3.51 (Pro)**; **mit TTS nur in 25 % der Fälle** **≈ $7.70–$11.00**. So bleiben die Kosten **transparent** und **steuerbar** – über **Antwortlänge** (Tokens) und **TTS-Anteil** (Zeichen). 
+**Konkrete Größenordnung (Beispielrechnung mit Gemini + Chirp 3 HD):** Eine **kurze Antwort (~250 Tokens)** kostet **mit Vorlesen** etwa **$0.030–$0.034**; **ohne Vorlesen** fallen nur **ASR/LLM**-Anteile an (**≈ $0.00019–$0.00351**, je nach Modellstufe). Auf **1 000 Nachrichten** pro Person umgerechnet: **ohne TTS** insgesamt **≈ $0.19 (Flash-Lite)** bis **≈ $3.51 (Pro)**; **mit TTS nur in 25 % der Fälle** **≈ $7.70–$11.00**. So bleiben die Kosten **transparent** und **steuerbar** – über **Antwortlänge** (Tokens) und **TTS-Anteil** (Zeichen).
 
 ## Skalierung & Betrieb
 
-**Admin Bud-E** wächst mit Ihren Bedürfnissen – vom **Pilot mit zehn** Nutzenden bis zur **Instanz mit zehntausend**. Die Middleware bleibt **schlank**, da sie Anfragen überwiegend **durchreicht**; oft genügt ein **einzelner, kostengünstiger EU-Server** (z. B. Hetzner). **Modelle und Anbieter** wechseln Sie bequem in der **Admin-UI**, **ohne** Client-Anpassungen – so bleiben Sie technisch und finanziell **beweglich**. 
+**Admin Bud-E** wächst mit Ihren Bedürfnissen – vom **Pilot mit zehn** Nutzenden bis zur **Instanz mit zehntausend**. Die Middleware bleibt **schlank**, da sie Anfragen überwiegend **durchreicht**; oft genügt ein **einzelner, kostengünstiger EU-Server** (z. B. Hetzner). **Modelle und Anbieter** wechseln Sie bequem in der **Admin-UI**, **ohne** Client-Anpassungen – so bleiben Sie technisch und finanziell **beweglich**.
 
 ## Praxis: So läuft’s im Alltag
 
-Die IT setzt **Admin Bud-E** in einem **Nachmittag** auf, erzeugt **anonyme API-Schlüssel** und verteilt sie als **CSV** – ohne persönliche Accounts. Nutzende fügen den Schlüssel in den **Einstellungen** ein, laden **PDFs/Bilder** und erhalten **sofort Antworten** – still lesbar oder auf Wunsch **vorgelesen**. **Allowance** (persönliches, automatisch erneuerbares Guthaben) und **Common Pool** (gemeinsamer Projekttopf) sorgen für **Fairness** und **Budgetstabilität**. Ein praktischer Mehrwert: **Sprechen statt tippen**, **zuhören statt suchen** – Bud-E nimmt **mündliche Fragen** auf, versteht **Kontext** und meldet sich bei Bedarf **natürlich klingend** zurück. Die Anbindung an **Wikipedia** und den **Open Research Knowledge Graph** unterstützt **Quellenarbeit** und **kriteriengeleitetes Recherchieren**. 
+Die IT setzt **Admin Bud-E** in einem **Nachmittag** auf, erzeugt **anonyme API-Schlüssel** und verteilt sie als **CSV** – ohne persönliche Accounts. Nutzende fügen den Schlüssel in den **Einstellungen** ein, laden **PDFs/Bilder** und erhalten **sofort Antworten** – still lesbar oder auf Wunsch **vorgelesen**. **Allowance** (persönliches, automatisch erneuerbares Guthaben) und **Common Pool** (gemeinsamer Projekttopf) sorgen für **Fairness** und **Budgetstabilität**. Ein praktischer Mehrwert: **Sprechen statt tippen**, **zuhören statt suchen** – Bud-E nimmt **mündliche Fragen** auf, versteht **Kontext** und meldet sich bei Bedarf **natürlich klingend** zurück. Die Anbindung an **Wikipedia** und den **Open Research Knowledge Graph** unterstützt **Quellenarbeit** und **kriteriengeleitetes Recherchieren**.
 
 <img width="1484" height="851" alt="image" src="https://github.com/user-attachments/assets/e2b2044c-ed0e-4dc8-a32e-0e88eb93d98e" />
 
@@ -70,10 +70,37 @@ Die IT setzt **Admin Bud-E** in einem **Nachmittag** auf, erzeugt **anonyme API-
 * **School Bud-E Frontend (Live):** [https://school.bud-e.ai/](https://school.bud-e.ai/)
 * **Admin Bud-E Repository (GitHub):** [https://github.com/LAION-AI/Admin_Bud-E](https://github.com/LAION-AI/Admin_Bud-E)
 * **School Bud-E Frontend Repository (GitHub):** [https://github.com/LAION-AI/school-bud-e-frontend](https://github.com/LAION-AI/school-bud-e-frontend)
-* **Admin Bud-E Image (Hugging Face):** [https://huggingface.co/laion/Admin_Bud-E_image](https://huggingface.co/laion/Admin_Bud-E_image) – fertiges Systemabbild für einen schnellen Start (z. B. bei [Contabo](https://contabo.com)). 
+* **Admin Bud-E Image (Hugging Face):** [https://huggingface.co/laion/Admin_Bud-E_image](https://huggingface.co/laion/Admin_Bud-E_image) – fertiges Systemabbild für einen schnellen Start (z. B. bei [Contabo](https://contabo.com)).
 
 ## Mitmachen
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/126d983a-febd-4afb-9808-ba02f4953631" />
 
-Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Wir bieten **regelmäßig kostenlose Webinare** zum Einrichten von **Admin Bud-E** und **School Bud-E** für die eigene Organisation auf eigenen Servern an. Bei Interesse schreiben Sie uns bitte an **[contact@laion.ai](mailto:contact@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag. 
+Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Wir bieten **regelmäßig kostenlose Webinare** zum Einrichten von **Admin Bud-E** und **School Bud-E** für die eigene Organisation auf eigenen Servern an. Bei Interesse schreiben Sie uns bitte an **[contact@laion.ai](mailto:contact@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
+
+---
+
+[^llm-evidence]: **Evidenz zu LLM-/KI-Feedback & Tutoring**
+
+* Ma, W., Adesope, O. O., Nesbit, J. C., & Liu, Q. (2014). *Intelligent Tutoring Systems and Learning Outcomes: A Meta-Analysis*. **Review of Educational Research**. DOI: 10.3102/0034654315581420. ([SAGE Journals][1])
+* Meyer, J. et al. (2024). *Using LLMs to bring evidence-based feedback into the classroom*. **Computers & Education: X**. (timely LLM-Feedback ↔ bessere kognitive & motivationale Outcomes). ([ScienceDirect][2])
+* Kinder, A. et al. (2025). *Effects of adaptive feedback generated by a large language model on writing performance*. **Computers & Education: X**. (LLM-Feedback → Leistungsgewinne beim Schreiben). ([ScienceDirect][3])
+* Zhang, K. et al. (2025). *Enhancing Critical Writing Through AI Feedback: A Randomized Controlled Trial*. **Behavioral Sciences** 15(5):600. (RCT: KI-Feedback > Kontrolle). ([MDPI][4])
+* Heinrich, T. et al. (2025). *AI-assisted grading and personalized feedback in large courses: A randomized controlled trial*. (Volltext, RCT in vier Kursen). ([PMC][5])
+* Zur Qualitätssicherung: Jia, Q. et al. (2024). *On Assessing the Faithfulness of LLM-generated Feedback*. **Proceedings of EDM 2024** (Halluzinationsanteil > 23 %). ([educationaldatamining.org][6])
+
+[^voice-divide]: **Sprachschnittstellen, Zugänglichkeit & Digital Divide**
+
+* Masina, F. et al. (2020). *Investigating the Accessibility of Voice Assistants with Cognitive and Linguistic Tests*. **Journal of Accessibility and Design for All** (open access). (Zugänglichkeit & Prädiktoren der Nutzung). ([PMC][7])
+* Chemnad, K. et al. (2024). *Digital accessibility in the era of artificial intelligence — a systematic review*. **PLOS Digital Health**. (Chancen & Grenzen von KI-gestützten Zugängen, inkl. Voice). ([PMC][8])
+* Leite, H. et al. (2024). *‘It’s not the boogeyman’: How voice assistant technology is enabling inclusion*. **Telematics and Informatics**. (Voice-Assistenten als Inklusions-Technologie). ([ScienceDirect][9])
+
+[1]: https://journals.sagepub.com/doi/10.3102/0034654315581420?utm_source=chatgpt.com "Effectiveness of Intelligent Tutoring Systems: A Meta- ..."
+[2]: https://www.sciencedirect.com/science/article/pii/S2666920X23000784?utm_source=chatgpt.com "Using LLMs to bring evidence-based feedback into the ..."
+[3]: https://www.sciencedirect.com/science/article/pii/S2666920X24001528?utm_source=chatgpt.com "Effects of adaptive feedback generated by a large ..."
+[4]: https://www.mdpi.com/2076-328X/15/5/600?utm_source=chatgpt.com "Enhancing Critical Writing Through AI Feedback"
+[5]: https://pmc.ncbi.nlm.nih.gov/articles/PMC12364334/?utm_source=chatgpt.com "AI-assisted grading and personalized feedback in large ..."
+[6]: https://www.educationaldatamining.org/edm2024/proceedings/2024.EDM-short-papers.49/?utm_source=chatgpt.com "On Assessing the Faithfulness of LLM-generated Feedback ..."
+[7]: https://pmc.ncbi.nlm.nih.gov/articles/PMC7547392/?utm_source=chatgpt.com "Investigating the Accessibility of Voice Assistants With ..."
+[8]: https://pmc.ncbi.nlm.nih.gov/articles/PMC10905618/?utm_source=chatgpt.com "Digital accessibility in the era of artificial intelligence— ..."
+[9]: https://www.sciencedirect.com/science/article/abs/pii/S0166497224001305?utm_source=chatgpt.com "'It's not the boogeyman': How voice assistant technology is ..."
