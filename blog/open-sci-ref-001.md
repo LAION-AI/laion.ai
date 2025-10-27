@@ -8,7 +8,8 @@ previewImg: "/images/blog/open-sci-ref-001/open-sci-ref-001-release-v2.png"
 We introduce and release open-sci-ref 0.01 - a research dense transformer model family with all the intermediate checkpoints trained on 8 different well established reference datasets on various model (0.13B - 0.4B - 1.3B - 1.7B) and token (50B, 300B, 1T) scales to serve as baselines for comparison and for studies on training dynamics. Our release includes all intermediate model weights, logs and training workflow code to enable easy learning procedure comparison on available reference scales and datasets and to support future research.
 
 Models and intermediate checkpoints: [HugginFace open-sci-ref-0.01 collection](https://huggingface.co/collections/open-sci/open-sci-ref-001-685905e598be658fbcebff4f) \
-Usage infos and release overview: [open-sci-ref-0.01 release repository](https://github.com/LAION-AI/open-sci-ref-0.01) (continuously updated)
+Usage infos and release overview: [open-sci-ref-0.01 release repository](https://github.com/LAION-AI/open-sci-ref-0.01) (continuously updated) \
+[ArXiv paper](https://arxiv.org/abs/2509.09009)
 
 
 ## Introduction and motivation
@@ -211,6 +212,13 @@ Having established reference baselines that can be used for comparison to any ot
 
 ## Citation
 If you like this work, please cite:
+
+@article{opensciref001arxiv,
+  title={Open-sci-ref-0.01: open and reproducible reference baselines for language model and dataset comparison},
+  author={Nezhurina, Marianna and Franke, Joerg and Nakamura, Taishi and Carstensen, Timur and Ajroldi, Niccol{\`o} and Komulainen, Ville and Salinas, David and Jitsev, Jenia},
+  journal={arXiv:2509.09009},
+  year={2025}
+}
 
 ```
 @misc{opensciref001blog,
