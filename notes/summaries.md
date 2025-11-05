@@ -5,7 +5,7 @@ date: "October 28 2025"
 previewImg: "public/images/blog/sci3.jpg"
 ---
 <p align="center">
-  <img src="/public/images/blog/sci4.png" alt="LLM-as-a-Judge scores chart" width="800">
+  <img src="/public/images/blog/sci5.png" alt="LLM-as-a-Judge scores chart" width="800">
 </p>
 
 
