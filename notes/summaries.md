@@ -1,10 +1,10 @@
 ---
-
 title: "Open Scientific Summaries at Scale: The Inference.net × LAION × Grass Initiative"
 author: "FULL AUTHOR LIST TBD"
 date: "October 28 2025"
-previewImg: "[https://github.com/LAION-AI/laion.ai/blob/58dd33f12bf32a95b49fc6a430f9abc3cde127ae/public/images/blog/sci3.jpg](https://github.com/LAION-AI/laion.ai/blob/58dd33f12bf32a95b49fc6a430f9abc3cde127ae/public/images/blog/sci3.jpg)"
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+previewImg: "https://github.com/LAION-AI/laion.ai/blob/58dd33f12bf32a95b49fc6a430f9abc3cde127ae/public/images/blog/sci3.jpg"
+---
+
 
 ## Abstract
 
