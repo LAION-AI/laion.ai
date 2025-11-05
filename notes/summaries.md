@@ -5,8 +5,13 @@ date: "October 28 2025"
 previewImg: "public/images/blog/sci3.jpg"
 ---
 
+
 ## Abstract 
-We present a comprehensive approach to democratizing access to scientific knowledge through large-scale, **structured summarization** of academic literature. We retrieved and processed ~**100 million** research papers from the public internet, leveraging existing datasets from **bethgelab**, **PeS2o**, **Hugging Face**, and **Common Pile**. We designed a standardized **JSON schema** for scientific paper summaries and **post-trained two models**—**Qwen 3 14B** and **Nemotron 12B**—to produce summaries in this format. Our evaluation combines **LLM-as-a-Judge** and a **QA dataset**. Fine-tuned models achieve performance on our evals comparable to leading closed models (e.g., GPT-5, Claude 4.5). **Nemotron 12B** offers ~**2.25×** higher throughput than Qwen 3 14B, making it attractive for large-scale processing. With this preliminary blog post, we **release a fine-tuned model and 100k paper summaries**. A live **visualization tool** at [https://laion.inference.net/](https://laion.inference.net/) demonstrates the utility of structured summaries. We plan to release structured summaries for the full **100M** paper corpus. 
+
+We present a comprehensive approach to democratizing access to scientific knowledge through large-scale, **structured summarization** of academic literature. We retrieved and processed ~**100 million** research papers from the public internet, leveraging existing datasets from **bethgelab**, **PeS2o**, **Hugging Face**, and **Common Pile**. We designed a standardized **JSON schema** for scientific paper summaries and **post-trained two models**—**Qwen 3 14B** and **Nemotron 12B**—to produce summaries in this format. Our evaluation combines **LLM-as-a-Judge** and a **QA dataset**. Fine-tuned models achieve performance on our evals comparable to leading closed models (e.g., GPT-5, Claude 4.5). **Nemotron 12B** offers ~**2.25×** higher throughput than Qwen 3 14B, making it attractive for large-scale processing. 
+
+With this preliminary blog post, we **release a fine-tuned models, 100k paper summaries**. 
+A live **visualization tool** at [https://laion.inference.net/](https://laion.inference.net/) demonstrates the utility of structured summaries. We plan to release structured summaries for the full **100M** paper corpus. 
 
 --- 
 
@@ -14,13 +19,24 @@ We present a comprehensive approach to democratizing access to scientific knowle
 
 Access to scientific knowledge remains constrained by paywalls, licensing, and copyright, slowing research and education. Our **Project Alexandria** ([arXiv:2502.19413](https://arxiv.org/abs/2502.19413)) showed that it is legally and technically feasible to **extract factual knowledge** while respecting copyright via **Knowledge Units**—structured, style-agnostic representations of content. However, research-paper corpora vary in format and structure, making it hard to compare similar claims or retrieve knowledge efficiently. Building on Alexandria, we introduce a **pipeline** to collect, process, and summarize papers into **structured outputs** consumable by humans and AI systems alike. Our aims: * **Create** a massive, openly accessible, well-structured summary dataset of scientific literature * **Develop** models capable of generating **structured, factual** summaries * **Demonstrate** the utility of these summaries for scientific tasks * **Explore** decentralized computing to process at global scale This brief outlines **methodology**, **results**, and **implications** for the scientific community—and humanity. 
 
+
 --- 
+
 
 ## Methodology 
 
 ### 2.1 Dataset Collection & Processing 
 
-Primary corpus: ~**100M** research papers retrieved via collaboration with **Wynd Labs** using the **Grass** network. After deduplication, we **supplemented** with: * **bethgelab**: *paper_parsed_jsons* ([dataset](https://huggingface.co/datasets/bethgelab/paper_parsed_jsons)) * **LAION**: *COREX-18text* ([dataset](https://huggingface.co/datasets/laion/COREX-18text)) * **Common Pile**: *PubMed* subset ([dataset](https://huggingface.co/datasets/common-pile/pubmed)) * **LAION**: *PeS2oX-fulltext* ([dataset](https://huggingface.co/datasets/laion/Pes2oX-fulltext)) **Post-training subset (110k papers)**: 40% from the retrieved corpus, **15% each** from the four sources above. Split: **100k train / 10k val**. **Length stats**: mean **81,334** characters, median **45,025** characters. 
+Primary corpus: ~**100M** research papers retrieved via collaboration with **Wynd Labs** using the **Grass** network. After deduplication, we **supplemented** with: * 
+**bethgelab**: *paper_parsed_jsons* ([dataset](https://huggingface.co/datasets/bethgelab/paper_parsed_jsons)) * 
+
+**LAION**: *COREX-18text* ([dataset](https://huggingface.co/datasets/laion/COREX-18text)) * 
+
+**Common Pile**: *PubMed* subset ([dataset](https://huggingface.co/datasets/common-pile/pubmed)) * 
+
+**LAION**: *PeS2oX-fulltext* ([dataset](https://huggingface.co/datasets/laion/Pes2oX-fulltext)) 
+
+**Post-training subset (110k papers)**: 40% from the retrieved corpus, **15% each** from the four sources above. Split: **100k train / 10k val**. **Length stats**: mean **81,334** characters, median **45,025** characters. 
 
 
 ### 2.2 Structured Summary Schema 
@@ -43,7 +59,7 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 ### 3.1 LLM-as-a-Judge
 
 <p align="center">
-  <img src="public/images/blog/sci2.jpg" alt="LLM-as-a-Judge scores chart" width="600">
+  <img src="/public/images/blog/sci2.jpg" alt="LLM-as-a-Judge scores chart" width="600">
 </p>
 
 | Model                 | Score (1–5) |
@@ -60,10 +76,11 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 
 *Figure 1.* Average LLM-as-a-Judge scores; **95% CIs via bootstrap**.
 
+
 ### 3.2 QA Accuracy
 
 <p align="center">
-  <img src="public/images/blog/sci.jpg" alt="QA evaluation accuracy chart" width="600">
+  <img src="/public/images/blog/sci.jpg" alt="QA evaluation accuracy chart" width="600">
 </p>
 
 | Model                 | Accuracy (%) |
@@ -80,6 +97,7 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 
 *Figure 2.* QA evaluation over **1,270 MCQs** (multiple-choice accuracy).
 
+
 ### 3.3 Throughput on 8×H200 (TP=8, vLLM)
 
 | Model            | Requests/sec | Input tok/sec | Output tok/sec | Single-req tok/sec |
@@ -89,11 +107,14 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 
 **Nemotron 12B** delivers ~**2.25×** the throughput of **Qwen 3 14B**, favoring **large-scale** runs.
 
+
 ### 3.4 Visualization Tool
 
 Explore **100k** structured summaries (Qwen 3 14B FT outputs) at **[https://laion.inference.net/](https://laion.inference.net/)**. We compute **Qwen 3 Embedding 4B** embeddings on summaries and use **UMAP** for clustering; **cosine similarity** supports nearest-neighbor exploration.
 
+
 ---
+
 
 ## Discussion
 
@@ -109,9 +130,11 @@ Structured summaries enable:
 
 Fine-tuned **open** models, correctly trained and formatted, are **competitive** for this task.
 
+
 ### 4.2 Decentralized Compute
 
 Processing **100M** papers is compute-intensive. The **Inference.net** **permissionless GPU network** (with **verification**) harnesses **idle global compute** at low cost, offering resilient infrastructure for science. Rough estimates: **>$5M** at current **GPT-5** pricing vs. **< $100k** via decentralized nodes and our models.
+
 
 ### 4.3 Limitations
 
@@ -124,13 +147,16 @@ Processing **100M** papers is compute-intensive. The **Inference.net** **permiss
 
 **Appropriate use:** Treat summaries as **high-quality overviews** for search/triage/review—not as substitutes for the source in **high-stakes** contexts. Verify numbers, dates, and terms in the original paper when precision is critical.
 
+
 ### 4.4 Outlook & Future Work
 
 * **Scale to 100M summaries + metadata**: Join each summary to **OpenAlex** metadata (authors, venues, concepts, references, citations) for **graph-native** exploration at scale ([https://docs.openalex.org/](https://docs.openalex.org/)).
 * **Release permissive full texts + summaries**: For permissively licensed papers (e.g., **PeS2o**, **Common Pile PubMed**), pair **full text** with structured summaries to support **long-context** training and **grounded retrieval**.
 * **From summaries to Knowledge Units**: Iteratively convert summaries into **Alexandria-style Knowledge Units** ([arXiv:2502.19413](https://arxiv.org/abs/2502.19413)) to create a **shareable factual substrate** suited for open dissemination. (More compute-intensive; we will prioritize scaled summaries + metadata first.)
 
+
 ---
+
 
 ## Conclusion
 
@@ -139,13 +165,17 @@ Open, large-scale **structured summarization** can significantly **accelerate** 
 Our **visualizer** demonstrates real applications of structured summaries, and collaboration with **Inference.net** highlights how **decentralized compute** can tackle the processing challenges ahead.
 
 **Call to action:**
+
 We invite **researchers, librarians, and open-access advocates** to help us **gather more papers** for large-scale knowledge extraction. We also invite **engineers and compute providers** to help **optimize** our paragraph-level pipeline and **contribute GPU capacity** (decentralized nodes, clusters, credits) so we can run inference over the **full corpus** and convert it into **Alexandria-style Knowledge Units**—**freeing factual scientific knowledge** for education and accelerated research.
 
+
 ---
+
 
 ## Acknowledgments
 
 This is a collaboration between **LAION**, **Grass**, and **Inference.net**. We thank all contributors, especially **Tawsif Ratul** for data collection, and **Prof. Sören Auer**, **Dr. Gollam Rabby**, and the **TIB – Leibniz Information Centre for Science and Technology** for scientific advice and support.
+
 
 ---
 
@@ -159,6 +189,7 @@ This is a collaboration between **LAION**, **Grass**, and **Inference.net**. We 
 6. **A Survey on LLM-as-a-Judge** (2025). [https://arxiv.org/abs/2411.15594](https://arxiv.org/abs/2411.15594)
 7. **Inference.net Paper Visualizer** (2025). [https://laion.inference.net/](https://laion.inference.net/)
 8. **Qwen 3 Embedding 4B** (2025). [https://huggingface.co/Qwen/Qwen3-Embedding-4B](https://huggingface.co/Qwen/Qwen3-Embedding-4B)
+
 
 ---
 
