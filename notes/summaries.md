@@ -98,7 +98,7 @@ We used **two complementary approaches**:
 ### 3.2 QA Accuracy
 
 <p align="center">
-  <img src="https://github.com/LAION-AI/laion.ai/blob/58dd33f12bf32a95b49fc6a430f9abc3cde127ae/public/images/blog/sci1.jpg" alt="QA evaluation accuracy chart" width="600">
+  <img src="https://github.com/LAION-AI/laion.ai/blob/58dd33f12bf32a95b49fc6a430f9abc3cde127ae/public/images/blog/sci.jpg" alt="QA evaluation accuracy chart" width="600">
 </p>
 
 | Model                 | Accuracy (%) |
