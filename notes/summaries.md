@@ -5,8 +5,11 @@ date: "November 07 2025"
 previewImg: "/images/blog/sci3.jpg"
 ---
 <p align="center">
-  <img src="/images/blog/sci5.png" alt="LLM-as-a-Judge scores chart" width="800">
+  <img src="/images/blog/sci5.png"
+       alt="LLM-as-a-Judge scores chart"
+       style="width:90%; height:auto;">
 </p>
+
 
 
 ## Abstract 
@@ -17,8 +20,11 @@ With this preliminary blog post, we **release a fine-tuned models, 100k paper su
 A live **visualization tool** at [https://laion.inference.net/](https://laion.inference.net/) demonstrates the utility of structured summaries. We plan to release structured summaries for the full **100M** paper corpus. 
 
 <p align="center">
-  <img src="/images/blog/sci4.png" alt="LLM-as-a-Judge scores chart" width="800">
+  <img src="/images/blog/sci4.png"
+       alt="LLM-as-a-Judge scores chart"
+       style="width:90%; height:auto;">
 </p>
+
 
 
 ## Introduction 
@@ -65,7 +71,10 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 ### 3.1 LLM-as-a-Judge
 
 <p align="center">
-  <img src="/images/blog/sci2.jpg" alt="LLM-as-a-Judge scores chart" width="600">
+  <img src="/images/blog/sci2.jpg"
+       alt="LLM-as-a-Judge scores chart"
+       style="width:90%; height:auto;">
+
 
 
 | Model                 | Score (1–5) |
@@ -86,7 +95,9 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 ### 3.2 QA Accuracy
 
 <p align="center">
-  <img src="/images/blog/sci.jpg" alt="QA evaluation accuracy chart" width="600">
+  <img src="/images/blog/sci.jpg"
+       alt="LLM-as-a-Judge scores chart"
+       style="width:90%; height:auto;">
 
 
 | Model                 | Accuracy (%) |
