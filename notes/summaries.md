@@ -11,6 +11,7 @@ previewImg: "/images/blog/sci3.jpg"
 
 We present a comprehensive approach to democratizing access to scientific knowledge through large-scale, **structured summarization** of academic literature. 
 We retrieved and processed ~**100 million** research papers from the public internet, leveraging existing datasets from **bethgelab**, **PeS2o**, **Hugging Face**, and **Common Pile**. 
+
 <p align="center">
   <img src="/images/blog/sci5.png"
        alt="LLM-as-a-Judge scores chart"
