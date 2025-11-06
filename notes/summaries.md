@@ -16,6 +16,10 @@ We present a comprehensive approach to democratizing access to scientific knowle
 With this preliminary blog post, we **release a fine-tuned models, 100k paper summaries**. 
 A live **visualization tool** at [https://laion.inference.net/](https://laion.inference.net/) demonstrates the utility of structured summaries. We plan to release structured summaries for the full **100M** paper corpus. 
 
+<p align="center">
+  <img src="/public/images/blog/sci4.png" alt="LLM-as-a-Judge scores chart" width="600">
+</p>
+
 --- 
 
 ## Introduction 
