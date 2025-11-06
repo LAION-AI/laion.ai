@@ -10,13 +10,14 @@ previewImg: "/images/blog/sci3.jpg"
 ## Abstract 
 
 We present a comprehensive approach to democratizing access to scientific knowledge through large-scale, **structured summarization** of academic literature. 
+We retrieved and processed ~**100 million** research papers from the public internet, leveraging existing datasets from **bethgelab**, **PeS2o**, **Hugging Face**, and **Common Pile**. 
 <p align="center">
   <img src="/images/blog/sci5.png"
        alt="LLM-as-a-Judge scores chart"
        style="width:90%; height:auto;">
 </p>
 
-We retrieved and processed ~**100 million** research papers from the public internet, leveraging existing datasets from **bethgelab**, **PeS2o**, **Hugging Face**, and **Common Pile**. We designed a standardized **JSON schema** for scientific paper summaries and **post-trained two models**—**Qwen 3 14B** and **Nemotron 12B**—to produce summaries in this format. Our evaluation combines **LLM-as-a-Judge** and a **QA dataset**. Fine-tuned models achieve performance on our evals comparable to leading closed models (e.g., GPT-5, Claude 4.5). **Nemotron 12B** offers ~**2.25×** higher throughput than Qwen 3 14B, making it attractive for large-scale processing. 
+We designed a standardized **JSON schema** for scientific paper summaries and **post-trained two models**—**Qwen 3 14B** and **Nemotron 12B**—to produce summaries in this format. Our evaluation combines **LLM-as-a-Judge** and a **QA dataset**. Fine-tuned models achieve performance on our evals comparable to leading closed models (e.g., GPT-5, Claude 4.5). **Nemotron 12B** offers ~**2.25×** higher throughput than Qwen 3 14B, making it attractive for large-scale processing. 
 
 With this preliminary blog post, we **release a fine-tuned models, 100k paper summaries**. 
 A live **visualization tool** at [https://laion.inference.net/](https://laion.inference.net/) demonstrates the utility of structured summaries. We plan to release structured summaries for the full **100M** paper corpus. 
