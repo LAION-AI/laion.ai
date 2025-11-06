@@ -6,10 +6,11 @@ date: "October 9 2025"
 previewImg: "/images/blog/admin-bud-e+.jpg"
 ---
 **LAION** verfolgt seit seiner Gründung ein klares Ziel: die **Demokratisierung von Künstlicher Intelligenz** und **zugängliche, faire Bildung** für alle. 
+Mit **[Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** und **[School Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/babd1bd7-cca5-470e-ab5e-335a49585f4d" />
 
-Mit **[Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** und **[School Bud-E 1.0](https://laion.ai/blog/bud-e-release/)** haben wir zu Jahresbeginn zwei **browserbasierte Sprachassistenten** bereitgestellt, die konsequent auf **Privatsphäre**, **Offenheit** und **Datenhoheit** setzen. Gespräche bleiben **lokal im Browser**, die Architektur ist **modular**, und der Betrieb ist mit **selbst gehosteten** oder **DSGVO-konformen** APIs möglich.
+
 Gleichzeitig adressiert **Bud-E** einen Punkt, den viele kommerzielle Angebote (z. B. Fobizz, Telli Chat) bislang nur eingeschränkt abdecken: **intuitive Spracheingabe** und **angenehme, natürlich klingende Sprachausgabe**. **Bud-E versteht gesprochene Sprache**, **antwortet schnell** und kann – wenn gewünscht – **in einer gut verständlichen Stimme vorlesen**. So werden nicht nur Fakten vermittelt, sondern es entsteht eine **inspirierende Lernatmosphäre**, die individuelle Lernstände, Sprachniveaus und Vorwissen berücksichtigt und damit besonders auch Lernende unterstützt, die vom **Digital Divide** betroffen sind<sup id="cite-voice-divide"><a href="#ref-voice-divide">[1]</a></sup>. **Studien** zeigen, dass LLMs personalisiertes Feedback und motivierendere Lernumgebungen erleichtern – das stärkt Selbstwirksamkeit und Lernfortschritt und entlastet Lehrkräfte<sup id="cite-llm-evidence"><a href="#ref-llm-evidence">[2]</a></sup>.
 Mit **Admin Bud-E V1.0** komplettieren wir nun das System: Gemeinsam mit **School Bud-E** entsteht eine **durchgängige Lösung** für Organisationen, die **volle Kontrolle über Speicher- und Verarbeitungsort** ihrer Daten behalten – und dabei **einen Großteil der Kosten** im Vergleich zu klassischen, kommerziellen Angeboten einsparen.
 
