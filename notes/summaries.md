@@ -67,7 +67,7 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 
 <p align="center">
   <img src="/public/images/blog/sci2.jpg" alt="LLM-as-a-Judge scores chart" width="600">
-</p>
+
 
 | Model                 | Score (1–5) |
 | --------------------- | :---------: |
@@ -82,13 +82,13 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 | Nemotron 12B (Base)   |    2.179    |
 
 *Figure 1.* Average LLM-as-a-Judge scores; **95% CIs via bootstrap**.
-
+</p>
 
 ### 3.2 QA Accuracy
 
 <p align="center">
   <img src="/public/images/blog/sci.jpg" alt="QA evaluation accuracy chart" width="600">
-</p>
+
 
 | Model                 | Accuracy (%) |
 | --------------------- | :----------: |
@@ -103,7 +103,7 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 | GPT OSS 20B           |     58.8     |
 
 *Figure 2.* QA evaluation over **1,270 MCQs** (multiple-choice accuracy).
-
+</p>
 
 ### 3.3 Throughput on 8×H200 (TP=8, vLLM)
 
