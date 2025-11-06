@@ -2,10 +2,10 @@
 title: "Open Scientific Summaries at Scale: The Inference.net × LAION × Grass Initiative"
 author: "Christoph Schuhmann, Amarjot Singh, Andrej Radonjic, Sean Smith, and Sam Hogan"
 date: "October 28 2025"
-previewImg: "public/images/blog/sci3.jpg"
+previewImg: "/images/blog/sci3.jpg"
 ---
 <p align="center">
-  <img src="/public/images/blog/sci5.png" alt="LLM-as-a-Judge scores chart" width="800">
+  <img src="/images/blog/sci5.png" alt="LLM-as-a-Judge scores chart" width="800">
 </p>
 
 
@@ -17,7 +17,7 @@ With this preliminary blog post, we **release a fine-tuned models, 100k paper su
 A live **visualization tool** at [https://laion.inference.net/](https://laion.inference.net/) demonstrates the utility of structured summaries. We plan to release structured summaries for the full **100M** paper corpus. 
 
 <p align="center">
-  <img src="/public/images/blog/sci4.png" alt="LLM-as-a-Judge scores chart" width="800">
+  <img src="/images/blog/sci4.png" alt="LLM-as-a-Judge scores chart" width="800">
 </p>
 
 --- 
@@ -66,7 +66,7 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 ### 3.1 LLM-as-a-Judge
 
 <p align="center">
-  <img src="/public/images/blog/sci2.jpg" alt="LLM-as-a-Judge scores chart" width="600">
+  <img src="/images/blog/sci2.jpg" alt="LLM-as-a-Judge scores chart" width="600">
 
 
 | Model                 | Score (1–5) |
@@ -87,7 +87,7 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 ### 3.2 QA Accuracy
 
 <p align="center">
-  <img src="/public/images/blog/sci.jpg" alt="QA evaluation accuracy chart" width="600">
+  <img src="/images/blog/sci.jpg" alt="QA evaluation accuracy chart" width="600">
 
 
 | Model                 | Accuracy (%) |
