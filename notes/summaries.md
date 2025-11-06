@@ -1,7 +1,7 @@
 ---
 title: "Open Scientific Summaries at Scale: The Inference.net × LAION × Grass Initiative"
 author: "Christoph Schuhmann, Amarjot Singh, Andrej Radonjic, Sean Smith, and Sam Hogan"
-date: "October 28 2025"
+date: "November 07 2025"
 previewImg: "/images/blog/sci3.jpg"
 ---
 <p align="center">
@@ -20,14 +20,12 @@ A live **visualization tool** at [https://laion.inference.net/](https://laion.in
   <img src="/images/blog/sci4.png" alt="LLM-as-a-Judge scores chart" width="800">
 </p>
 
---- 
 
 ## Introduction 
 
 Access to scientific knowledge remains constrained by paywalls, licensing, and copyright, slowing research and education. Our **Project Alexandria** ([arXiv:2502.19413](https://arxiv.org/abs/2502.19413)) showed that it is legally and technically feasible to **extract factual knowledge** while respecting copyright via **Knowledge Units**—structured, style-agnostic representations of content. However, research-paper corpora vary in format and structure, making it hard to compare similar claims or retrieve knowledge efficiently. Building on Alexandria, we introduce a **pipeline** to collect, process, and summarize papers into **structured outputs** consumable by humans and AI systems alike. Our aims: * **Create** a massive, openly accessible, well-structured summary dataset of scientific literature * **Develop** models capable of generating **structured, factual** summaries * **Demonstrate** the utility of these summaries for scientific tasks * **Explore** decentralized computing to process at global scale This brief outlines **methodology**, **results**, and **implications** for the scientific community—and humanity. 
 
 
---- 
 
 
 ## Methodology 
@@ -59,7 +57,8 @@ We post-trained: * **Qwen 3 14B** (dense Transformer) * **Nemotron 12B** (hybrid
 
 We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of GPT-5, Gemini 2.5 Pro, and Claude 4.5 Sonnet, rating student outputs vs. GPT-5 references on a **1–5** rubric (accuracy, completeness, structure, clarity; hallucination checks). See survey [6]. 2. **QA Dataset** — For a holdout set, we generated **5 MCQs per paper** with GPT-5 and measured models’ ability to answer **using their own generated summaries** (truncated to **10,000 chars**), providing a proxy for **factual utility** (cf. Alexandria [1]). 
 
----
+
+
 
 ## Results
 
@@ -120,7 +119,6 @@ We used **two complementary approaches**: 1. **LLM-as-a-Judge** — Ensemble of 
 Explore **100k** structured summaries (Qwen 3 14B FT outputs) at **[https://laion.inference.net/](https://laion.inference.net/)**. We compute **Qwen 3 Embedding 4B** embeddings on summaries and use **UMAP** for clustering; **cosine similarity** supports nearest-neighbor exploration.
 
 
----
 
 
 ## Discussion
@@ -162,7 +160,7 @@ Processing **100M** papers is compute-intensive. The **Inference.net** **permiss
 * **From summaries to Knowledge Units**: Iteratively convert summaries into **Alexandria-style Knowledge Units** ([arXiv:2502.19413](https://arxiv.org/abs/2502.19413)) to create a **shareable factual substrate** suited for open dissemination. (More compute-intensive; we will prioritize scaled summaries + metadata first.)
 
 
----
+
 
 
 ## Conclusion
@@ -176,7 +174,7 @@ Our **visualizer** demonstrates real applications of structured summaries, and c
 We invite **researchers, librarians, and open-access advocates** to help us **gather more papers** for large-scale knowledge extraction. We also invite **engineers and compute providers** to help **optimize** our paragraph-level pipeline and **contribute GPU capacity** (decentralized nodes, clusters, credits) so we can run inference over the **full corpus** and convert it into **Alexandria-style Knowledge Units**—**freeing factual scientific knowledge** for education and accelerated research.
 
 
----
+
 
 
 ## Acknowledgments
@@ -184,7 +182,7 @@ We invite **researchers, librarians, and open-access advocates** to help us **ga
 This is a collaboration between **LAION**, **Grass**, and **Inference.net**. We thank all contributors, especially **Tawsif Ratul** for data collection, and **Prof. Sören Auer**, **Dr. Gollam Rabby**, and the **TIB – Leibniz Information Centre for Science and Technology** for scientific advice and support.
 
 
----
+
 
 ## References
 
@@ -198,7 +196,7 @@ This is a collaboration between **LAION**, **Grass**, and **Inference.net**. We 
 8. **Qwen 3 Embedding 4B** (2025). [https://huggingface.co/Qwen/Qwen3-Embedding-4B](https://huggingface.co/Qwen/Qwen3-Embedding-4B)
 
 
----
+
 
 ## Appendix A — Implementation Details
 
