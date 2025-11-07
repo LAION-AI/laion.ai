@@ -78,7 +78,7 @@ Die IT setzt **Admin Bud-E** in einem **Nachmittag** auf, erzeugt **anonyme API-
 
 <img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/126d983a-febd-4afb-9808-ba02f4953631" />
 
-Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Wir bieten **regelmäßig kostenlose Webinare** zum Einrichten von **Admin Bud-E** und **School Bud-E** für die eigene Organisation auf eigenen Servern an. Bei Interesse schreiben Sie uns bitte an **[bud-e@laion.ai](mailto:bed-e@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
+Wir laden **Schulen, Hochschulen, Unternehmen und öffentliche Einrichtungen** ein, **Admin Bud-E** in der Praxis zu erproben, zu evaluieren und gemeinsam weiterzuentwickeln. Wir bieten **regelmäßig kostenlose Webinare** zum Einrichten von **Admin Bud-E** und **School Bud-E** für die eigene Organisation auf eigenen Servern an. Bei Interesse schreiben Sie uns bitte an **[bud-e@laion.ai](mailto:bud-e@laion.ai)**. Gemeinsam bringen wir **faire, offene und empathische KI-Assistenz** unter **Ihrer** Kontrolle in den Alltag.
 
 ## Referenzen
 
