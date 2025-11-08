@@ -1,6 +1,6 @@
 ---
 title: "Open Scientific Summaries at Scale: The Inference.net × LAION × Grass Initiative"
-author: "Christoph Schuhmann, Amarjot Singh, Andrej Radonjic, Sean Smith, and Sam Hogan"
+author: "Christoph Schuhmann, Amarjot Singh,Andrii Prolorenzo, Andrej Radonjic, Sean Smith, and Sam Hogan"
 date: "November 07 2025"
 previewImg: "/images/blog/sci3.jpg"
 ---
