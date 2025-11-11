@@ -1,7 +1,7 @@
 ---
-title: "Open Scientific Summaries at Scale: The Inference.net × LAION × Grass Initiative"
+title: "AELLA (Autonomous Extraction of Linked Literature for Accessibility): The Inference.net × LAION × Grass Initiative"
 author: "Christoph Schuhmann, Amarjot Singh, Andrii Prolorenzo, Andrej Radonjic, Sean Smith, and Sam Hogan"
-date: "November 07 2025"
+date: "November 11 2025"
 previewImg: "/images/blog/sci3.jpg"
 ---
 
