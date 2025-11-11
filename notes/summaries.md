@@ -1,5 +1,5 @@
 ---
-title: "AELLA (Autonomous Extraction of Linked Literature for Accessibility): The Inference.net × LAION × Grass Initiative"
+title: "AELLA (Autonomous Extraction of Linked Literature for Accessibility): The Inference.net × LAION"
 author: "Christoph Schuhmann, Amarjot Singh, Andrii Prolorenzo, Andrej Radonjic, Sean Smith, and Sam Hogan"
 date: "November 11 2025"
 previewImg: "/images/blog/sci3.jpg"
@@ -42,7 +42,7 @@ Access to scientific knowledge remains constrained by paywalls, licensing, and c
 
 ### 2.1 Dataset Collection & Processing 
 
-Primary corpus: ~**100M** research papers retrieved via collaboration with **Wynd Labs** using the **Grass** network. After deduplication, we **supplemented** with: * 
+Primary corpus: ~**100M** research papers retrieved from the public internet. After deduplication, we **supplemented** with: * 
 **bethgelab**: *paper_parsed_jsons* ([dataset](https://huggingface.co/datasets/bethgelab/paper_parsed_jsons)) * 
 
 **LAION**: *COREX-18text* ([dataset](https://huggingface.co/datasets/laion/COREX-18text)) * 
