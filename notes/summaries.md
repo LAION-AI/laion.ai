@@ -1,5 +1,5 @@
 ---
-title: "AELLA (Autonomous Extraction of Linked Literature for Accessibility): The Inference.net × LAION"
+title: "AELLA (Autonomous Extraction of Linked Literature for Accessibility): The Inference.net × LAION × Grass"
 author: "Christoph Schuhmann, Amarjot Singh, Andrii Prolorenzo, Andrej Radonjic, Sean Smith, and Sam Hogan"
 date: "November 11 2025"
 previewImg: "/images/blog/sci3.jpg"
@@ -10,7 +10,7 @@ previewImg: "/images/blog/sci3.jpg"
 ## Abstract 
 
 We present a comprehensive approach to democratizing access to scientific knowledge through large-scale, **structured summarization** of academic literature. 
-We retrieved and processed ~**100 million** research papers from the public internet, leveraging existing datasets from **bethgelab**, **PeS2o**, **Hugging Face**, and **Common Pile**. 
+We retrieved and processed ~**100 million** research papers from the public internet , leveraging existing datasets from **bethgelab**, **PeS2o**, **Hugging Face**, and **Common Pile**. 
 
 <p align="center">
   <img src="/images/blog/sci5.png"
@@ -42,7 +42,7 @@ Access to scientific knowledge remains constrained by paywalls, licensing, and c
 
 ### 2.1 Dataset Collection & Processing 
 
-Primary corpus: ~**100M** research papers retrieved from the public internet. After deduplication, we **supplemented** with: * 
+Primary corpus: ~**100M** research papers retrieved from the public internet through a collaboration with Grass. After deduplication, we **supplemented** with: * 
 **bethgelab**: *paper_parsed_jsons* ([dataset](https://huggingface.co/datasets/bethgelab/paper_parsed_jsons)) * 
 
 **LAION**: *COREX-18text* ([dataset](https://huggingface.co/datasets/laion/COREX-18text)) * 
@@ -194,7 +194,7 @@ We invite **researchers, librarians, and open-access advocates** to help us **ga
 
 ## Acknowledgments
 
-This is a collaboration between **LAION** and **Inference.net**. We thank all contributors, especially **Tawsif Ratul** for data collection, and **Prof. Sören Auer**, **Dr. Gollam Rabby**, and the **TIB – Leibniz Information Centre for Science and Technology** for scientific advice and support.
+This is a collaboration between **LAION**, **Grass** and **Inference.net**. We thank all contributors, especially **Tawsif Ratul** for data collection, and **Prof. Sören Auer**, **Dr. Gollam Rabby**, and the **TIB – Leibniz Information Centre for Science and Technology** for scientific advice and support.
 
 
 
