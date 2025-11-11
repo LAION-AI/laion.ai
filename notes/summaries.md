@@ -194,7 +194,7 @@ We invite **researchers, librarians, and open-access advocates** to help us **ga
 
 ## Acknowledgments
 
-This is a collaboration between **LAION**, **Grass**, and **Inference.net**. We thank all contributors, especially **Tawsif Ratul** for data collection, and **Prof. Sören Auer**, **Dr. Gollam Rabby**, and the **TIB – Leibniz Information Centre for Science and Technology** for scientific advice and support.
+This is a collaboration between **LAION** and **Inference.net**. We thank all contributors, especially **Tawsif Ratul** for data collection, and **Prof. Sören Auer**, **Dr. Gollam Rabby**, and the **TIB – Leibniz Information Centre for Science and Technology** for scientific advice and support.
 
 
 
