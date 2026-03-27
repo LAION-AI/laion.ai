@@ -19,4 +19,4 @@ LAION e.V. commits to implementing concrete measures and targets across the foll
 
 ## Implementation
 
-LAION e.V. will designate a responsible person or team to oversee GEP implementation, set measurable targets, and report on progress. This declaration will be reviewed and updated periodically to reflect evolving goals and outcomes.
+Until a responsible person or team is designated, the chairpersons will oversee the implementation of the GEP measures, set measurable targets, and report on progress. This declaration will be reviewed and updated periodically to reflect evolving goals and outcomes.
