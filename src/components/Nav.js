@@ -31,6 +31,7 @@ export default function Nav() {
           <Link href="/privacy-policy">Privacy Policy</Link>
           <Link href="/dataset-requests">Dataset Requests</Link>
           <Link href="/impressum">Impressum</Link>
+          <Link href="/gep-policy">GEP Policy</Link>
         </div>
       </div>
       <div className="child:mr-3 -ml-0.5 child:w-8 child:brightness-100 child:transition hidden md:flex">
@@ -165,6 +166,9 @@ function Hamburger() {
             </p>
             <p>
               <Link href="/impressum">Impressum</Link>
+            </p>
+            <p>
+              <Link href="/gep-policy">GEP Policy</Link>
             </p>
           </div>
           <div className="child:mr-3 pt-4 child:w-8 child:brightness-100 hover:child:brightness-90 child:transition flex">
