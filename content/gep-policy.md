@@ -1,7 +1,7 @@
 ---
 title: "GEP Policy"
 ---
-Gender Equality Plan (GEP) Declaration
+## Gender Equality Plan Declaration
 
 LAION e.V. is a non-profit association registered in Germany. In order to commitment to and foster a fair and inclusive research environment, we hereby adopt this Gender Equality Plan (GEP).
 
@@ -20,5 +20,3 @@ LAION e.V. commits to implementing concrete measures and targets across the foll
 ## Implementation
 
 LAION e.V. will designate a responsible person or team to oversee GEP implementation, set measurable targets, and report on progress. This declaration will be reviewed and updated periodically to reflect evolving goals and outcomes.
-
-LAION e.V.
