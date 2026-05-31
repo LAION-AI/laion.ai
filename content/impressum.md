@@ -24,13 +24,13 @@ E-Mail: contact@laion.ai
 
 ### Verantwortliche i.S.d. § 55 Abs. 2 RStV
 
-Christoph Schuhmann
-Marlowweg 26 c/o LAION e.V.
+Christoph Schuhmann, Robert Kaczmarczyk, Jenia Jitsev 
+Marlowring 26 c/o LAION e.V.
 22525 Hamburg
 
 ### Registereintrag
 
-Eintragung im Vereinsregister ist in Bearbeitung.
+Eintragung im Vereinsregister durch Amstgericht Hamburg, VR 25085.
 
 ### Haftungsausschluss
 
