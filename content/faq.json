@@ -22,5 +22,9 @@
   {
     "q": "Do your scripts respect robots.txt instructions?",
     "a": "Despite the “Crawling at Home” project name, we are not crawling websites to create the datasets. Common Crawl did the crawling part in the past, and they did respect the robots.txt instruction. We only analyse their data and then look at the pictures to assess their value concerning the provided alt text."
+  },
+  {
+    "q": "Please remove my original image / audio / video / or other media sample from your dataset.",
+    "a": "LAION datasets do not contain any original media samples such as images, audio, or video. They contain only metadata (e.g. captions or alt texts) and URL links pointing to the original content on the public web. Because no original samples are stored or distributed by LAION, there is nothing to remove from our datasets in this regard. Any organisation — not only LAION — is permitted under EU and German law (Art. 3 EU TDM exemption and §60d UrhG) to publish such collections of links to publicly accessible web content for research purposes. If you would like the content removed from the web entirely, you will need to contact the original hosting provider directly (e.g. YouTube, Vimeo). If your request concerns personal data covered by GDPR (e.g. your name or image appearing in a URL or associated metadata), please refer to the GDPR question above for the appropriate takedown process."
   }
 ]
