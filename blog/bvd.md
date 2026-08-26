@@ -1,6 +1,6 @@
 ---
 title: "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Research"
-author: "Andreas Hochlehnert"
+author: "Andreas Hochlehnert, Marianna Nezhurina, Mehdi Cherti, Andrej Radonjic, Thaddäus Wiedemer, Christoph Schuhmann, Romain Beaumont, Wieland Brendel, Bernhard Schölkopf, A. Sophia Koepke, Jenia Jitsev, Matthias Bethge"
 date: "Aug 26, 2026"
 previewImg: "/images/blog/bvd-preview.jpg"
 ---
