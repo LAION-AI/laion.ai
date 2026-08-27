@@ -79,7 +79,7 @@
         "status": "Released",
         "desc": "A large-scale open video dataset for multimodal learning, containing 1.3B platform-specific video URLs collected from CommonCrawl, 80M downloaded videos with a total duration of 10 million hours, 55 million captioned video clips, and 300 million captioned video frames.",
         "link": "/blog/bvd"
-      },
+      }
     ]
   },
   {
