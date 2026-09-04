@@ -537,6 +537,13 @@ git mv content src/content/pages
 git checkout main -- public
 git mv public/fonts src/assets/fonts     # fonts move into src/ for the Fonts API
 
+# Repo-level files that also live only on main (the branch was stripped to PLAN.md)
+git checkout main -- LICENSE FUNDING.yml README.md CONTRIBUTING.md .nojekyll
+#  NOT restored on purpose: next.config.js, postcss.config.js, tailwind.config.js,
+#  .eslintrc.json, package.json, package-lock.json (Astro supplies its own),
+#  sci.jpg, sci2.jpg (unused strays, 0.5 #10), .github/workflows/integrate.yml (Step 9),
+#  and src/ (the Next.js app — ported deliberately in Step 5, not copied)
+
 git commit -m "Move blog, notes, blog-de and content from main into Astro layout"
 ```
 
