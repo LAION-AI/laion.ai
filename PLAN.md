@@ -5,18 +5,23 @@
 Goal: rebuild https://laion.ai on a modern stack with a cleaner, more contemporary
 layout, **full parity with today's site**, plus functionality it never had.
 
-**Target stack:** Astro 7 · Tailwind CSS 4 · shadcn/ui (selectively) · Bun ·
-Formspark (kept) · GitHub Pages (kept).
+**Target stack:** Astro 7 · Sätteri (Rust markdown) · Tailwind CSS 4 ·
+shadcn/ui (selectively) · Bun · Formspark (kept) · GitHub Pages (kept).
 
 Steps 1–3 are the sequence originally requested: scaffold → move content → new
 functionality. Steps 4–11 carry it to a shippable site. Each step is meant to be one
 reviewable PR.
 
-> **Rev 2 changes:** Formspark is retained (it works and has built-in spam protection),
-> so there is no backend to build and no hosting migration — the site stays fully static
-> on GitHub Pages. Astro **7** replaces Astro 6, which changes the markdown pipeline
-> significantly (see §1.3). Bun and shadcn/ui are both adopted, with the trade-offs
-> spelled out in §1.2.
+> **Rev 3 changes:** the markdown pipeline is now **Sätteri** (`@astrojs/markdown-satteri`),
+> Astro 7's native Rust processor, rather than falling back to unified. Raw HTML turns out
+> to pass through fine in `.md` files, so nothing is *forced* to change — but we convert the
+> HTML that markdown can express anyway, because it unlocks image optimisation and removes
+> some genuinely fragile markup. §1.3 has the feature-flag decisions (including two flags
+> that would corrupt existing content), and Step 2.5 has the per-file conversion inventory.
+>
+> **Rev 2 changes:** Formspark is retained (it works and has built-in spam protection), so
+> there is no backend to build and no hosting migration — the site stays fully static on
+> GitHub Pages. Bun and shadcn/ui are both adopted, with the trade-offs in §1.2.
 
 ---
 
@@ -86,11 +91,12 @@ favicon + 6 font preloads).
 - `public/documents`: 3 PDFs + 1 standalone HTML report (592 KB) — URLs must keep working.
 - `public/fonts`: **Dinish** (Regular / Italic / Condensed-Bold, woff+woff2) loaded via a
   plain `public/fonts/load.css` and 6 manual `<link rel=preload>` tags.
-- **14 content files contain raw HTML** (`<div>`, `<img>`, `<iframe>` YouTube embed,
-  `<video>`, `<table>`, `<sup>`); 7 use fenced code blocks. No LaTeX/math, no footnote
-  syntax. One `previewImg` points at a **remote** `raw.githubusercontent.com` URL
-  (`notes/realfake.md`). *The raw HTML is the single biggest Astro 7 migration risk —
-  see §1.3.*
+- **16 content files contain raw HTML** — ~32 `<img>`, 38 `<sup>`, 5 HTML `<table>`s,
+  71 `<br>`, 5 `<center>`, one `<iframe>` (YouTube) and one `<video>`. 7 files use fenced
+  code blocks. No footnote syntax. Five files contain literal `$` characters, and two use
+  single `~` in prose (`~133h`, and `~user` in URLs) — both matter for §1.3's feature flags.
+  One `previewImg` points at a **remote** `raw.githubusercontent.com` URL (`notes/realfake.md`).
+  Full per-tag inventory and conversion plan: **Step 2.5**.
 
 ### 0.4 What is worth keeping
 
@@ -160,7 +166,7 @@ rewrite rather than filing separately.
 | Package manager / runner | **Bun** | Fastest install and script runner; see §1.2 |
 | Language | TypeScript (`strict`) | |
 | Content | **Content Collections** — `glob()` / `file()` loaders + Zod schemas | Build-time validation of all 48 posts and 6 JSON files |
-| Markdown | `@astrojs/markdown-remark` via `markdown.processor: unified()` | **Required for parity** — see §1.3 |
+| Markdown | **`@astrojs/markdown-satteri`** (`satteri()`) — Astro 7's native Rust pipeline | GFM, heading IDs, superscript, directives built in; ~60 % faster. See §1.3 |
 | Styling | **Tailwind CSS 4** (`@tailwindcss/vite`, CSS-first `@theme`) + `@tailwindcss/typography` | |
 | Components | **shadcn/ui**, selectively, on `@astrojs/react` | Themable primitives for the interactive parts; see §1.2 |
 | Images | `astro:assets` (sharp) | Responsive `srcset`, AVIF/WebP, lazy by default |
@@ -270,79 +276,118 @@ Also worth knowing: shadcn is copy-in, so we own the code and can delete React l
 we decide the interactive surface is small enough to hand-write. Adopting it is not a
 one-way door.
 
-### 1.3 Astro 7 changes the markdown pipeline — read this before Step 2
+### 1.3 Markdown: going with Sätteri
 
-This is the one genuinely load-bearing consequence of targeting Astro 7 (`7.3.1`,
-released 22 June 2026; requires Node ≥ 22.12.0).
+Astro 7 (`7.3.1`, released 22 June 2026; Node ≥ 22.12.0) replaced the default markdown
+processor with **Sätteri** — a Rust pipeline (pulldown-cmark for CommonMark, Oxc for MDX
+expressions) that is roughly 60 % faster and implements natively much of what previously
+needed plugins. **Decision: use it.** `@astrojs/markdown-satteri`, no unified fallback.
 
-**Astro 7 replaced the default markdown processor.** It is now **Sätteri**, a Rust
-pipeline (pulldown-cmark for CommonMark, Oxc for MDX expressions), and **remark/rehype
-plugins do not run under it.** Sätteri brings GFM, smart punctuation, heading IDs, math
-and container directives in natively, and it is dramatically faster — but the JS plugin
-ecosystem is not part of it, because MDAST/HAST plugins are JavaScript and a Rust pipeline
-can't execute them.
+The thing to know first, because it changes what "conversion" means here:
 
-What that means for this site:
+> **Raw HTML in `.md` files works under Sätteri.** Sätteri has an `html` MDAST node and it
+> renders under the `markdownToHtml` path — which is what Astro uses for `.md`. Raw HTML
+> only *throws* under `mdxToJs`, i.e. in `.mdx` files, which is normal MDX behaviour and
+> not something we do today (all 48 posts are `.md`).
 
-| Need | Under unified | Under Sätteri |
-|---|---|---|
-| Raw HTML in 14 content files (`<iframe>`, `<video>`, `<table>`, `<div>`, `<sup>`) | ✅ `rehype-raw` is a dependency of `@astrojs/markdown-remark` | **Unverified** — not documented either way |
-| GitHub-style heading anchors (today: `markdown-it-github-headings`) | ✅ `rehype-slug` + `rehype-autolink-headings` | Heading **IDs** built in; the clickable anchor link needs a HAST plugin |
-| External links → `target=_blank rel=noopener` | ✅ `rehype-external-links` | needs a HAST plugin |
-| GFM tables, code fences, Shiki highlighting | ✅ | ✅ built in |
+So none of the 16 raw-HTML files are *forced* to change. We convert the HTML that markdown
+can express anyway, because it earns its keep independently (Step 2.5) — and we keep the
+handful of constructs markdown genuinely cannot express.
 
-**Decision: start on the unified processor.** It is a documented, supported path in
-Astro 7 and it reproduces today's `markdown-it({html: true})` behaviour exactly — which
-matters because 14 of 48 files would break silently if raw HTML were dropped, and the
-YouTube `<iframe>` in `do-they-see-what-we-see.md` and the `<video>` in
-`video2dataset.md` are the kind of thing nobody notices is missing until a reader
-complains.
+#### Feature flags
 
-```js
-// astro.config.mjs
-import { unified } from '@astrojs/markdown-remark';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeExternalLinks from 'rehype-external-links';
+Sätteri is configured with explicit feature flags. Defaults matter here, and two of them
+would corrupt existing content if flipped:
 
-export default defineConfig({
-  markdown: {
-    // Astro 7's default is Sätteri; opt back into unified for raw-HTML + plugin parity.
-    processor: unified({
-      gfm: true,
-      smartypants: true,
-      rehypePlugins: [
-        rehypeSlug,
-        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-        [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
-      ],
-    }),
-    shikiConfig: { theme: 'github-dark', wrap: true },
+| Flag | Default | Set to | Why |
+|---|---|---|---|
+| `gfm` | `true` | **`true`** | Tables, strikethrough, task lists, footnotes, autolinks. Already relied on |
+| `frontmatter` | `true` | **`true`** | All 48 posts |
+| `rawHtml` | `false` | **`true`** | Reparses raw HTML into HAST elements instead of leaving it as an opaque string, so our HAST plugins (external links, and later image handling) see *inside* the raw HTML too. Without it the HTML still renders — it is just invisible to plugins |
+| `superscript` | `false` | **`true`** | `^text^` → `<sup>`. Lets 38 `<sup>` tags become markdown (Step 2.5) |
+| `directive` | `false` | **`true`** | `:::name` containers — the clean way to handle the YouTube and video embeds |
+| `subscript` | `false` | **`false`** ⚠️ | **Would corrupt content.** `~text~` → `<sub>`, and prose uses single tildes: `(~133h), Valley Girl (~159h)` in `do-they-see-what-we-see.md` would become a subscript. It also disables single-tilde strikethrough. We have no subscripts. Leave off |
+| `math` | `false` | **`false`** ⚠️ | Five files contain literal `$`. Nothing today renders as math (`markdown-it` has no math), so turning it on would change existing pages. Leave off; if math is ever wanted, audit those five files first |
+| `smartPunctuation` | `false` | **`false`** (for now) | Today's `markdown-it({html:true})` has `typographer` off, so parity = off. Turning it on is a nice-to-have that changes quotes and dashes across all 48 posts — do it as its own visible commit, not silently inside the rewrite |
+| `headingAttributes`, `wikilinks`, `definitionList` | `false` | `false` | Unused |
+
+Heading **IDs** are generated by Astro's Sätteri processor itself (it depends on
+`github-slugger`), so deep links into articles keep working.
+
+#### The two plugins to port
+
+Sätteri's plugin API is not compatible with remark/rehype — the AST shapes match MDAST and
+HAST, but the plugins themselves must be rewritten. We need exactly two, both small, and
+both have public precedent from people who migrated in 2026:
+
+1. **Heading anchor links** — replaces `markdown-it-github-headings`. IDs are already
+   there; this wraps the heading text in an `<a href="#id">`.
+2. **External links** — `target="_blank" rel="noopener noreferrer"` on off-site links.
+
+```ts
+// src/plugins/markdown.ts
+import { defineHastPlugin } from 'satteri';
+
+export const headingAnchors = defineHastPlugin({
+  name: 'heading-anchors',
+  element: { tagName: ['h2', 'h3', 'h4', 'h5', 'h6'] },
+  visit(node) {
+    const id = node.properties?.id;
+    if (!id) return;
+    node.children = [{
+      type: 'element', tagName: 'a',
+      properties: { href: `#${id}`, class: 'heading-anchor' },
+      children: node.children,
+    }];
+  },
+});
+
+export const externalLinks = defineHastPlugin({
+  name: 'external-links',
+  element: { tagName: 'a' },
+  visit(node) {
+    const href = String(node.properties?.href ?? '');
+    if (!/^https?:\/\//.test(href) || href.includes('laion.ai')) return;
+    node.properties.target = '_blank';
+    node.properties.rel = 'noopener noreferrer';
   },
 });
 ```
 
-Note the top-level `markdown.remarkPlugins` / `rehypePlugins` / `gfm` / `smartypants`
-options still work but are **deprecated and will be removed in Astro 8** — configure them
-inside `unified({...})` as above, not at the top level.
+*(Exact visitor signature per Sätteri's plugin API — `defineHastPlugin` / `defineMdastPlugin`
+with per-node-type visitors. Verify against the docs when writing them; the shape above is
+the intent, not a copy-paste.)*
 
-**Sätteri is a fast-follow, not a blocker.** Once the site is live, evaluate switching:
-build 48 files, diff the rendered HTML against the unified output, and port the two
-missing behaviours (heading anchors, external links) as HAST plugins. Two things to weigh:
-`satteri` is at `0.10.x` and `@astrojs/markdown-satteri` at `0.4.0` — young for the
-pipeline that renders every page of the site — and at 48 documents our build is not
-slow enough for the speed to matter yet. Revisit when either changes.
+Optionally a third, once the embeds are converted: a `:::youtube{id=…}` / `:::video{src=…}`
+directive handler, so the two embeds become one-liners in markdown instead of raw HTML —
+and get lazy-loading and a proper aspect-ratio wrapper for free.
 
-**Two more Astro 7 behaviours to expect while porting (Step 5):**
+#### Risk and the fallback
+
+Being honest about maturity: `satteri` is at `0.10.x` and `@astrojs/markdown-satteri` at
+`0.4.0`. It is Astro 7's default and therefore heavily exercised, but it is young for the
+component that renders every page of the site. The mitigation is cheap and belongs in
+Step 2: **render all 48 posts under Sätteri and diff the HTML against the current
+production output.** That diff is the acceptance test for this decision.
+
+The fallback, if the diff turns up something structural we can't live with, is one config
+change — `bun add @astrojs/markdown-remark` and `processor: unified({ rehypePlugins: [...] })`,
+using off-the-shelf `rehype-slug` / `rehype-autolink-headings` / `rehype-external-links`
+instead of the two ported plugins. Worth knowing it exists; not the plan.
+
+Note also that the top-level `markdown.remarkPlugins` / `rehypePlugins` / `gfm` /
+`smartypants` options are deprecated and **removed in Astro 8** — everything goes through
+`markdown.processor` now, which is the direction we're already heading.
+
+#### Two more Astro 7 behaviours to expect while porting (Step 5)
 
 - The Rust `.astro` compiler is **stricter**: unclosed tags now error and invalid HTML
   nesting is no longer silently corrected. Hand-porting JSX will surface latent markup
-  bugs — that is a feature, but budget for it.
-- `compressHTML` now defaults to `'jsx'`, which collapses whitespace the way React does.
-  Spaces between inline elements can disappear; add explicit `{" "}` where it matters
-  (the nav and inline article links are where this will show up).
-- `@astrojs/db` was removed in Astro 7 — irrelevant now that we're keeping Formspark, but
-  worth knowing if a database is ever proposed.
+  bugs — a feature, but budget for it.
+- `compressHTML` now defaults to `'jsx'`, collapsing whitespace the way React does. Spaces
+  between inline elements can disappear; add explicit `{" "}` where it matters (the nav and
+  inline article links are where this shows up).
+- `@astrojs/db` was removed in Astro 7 — irrelevant now that we're keeping Formspark.
 - Astro ships an upgrade tool: `bunx @astrojs/upgrade`. Useful later, not for a fresh scaffold.
 
 ---
@@ -359,23 +404,25 @@ for side-by-side comparison:
 bun create astro@latest ./astro-tmp -- --template minimal --typescript strict --no-install --no-git
 ```
 
-Move it into place and remove the Next.js app in the same commit:
+Move it into place. The `astro-rewrite` branch is already stripped to `PLAN.md` alone —
+the Next.js app, content and assets live on `main` and come across deliberately in Step 2 —
+so there is nothing to delete here:
 
 ```bash
 cd /Users/robert/Developer/laion/laion.ai
 rsync -a astro-tmp/ ./ && rm -rf astro-tmp
-git rm -r --cached src next.config.js postcss.config.js tailwind.config.js .eslintrc.json package-lock.json
-rm -rf src/pages src/components src/api next.config.js postcss.config.js tailwind.config.js .eslintrc.json package-lock.json
-rm -f sci.jpg sci2.jpg                 # unused root strays (0.5 #10)
 bun install
 ```
+
+Note the two unused root strays (`sci.jpg`, `sci2.jpg` — 0.5 #10) are already gone with
+the branch cleanup, and must **not** be brought back in Step 2.
 
 Integrations:
 
 ```bash
 bunx astro add tailwind mdx react sitemap --yes
 bun add @astrojs/rss astro-pagefind @tailwindcss/typography
-bun add @astrojs/markdown-remark rehype-slug rehype-autolink-headings rehype-external-links   # §1.3
+bun add @astrojs/markdown-satteri            # §1.3 — Astro 7's native Rust markdown pipeline
 bun add -d prettier prettier-plugin-astro eslint eslint-plugin-astro @astrojs/check typescript @types/bun
 ```
 
@@ -401,10 +448,8 @@ import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import pagefind from 'astro-pagefind';
-import { unified } from '@astrojs/markdown-remark';
-import rehypeSlug from 'rehype-slug';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeExternalLinks from 'rehype-external-links';
+import { satteri } from '@astrojs/markdown-satteri';
+import { headingAnchors, externalLinks } from './src/plugins/markdown';
 
 export default defineConfig({
   site: 'https://laion.ai',
@@ -417,14 +462,18 @@ export default defineConfig({
   image: { domains: ['raw.githubusercontent.com'] },
 
   markdown: {
-    processor: unified({          // §1.3 — parity for raw HTML + plugins
-      gfm: true,
-      smartypants: true,
-      rehypePlugins: [
-        rehypeSlug,
-        [rehypeAutolinkHeadings, { behavior: 'wrap' }],
-        [rehypeExternalLinks, { target: '_blank', rel: ['noopener', 'noreferrer'] }],
-      ],
+    processor: satteri({
+      features: {                 // §1.3 — every flag is a deliberate choice
+        gfm: true,
+        frontmatter: true,
+        rawHtml: true,            // reparse raw HTML into HAST so plugins see inside it
+        superscript: true,        // ^text^ replaces 38 <sup> tags
+        directive: true,          // :::youtube / :::video containers
+        subscript: false,         // WOULD CORRUPT PROSE: "(~133h)" -> subscript
+        math: false,              // 5 files contain literal '$'
+        smartPunctuation: false,  // parity with today's markdown-it; flip in its own commit
+      },
+      hastPlugins: [headingAnchors, externalLinks],
     }),
     shikiConfig: { theme: 'github-dark', wrap: true },
   },
@@ -459,6 +508,9 @@ export default defineConfig({
 - [ ] **`bunx shadcn@latest add button` works**, and a `<Button client:idle />` renders in
       LAION colours from the token mapping, not shadcn's defaults
 - [ ] `npm run build` also works (contributor fallback, no Bun required)
+- [ ] **Sätteri renders a scratch `.md` file** containing a GFM table, a `^superscript^`,
+      a fenced code block, a raw `<br>` inside a table cell and a raw `<iframe>` — all five
+      survive. This validates §1.3's flags before any real content depends on them
 
 If sharp or pagefind fails under Bun, switch CI's build step to Node and keep
 `bun install` — decide it here, not in Step 9.
@@ -575,18 +627,94 @@ const press        = defineCollection({
 export const collections = { blog, notes, blogDe, pages, team, projects, faq, privacy, datasetIntro, press };
 ```
 
-**Exit criteria — plus the §1.3 markdown-parity gate, which belongs here:**
+**Exit criteria — plus the §1.3 markdown gate, which belongs here:**
 
 - [ ] `bunx astro check && bun run build` passes with all 48 posts and 6 JSON files
       validating. Any schema failure is a real content bug — fix the content, not the schema.
-- [ ] Render all 14 raw-HTML files and diff against production: the YouTube `<iframe>`
-      (`do-they-see-what-we-see.md`), the `<video>` (`video2dataset.md`), `<table>`,
-      `<div>`, `<sup>`, `<img>` all present and rendering.
+- [ ] **Render all 48 posts and diff the HTML against current production.** This is the
+      acceptance test for the Sätteri decision (§1.3). Script it: build `main`
+      (`npm run deploy`), build the branch, and diff the article bodies file by file.
 - [ ] Heading anchors work on all 48 posts (today's `markdown-it-github-headings`
       behaviour) — deep links into long articles are in circulation.
 - [ ] All 7 code-fenced files highlight via Shiki.
-- [ ] Optional, cheap, worth doing now: build once with `satteri()` instead of
-      `unified()` and record what breaks. That is the data the §1.3 fast-follow needs.
+- [ ] The 16 raw-HTML files render: the YouTube `<iframe>`, the `<video>`, all 5 HTML
+      tables, the `<br>`s inside table cells, `<sup>`, `<img>`.
+- [ ] Spot-check that `$` still renders literally (5 files) and single `~` is untouched
+      (`~133h`, `~user` in URLs) — the two flags we deliberately left off.
+
+---
+
+## Step 2.5 — Convert the HTML in markdown to markdown
+
+Raw HTML *works* under Sätteri (§1.3), so this step is elective — but most of it is worth
+doing on its own merits, and it is best done here, before any layout work depends on how
+the content renders. Do it as one PR per category so the HTML diff stays reviewable, and
+keep the Step 2 production diff green throughout.
+
+**Why bother, given it renders fine:**
+
+1. **`<img>` → `![]()` is the prerequisite for image optimisation.** `astro:assets` can
+   only touch markdown images. 32 raw `<img>` tags are 32 images permanently excluded from
+   the AVIF/WebP/responsive pipeline in Step 6 — including the two largest figures on the site.
+2. **Some of it is genuinely fragile.** `notes/summaries.md` wraps figures in
+   `<p align="center">` blocks that contain an unclosed `<img>`, then a blank line, then a
+   GFM table and markdown emphasis, then a closing `</p>`. Per CommonMark, the blank line
+   ends the HTML block — so that markup only works because browsers recover from broken
+   HTML. It is one whitespace edit away from rendering wrong, in any parser.
+3. **`<center>` has been obsolete for two decades** and is doing layout that belongs in CSS.
+4. **Contributors write markdown, not HTML.** Every HTML block is a thing the next
+   researcher has to imitate rather than just write.
+
+### Per-file inventory
+
+| File | Convert | Keep as raw HTML |
+|---|---|---|
+| `notes/summaries.md` | **4 `<p align="center">` wrappers + 4 `<img>`** — highest priority, see #2 above | — |
+| `blog/laion-coco.md` | 8 `<img>` | — |
+| `blog/paella.md` | 5 `<img>`, 1 `<figure>`/`<figcaption>` | 17 `<br>` |
+| `blog/bvd.md` | 4 `<img>`, 4 `<figure>`/`<figcaption>`, 4 `<strong>` | 1 `<br>` |
+| `blog/laion-pop.md` | 1 `<img>` | — |
+| `blog/coca.md` | 2 `<img>` | **3 `<table>`** — uses `colspan`/`rowspan`, which GFM cannot express |
+| `blog/open-flamingo.md` | **2 `<table>`** (36 `<td>`, no spans) → GFM tables | — |
+| `blog/open-sci-ref-001.md` | 26 `<sup>` → `^…^` | **47 `<br>`** — multi-line GFM table cells; markdown has no in-cell line break |
+| `blog/leo-lm.md` | 4 `<sup>` → `^…^` | — |
+| `blog-de/leo-lm.md` | 4 `<sup>` → `^…^` | — |
+| `notes/admin_bud-e.md` | 4 `<img>`, 7 `<a>`, 5 `<strong>`, 5 `<em>`, 2 `<li>`, 1 `<ol>`, 2 `<sup>` | 3 `<br>` |
+| `blog-de/admin_bud-e.md` | same as above (it is the German translation of the same file) | 3 `<br>` |
+| `notes/general-gpt.md` | 2 `<img>`, 2 `<center>` | — |
+| `notes/cpretrain.md` | 3 `<center>` | — |
+| `blog/do-they-see-what-we-see.md` | 1 `<iframe>` + 2 `<div>` → `:::youtube{id="TsTVKCmqHhk"}` | (or keep the raw `<iframe>` — both work) |
+| `blog/video2dataset.md` | 1 `<video>`/`<source>` → `:::video{src="…"}` | (or keep the raw `<video>`) |
+
+### Conversion rules
+
+| From | To | Notes |
+|---|---|---|
+| `<img src alt>` | `![alt](src)` | Drop inline `style` — width/centering belongs in the article CSS (Step 4). This is what unlocks Step 6 |
+| `<figure>` + `<figcaption>` | markdown image on its own line + `*italic caption*` beneath | Matches the existing `h6`/italic caption convention already in `globals.css`; or a `:::figure` directive if we want real `<figure>` semantics |
+| `<sup>x</sup>` | `^x^` | Needs `superscript: true` (§1.3). 38 occurrences, mostly scientific notation in tables (`10^8^`) and author affiliation markers |
+| `<center>` | delete; add a `text-center` class or `:::center` directive | Obsolete element |
+| `<p align="center">` wrapper | delete the wrapper entirely | The images and tables inside stand on their own |
+| `<strong>` / `<em>` / `<a href>` / `<ol>` / `<li>` | `**` / `*` / `[]()` / `1.` / `-` | Straight mechanical translation |
+| `<table>` without spans | GFM table | `open-flamingo.md` only |
+| `<table>` with `colspan`/`rowspan` | **keep** | GFM has no cell spans. `coca.md`'s 3 tables |
+| `<br>` inside a table cell | **keep** | The standard idiom; there is no markdown alternative inside a GFM cell |
+| `<iframe>` / `<video>` | `:::youtube{…}` / `:::video{…}` + a directive plugin | Needs `directive: true`. Gains lazy-loading and an aspect-ratio wrapper. Keeping the raw HTML is also fine |
+
+### How to do it safely
+
+- **One category per commit** (`<img>` first, then `<sup>`, then the two convertible
+  tables, then `<center>`/`<p>` wrappers, then the embeds). Small, reviewable diffs.
+- **Diff the rendered HTML after each commit**, not just the markdown. The Step 2 diff
+  script is the tool; a conversion that changes the output is a conversion done wrong.
+- **`blog-de/admin_bud-e.md` and `blog-de/leo-lm.md` are translations of English files** —
+  convert both sides together so they don't drift.
+- **Never touch content inside fenced code blocks.** `notes/summaries.md` contains
+  `"score": <integer 1-5>` inside a ```json fence — that is sample JSON, not HTML, and it
+  is safe today precisely because it is fenced. A careless regex would eat it.
+- **Do not convert to `.mdx`.** Raw HTML throws under MDX (§1.3), so any file we move to
+  `.mdx` must have *all* of its raw HTML removed first — and 8 files legitimately keep some.
+  Stay on `.md`.
 
 ---
 
@@ -777,8 +905,10 @@ find src/content -name '*.md' -exec sed -i '' 's|](/images/|](../../assets/image
 
 Phase B is the bigger win (131 MB → likely under 30 MB served) but it touches all 48
 content files and changes where contributors upload images, so it needs a README update
-(Appendix B) and its own review. Note it does **not** help the raw `<img>` tags inside
-the 14 raw-HTML files — those need hand-editing or leaving on absolute paths.
+(Appendix B) and its own review. **Step 2.5 is its prerequisite:** `astro:assets` can only
+optimise markdown images, so the 32 raw `<img>` tags have to become `![]()` first —
+otherwise those images (including the two largest figures on the site) stay unoptimised
+no matter what Phase B does.
 
 ---
 
@@ -862,9 +992,11 @@ diffs blind. That is the one thing GitHub Pages genuinely doesn't give us.
 ## Step 10 — QA gates before cutover
 
 - [ ] `bunx astro check` clean, `bun run build` clean, no console errors on any page
-- [ ] **Markdown parity (§1.3):** all 48 posts render; the 14 raw-HTML files keep their
-      `<iframe>` / `<video>` / `<table>` / `<div>` / `<sup>`; heading anchors work; all 7
-      code-fenced files highlight
+- [ ] **Markdown parity (§1.3, Step 2.5):** all 48 posts diffed against production output.
+      Superscripts render (38, now `^…^`); the kept raw HTML still renders (`<iframe>`,
+      `<video>`, `coca.md`'s 3 span-using tables, 71 in-cell `<br>`s); heading anchors work;
+      all 7 code-fenced files highlight; `$` still literal in 5 files; single `~` untouched
+- [ ] Every converted image (32) resolves and, after Step 6 Phase B, is actually optimised
 - [ ] Whitespace check after the `compressHTML: 'jsx'` change — nav items and inline links
       not run together
 - [ ] Every URL from the current build resolves (Step 8 script)
@@ -923,6 +1055,7 @@ Simpler than a hosting migration: same host, same DNS, same domain.
 │   │   └── *.astro        Header, MobileNav, Footer, PostCard, TeamCard,
 │   │                      ProjectCard, Hero, Toc, DatasetRequestForm
 │   ├── config/nav.ts      # single nav source of truth
+│   ├── plugins/markdown.ts # Sätteri HAST plugins: heading anchors, external links (§1.3)
 │   ├── pages/             # Step 5 matrix
 │   └── styles/global.css  # @theme tokens + shadcn variables + prose
 ├── public/                images (Phase A), documents, favicons, social.png,
@@ -942,6 +1075,9 @@ Must stay true after the rewrite: *"add a markdown file to `src/content/blog/` w
   instead of silently breaking the build (cf. `main`'s last commit, *"fix json syntax error"*).
 - Every PR gets a preview URL to check before merge.
 - Images: `public/images/blog/` in Phase A; `src/assets/images/blog/` after Phase B.
+- Write images as `![alt](path)`, not `<img>` — markdown images get optimised, raw HTML
+  ones don't (Step 2.5). Superscript is `^text^`. Raw HTML still works where markdown
+  can't express something (cell line breaks, tables with merged cells, embeds).
 - Bun is optional for contributors — `npm run build` still works. Only CI and the core
   maintainers need Bun.
 
@@ -951,7 +1087,7 @@ Must stay true after the rewrite: *"add a markdown file to `src/content/blog/` w
 |---|---|
 | `next`, `react-dom` (as a framework) | `astro` |
 | `next-image-export-optimizer` | `astro:assets` (sharp) |
-| `gray-matter`, `markdown-it`, `markdown-it-github-headings` | content collections + `@astrojs/markdown-remark` (`unified()`) + `rehype-slug`/`rehype-autolink-headings` |
+| `gray-matter`, `markdown-it`, `markdown-it-github-headings` | content collections + `@astrojs/markdown-satteri` (`satteri()`); heading anchors and external links as two small Sätteri HAST plugins (§1.3) |
 | `framer-motion` | `astro:transitions` (`<ClientRouter />`) + CSS |
 | `react-slideshow-image` | CSS crossfade + `astro:assets` |
 | `react-burger-menu` | shadcn `sheet` |
@@ -974,5 +1110,9 @@ Must stay true after the rewrite: *"add a markdown file to `src/content/blog/` w
 5. Analytics: none, Cloudflare Web Analytics, or self-hosted Umami.
 6. PR preview deploys: Cloudflare Pages, Netlify, or none (production stays GitHub Pages
    either way).
-7. Sätteri fast-follow (§1.3): revisit after launch, once the Step 2 experiment says what
-   would break.
+7. `smartPunctuation` (§1.3): leave off for parity, or turn it on as its own commit and
+   accept changed quotes/dashes across all 48 posts.
+8. The two embeds (Step 2.5): `:::youtube` / `:::video` directives, or keep the raw
+   `<iframe>` / `<video>`. Directives are nicer and cost one small plugin.
+9. How far to take Step 2.5 — all categories, or just the `<img>` conversion that Step 6
+   depends on.
