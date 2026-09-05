@@ -1,0 +1,408 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PostCard from '../components/PostCard.astro';
+import { sortPosts } from '../lib/content';
+
+const latest = sortPosts(await getCollection('blog')).slice(0, 3);
+---
+
+<BaseLayout>
+  <section class="hero">
+    <div class="shell hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow">Open research · Non-profit · Community-driven</p>
+        <div class="wordmark">
+          <h1>LAION</h1><img src="/images/logo.svg" alt="LAION logo" width="96" height="96" />
+        </div>
+        <p class="strap">Large-scale Artificial Intelligence Open Network</p>
+        <h2>Open AI research should belong to everyone.</h2>
+        <p class="intro">
+          We provide datasets, tools, and models to liberate machine-learning research, encourage
+          public education, and make better use of shared resources.
+        </p>
+        <div class="actions">
+          <a class="button" href="/projects">Explore our work</a><a
+            class="button secondary"
+            href="/donations">Support LAION</a
+          >
+        </div>
+      </div>
+      <div class="gallery" aria-label="A selection of images from the LAION community">
+        <picture class="image image-one"
+          ><source srcset="/images/gallery/dragon.avif" type="image/avif" /><source
+            srcset="/images/gallery/dragon.webp"
+            type="image/webp"
+          /><img src="/images/gallery/dragon.jpg" alt="A vivid AI-generated dragon" /></picture
+        >
+        <picture class="image image-two"
+          ><source srcset="/images/gallery/painting.avif" type="image/avif" /><source
+            srcset="/images/gallery/painting.webp"
+            type="image/webp"
+          /><img
+            src="/images/gallery/painting.jpg"
+            alt="An expressive AI-generated painting"
+          /></picture
+        >
+        <picture class="image image-three"
+          ><source srcset="/images/gallery/fox.avif" type="image/avif" /><source
+            srcset="/images/gallery/fox.webp"
+            type="image/webp"
+          /><img src="/images/gallery/fox.jpg" alt="An AI-generated fox in a landscape" /></picture
+        >
+        <span class="gallery-note">Images from open<br />machine-learning research</span>
+      </div>
+    </div>
+  </section>
+
+  <a class="announcement" href="/blog/relaion-5b"
+    ><span>Latest release</span><strong>Re-LAION-5B</strong><span class="arrow" aria-hidden="true"
+      >↗</span
+    ></a
+  >
+
+  <section class="numbers shell" aria-label="LAION at a glance">
+    <div><strong>5.85B</strong><span>image-text pairs in LAION-5B</span></div>
+    <div><strong>100%</strong><span>non-profit and open</span></div>
+    <div><strong>Global</strong><span>community of researchers</span></div>
+  </section>
+
+  <section class="work">
+    <div class="shell section-head">
+      <div><p class="eyebrow">What we build</p><h2>Public infrastructure for open AI.</h2></div><a
+        href="/projects">View all projects →</a
+      >
+    </div>
+    <div class="shell work-grid">
+      <a href="/blog/laion-5b"
+        ><span>01 / Dataset</span><h3>LAION-5B</h3><p>
+          5.85 billion multilingual, CLIP-filtered image-text pairs for open research.
+        </p></a
+      >
+      <a href="/blog/large-openclip"
+        ><span>02 / Model</span><h3>OpenCLIP</h3><p>
+          Large-scale open implementations and models for contrastive language-image training.
+        </p></a
+      >
+      <a href="/blog/laion-aesthetics"
+        ><span>03 / Dataset</span><h3>LAION-Aesthetics</h3><p>
+          Open subsets filtered with models trained to estimate visual aesthetics.
+        </p></a
+      >
+      <a href="/blog/bud-e-release"
+        ><span>04 / Education</span><h3>BUD-E</h3><p>
+          An open conversational AI assistant designed to make education more accessible.
+        </p></a
+      >
+    </div>
+  </section>
+
+  <section class="latest shell">
+    <div class="section-head">
+      <div><p class="eyebrow">From the network</p><h2>Latest from LAION.</h2></div><a href="/blog"
+        >Read the blog →</a
+      >
+    </div>
+    <div class="latest-grid">{latest.map((post) => <PostCard post={post} basePath="blog" />)}</div>
+  </section>
+
+  <section class="principles">
+    <div class="shell principles-grid">
+      <p class="eyebrow">Why open?</p><h2>Knowledge grows when it is shared.</h2><div>
+        <p>
+          LAION exists to broaden access to large-scale machine-learning research. We make reusable
+          resources public so more people can inspect, improve, and learn from them.
+        </p><a class="button light" href="/about">About LAION</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .hero {
+    overflow: hidden;
+    padding: clamp(3rem, 7vw, 6.5rem) 0;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.12fr 0.88fr;
+    gap: clamp(2rem, 7vw, 7rem);
+    align-items: center;
+  }
+  .wordmark {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.7rem, 2vw, 1.5rem);
+  }
+  .wordmark h1 {
+    margin: 0;
+    font-size: clamp(5.5rem, 13vw, 10.5rem);
+    font-weight: 900;
+    letter-spacing: -0.07em;
+    line-height: 0.72;
+  }
+  .wordmark img {
+    width: clamp(3.8rem, 8vw, 7rem);
+    filter: brightness(0) saturate(100%) invert(13%) sepia(21%) saturate(1576%) hue-rotate(164deg)
+      brightness(92%) contrast(93%);
+  }
+  .strap {
+    margin: 1.2rem 0 3.2rem;
+    color: #536778;
+    font-size: 0.95rem;
+    font-style: italic;
+  }
+  .hero h2 {
+    max-width: 42rem;
+    margin: 0;
+    font-size: clamp(2.4rem, 5vw, 4.8rem);
+    letter-spacing: -0.048em;
+    line-height: 0.94;
+  }
+  .intro {
+    max-width: 39rem;
+    margin: 1.5rem 0;
+    font-size: 1.15rem;
+  }
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+  .gallery {
+    position: relative;
+    min-height: 38rem;
+  }
+  .image {
+    position: absolute;
+    display: block;
+    overflow: hidden;
+    box-shadow: 0 24px 65px rgba(16, 40, 61, 0.2);
+  }
+  .image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image-one {
+    top: 0;
+    right: 0;
+    width: 78%;
+    aspect-ratio: 4 / 5;
+  }
+  .image-two {
+    top: 24%;
+    left: 0;
+    width: 48%;
+    aspect-ratio: 1;
+    border: 0.55rem solid var(--paper);
+  }
+  .image-three {
+    right: 2%;
+    bottom: -3%;
+    width: 42%;
+    aspect-ratio: 4 / 3;
+    border: 0.55rem solid var(--paper);
+  }
+  .gallery-note {
+    position: absolute;
+    bottom: 1rem;
+    left: 0;
+    max-width: 9rem;
+    color: #637684;
+    font-size: 0.68rem;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  .announcement {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 1rem max(1rem, calc((100vw - 78rem) / 2));
+    background: var(--accent);
+    text-decoration: none;
+  }
+  .announcement > span:first-child {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .announcement strong {
+    font-size: 1.25rem;
+  }
+  .announcement .arrow {
+    justify-self: end;
+    font-size: 1.4rem;
+  }
+  .numbers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-block: 4.5rem;
+  }
+  .numbers div {
+    display: flex;
+    flex-direction: column;
+    min-height: 8rem;
+    padding-inline: 2rem;
+    border-right: 1px solid var(--line);
+  }
+  .numbers div:first-child {
+    padding-left: 0;
+  }
+  .numbers div:last-child {
+    border: 0;
+  }
+  .numbers strong {
+    font-size: clamp(2.7rem, 6vw, 5rem);
+    letter-spacing: -0.05em;
+    line-height: 1;
+  }
+  .numbers span {
+    margin-top: auto;
+    color: #607383;
+  }
+  .work {
+    padding: 6rem 0;
+    background: var(--mist);
+  }
+  .section-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+  }
+  .section-head h2 {
+    max-width: 48rem;
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 5.3rem);
+    line-height: 0.92;
+    letter-spacing: -0.05em;
+  }
+  .section-head > a {
+    flex: none;
+    font-weight: 700;
+    text-underline-offset: 0.2em;
+  }
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+  .work-grid a {
+    min-height: 19rem;
+    padding: clamp(1.4rem, 4vw, 2.8rem);
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+  .work-grid a:hover {
+    background: var(--ink);
+    color: white;
+  }
+  .work-grid span {
+    color: #6d7e8a;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .work-grid h3 {
+    margin: 3.5rem 0 0.7rem;
+    font-size: clamp(2.4rem, 5vw, 4.3rem);
+    letter-spacing: -0.045em;
+    line-height: 0.9;
+  }
+  .work-grid p {
+    max-width: 30rem;
+  }
+  .latest {
+    padding-block: 6rem;
+  }
+  .latest-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+  .principles {
+    padding: 6.5rem 0;
+    background: var(--ink);
+    color: white;
+  }
+  .principles .eyebrow {
+    color: #95a6b3;
+  }
+  .principles-grid {
+    display: grid;
+    grid-template-columns: 0.35fr 1.2fr 0.65fr;
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+  .principles h2 {
+    margin: 0;
+    font-size: clamp(3rem, 7vw, 6.5rem);
+    letter-spacing: -0.055em;
+    line-height: 0.88;
+  }
+  .principles-grid > div p {
+    margin: 0 0 2rem;
+    color: #c1ccd4;
+    font-size: 1.15rem;
+  }
+  @media (max-width: 900px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+    }
+    .gallery {
+      min-height: 32rem;
+    }
+    .latest-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+    .latest-grid :global(article:last-child) {
+      display: none;
+    }
+    .principles-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 640px) {
+    .gallery {
+      min-height: 25rem;
+    }
+    .numbers {
+      grid-template-columns: 1fr;
+    }
+    .numbers div {
+      min-height: 7rem;
+      padding: 1.3rem 0;
+      border-right: 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .work-grid {
+      grid-template-columns: 1fr;
+    }
+    .section-head {
+      align-items: start;
+      flex-direction: column;
+    }
+    .latest-grid {
+      grid-template-columns: 1fr;
+    }
+    .latest-grid :global(article:last-child) {
+      display: grid;
+    }
+    .announcement {
+      grid-template-columns: 1fr auto;
+    }
+    .announcement > span:first-child {
+      display: none;
+    }
+  }
+</style>

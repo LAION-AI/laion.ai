@@ -1,0 +1,112 @@
+---
+interface Item {
+  q: string;
+  a: string;
+}
+interface Props {
+  items: Item[];
+  collapsible?: boolean;
+}
+const { items, collapsible = true } = Astro.props;
+---
+
+<div class:list={['questions', { open: !collapsible }]}>
+  {
+    items.map((item, index) =>
+      collapsible ? (
+        <details open={index === 0}>
+          <summary>
+            <>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h2>{item.q}</h2>
+              <b aria-hidden="true">+</b>
+            </>
+          </summary>
+          <p>{item.a}</p>
+        </details>
+      ) : (
+        <section>
+          <div class="number">{String(index + 1).padStart(2, '0')}</div>
+          <div>
+            <>
+              <h2>{item.q}</h2>
+              <p>{item.a}</p>
+            </>
+          </div>
+        </section>
+      ),
+    )
+  }
+</div>
+<style>
+  .questions {
+    border-top: 1px solid var(--line);
+  }
+  details {
+    border-bottom: 1px solid var(--line);
+  }
+  summary {
+    display: grid;
+    grid-template-columns: 3rem 1fr 2rem;
+    gap: 1rem;
+    align-items: start;
+    padding: 1.6rem 0;
+    list-style: none;
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary span,
+  .number {
+    padding-top: 0.25rem;
+    color: #748591;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 3vw, 2rem);
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+  }
+  summary b {
+    font-size: 1.6rem;
+    font-weight: 400;
+    transition: transform 0.2s ease;
+  }
+  details[open] summary b {
+    transform: rotate(45deg);
+  }
+  details > p {
+    max-width: 50rem;
+    margin: -0.4rem 3rem 2rem 4rem;
+    color: #425b6e;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 2.2rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section p {
+    max-width: 52rem;
+    margin: 0.8rem 0 0;
+    color: #425b6e;
+  }
+  @media (max-width: 520px) {
+    summary,
+    section {
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: 0.6rem;
+    }
+    summary b {
+      display: none;
+    }
+    details > p {
+      margin-left: 2.6rem;
+    }
+  }
+</style>

@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from '../../components/PageHero.astro';
+import PostIndex from '../../components/PostIndex.astro';
+import { collectionMeta, sortPosts } from '../../lib/content';
+const meta = collectionMeta.blog;
+const posts = sortPosts(await getCollection('blog'));
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <PageHero eyebrow={meta.eyebrow} title={meta.title} intro={meta.description} />
+  <PostIndex posts={posts} basePath={meta.path} />
+</BaseLayout>

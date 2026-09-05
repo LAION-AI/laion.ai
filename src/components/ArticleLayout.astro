@@ -1,0 +1,96 @@
+---
+import type { PostEntry } from '../lib/content';
+import { formatDate } from '../lib/content';
+interface Props {
+  post: PostEntry;
+  backHref: string;
+  backLabel: string;
+  lang?: string;
+}
+const { post, backHref, backLabel, lang = 'en' } = Astro.props;
+---
+
+<article lang={lang}>
+  <header class="article-head">
+    <div class="shell">
+      <a class="back" href={backHref}>← {backLabel}</a>
+      <h1>{post.data.title}</h1>
+      <div class="byline">
+        <span>{post.data.author}</span><time datetime={new Date(post.data.date).toISOString()}
+          >{formatDate(post.data.date, lang === 'de' ? 'de-DE' : 'en-GB')}</time
+        >
+      </div>
+    </div>
+  </header>
+  <div class="shell article-grid">
+    <aside aria-hidden="true"><span>LAION / {backLabel}</span></aside>
+    <div class="prose-laion"><slot /></div>
+  </div>
+</article>
+
+<style>
+  .article-head {
+    padding: clamp(3.5rem, 8vw, 7rem) 0 3rem;
+    background: var(--ink);
+    color: white;
+  }
+  .back {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #bdcad3;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-underline-offset: 0.2em;
+  }
+  h1 {
+    max-width: 67rem;
+    margin: 0;
+    font-size: clamp(2.8rem, 7.5vw, 6.8rem);
+    font-weight: 900;
+    letter-spacing: -0.045em;
+    line-height: 0.93;
+    overflow-wrap: anywhere;
+  }
+  .byline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
+    justify-content: space-between;
+    margin-top: 2.2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.24);
+    color: #bdcad3;
+  }
+  .byline span {
+    max-width: 56rem;
+  }
+  .article-grid {
+    display: grid;
+    grid-template-columns: 9rem minmax(0, 1fr);
+    gap: 3rem;
+    padding-block: 4rem 7rem;
+  }
+  aside {
+    border-right: 1px solid var(--line);
+    color: #70818e;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+  aside span {
+    position: sticky;
+    top: 7rem;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+  }
+  @media (max-width: 700px) {
+    .article-grid {
+      grid-template-columns: 1fr;
+      padding-block: 2.5rem 5rem;
+    }
+    aside {
+      display: none;
+    }
+  }
+</style>

@@ -1,0 +1,8 @@
+.astro
+dist
+node_modules
+public
+src/content
+src/assets
+tests/fixtures
+bun.lock

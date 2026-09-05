@@ -1,0 +1,32 @@
+---
+import type { PostEntry } from '../lib/content';
+import PostCard from './PostCard.astro';
+interface Props {
+  posts: PostEntry[];
+  basePath: string;
+}
+const { posts, basePath } = Astro.props;
+const [first, ...rest] = posts;
+---
+
+<section class="posts shell">
+  {first && <PostCard post={first} basePath={basePath} featured />}
+  <div class="grid">{rest.map((post) => <PostCard post={post} basePath={basePath} />)}</div>
+</section>
+
+<style>
+  .posts {
+    padding-block: 3rem 6rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+    margin-top: 1.2rem;
+  }
+  @media (max-width: 680px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

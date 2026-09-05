@@ -1,0 +1,98 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { press } from '../lib/data';
+import { formatDate, parseDate } from '../lib/content';
+const stories = [...press].sort((a, b) => parseDate(b.dt).valueOf() - parseDate(a.dt).valueOf());
+const publication = (url: string) =>
+  new URL(url).hostname
+    .replace(/^www\./, '')
+    .split('.')[0]
+    .replace(/[-_]/g, ' ');
+---
+
+<BaseLayout
+  title="Press"
+  description="Media coverage and press about LAION and open machine-learning research."
+>
+  <PageHero
+    eyebrow="In the media"
+    title="Press"
+    intro="Coverage of LAION, our research, and the wider movement for open AI."
+  />
+  <section class="shell press-list">
+    {
+      stories.map((story, index) => (
+        <a href={story.url} target="_blank" rel="noopener noreferrer">
+          <>
+            <span>{String(index + 1).padStart(2, '0')}</span>
+            <time datetime={parseDate(story.dt).toISOString()}>{formatDate(story.dt)}</time>
+            <strong>{publication(story.url)}</strong>
+            <p>{story.url}</p>
+            <b aria-hidden="true">↗</b>
+          </>
+        </a>
+      ))
+    }
+  </section>
+</BaseLayout>
+<style>
+  .press-list {
+    padding-block: 3rem 7rem;
+    border-top: 1px solid var(--line);
+  }
+  .press-list a {
+    display: grid;
+    grid-template-columns: 2.5rem 8rem 8rem minmax(0, 1fr) 2rem;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+  }
+  .press-list a:hover strong {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 0.2em;
+  }
+  span,
+  time {
+    color: #6b7e8b;
+    font-size: 0.78rem;
+  }
+  strong {
+    text-transform: capitalize;
+  }
+  p {
+    overflow: hidden;
+    margin: 0;
+    color: #556c7d;
+    font-size: 0.9rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  b {
+    justify-self: end;
+    font-size: 1.2rem;
+  }
+  @media (max-width: 700px) {
+    .press-list a {
+      grid-template-columns: 2rem 1fr 2rem;
+    }
+    time {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    strong {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    p {
+      display: none;
+    }
+    b {
+      grid-column: 3;
+      grid-row: 1 / 3;
+    }
+  }
+</style>

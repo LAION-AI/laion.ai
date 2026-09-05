@@ -1,0 +1,102 @@
+---
+import type { PostEntry } from '../lib/content';
+import { excerpt, formatDate } from '../lib/content';
+interface Props {
+  post: PostEntry;
+  basePath: string;
+  featured?: boolean;
+}
+const { post, basePath, featured = false } = Astro.props;
+---
+
+<article class:list={['post-card', { featured }]}>
+  <a class="image-wrap" href={`/${basePath}/${post.id}`} tabindex="-1" aria-hidden="true">
+    <img src={post.data.previewImg} alt="" loading="lazy" />
+  </a>
+  <div class="card-body">
+    <p class="meta">
+      <time datetime={new Date(post.data.date).toISOString()}>{formatDate(post.data.date)}</time
+      ><span>·</span>{post.data.author}
+    </p>
+    <h2><a href={`/${basePath}/${post.id}`}>{post.data.title}</a></h2>
+    <p>{excerpt(post.body ?? '')}</p>
+    <a class="read" href={`/${basePath}/${post.id}`}
+      >Read article <span aria-hidden="true">↗</span></a
+    >
+  </div>
+</article>
+
+<style>
+  .post-card {
+    display: grid;
+    overflow: hidden;
+    border: 1px solid var(--line);
+    background: white;
+  }
+  .image-wrap {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    background: var(--mist);
+  }
+  .image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .post-card:hover .image-wrap img {
+    transform: scale(1.025);
+  }
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: clamp(1.1rem, 3vw, 1.65rem);
+  }
+  .meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin: 0 0 0.8rem;
+    color: #627484;
+    font-size: 0.78rem;
+    line-height: 1.3;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(1.35rem, 2.5vw, 1.9rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+  }
+  h2 a {
+    text-decoration: none;
+  }
+  .card-body > p:not(.meta) {
+    margin: 0.9rem 0 1.2rem;
+    color: #536778;
+    font-size: 0.94rem;
+  }
+  .read {
+    margin-top: auto;
+    font-size: 0.88rem;
+    font-weight: 700;
+    text-underline-offset: 0.2em;
+  }
+  .featured {
+    grid-template-columns: 1.15fr 1fr;
+  }
+  .featured .image-wrap {
+    aspect-ratio: auto;
+    min-height: 24rem;
+  }
+  @media (max-width: 700px) {
+    .featured {
+      grid-template-columns: 1fr;
+    }
+    .featured .image-wrap {
+      min-height: 0;
+      aspect-ratio: 16 / 9;
+    }
+  }
+</style>

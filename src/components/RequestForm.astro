@@ -1,0 +1,105 @@
+---
+interface Props {
+  heading?: string;
+  intro?: string;
+}
+const { heading = 'Submit a request', intro } = Astro.props;
+---
+
+<section class="form-section" aria-labelledby="request-heading">
+  <div class="form-intro">
+    <p class="eyebrow">Secure form</p>
+    <h2 id="request-heading">{heading}</h2>
+    {intro && <p>{intro}</p>}
+  </div>
+  <form action="https://submit-form.com/lMcR2WFx" method="POST">
+    <input type="hidden" name="_append" value="false" />
+    <input type="checkbox" name="_honeypot" class="honeypot" tabindex="-1" autocomplete="off" />
+    <div class="field-grid">
+      <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+    </div>
+    <label>Explanation<textarea name="message" rows="6" required></textarea></label>
+    <div class="field-grid">
+      <label>Dataset<input type="text" name="datset" required /></label>
+      <label>Sample ID<input type="text" name="sampleID" required /></label>
+    </div>
+    <label>Website / URL<input type="url" name="website" required /></label>
+    <p class="consent">
+      By submitting this form, you agree to our <a href="/privacy-policy">privacy policy</a>.
+    </p>
+    <button class="button" type="submit">Send request</button>
+  </form>
+</section>
+
+<style>
+  .form-section {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+    gap: clamp(2rem, 7vw, 6rem);
+    padding: 5rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .form-intro h2 {
+    max-width: 22rem;
+    margin: 0;
+    font-size: clamp(2.3rem, 5vw, 4.2rem);
+    letter-spacing: -0.04em;
+    line-height: 0.92;
+  }
+  .form-intro > p:last-child {
+    max-width: 25rem;
+    color: #536778;
+  }
+  form {
+    display: grid;
+    gap: 1rem;
+  }
+  label {
+    display: grid;
+    gap: 0.35rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem 0.9rem;
+    border: 1px solid #9cabb6;
+    border-radius: 0;
+    background: white;
+    color: var(--ink);
+    font: inherit;
+  }
+  textarea {
+    resize: vertical;
+  }
+  .field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .consent {
+    margin: 0;
+    color: #536778;
+    font-size: 0.84rem;
+  }
+  button {
+    justify-self: start;
+    cursor: pointer;
+  }
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+  }
+  @media (max-width: 760px) {
+    .form-section {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .field-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

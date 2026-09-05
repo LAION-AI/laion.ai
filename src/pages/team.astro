@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { team } from '../lib/data';
+---
+
+<BaseLayout
+  title="Team"
+  description="Meet the community behind LAION's open machine-learning research."
+>
+  <PageHero
+    eyebrow="The network"
+    title="Team"
+    intro="Researchers, engineers, organizers, and contributors working to keep large-scale AI research open."
+  />
+  <section class="shell team-grid">
+    {
+      team.map((member) => (
+        <article>
+          <div class="portrait">
+            <img
+              src={`/images/team/${member.img ?? 'none'}.jpg`}
+              alt={member.name}
+              loading="lazy"
+            />
+          </div>
+          <div class="member">
+            <>
+              <p>{member.title}</p>
+              <h2>{member.name}</h2>
+              <p>{member.desc}</p>
+            </>
+          </div>
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>
+<style>
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    padding-block: 3rem 7rem;
+    background: var(--line);
+  }
+  article {
+    display: grid;
+    grid-template-columns: minmax(8rem, 0.72fr) 1.28fr;
+    min-height: 18rem;
+    background: var(--paper);
+  }
+  .portrait {
+    overflow: hidden;
+    background: var(--mist);
+  }
+  .portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: saturate(0.75);
+    transition: filter 0.25s ease;
+  }
+  article:hover img {
+    filter: saturate(1);
+  }
+  .member {
+    padding: 1.4rem;
+  }
+  .member > p:first-child {
+    margin: 0 0 2.5rem;
+    color: #6b7e8c;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(1.6rem, 3vw, 2.4rem);
+    letter-spacing: -0.035em;
+    line-height: 0.95;
+  }
+  .member > p:last-child {
+    color: #506677;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 900px) {
+    .team-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    article {
+      grid-template-columns: 1fr;
+    }
+    .portrait {
+      aspect-ratio: 4 / 3;
+    }
+  }
+</style>

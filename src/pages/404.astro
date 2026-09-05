@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Page not found" noindex>
+  <section class="not-found shell">
+    <p class="eyebrow">404 / Lost in the network</p><h1>
+      Nothing here.<br />Let’s keep exploring.
+    </h1><p>The page may have moved, or the address may be incomplete.</p><div>
+      <a class="button" href="/">Return home</a><a class="button secondary" href="/projects"
+        >Browse projects</a
+      >
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .not-found {
+    min-height: 66vh;
+    padding-block: clamp(5rem, 12vw, 10rem);
+  }
+  h1 {
+    margin: 0;
+    font-size: clamp(3.4rem, 10vw, 8.5rem);
+    letter-spacing: -0.06em;
+    line-height: 0.84;
+  }
+  .not-found > p:not(.eyebrow) {
+    margin: 2rem 0;
+    font-size: 1.2rem;
+  }
+  .not-found div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
+  }
+</style>

@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import QuestionList from '../components/QuestionList.astro';
+import RequestForm from '../components/RequestForm.astro';
+import { privacy } from '../lib/data';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="How LAION e.V. processes personal data and protects your privacy."
+>
+  <PageHero
+    eyebrow="Legal"
+    title="Privacy Policy"
+    intro="How we process personal data, why we process it, and the rights available to you."
+  />
+  <div class="shell">
+    <QuestionList items={privacy} collapsible={false} /><RequestForm
+      heading="Exercise your data rights"
+      intro="Use the existing LAION request form to contact us about personal data or a dataset entry."
+    />
+  </div>
+</BaseLayout>

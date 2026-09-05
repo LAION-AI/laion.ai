@@ -1,0 +1,48 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DocumentPage from '../components/DocumentPage.astro';
+const page = await getEntry('pages', 'donations');
+if (!page) throw new Error('Missing donations content');
+const { Content } = await render(page);
+---
+
+<BaseLayout
+  title="Donations"
+  description="Support LAION's non-profit open machine-learning research."
+>
+  <DocumentPage eyebrow="Support open research" title="Donations" intro={page.data.heading}>
+    <Content />
+    <dl class="bank">
+      <div><dt>Name</dt><dd>{page.data.name}</dd></div><div>
+        <dt>IBAN</dt><dd>{page.data.iban}</dd>
+      </div><div><dt>BIC</dt><dd>{page.data.bic}</dd></div>
+    </dl>
+  </DocumentPage>
+</BaseLayout>
+<style>
+  .bank {
+    max-width: 49rem;
+    margin-top: 3rem;
+    border-top: 1px solid var(--line);
+  }
+  .bank div {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  dt {
+    color: #667985;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  dd {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    overflow-wrap: anywhere;
+  }
+</style>

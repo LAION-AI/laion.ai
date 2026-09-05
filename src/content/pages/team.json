@@ -1,0 +1,132 @@
+[
+  {
+    "name": "Christoph Schuhmann",
+    "title": "Organizational Lead / Founder",
+    "desc": "Master in Physics & Computer Science. Producer of Schools of Trust.",
+    "img": "christoph"
+  },
+  {
+    "name": "Jenia Jitsev",
+    "title": "Scientific Lead / Founder",
+    "desc": "Senior researcher. Leads Scalable Learning and Multi-Purpose AI (SLAMPAI) Lab at Juelich Supercomputing Center (JSC). PhD in Computer Science, with background in Neuroscience & Machine Learning.",
+    "img": "jenia"
+  },
+  {
+    "name": "Richard Vencu",
+    "title": "Engineering Lead / Founder",
+    "desc": "AI, automation, and electronics engineer with 28 years of experience in the industry.",
+    "img": "vencu"
+  },
+  {
+    "name": "Romain Beaumont",
+    "title": "Open source contributor / Founder",
+    "desc": "I like to apply scale and deep learning to build AI apps and models.",
+    "img": "romain"
+  },
+  {
+    "name": "Robert Kaczmarczyk",
+    "title": "Community / Medical / Operational Lead / Founder",
+    "desc": "Technical University of Munich. 3 years experience in epidemiological research.",
+    "img": "robert"
+  },
+  {
+    "name": "Theo Coombes",
+    "title": "Founding Member",
+    "desc": "Programmer with a great passion for big data and machine learning.",
+    "img": "theo"
+  },
+  {
+    "name": "Mehdi Cherti",
+    "title": "Founding Member, senior core researcher",
+    "desc": "Researcher on Machine Learning and Deep Generative Models. Open multi-modal foundation models and datasets, scaling laws. PhD in Computer Science.",
+    "img": "mehdi"
+  },
+  {
+    "name": "Irina Rish",
+    "title": "Member, senior researcher.",
+    "desc": "Professor, Computer Science and Operations Research, Université de Montréal.Strong interest in Scaling Laws for ML",
+    "img": "irina"
+  },
+  {
+    "name": "Aran Komatzusaki",
+    "title": "Member. PhD student of Machine Learning at GaTech",
+    "desc": "Interest in RL, representation learning and generative modeling in general",
+    "img": "aran"
+  },
+  {
+    "name": "Robin Rombach",
+    "title": "Member. Stable Diffusion Trainer",
+    "desc": "AI researcher with a focus on deep generative models. Author of VQGAN, Latent Diffusion, Stable Diffusion.",
+    "img": "robin"
+  },
+  {
+    "name": "Katherine Crowson",
+    "title": "Member",
+    "desc": "AI researcher working on generative models. Generative artist",
+    "img": "katherine"
+  },
+  {
+    "name": "Marianna Nezhurina",
+    "title": "Member, core researcher multi-modal learning. PhD student JSC/Tuebingen",
+    "desc": "Coder and ML researcher with strong interest in open multi-modal foundation models and datasets, scaling laws.",
+    "img": "marianna"
+  },
+  {
+    "name": "Ludwig Schmidt",
+    "title": "Member, senior lead researcher. Professor in computer science at Stanford University.",
+    "desc": "Research on datasets, reliable generalization, strong reasoning, evaluation and large models.",
+    "img": "ludwig"
+  },
+  {
+    "name": "Rio Yokota",
+    "title": "Member, senior researcher. Professor at Tokyo Institute of Technology, RIKEN. Large-scale machine learning on supercomputers.",
+    "desc": "Research in intersect of high performance computing, linear algebra, and machine learning. Strong interest in open foundation models.",
+    "img": "rioyokota"
+  },
+  {
+    "name": "Lucia Cipolina-Kun",
+    "title": "Member. PhD Student at the University of Bristol.",
+    "desc": "AI researcher specialized on diffusion models, reinforcement learning and mathematics. Researching on art restoration and preservation of cultural heritage.",
+    "img": "luciacipkun"
+  },
+  {
+    "name": "Dominic Rampas",
+    "title": "Technische Hochschule Ingolstadt",
+    "desc": "AI researcher, passionate about generative models as means to enhance human creative processes. Author of Paella & Würstchen.",
+    "img": "dome"
+  },
+  {
+    "name": "Pablo Pernias",
+    "title": "Machine Learning Research en Disney Parks",
+    "desc": "AI researcher, passionate about generative models as means to enhance human creative processes. Author of Paella & Würstchen.",
+    "img": "pablo"
+  },
+  {
+    "name": "Huu Nguyen",
+    "title": "Head of safety policy. Founder and CEO of ontocord.ai",
+    "desc": "Computer scientist and lawyer with over 15 years of experience and advocate for the human rights of equal access to scientific advancement and education.",
+    "img": "huu"
+  },
+  {
+    "name": "Björn Plüster",
+    "title": "University of Hamburg, DiscoResearch",
+    "desc": "AI researcher with a focus on multilingual LLMs and specialized finetuning.",
+    "img": "bjoern"
+  },
+  {
+    "name": "Jörg Franke",
+    "title": "Member, researcher. PhD student, U Freiburg/ELLIS Institute Tuebingen",
+    "desc": "Open foundation models & datasets, autoML and optimization",
+    "img": "joerg_franke"
+  },  
+  {
+    "name": "Aarush Katta",
+    "title": "Founding Member",
+    "desc": "Programmer with lots of enthusiasm for AI & ML."
+  },
+  {
+    "name": "Jan Ebert",
+    "title": "Founding Member",
+    "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
+  }
+]

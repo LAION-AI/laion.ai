@@ -1,0 +1,140 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { projects } from '../lib/data';
+---
+
+<BaseLayout
+  title="Projects"
+  description="Open-source datasets, models, tools, and research projects maintained by LAION."
+>
+  <PageHero
+    eyebrow="Open by default"
+    title="Projects"
+    intro="Datasets, models, and tools built for the open machine-learning research community."
+  />
+  <div class="shell project-groups">
+    {
+      projects.map((group, groupIndex) => (
+        <section>
+          <header>
+            <>
+              <span>{String(groupIndex + 1).padStart(2, '0')}</span>
+              <h2>{group.name}</h2>
+              <span>{group.entries.length} projects</span>
+            </>
+          </header>
+          <div class="project-grid">
+            {group.entries.map((project) => (
+              <a
+                href={project.link}
+                target={project.link.startsWith('/') ? undefined : '_blank'}
+                rel={project.link.startsWith('/') ? undefined : 'noopener noreferrer'}
+              >
+                <div class="project-top">
+                  <span>{project.kind ?? project.modality ?? 'Open source'}</span>
+                  <span>{project.status}</span>
+                </div>
+                <h3>{project.name}</h3>
+                {project.desc && <p>{project.desc}</p>}
+                <b aria-hidden="true">↗</b>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>
+<style>
+  .project-groups {
+    padding-block: 2rem 7rem;
+  }
+  section {
+    padding-top: 4rem;
+  }
+  section > header {
+    display: grid;
+    grid-template-columns: 3rem 1fr auto;
+    gap: 1rem;
+    align-items: end;
+    margin-bottom: 1.2rem;
+  }
+  header span {
+    color: #6e808d;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    letter-spacing: -0.045em;
+    line-height: 0.9;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-top: 1px solid var(--line);
+    border-left: 1px solid var(--line);
+  }
+  .project-grid a {
+    position: relative;
+    min-height: 15rem;
+    padding: 1.5rem;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    text-decoration: none;
+    transition:
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+  .project-grid a:hover {
+    background: var(--ink);
+    color: white;
+  }
+  .project-top {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    color: #70828f;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  h3 {
+    max-width: 25rem;
+    margin: 2.6rem 0 0.7rem;
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    letter-spacing: -0.03em;
+    line-height: 1;
+  }
+  .project-grid p {
+    max-width: 32rem;
+    color: #506677;
+    font-size: 0.92rem;
+  }
+  .project-grid a:hover p,
+  .project-grid a:hover .project-top {
+    color: #c1ccd4;
+  }
+  .project-grid b {
+    position: absolute;
+    right: 1.4rem;
+    bottom: 1.2rem;
+    font-size: 1.35rem;
+  }
+  @media (max-width: 680px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+    section > header {
+      grid-template-columns: 2rem 1fr;
+    }
+    section > header span:last-child {
+      display: none;
+    }
+  }
+</style>

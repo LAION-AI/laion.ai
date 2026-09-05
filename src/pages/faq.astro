@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import QuestionList from '../components/QuestionList.astro';
+import { faq } from '../lib/data';
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faq.map(({ q, a }) => ({
+    '@type': 'Question',
+    name: q,
+    acceptedAnswer: { '@type': 'Answer', text: a },
+  })),
+};
+---
+
+<BaseLayout
+  title="FAQ"
+  description="Frequently asked questions about LAION, our datasets, and open machine-learning research."
+>
+  <script
+    is:inline
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(structuredData)}
+  />
+  <PageHero
+    eyebrow="Questions, answered"
+    title="FAQ"
+    intro="Background on our datasets, organization, and approach to open research."
+  />
+  <section class="shell questions-wrap"><QuestionList items={faq} /></section>
+</BaseLayout>
+<style>
+  .questions-wrap {
+    padding-block: 3rem 7rem;
+  }
+</style>

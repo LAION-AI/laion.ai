@@ -1,0 +1,110 @@
+<footer>
+  <div class="shell footer-grid">
+    <div class="footer-brand">
+      <div><span>LAION</span><img src="/images/logo.svg" alt="" width="46" height="46" /></div>
+      <p>Large-scale Artificial Intelligence Open Network</p>
+    </div>
+    <div>
+      <p class="label">Explore</p>
+      <a href="/projects">Projects</a><a href="/blog">Blog</a><a href="/notes">Notes</a><a
+        href="/team">Team</a
+      >
+    </div>
+    <div>
+      <p class="label">Connect</p>
+      <a href="https://github.com/LAION-AI/">GitHub</a><a
+        href="https://discord.com/invite/eq3cAMZtCC">Discord</a
+      ><a href="mailto:contact@laion.ai">Email</a>
+    </div>
+    <div>
+      <p class="label">Organization</p>
+      <a href="/donations">Donations</a><a href="/privacy-policy">Privacy</a><a href="/impressum"
+        >Impressum</a
+      ><a href="/gep-policy">GEP policy</a>
+    </div>
+  </div>
+  <div class="shell footnote">
+    <span>LAION e.V. · Non-profit, open, community-driven.</span><span
+      >© {new Date().getFullYear()} LAION</span
+    >
+  </div>
+</footer>
+
+<style>
+  footer {
+    padding: 4.5rem 0 1.5rem;
+    background: var(--ink);
+    color: white;
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: minmax(16rem, 2fr) repeat(3, 1fr);
+    gap: 3rem;
+  }
+  .footer-brand > div {
+    display: flex;
+    gap: 0.7rem;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: -0.05em;
+    line-height: 1;
+  }
+  .footer-brand img {
+    width: 2.5rem;
+    filter: brightness(0) invert(1);
+  }
+  .footer-brand p {
+    max-width: 18rem;
+    color: #b9c5ce;
+  }
+  .label {
+    margin: 0.7rem 0 1rem;
+    color: #91a3b1;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+  .footer-grid > div:not(:first-child) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .footer-grid a {
+    margin: 0.22rem 0;
+    color: white;
+    text-decoration: none;
+  }
+  .footer-grid a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-underline-offset: 0.2em;
+  }
+  .footnote {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    color: #91a3b1;
+    font-size: 0.82rem;
+  }
+  @media (max-width: 760px) {
+    .footer-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .footer-brand {
+      grid-column: 1 / -1;
+    }
+  }
+  @media (max-width: 430px) {
+    .footer-grid {
+      gap: 2rem 1rem;
+    }
+    .footnote {
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+  }
+</style>
