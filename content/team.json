@@ -37,7 +37,7 @@
   },
   {
     "name": "Mehdi Cherti",
-    "title": "Founding Member, senior core researcher",
+    "title": "Founding Member, senior core researcher. Scalable Learning and Multi-Purpose AI (SLAMPAI) Lab at Juelich Supercomputing Center (JSC).",
     "desc": "Researcher on Machine Learning and Deep Generative Models. Open multi-modal foundation models and datasets, scaling laws. PhD in Computer Science.",
     "img": "mehdi"
   },
@@ -67,7 +67,7 @@
   },
   {
     "name": "Marianna Nezhurina",
-    "title": "Member, core researcher multi-modal learning. PhD student JSC/Tuebingen",
+    "title": "Member, core researcher multi-modal learning. PhD student JSC/Tuebingen. Scalable Learning and Multi-Purpose AI (SLAMPAI) Lab at Juelich Supercomputing Center (JSC).",
     "desc": "Coder and ML researcher with strong interest in open multi-modal foundation models and datasets, scaling laws.",
     "img": "marianna"
   },
@@ -103,7 +103,7 @@
   },
   {
     "name": "Björn Plüster",
-    "title": "University of Hamburg, DiscoResearch",
+    "title": "University of Hamburg, DiscoResearch. Ellamind.",
     "desc": "AI researcher with a focus on multilingual LLMs and specialized finetuning.",
     "img": "bjoern"
   },
@@ -112,15 +112,16 @@
     "title": "Member, researcher. PhD student, U Freiburg/ELLIS Institute Tuebingen",
     "desc": "Open foundation models & datasets, autoML and optimization",
     "img": "joerg_franke"
-  },  
+  },
+  {
+    "name": "Gijs Wijngaard",
+    "title": "Member, researcher. Scalable Learning and Multi-Purpose AI (SLAMPAI) Lab at Juelich Supercomputing Center (JSC).",
+    "desc": "Open multi-modal foundation models & datasets, audio modelling.",
+    "img": "gijs"
+  },      
   {
     "name": "Aarush Katta",
     "title": "Founding Member",
     "desc": "Programmer with lots of enthusiasm for AI & ML."
-  },
-  {
-    "name": "Jan Ebert",
-    "title": "Founding Member",
-    "desc": "Software engineer and researcher, responsible for scaling up deep learning. Helmholtz AI."
   }
 ]
