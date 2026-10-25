@@ -1,6 +1,13 @@
-Everyone is free to open Pull Requests to contribute to the website.
+# Contributing
 
-It's best if all PRs are reviewed by at least one person.
-Critical content (for example teams.json) need to be reviewed by the team.
+Contributions to the LAION website are welcome. Please open a pull request and have it reviewed by at least one other person. Changes to critical organizational content, including `src/content/pages/team.json`, require review by the LAION team.
 
-Direct push to master should be reserved only to minor edits (eg typo)
+Before opening a pull request, run:
+
+```sh
+bun run check
+bun run lint
+bun run test
+```
+
+Keep existing public routes stable. If a route must move, add an explicit redirect and extend the parity manifest.

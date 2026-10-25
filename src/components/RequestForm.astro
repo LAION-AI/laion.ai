@@ -1,0 +1,135 @@
+---
+interface Props {
+  heading?: string;
+  intro?: string;
+}
+const { heading = 'Submit a request', intro } = Astro.props;
+---
+
+<section class="form-section" aria-labelledby="request-heading">
+  <div class="form-intro">
+    <p class="eyebrow">Request form</p>
+    <h2 id="request-heading">{heading}</h2>
+    {intro && <p>{intro}</p>}
+  </div>
+  <form action="https://submit-form.com/lMcR2WFx" method="POST">
+    <input type="hidden" name="_append" value="false" />
+    <input type="checkbox" name="_honeypot" class="honeypot" tabindex="-1" autocomplete="off" />
+    <div class="field-grid">
+      <label>Name<input type="text" name="name" autocomplete="name" required /></label>
+      <label>Email<input type="email" name="email" autocomplete="email" required /></label>
+    </div>
+    <label>Explanation<textarea name="message" rows="6" required></textarea></label>
+    <div class="field-grid">
+      <label>Dataset<input type="text" name="datset" required /></label>
+      <label>Sample ID<input type="text" name="sampleID" required /></label>
+    </div>
+    <label>Website / URL<input type="url" name="website" required /></label>
+    <p class="consent">
+      By submitting this form, you agree to our <a href="/privacy-policy">privacy policy</a>.
+    </p>
+    <button class="button" type="submit"
+      >Send request <span class="arrow" aria-hidden="true">→</span></button
+    >
+  </form>
+</section>
+
+<style>
+  .form-section {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: clamp(2rem, 6vw, 5rem);
+    margin-block: clamp(3rem, 6vw, 5rem) clamp(5rem, 9vw, 7rem);
+    padding: clamp(1.75rem, 5vw, 3.5rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .form-intro h2 {
+    max-width: 22rem;
+    margin: 0;
+    font-size: clamp(2.2rem, 4vw, 3.25rem);
+    font-weight: 900;
+    line-height: 0.95;
+    text-wrap: balance;
+  }
+  .form-intro > p:last-child {
+    max-width: 25rem;
+    color: var(--muted);
+  }
+  form {
+    display: grid;
+    gap: 1.1rem;
+  }
+  label {
+    display: grid;
+    gap: 0.4rem;
+    color: var(--muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.8rem 0.95rem;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    background: var(--paper);
+    color: var(--ink);
+    font: inherit;
+    font-family: 'Dinish', ui-sans-serif, system-ui, sans-serif;
+    font-size: 1rem;
+    letter-spacing: normal;
+    text-transform: none;
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease,
+      background 0.15s ease;
+  }
+  input:hover,
+  textarea:hover {
+    border-color: var(--subtle);
+  }
+  input:focus,
+  textarea:focus {
+    border-color: var(--ink);
+    outline: none;
+    background: var(--surface);
+    box-shadow: 0 0 0 4px rgba(245, 200, 76, 0.35);
+  }
+  textarea {
+    resize: vertical;
+  }
+  .field-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+  .consent {
+    margin: 0;
+    color: var(--muted);
+    font-size: 0.88rem;
+  }
+  button {
+    justify-self: start;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .honeypot {
+    position: absolute;
+    left: -9999px;
+  }
+  @media (max-width: 860px) {
+    .form-section {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .field-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

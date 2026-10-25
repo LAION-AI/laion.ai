@@ -1,36 +1,43 @@
 {
-  "name": "laion",
-  "version": "0.1.0",
-  "private": true,
+  "name": "laion-ai",
+  "type": "module",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start --port 3005",
-    "lint": "next lint",
-    "export": "next export && next-image-export-optimizer",
-    "deploy": "npm run build && npm run export  && touch ./out/.nojekyll"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "test": "bun run build && bun run test:parity",
+    "test:parity": "bun scripts/verify-parity.ts",
+    "parity:capture": "bun scripts/capture-legacy-baseline.ts",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "astro": "astro"
   },
   "dependencies": {
-    "@formspark/use-formspark": "^0.1.39",
-    "dateformat": "^5.0.3",
-    "framer-motion": "^6.3.11",
-    "gray-matter": "^4.0.3",
-    "markdown-it": "^13.0.1",
-    "markdown-it-github-headings": "^2.0.1",
-    "next": "12.1.6",
-    "next-image-export-optimizer": "^0.10.1",
-    "react": "18.1.0",
-    "react-burger-menu": "^3.0.8",
-    "react-dom": "18.1.0",
-    "react-icons": "^4.4.0",
-    "react-slideshow-image": "^3.7.5",
-    "tailwind-children": "^0.5.0"
+    "@astrojs/markdown-satteri": "^0.4.0",
+    "@astrojs/rss": "^4.0.19",
+    "@astrojs/sitemap": "^3.7.4",
+    "@tailwindcss/typography": "^0.5.20",
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.8",
+    "tailwindcss": "^4.3.3"
+  },
+  "allowScripts": {
+    "esbuild": true
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.7",
-    "eslint": "8.17.0",
-    "eslint-config-next": "12.1.6",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.2"
+    "@astrojs/check": "^0.9.10",
+    "@types/bun": "^1.4.1",
+    "@typescript-eslint/parser": "^8.69.0",
+    "eslint": "^10.10.0",
+    "eslint-plugin-astro": "^3.1.0",
+    "prettier": "^3.9.6",
+    "prettier-plugin-astro": "^0.14.1",
+    "typescript": "^6.0.0"
   }
 }

@@ -1,0 +1,146 @@
+---
+import { getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DocumentPage from '../components/DocumentPage.astro';
+const page = await getEntry('pages', 'donations');
+if (!page) throw new Error('Missing donations content');
+import FundingStatement from '../components/FundingStatement.astro';
+const { name, iban, bic, bank, qrImage } = page.data;
+// Printed IBANs are grouped in fours; banking apps accept either form.
+const displayIban = iban?.replace(/(.{4})(?=.)/g, '$1 ');
+---
+
+<BaseLayout
+  title="Donations"
+  description="Support LAION's non-profit open machine-learning research."
+>
+  <DocumentPage
+    eyebrow="Support open research"
+    title="Donations"
+    intro="Help sustain open machine-learning research and public education."
+  >
+    <FundingStatement />
+    <p>
+      Support our non-profit mission with a direct bank transfer, using the account details below or
+      the QR code in your banking app.
+    </p>
+    <h2>What your support makes possible</h2>
+    <p>
+      Our work brings together dataset development, reusable training and evaluation tools, and
+      educational projects such as <a href="/blog/bud-e-release">BUD-E</a>. Explore our <a
+        href="/projects">research projects</a
+      > to see the resources we share.
+    </p>
+    <p>
+      To discuss organizational support or a contribution of computing resources, <a
+        href="/contribute">see the ways to contribute</a
+      >.
+    </p>
+    <section class="transfer" aria-labelledby="transfer-heading">
+      <div class="details">
+        <h2 id="transfer-heading">Bank transfer</h2>
+        <dl class="bank">
+          <div><dt>Recipient</dt><dd>{name}</dd></div>
+          <div><dt>IBAN</dt><dd>{displayIban}</dd></div>
+          <div><dt>BIC</dt><dd>{bic}</dd></div>
+          {
+            bank && (
+              <div>
+                <dt>Bank</dt>
+                <dd>{bank}</dd>
+              </div>
+            )
+          }
+        </dl>
+      </div>
+      {
+        qrImage && (
+          <figure class="qr">
+            {/* Enlarge the 160px QR at (289, 267) in the original 734x437 image. */}
+            <div
+              class="qr-code"
+              role="img"
+              aria-label="Bank transfer QR code for LAION e.V. donations"
+              style={`background-image: url("${qrImage}")`}
+            />
+            <figcaption>
+              Scan the code in your banking app and enter your donation amount.{' '}
+              <a href={qrImage}>Open the full-size image</a>.
+            </figcaption>
+          </figure>
+        )
+      }
+    </section>
+  </DocumentPage>
+</BaseLayout>
+<style>
+  .transfer {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 2rem 3rem;
+    align-items: center;
+    max-width: 46rem;
+    margin-top: 3rem;
+    padding: clamp(1.5rem, 4vw, 2.25rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .transfer .details > h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.6rem;
+  }
+  .bank {
+    margin: 0;
+  }
+  .bank div {
+    display: grid;
+    gap: 0.3rem;
+    padding: 0.8rem 0;
+  }
+  .bank div + div {
+    border-top: 1px solid var(--line);
+  }
+  dt {
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  dd {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+    overflow-wrap: anywhere;
+  }
+  /* 15rem shows the 160px code at a 1.5x scale. */
+  .qr {
+    width: 16.5rem;
+    margin: 0;
+  }
+  .qr-code {
+    aspect-ratio: 1;
+    border: 0.75rem solid white;
+    border-radius: var(--radius);
+    background-color: white;
+    background-position: 50.348432% 96.389892%;
+    background-repeat: no-repeat;
+    background-size: 458.75% auto;
+    box-shadow: 0 0 0 1px var(--line);
+    image-rendering: pixelated;
+  }
+  figcaption {
+    margin-top: 0.85rem;
+    color: var(--muted);
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+  @media (max-width: 640px) {
+    .transfer {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

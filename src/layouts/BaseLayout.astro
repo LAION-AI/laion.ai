@@ -1,0 +1,111 @@
+---
+import '../styles/global.css';
+import SiteFooter from '../components/SiteFooter.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import { absoluteImage, jsonLd } from '../lib/content';
+
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  type?: 'website' | 'article';
+  lang?: string;
+  noindex?: boolean;
+}
+
+const {
+  title,
+  description = 'LAION is a non-profit organization making machine-learning datasets, tools, and models openly available for research and education.',
+  image = '/social.png',
+  type = 'website',
+  lang = 'en',
+  noindex = false,
+} = Astro.props;
+const pageTitle = title ? `${title} · LAION` : 'LAION · Open AI research for everyone';
+const canonical = new URL(Astro.url.pathname, Astro.site);
+const socialImage = absoluteImage(image);
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'NGO',
+  name: 'LAION e.V.',
+  alternateName: 'Large-scale Artificial Intelligence Open Network',
+  url: 'https://laion.ai',
+  logo: 'https://laion.ai/images/logo.svg',
+  email: 'contact@laion.ai',
+  sameAs: ['https://github.com/LAION-AI/', 'https://discord.com/invite/eq3cAMZtCC'],
+};
+// GitHub Pages cannot send headers, so the policy ships as a meta tag. The site runs no
+// JavaScript; blocking scripts contains any markup that slips into Markdown content.
+// Dev builds skip it because Vite injects its client script.
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "script-src 'none'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' https: data:",
+  "media-src 'self' https:",
+  "font-src 'self' data:",
+  'frame-src https://www.youtube-nocookie.com',
+  "form-action 'self' https://submit-form.com",
+  'upgrade-insecure-requests',
+].join('; ');
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    {
+      import.meta.env.PROD && (
+        <meta http-equiv="Content-Security-Policy" content={contentSecurityPolicy} />
+      )
+    }
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#061220" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="alternate" type="application/rss+xml" title="LAION Blog" href="/blog/rss.xml" />
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={socialImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImage} />
+    <script is:inline type="application/ld+json" set:html={jsonLd(organization)} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <SiteHeader currentPath={Astro.url.pathname} />
+    <main id="main"><slot /></main>
+    <SiteFooter currentPath={Astro.url.pathname} />
+  </body>
+</html>
+
+<style>
+  .skip-link {
+    position: fixed;
+    z-index: 100;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: var(--night);
+    text-decoration: none;
+    transform: translateY(-150%);
+  }
+  .skip-link:focus {
+    transform: translateY(0);
+  }
+</style>

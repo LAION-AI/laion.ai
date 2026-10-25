@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DocumentPage from '../components/DocumentPage.astro';
+import FundingStatement from '../components/FundingStatement.astro';
+---
+
+<BaseLayout
+  title="About"
+  description="Learn about LAION, our open research mission, and our non-profit organization."
+>
+  <DocumentPage
+    title="About"
+    intro="A non-profit research network making large-scale machine-learning resources available to the public."
+  >
+    <p>
+      LAION brings together researchers, engineers, and contributors from around the world. Our
+      mission is to broaden access to large-scale machine-learning research through public datasets,
+      models, and code.
+    </p>
+    <h2>Research that others can build on</h2>
+    <p>
+      We develop resources that researchers can inspect, evaluate, and reuse. Publishing methods and
+      tools alongside research results helps others reproduce experiments and investigate their
+      limitations.
+    </p>
+    <p>
+      Our work spans <a href="/projects#datasets">multimodal datasets</a>, <a
+        href="/projects#models">open models</a
+      >, <a href="/projects#tools">training and evaluation tools</a>, and <a
+        href="/blog/bud-e-release">educational assistants</a
+      >. Each release documents its own access conditions and intended uses.
+    </p>
+    <h2>People and participation</h2>
+    <p>
+      Meet the <a href="/team">people behind LAION</a> and find ways to <a href="/contribute"
+        >contribute code, research, computing resources, or financial support</a
+      >.
+    </p>
+    <h2>Funding</h2>
+    <FundingStatement />
+    <p><a href="/donations">Support LAION →</a></p>
+    <h2>Organization and contact</h2>
+    <p>
+      LAION e.V. is a non-profit association. Our <a href="/impressum">legal notice</a> provides organizational
+      and representative details. For collaboration or organizational questions, contact <a
+        href="mailto:contact@laion.ai">contact@laion.ai</a
+      >.
+    </p>
+    <p>
+      For questions about a dataset, use <a href="/dataset-requests">Dataset requests</a>. Read our <a
+        href="/privacy-policy">privacy policy</a
+      > and <a href="/gep-policy">gender equality policy</a>.
+    </p>
+  </DocumentPage>
+</BaseLayout>

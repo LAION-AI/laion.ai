@@ -1,0 +1,20 @@
+---
+import PageHero from './PageHero.astro';
+interface Props {
+  eyebrow?: string;
+  title: string;
+  intro?: string;
+}
+const { eyebrow = 'LAION e.V.', title, intro } = Astro.props;
+---
+
+<PageHero {eyebrow} {title} {intro} />
+<section class="shell document"><div class="prose-laion"><slot /></div></section>
+<style>
+  .document {
+    padding-block: clamp(3rem, 6vw, 4.5rem) clamp(5rem, 9vw, 7rem);
+  }
+  .document > .prose-laion {
+    max-width: 46rem;
+  }
+</style>

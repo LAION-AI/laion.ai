@@ -1,0 +1,294 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import { getCollection } from 'astro:content';
+import { projects } from '../data/projects';
+import { formatDate, parseDate } from '../lib/content';
+const releases = new Map(
+  (await getCollection('blog')).map((post) => [`/blog/${post.id}`, post.data.date]),
+);
+const groupId = (name: string) => name.toLowerCase().replaceAll(' ', '-');
+const statusTone = (status: string) =>
+  /historical|superseded/i.test(status)
+    ? 'archived'
+    : /preprint/i.test(status)
+      ? 'preprint'
+      : 'live';
+---
+
+<BaseLayout
+  title="Projects"
+  description="Datasets, models, tools, papers, and historical releases from LAION and its research community."
+>
+  <PageHero
+    eyebrow="Open by default"
+    title="Projects"
+    intro="Datasets, models, and tools built for the open machine-learning research community."
+  >
+    <nav class="project-nav" aria-label="Project categories">
+      {
+        projects.map((group) => (
+          <a href={`#${groupId(group.name)}`}>
+            {group.name} <span>{group.entries.length}</span>
+          </a>
+        ))
+      }
+    </nav>
+  </PageHero>
+  <div class="shell project-groups">
+    {
+      projects.map((group, groupIndex) => (
+        <section id={groupId(group.name)} aria-labelledby={`${groupId(group.name)}-heading`}>
+          <header>
+            <>
+              <span class="index">{String(groupIndex + 1).padStart(2, '0')}</span>
+              <h2 id={`${groupId(group.name)}-heading`}>{group.name}</h2>
+              <span class="count">{group.entries.length} projects</span>
+            </>
+          </header>
+          {group.name === 'Historical datasets' && (
+            <p class="group-intro">
+              Earlier releases and subsets, preserved for reference. For the updated LAION-5B
+              dataset, use <a href="/blog/relaion-5b">Re-LAION-5B</a>.
+            </p>
+          )}
+          <div class="project-grid">
+            {group.entries.map((project) => {
+              const date = project.date ?? releases.get(project.link);
+              return (
+                <article>
+                  <div class="project-top">
+                    <span class="chip">{project.modality ?? 'Research'}</span>
+                    {project.status && (
+                      <span class:list={['status', statusTone(project.status)]}>
+                        {project.status}
+                      </span>
+                    )}
+                  </div>
+                  <h3>
+                    <a href={project.link}>{project.name}</a>
+                  </h3>
+                  {date && <time datetime={parseDate(date).toISOString()}>{formatDate(date)}</time>}
+                  {project.desc && <p>{project.desc}</p>}
+                  <nav class="resources" aria-label={`${project.name} resources`}>
+                    {project.resources.map((resource) => (
+                      <a href={resource.href}>
+                        {resource.label}
+                        <span aria-hidden="true"> {resource.href.startsWith('/') ? '→' : '↗'}</span>
+                      </a>
+                    ))}
+                  </nav>
+                </article>
+              );
+            })}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</BaseLayout>
+<style>
+  .project-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+  }
+  .project-nav a {
+    display: inline-flex;
+    gap: 0.65rem;
+    align-items: center;
+    padding: 0.5rem 0.6rem 0.5rem 1rem;
+    border: 1px solid var(--line-dark);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--on-dark);
+    text-decoration: none;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .project-nav a:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.1);
+  }
+  .project-nav span {
+    display: inline-grid;
+    min-width: 1.6rem;
+    height: 1.6rem;
+    padding-inline: 0.4rem;
+    place-items: center;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--on-dark-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+  }
+
+  .project-groups {
+    padding-block: 1rem clamp(5rem, 9vw, 7rem);
+  }
+  section {
+    padding-top: clamp(3.5rem, 6vw, 5rem);
+  }
+  section > header {
+    display: grid;
+    grid-template-columns: 3rem 1fr auto;
+    gap: 1rem;
+    align-items: baseline;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--line);
+  }
+  .index,
+  .count {
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.015em;
+    line-height: 0.95;
+  }
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .project-grid article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: clamp(1.4rem, 2.5vw, 1.85rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.35s var(--ease-out),
+      transform 0.35s var(--ease-out);
+  }
+  .project-grid article:hover,
+  .project-grid article:focus-within {
+    border-color: var(--line-strong);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+  }
+  .project-top {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .project-top .chip {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .status {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .status::before {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #3fae7a;
+    box-shadow: 0 0 0 3px rgba(63, 174, 122, 0.16);
+    content: '';
+  }
+  .status.preprint::before {
+    background: var(--accent);
+    box-shadow: 0 0 0 3px rgba(245, 200, 76, 0.2);
+  }
+  .status.archived::before {
+    background: #9aa8b4;
+    box-shadow: 0 0 0 3px rgba(154, 168, 180, 0.2);
+  }
+  h3 {
+    margin: 1.5rem 0 0.4rem;
+    font-size: clamp(1.7rem, 2.4vw, 2.1rem);
+    font-weight: 900;
+    letter-spacing: -0.005em;
+    line-height: 1.02;
+    overflow-wrap: anywhere;
+  }
+  h3 a {
+    text-decoration: none;
+  }
+  h3 a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.15em;
+  }
+  time {
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .project-grid p {
+    margin: 0.9rem 0 1.5rem;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .resources {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: auto;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--line);
+  }
+  .resources a {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 0.88rem;
+    text-decoration: none;
+    transition:
+      background 0.15s ease,
+      border-color 0.15s ease,
+      color 0.15s ease;
+  }
+  .resources a:hover {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: white;
+  }
+  .group-intro {
+    max-width: 48rem;
+    margin: 0 0 1.5rem;
+    color: var(--muted);
+  }
+  @media (max-width: 1080px) {
+    .project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 680px) {
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+    section > header {
+      grid-template-columns: 2.25rem 1fr;
+    }
+    .count {
+      display: none;
+    }
+  }
+</style>

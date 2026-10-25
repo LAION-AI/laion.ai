@@ -1,0 +1,149 @@
+---
+interface Item {
+  q: string;
+  a: string;
+}
+interface Props {
+  items: Item[];
+  collapsible?: boolean;
+}
+const { items, collapsible = true } = Astro.props;
+---
+
+<div class:list={['questions', { open: !collapsible }]}>
+  {
+    items.map((item, index) =>
+      collapsible ? (
+        <details open={index === 0}>
+          <summary>
+            <>
+              <span>{String(index + 1).padStart(2, '0')}</span>
+              <h2>{item.q}</h2>
+              <b aria-hidden="true">+</b>
+            </>
+          </summary>
+          <p>{item.a}</p>
+        </details>
+      ) : (
+        <section>
+          <div class="number">{String(index + 1).padStart(2, '0')}</div>
+          <div>
+            <>
+              <h2>{item.q}</h2>
+              <p>{item.a}</p>
+            </>
+          </div>
+        </section>
+      ),
+    )
+  }
+</div>
+<style>
+  .questions {
+    display: grid;
+    gap: 0.75rem;
+  }
+  .questions.open {
+    gap: 0;
+    border-top: 1px solid var(--line);
+  }
+  details {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--surface);
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.3s var(--ease-out);
+  }
+  details:hover {
+    border-color: var(--line-strong);
+  }
+  details[open] {
+    box-shadow: var(--shadow);
+  }
+  summary {
+    display: grid;
+    grid-template-columns: 2.75rem 1fr 2.25rem;
+    gap: 1rem;
+    align-items: center;
+    padding: 1.35rem 1.5rem;
+    list-style: none;
+    cursor: pointer;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  summary span,
+  .number {
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+  }
+  h2 {
+    margin: 0;
+    font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+    font-weight: 900;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+  summary b {
+    display: grid;
+    width: 2.25rem;
+    height: 2.25rem;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+    transition:
+      transform 0.25s var(--ease-out),
+      background 0.2s ease,
+      color 0.2s ease;
+  }
+  details[open] summary b {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: white;
+    transform: rotate(45deg);
+  }
+  details > p {
+    max-width: 50rem;
+    margin: -0.25rem 4.75rem 1.75rem 5.25rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  section {
+    display: grid;
+    grid-template-columns: 3rem minmax(0, 1fr);
+    gap: 1rem;
+    padding: 2.25rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .number {
+    padding-top: 0.5rem;
+  }
+  section p {
+    max-width: 52rem;
+    margin: 0.8rem 0 0;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  @media (max-width: 560px) {
+    summary {
+      grid-template-columns: minmax(0, 1fr) 2.25rem;
+      padding: 1.15rem 1.15rem;
+    }
+    summary span {
+      display: none;
+    }
+    details > p {
+      margin: -0.25rem 1.15rem 1.4rem;
+    }
+    section {
+      grid-template-columns: 2rem minmax(0, 1fr);
+      gap: 0.6rem;
+    }
+  }
+</style>

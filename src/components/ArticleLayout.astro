@@ -1,0 +1,213 @@
+---
+import type { PostEntry } from '../lib/content';
+import { formatDate, readingTime } from '../lib/content';
+interface Props {
+  post: PostEntry;
+  backHref: string;
+  backLabel: string;
+  lang?: string;
+  headings?: { depth: number; slug: string; text: string }[];
+}
+const { post, backHref, backLabel, lang = 'en', headings = [] } = Astro.props;
+const sections = headings.filter((heading) => heading.depth === 2);
+const de = lang === 'de';
+---
+
+<article lang={lang}>
+  <header class="article-head surface-dark">
+    <div class="shell">
+      <a class="back" href={backHref}><span aria-hidden="true">←</span> {backLabel}</a>
+      <h1>{post.data.title}</h1>
+      <dl class="byline">
+        <div class="byline-author">
+          <dt>{de ? 'Von' : 'Written by'}</dt>
+          <dd>{post.data.author}</dd>
+        </div>
+        <div>
+          <dt>{de ? 'Veröffentlicht' : 'Published'}</dt>
+          <dd>
+            <time datetime={new Date(post.data.date).toISOString()}
+              >{formatDate(post.data.date, de ? 'de-DE' : 'en-GB')}</time
+            >
+          </dd>
+        </div>
+        <div>
+          <dt>{de ? 'Lesezeit' : 'Reading time'}</dt>
+          <dd>{readingTime(post.body ?? '')} min</dd>
+        </div>
+      </dl>
+    </div>
+  </header>
+  <div class:list={['shell', 'article-grid', { 'has-toc': sections.length > 1 }]}>
+    {
+      sections.length > 1 && (
+        <aside>
+          <nav aria-label={de ? 'Inhaltsverzeichnis' : 'On this page'}>
+            <p>{de ? 'In diesem Beitrag' : 'On this page'}</p>
+            <ol>
+              {sections.map((heading) => (
+                <li>
+                  <a href={`#${heading.slug}`}>{heading.text}</a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        </aside>
+      )
+    }
+    <div class="article-main">
+      <div class="prose-laion"><slot /></div>
+      <a class="button secondary end-link" href={backHref}
+        ><span aria-hidden="true">←</span> {de ? 'Zurück zur Übersicht' : `Back to ${backLabel}`}</a
+      >
+    </div>
+  </div>
+</article>
+
+<style>
+  .article-head {
+    padding: clamp(3rem, 7vw, 5.5rem) 0 clamp(2.5rem, 5vw, 3.5rem);
+  }
+  .back {
+    display: inline-flex;
+    gap: 0.4rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0.35rem 0.85rem;
+    border: 1px solid var(--line-dark);
+    border-radius: 999px;
+    color: var(--on-dark-muted);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition:
+      color 0.15s ease,
+      border-color 0.15s ease;
+  }
+  .back:hover {
+    border-color: rgba(255, 255, 255, 0.35);
+    color: white;
+  }
+  h1 {
+    max-width: 62rem;
+    margin: 0;
+    color: white;
+    font-size: clamp(2.6rem, 6vw, 5.25rem);
+    font-weight: 900;
+    letter-spacing: -0.015em;
+    line-height: 0.95;
+    text-wrap: balance;
+    overflow-wrap: anywhere;
+  }
+  .byline {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 1rem 3rem;
+    margin: 2.5rem 0 0;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line-dark);
+  }
+  .byline dt {
+    margin-bottom: 0.3rem;
+    color: var(--on-dark-muted);
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .byline dd {
+    margin: 0;
+    color: var(--on-dark);
+  }
+  .byline-author dd {
+    max-width: 52rem;
+  }
+  .article-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 4rem;
+    justify-content: center;
+    padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(4rem, 8vw, 6rem);
+  }
+  .article-grid.has-toc {
+    grid-template-columns: minmax(0, 46rem) 15rem;
+    grid-template-areas: 'content toc';
+  }
+  .article-grid:not(.has-toc) .article-main {
+    width: min(100%, 46rem);
+    margin-inline: auto;
+  }
+  .has-toc aside {
+    grid-area: toc;
+  }
+  .has-toc .article-main {
+    grid-area: content;
+  }
+  .end-link {
+    margin-top: 4rem;
+  }
+  aside nav {
+    position: sticky;
+    top: calc(var(--header-height) + 2rem);
+    max-height: calc(100vh - var(--header-height) - 4rem);
+    overflow-y: auto;
+  }
+  aside p {
+    margin: 0 0 0.9rem;
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  aside ol {
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--line);
+    list-style: none;
+  }
+  aside a {
+    display: block;
+    margin-left: -1px;
+    padding: 0.4rem 0.9rem;
+    border-left: 2px solid transparent;
+    color: var(--muted);
+    font-size: 0.92rem;
+    line-height: 1.35;
+    text-decoration: none;
+    transition:
+      color 0.15s ease,
+      border-color 0.15s ease;
+  }
+  aside a:hover {
+    border-left-color: var(--accent);
+    color: var(--ink);
+  }
+  @media (max-width: 1000px) {
+    .article-grid.has-toc {
+      grid-template-columns: minmax(0, 1fr);
+      grid-template-areas:
+        'toc'
+        'content';
+      gap: 2.5rem;
+    }
+    aside nav {
+      position: static;
+      max-height: none;
+      padding: 1.25rem 1.25rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+  }
+  @media (max-width: 640px) {
+    .byline {
+      grid-template-columns: 1fr 1fr;
+    }
+    .byline-author {
+      grid-column: 1 / -1;
+    }
+  }
+</style>

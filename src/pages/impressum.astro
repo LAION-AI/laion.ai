@@ -1,0 +1,11 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DocumentPage from '../components/DocumentPage.astro';
+const page = await getEntry('pages', 'impressum');
+if (!page) throw new Error('Missing impressum content');
+const { Content } = await render(page);
+---
+
+<BaseLayout title="Impressum"><DocumentPage title="Impressum"><Content /></DocumentPage></BaseLayout
+>

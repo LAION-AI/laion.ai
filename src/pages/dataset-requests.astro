@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import QuestionList from '../components/QuestionList.astro';
+import RequestForm from '../components/RequestForm.astro';
+import { datasetRequests } from '../lib/data';
+---
+
+<BaseLayout
+  title="Dataset Requests"
+  description="Report an issue with a LAION dataset or request review of a dataset entry."
+>
+  <PageHero
+    eyebrow="Dataset stewardship"
+    title="Dataset Requests"
+    intro="Tell us about a problem with a dataset or a specific sample."
+  />
+  <div class="shell">
+    <QuestionList items={datasetRequests} collapsible={false} /><RequestForm />
+  </div>
+</BaseLayout>

@@ -1,0 +1,14 @@
+---
+import { getEntry, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import DocumentPage from '../components/DocumentPage.astro';
+const page = await getEntry('pages', 'gep-policy');
+if (!page) throw new Error('Missing GEP policy content');
+const { Content } = await render(page);
+---
+
+<BaseLayout title="GEP Policy"
+  ><DocumentPage title="GEP Policy" intro="LAION e.V. Gender Equality Plan"
+    ><Content /></DocumentPage
+  ></BaseLayout
+>
