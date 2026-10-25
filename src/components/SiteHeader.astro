@@ -13,13 +13,14 @@ const secondary = [
   ['Notes', '/notes'],
   ['Press', '/press'],
   ['FAQ', '/faq'],
-  ['Donations', '/donations'],
   ['Dataset requests', '/dataset-requests'],
   ['Privacy', '/privacy-policy'],
   ['Impressum', '/impressum'],
   ['GEP policy', '/gep-policy'],
 ] as const;
 const cta = ['Contribute', '/contribute'] as const;
+// Donations sit in the header bar itself, not behind the More menu.
+const donate = ['Donate', '/donations'] as const;
 const active = (href: string) =>
   currentPath === href || (href !== '/' && currentPath.startsWith(`${href}/`));
 const secondaryActive = secondary.some(([, href]) => active(href));
@@ -74,7 +75,17 @@ const secondaryActive = secondary.some(([, href]) => active(href));
         >
       </a>
       <a
-        class="button accent header-cta"
+        class="button ghost header-cta header-donate"
+        href={donate[1]}
+        aria-current={active(donate[1]) ? 'page' : undefined}
+        ><svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"
+          ><path
+            fill="currentColor"
+            d="M8 14s-6-3.6-6-8a3.5 3.5 0 0 1 6-2.45A3.5 3.5 0 0 1 14 6c0 4.4-6 8-6 8z"></path></svg
+        >{donate[0]}</a
+      >
+      <a
+        class="button accent header-cta header-contribute"
         href={cta[1]}
         aria-current={active(cta[1]) ? 'page' : undefined}>{cta[0]}</a
       >
@@ -85,7 +96,7 @@ const secondaryActive = secondary.some(([, href]) => active(href));
         <nav aria-label="Mobile navigation">
           <div class="mobile-primary">
             {
-              [...primary, cta].map(([label, href]) => (
+              [...primary, donate, cta].map(([label, href]) => (
                 <a href={href} aria-current={active(href) ? 'page' : undefined}>
                   {label}
                   <span aria-hidden="true">→</span>
@@ -247,6 +258,12 @@ const secondaryActive = secondary.some(([, href]) => active(href));
     padding: 0.5rem 1.1rem;
     font-size: 0.95rem;
   }
+  .header-donate {
+    gap: 0.4rem;
+  }
+  .header-donate svg {
+    color: var(--accent);
+  }
   .mobile-nav {
     display: none;
   }
@@ -346,6 +363,12 @@ const secondaryActive = secondary.some(([, href]) => active(href));
   }
   @media (max-width: 520px) {
     .icon-link {
+      display: none;
+    }
+  }
+  /* Narrow phones fit one header button; Contribute stays first in the menu. */
+  @media (max-width: 420px) {
+    .header-contribute {
       display: none;
     }
   }
