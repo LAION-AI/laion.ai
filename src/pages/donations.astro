@@ -1,42 +1,233 @@
 ---
 import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import DocumentPage from '../components/DocumentPage.astro';
+import PageHero from '../components/PageHero.astro';
+import FundingStatement from '../components/FundingStatement.astro';
 const page = await getEntry('pages', 'donations');
 if (!page) throw new Error('Missing donations content');
-import FundingStatement from '../components/FundingStatement.astro';
 const { name, iban, bic, bank, qrImage } = page.data;
 // Printed IBANs are grouped in fours; banking apps accept either form.
 const displayIban = iban?.replace(/(.{4})(?=.)/g, '$1 ');
+
+const pillars = [
+  {
+    number: '01',
+    title: 'Mathematics & physics',
+    text: 'Models that reason through mathematics and physics, built on open language-model training that anyone can reproduce.',
+    link: { label: 'Our open training baselines', href: '/blog/open-sci-ref-001' },
+  },
+  {
+    number: '02',
+    title: 'Biology',
+    text: 'Foundation models for genomics, proteomics, and metabolomics that learn from DNA, proteins, and the molecules of living cells.',
+  },
+  {
+    number: '03',
+    title: 'Robotics & world models',
+    text: 'Multimodal, agentic world foundation models that perceive, plan, and act, as an open basis for robotics.',
+  },
+];
+const steps = [
+  { title: 'Collect', text: 'Gather and curate open datasets for each field.' },
+  { title: 'Train', text: 'Train models with open, reproducible recipes.' },
+  { title: 'Evaluate', text: 'Benchmark them openly, so anyone can check the results.' },
+];
+const lighthouses = [
+  {
+    name: 'Modelympics',
+    status: 'In preparation',
+    need: 'Needs compute',
+    text: [
+      'An event where the people building open pipelines come together to push the state of the art on important models.',
+      'Every round leaves two things behind: better open pipelines, and better open datasets and models. Over time, the models that come out of Modelympics help improve the stack that produced them, so each round makes the next one stronger.',
+    ],
+    links: [],
+  },
+  {
+    name: 'Project Alexandria',
+    status: 'Paper and code released',
+    need: 'Needs storage',
+    text: [
+      'Collecting the world’s useful knowledge: scientific knowledge first, but not only. Alexandria turns documents into Knowledge Units, structured facts and relations that keep the knowledge without redistributing the original text.',
+      'Research comes first. Curated subsets can then be made available for standard use, including in industry.',
+    ],
+    links: [
+      { label: 'Read the paper', href: 'https://arxiv.org/abs/2502.19413' },
+      { label: 'Code', href: 'https://github.com/LAION-AI/project-alexandria' },
+    ],
+  },
+];
+const ways = [
+  {
+    title: 'Funds',
+    text: 'Donations pay for the researchers, engineers, and infrastructure that keep every pipeline, dataset, and model open.',
+    link: { label: 'Donate by bank transfer', href: '#bank-transfer' },
+  },
+  {
+    title: 'Compute',
+    text: 'GPU time powers Modelympics rounds and training across all three pillars. Tell us what you can offer and for how long.',
+    link: { label: 'Offer compute', href: 'mailto:contact@laion.ai?subject=Compute%20donation' },
+  },
+  {
+    title: 'Storage',
+    text: 'Project Alexandria and the open datasets around it need large, durable storage.',
+    link: { label: 'Offer storage', href: 'mailto:contact@laion.ai?subject=Storage%20donation' },
+  },
+];
 ---
 
 <BaseLayout
-  title="Donations"
-  description="Support LAION's non-profit open machine-learning research."
+  title="Donate"
+  description="Support LAION's open pipelines and foundation models for mathematics and physics, biology, and robotics with funds, compute, or storage."
 >
-  <DocumentPage
-    eyebrow="Support open research"
-    title="Donations"
-    intro="Help sustain open machine-learning research and public education."
+  <PageHero
+    eyebrow="Donate"
+    title="Open foundation models for science"
+    intro="LAION is a non-profit. Help us build open pipelines for data, training, and evaluation, shared across mathematics and physics, biology, and robotics, so anyone can study, reproduce, and improve the models that drive science."
   >
-    <FundingStatement />
-    <p>
-      Support our non-profit mission with a direct bank transfer, using the account details below or
-      the QR code in your banking app.
-    </p>
-    <h2>What your support makes possible</h2>
-    <p>
-      Our work brings together dataset development, reusable training and evaluation tools, and
-      educational projects such as <a href="/blog/bud-e-release">BUD-E</a>. Explore our <a
-        href="/projects">research projects</a
-      > to see the resources we share.
-    </p>
-    <p>
-      To discuss organizational support or a contribution of computing resources, <a
-        href="/contribute">see the ways to contribute</a
-      >.
-    </p>
-    <section class="transfer" aria-labelledby="transfer-heading">
+    <div class="hero-actions">
+      <a class="button accent" href="#bank-transfer"
+        >Donate by bank transfer <span class="arrow" aria-hidden="true">↓</span></a
+      >
+      <a class="button ghost" href="#ways-to-give">Offer compute or storage</a>
+    </div>
+  </PageHero>
+
+  <section class="shell block" aria-labelledby="pillars-heading">
+    <div class="block-head">
+      <p class="eyebrow">Three pillars</p>
+      <h2 class="heading" id="pillars-heading">Where open models can move science forward.</h2>
+      <p>
+        Three fields are fundamental for progress on foundation models. LAION works on all three in
+        the open.
+      </p>
+    </div>
+    <ol class="cards pillars">
+      {
+        pillars.map((pillar) => (
+          <li class="card">
+            <span class="number" aria-hidden="true">
+              {pillar.number}
+            </span>
+            <h3>{pillar.title}</h3>
+            <p>{pillar.text}</p>
+            {pillar.link && (
+              <a class="arrow-link" href={pillar.link.href}>
+                {pillar.link.label}{' '}
+                <span class="arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            )}
+          </li>
+        ))
+      }
+    </ol>
+  </section>
+
+  <section class="surface-dark engine" aria-labelledby="engine-heading">
+    <div class="shell engine-grid">
+      <div>
+        <p class="eyebrow">One shared engine</p>
+        <h2 class="heading" id="engine-heading">Open pipelines that agents can improve.</h2>
+        <p class="lede">
+          All three fields need the same machinery: pipelines that collect data, train models, and
+          evaluate them. We build them openly and reuse them for every field.
+        </p>
+        <p class="engine-note">
+          We have done this before. Our OpenCLIP and CLAP pipelines took image–text and audio–text
+          models from raw data to trained, benchmarked releases, all in the open. The next pipelines
+          are designed so that agents can improve them too, with people reviewing every change.
+        </p>
+      </div>
+      <ol class="loop">
+        {
+          steps.map((step) => (
+            <li>
+              <span class="step">{step.title}</span>
+              <p>{step.text}</p>
+            </li>
+          ))
+        }
+        <li class="loop-note">
+          <span aria-hidden="true">↻</span>
+          <p>Agents propose better data, recipes, and benchmarks. Reviewed changes flow back in.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="shell block" aria-labelledby="lighthouse-heading">
+    <div class="block-head">
+      <p class="eyebrow">Lighthouse projects</p>
+      <h2 class="heading" id="lighthouse-heading">Two projects to rally around.</h2>
+    </div>
+    <div class="cards lighthouses">
+      {
+        lighthouses.map((project) => (
+          <article class="card">
+            <div class="chips">
+              <span class="chip">{project.status}</span>
+              <span class="chip need">{project.need}</span>
+            </div>
+            <h3>{project.name}</h3>
+            {project.text.map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+            {project.links.length > 0 && (
+              <div class="links">
+                {project.links.map((link) => (
+                  <a class="arrow-link" href={link.href}>
+                    {link.label}{' '}
+                    <span class="arrow" aria-hidden="true">
+                      →
+                    </span>
+                  </a>
+                ))}
+              </div>
+            )}
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="shell block" id="ways-to-give" aria-labelledby="give-heading">
+    <div class="block-head">
+      <p class="eyebrow">How to help</p>
+      <h2 class="heading" id="give-heading">Give funds, compute, or storage.</h2>
+    </div>
+    <div class="cards ways">
+      {
+        ways.map((way, index) => (
+          <article class="card">
+            <h3>{way.title}</h3>
+            <p>{way.text}</p>
+            <a
+              class:list={['button', { accent: index === 0, secondary: index > 0 }]}
+              href={way.link.href}
+            >
+              {way.link.label}{' '}
+              <span class="arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="shell block give-transfer" id="bank-transfer" aria-labelledby="transfer-heading">
+    <div class="prose-laion transfer-intro">
+      <FundingStatement />
+      <p>
+        Donate directly using the account details below or the QR code in your banking app. For
+        organizational support or partnerships, see the <a href="/contribute">ways to contribute</a
+        >.
+      </p>
+    </div>
+    <section class="transfer">
       <div class="details">
         <h2 id="transfer-heading">Bank transfer</h2>
         <dl class="bank">
@@ -71,16 +262,164 @@ const displayIban = iban?.replace(/(.{4})(?=.)/g, '$1 ');
         )
       }
     </section>
-  </DocumentPage>
+  </section>
 </BaseLayout>
 <style>
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2.25rem;
+  }
+  .block {
+    padding-block: clamp(4rem, 8vw, 6.5rem) 0;
+    scroll-margin-top: calc(var(--header-height) + 1rem);
+  }
+  .block-head {
+    max-width: 46rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+  .block-head > p:not(.eyebrow) {
+    margin: 1.25rem 0 0;
+    color: var(--muted);
+    font-size: 1.1rem;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .lighthouses {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: hidden;
+    padding: clamp(1.6rem, 3vw, 2.25rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .card h3 {
+    position: relative;
+    margin: 0 0 0.85rem;
+    font-size: clamp(1.6rem, 2.6vw, 2.1rem);
+    font-weight: 900;
+    line-height: 1;
+  }
+  .card p {
+    position: relative;
+    margin: 0 0 1rem;
+    color: var(--muted);
+  }
+  /* Links and buttons line up along the bottom of cards in the same row. */
+  .card > .arrow-link,
+  .card > .button,
+  .card > .links {
+    margin-top: auto;
+  }
+  .card .button {
+    white-space: normal;
+  }
+  .number {
+    margin-bottom: 1.1rem;
+    color: var(--mist);
+    font-size: clamp(2.75rem, 4.5vw, 3.75rem);
+    font-weight: 900;
+    line-height: 0.8;
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.4rem;
+  }
+  .chip.need {
+    border-color: rgba(245, 200, 76, 0.6);
+    background: rgba(245, 200, 76, 0.16);
+    color: var(--ink);
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+  }
+  .engine {
+    margin-top: clamp(4rem, 8vw, 6.5rem);
+    padding-block: clamp(4rem, 8vw, 6.5rem);
+  }
+  .engine .heading {
+    color: white;
+  }
+  .engine-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: clamp(2.5rem, 6vw, 5rem);
+    align-items: center;
+  }
+  .engine-note {
+    max-width: 40rem;
+    margin: 1.25rem 0 0;
+    color: var(--on-dark-muted);
+  }
+  .loop {
+    display: grid;
+    gap: 0.75rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .loop li {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 1rem;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--line-dark);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .loop p {
+    margin: 0;
+    color: var(--on-dark-muted);
+    font-size: 0.98rem;
+  }
+  .step {
+    color: white;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .loop .loop-note {
+    border-color: rgba(245, 200, 76, 0.45);
+    border-style: dashed;
+  }
+  .loop-note span {
+    color: var(--accent);
+    font-size: 1.6rem;
+    line-height: 1;
+  }
+  .give-transfer {
+    padding-bottom: clamp(5rem, 9vw, 7rem);
+  }
+  .transfer-intro {
+    max-width: 46rem;
+  }
   .transfer {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 2rem 3rem;
     align-items: center;
     max-width: 46rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     padding: clamp(1.5rem, 4vw, 2.25rem);
     border: 1px solid var(--line);
     border-radius: var(--radius-lg);
@@ -138,9 +477,28 @@ const displayIban = iban?.replace(/(.{4})(?=.)/g, '$1 ');
     font-size: 0.88rem;
     line-height: 1.45;
   }
+  figcaption a {
+    color: var(--ink);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+  }
+  @media (max-width: 960px) {
+    .cards,
+    .lighthouses {
+      grid-template-columns: 1fr;
+    }
+    .engine-grid {
+      grid-template-columns: 1fr;
+    }
+  }
   @media (max-width: 640px) {
     .transfer {
       grid-template-columns: 1fr;
+    }
+    .loop li {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
     }
   }
 </style>

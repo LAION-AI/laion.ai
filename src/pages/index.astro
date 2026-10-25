@@ -163,6 +163,25 @@ const principles = [
     </div>
   </section>
 
+  <section class="campaign shell" aria-labelledby="campaign-heading">
+    <div class="campaign-card">
+      <div>
+        <p class="eyebrow">Donate</p>
+        <h2 id="campaign-heading">Open foundation models for science.</h2>
+        <p>
+          Help us build open pipelines for mathematics and physics, biology, and robotics, and power
+          two lighthouse projects: Modelympics and Project Alexandria.
+        </p>
+      </div>
+      <div class="campaign-actions">
+        <a class="button accent" href="/donations"
+          >Support the campaign <span class="arrow" aria-hidden="true">→</span></a
+        >
+        <span>Give funds, compute, or storage</span>
+      </div>
+    </div>
+  </section>
+
   <section class="work shell" aria-labelledby="work-heading">
     <div class="section-head reveal">
       <div>
@@ -505,9 +524,53 @@ const principles = [
     line-height: 1.35;
   }
 
+  /* Campaign */
+  .campaign {
+    padding-top: clamp(3rem, 6vw, 4.5rem);
+  }
+  .campaign-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 1.5rem 3rem;
+    align-items: center;
+    padding: clamp(1.6rem, 4vw, 2.5rem);
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--accent);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+  }
+  .campaign-card h2 {
+    margin: 0;
+    font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+    font-weight: 900;
+    line-height: 1;
+    text-wrap: balance;
+  }
+  .campaign-card p:not(.eyebrow) {
+    max-width: 40rem;
+    margin: 0.9rem 0 0;
+    color: var(--muted);
+  }
+  .campaign-actions {
+    display: grid;
+    gap: 0.6rem;
+    justify-items: center;
+  }
+  .campaign-actions span {
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
   /* Work */
   .work {
     padding-block: clamp(5rem, 10vw, 8rem);
+  }
+  .campaign + .work {
+    padding-top: clamp(4rem, 8vw, 6rem);
   }
   .bento {
     display: grid;
@@ -802,6 +865,12 @@ const principles = [
   @media (max-width: 900px) {
     .hero-grid {
       grid-template-columns: minmax(0, 1fr);
+    }
+    .campaign-card {
+      grid-template-columns: minmax(0, 1fr);
+    }
+    .campaign-actions {
+      justify-items: start;
     }
     .mosaic {
       height: 22rem;
