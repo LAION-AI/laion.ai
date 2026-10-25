@@ -420,8 +420,8 @@
     {
       "legacyPath": "content/team.json",
       "targetPath": "src/content/pages/team.json",
-      "bytes": 5202,
-      "sha256": "7e1004262f470ae6c755b5e04d4e2c73d5215c39ef159061fc09e36ec47da933"
+      "bytes": 5484,
+      "sha256": "b1449d5d929f884743300729a4d7f9f27e3f8bb8a8da640ab370c9d5ee7028c2"
     },
     {
       "legacyPath": "public/CNAME",

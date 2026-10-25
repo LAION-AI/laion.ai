@@ -118,7 +118,13 @@
     "title": "Member, researcher. Scalable Learning and Multi-Purpose AI (SLAMPAI) Lab at Juelich Supercomputing Center (JSC).",
     "desc": "Open multi-modal foundation models & datasets, audio modelling.",
     "img": "gijs"
-  },      
+  },
+  {
+    "name": "Gollam Rabby",
+    "title": "Member / Researcher",
+    "desc": "Senior researcher. Junior research group leader (Data Science & Digital Libraries Research Group Lab at L3S and TIB). PhD in Computer Science, with background in Machine Learning.",
+    "img": "gollam"
+  },
   {
     "name": "Aarush Katta",
     "title": "Founding Member",
