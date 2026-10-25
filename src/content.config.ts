@@ -32,6 +32,8 @@ const pages = defineCollection({
     name: z.string().optional(),
     iban: z.string().optional(),
     bic: z.string().optional(),
+    bank: z.string().optional(),
+    qrImage: z.string().optional(),
   }),
 });
 

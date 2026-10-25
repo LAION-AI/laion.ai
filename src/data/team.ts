@@ -24,7 +24,7 @@ const updates: Record<string, Partial<Member>> = {
   'Theo Coombes': { desc: 'Programmer focused on large-scale data and machine learning.' },
   'Mehdi Cherti': {
     title: 'Founding member / Researcher',
-    desc: 'Research in open multimodal models, datasets, generative modelling, and scaling laws. PhD in computer science.',
+    desc: 'Researcher in the Scalable Learning and Multi-Purpose AI Lab at Jülich Supercomputing Centre. Research in open multimodal models, datasets, generative modelling, and scaling laws. PhD in computer science.',
     profile: 'https://www.fz-juelich.de/en/news/effzett/2023/artificial-intelligence-for-all',
   },
   'Irina Rish': {
@@ -46,7 +46,7 @@ const updates: Record<string, Partial<Member>> = {
   },
   'Marianna Nezhurina': {
     title: 'Member / Researcher',
-    desc: 'Research in open multimodal foundation models, datasets, and scaling laws.',
+    desc: 'PhD student at Jülich Supercomputing Centre and the University of Tübingen, in the Scalable Learning and Multi-Purpose AI Lab. Research in open multimodal foundation models, datasets, scaling laws, scalable reinforcement learning, and agentic model training and evaluation.',
   },
   'Ludwig Schmidt': {
     title: 'Member / Researcher',
@@ -70,20 +70,19 @@ const updates: Record<string, Partial<Member>> = {
     title: 'Research contributor',
     desc: 'Research in generative models for human creativity. Co-author of Paella and Würstchen.',
   },
-  'Huu Nguyen': {
-    title: 'Head of safety policy',
-    desc: 'Computer scientist and lawyer advocating for human rights and access to scientific advancement and education.',
-  },
   'Björn Plüster': {
     title: 'Research contributor',
-    desc: 'Research in multilingual language models and specialized fine-tuning.',
+    desc: 'Affiliated with the University of Hamburg, DiscoResearch, and Ellamind. Research in multilingual language models and specialized fine-tuning.',
   },
   'Jörg Franke': {
     title: 'Member / Researcher',
     desc: 'Research in open foundation models and datasets, automated machine learning, and optimization.',
   },
+  'Gijs Wijngaard': {
+    title: 'Member / Researcher',
+    desc: 'Researcher in the Scalable Learning and Multi-Purpose AI Lab at Jülich Supercomputing Centre. Research in open multimodal foundation models and datasets, and audio modelling.',
+  },
   'Aarush Katta': { desc: 'Programmer working in artificial intelligence and machine learning.' },
-  'Jan Ebert': { desc: 'Software engineer and researcher working on scaling deep learning.' },
 };
 
 export const team: Member[] = originalTeam.map((member) => ({

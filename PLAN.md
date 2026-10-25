@@ -2,7 +2,7 @@
 
 **Branch:** `astro-rewrite`
 
-**Legacy baseline:** `main` at `1a16c61e` (refresh before cutover)
+**Legacy baseline:** `main` at `231e15e1` (refresh before cutover)
 
 **Revised:** 2026-09-05
 

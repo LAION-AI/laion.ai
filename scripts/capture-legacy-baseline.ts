@@ -1,3 +1,4 @@
+import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
@@ -8,6 +9,9 @@ const output = resolve(process.argv[3] ?? 'tests/fixtures/legacy-manifest.json')
 if (!existsSync(join(legacyRoot, 'package.json'))) {
   throw new Error(`Legacy checkout not found at ${legacyRoot}`);
 }
+const legacyCommit = execFileSync('git', ['-C', legacyRoot, 'rev-parse', '--short=8', 'HEAD'], {
+  encoding: 'utf8',
+}).trim();
 
 function filesBelow(directory: string): string[] {
   return readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
@@ -96,7 +100,7 @@ const routes = [
 mkdirSync(dirname(output), { recursive: true });
 writeFileSync(
   output,
-  `${JSON.stringify({ capturedFrom: 'main@1a16c61e', routes, files, knownMissingAssets: [...missingAssets].sort() }, null, 2)}\n`,
+  `${JSON.stringify({ capturedFrom: `main@${legacyCommit}`, routes, files, knownMissingAssets: [...missingAssets].sort() }, null, 2)}\n`,
 );
 console.log(
   `Captured ${routes.length} routes, ${files.length} files, and ${missingAssets.size} known missing assets in ${output}`,

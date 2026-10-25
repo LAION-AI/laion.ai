@@ -1,0 +1,53 @@
+---
+title: "Introducing Voice Acting Arena"
+author: "Christoph & Robert"
+date: "Sep 15 2026"
+previewImg: "/images/blog/voice-acting-arena.jpeg"
+---
+
+Today, LAION and TTS Arena are launching [**Voice Acting Arena**](https://voiceacting.ttsarena.org/) - a platform for comparing AI voice acting, with human listeners evaluating the acting quality.
+
+Text-to-speech has made remarkable progress. Today's systems can sound clear, natural, fluent, and increasingly human.
+
+But sounding human is not the same as giving a human actor level performance.
+
+Most TTS systems are optimized for contexts where consistency is a strength: assistants, call centers, narration, customer support. The ideal voice is often clear, friendly, and professional.
+
+Acting is different.
+
+A convincing performance may need to sound frightened, exhausted, awkward, angry, vulnerable, restrained, or emotionally conflicted. It may include hesitation, a shaky breath, an uncomfortable pause, or a sentence that trails off. These aren't necessarily imperfections to eliminate - they can be what makes a performance feel real.
+
+**Voice Acting Arena asks a different question from traditional TTS evaluation: not just "Does this sound realistic?" but "Do I believe this performance?"**
+
+<div style="margin: 2em 0;">
+  <video controls playsinline preload="metadata" poster="/images/blog/voice-acting-arena.jpeg" src="/images/blog/voice-acting-arena-video.mp4" style="width: 100%; height: auto; display: block;"></video>
+</div>
+
+## Same scene. Two performances. Your judgment.
+
+Each matchup presents a scene, acting instructions, and two anonymous model-generated performances of the same script.
+
+You might hear a dispatcher reassuring a frightened caller, someone trying to hide bad news, or a person recording a farewell while trying to sound normal.
+
+Listen to both takes, then compare them on three dimensions:
+
+- **Overall acting preference:** Which performance do you prefer overall?
+- **Instruction following:** Which better matches the scene and acting direction?
+- **Genuineness and authenticity:** Which feels more believable, rather than forced or mechanical?
+- **Vocal bursts (where requested):** Which better delivers reactions such as laughter, sobs, gasps, or screams naturally and in line with the acting direction?
+
+We keep these judgments separate deliberately. A performance can sound natural while missing the emotion. Another can follow the direction closely without feeling convincing. Sometimes the less polished take is the one that feels more true.
+
+## Building toward voices with human level acting performance
+
+We want Voice Acting Arena to grow into an ongoing evaluation for increasingly capable voice models, with new models, scenes, emotions, and acting challenges.
+
+Your votes will help show where today's systems already succeed, where they fall back into generic "pleasant TTS," and what still separates realistic speech from a convincing performance.
+
+They will also support our research collaboration, including a planned paper, and our broader goal of advancing open voice acting models.
+
+**AI voices shouldn't just be able to speak. They should be able to perform, reflecting the richness and nuances of natural speech and professional acting**
+
+Put on headphones, try a few comparisons, and tell us which performances land.
+
+**Try Voice Acting Arena → [https://voiceacting.ttsarena.org/](https://voiceacting.ttsarena.org/)**

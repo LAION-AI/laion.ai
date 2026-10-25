@@ -1,5 +1,5 @@
 {
-  "capturedFrom": "main@1a16c61e",
+  "capturedFrom": "main@231e15e1",
   "routes": [
     "/",
     "/404",
@@ -62,6 +62,7 @@
     "/notes/realfake",
     "/notes/rook",
     "/notes/summaries",
+    "/notes/voice-acting-arena",
     "/press",
     "/privacy-policy",
     "/projects",
@@ -285,6 +286,12 @@
       "sha256": "d37f057b1d7874f4f3d3e60673198ce513a6fa85b03196283c22dc9513d594bd"
     },
     {
+      "legacyPath": "notes/voice-acting-arena.md",
+      "targetPath": "src/content/notes/voice-acting-arena.md",
+      "bytes": 3431,
+      "sha256": "c737f7b3e093c9ae0b9c08eea4e14062469abdc016c0d0777b4348d2a106129e"
+    },
+    {
       "legacyPath": "notes/general-gpt.md",
       "targetPath": "src/content/notes/general-gpt.md",
       "bytes": 13846,
@@ -365,8 +372,8 @@
     {
       "legacyPath": "content/donations.md",
       "targetPath": "src/content/pages/donations.md",
-      "bytes": 593,
-      "sha256": "20d4bb9f6c178b31917c7403ca19cad2ed8c31581ec0e214bea15d18a1f45821"
+      "bytes": 815,
+      "sha256": "372ba19608df3c81a0e086fa5181694357891d20e671700d8591e46f0eddf950"
     },
     {
       "legacyPath": "content/impressum.md",
@@ -413,14 +420,20 @@
     {
       "legacyPath": "content/team.json",
       "targetPath": "src/content/pages/team.json",
-      "bytes": 5135,
-      "sha256": "90d5bb0b0127ef394936bf71d2ed9146ff23ef87af82a6035878a3cbfff64593"
+      "bytes": 5202,
+      "sha256": "7e1004262f470ae6c755b5e04d4e2c73d5215c39ef159061fc09e36ec47da933"
     },
     {
       "legacyPath": "public/CNAME",
       "targetPath": "public/CNAME",
       "bytes": 8,
       "sha256": "6889a568aa32360af5aa892b74eb7e92bdb8a9afefa17f13246d81ffe2657bab"
+    },
+    {
+      "legacyPath": "public/images/donations/laion-gls-donation-account.png",
+      "targetPath": "public/images/donations/laion-gls-donation-account.png",
+      "bytes": 33548,
+      "sha256": "e7c065c10c08bd08db3bf061eb02fba3baa4032e0b2549e46243dd698587fe0a"
     },
     {
       "legacyPath": "public/images/gallery/river.jpg",
@@ -765,6 +778,12 @@
       "sha256": "d843aa422eae265616e9dd34ce1ad09b62b556c60d98abb7f0d8fa58ec2d471e"
     },
     {
+      "legacyPath": "public/images/blog/voice-acting-arena.jpeg",
+      "targetPath": "public/images/blog/voice-acting-arena.jpeg",
+      "bytes": 46129,
+      "sha256": "e2d1a2ebc57660b65bb8bc7be952802df9af792432a79dafa05cc72ce7ae1da2"
+    },
+    {
       "legacyPath": "public/images/blog/datacomp_scaling_plot.png",
       "targetPath": "public/images/blog/datacomp_scaling_plot.png",
       "bytes": 36429,
@@ -1081,6 +1100,12 @@
       "targetPath": "public/images/blog/sci3.jpg",
       "bytes": 320019,
       "sha256": "9f9c295e94f213f5c2b1d05a15b0eb52a20d526366e78ab84be0f9e79a28746a"
+    },
+    {
+      "legacyPath": "public/images/blog/voice-acting-arena-video.mp4",
+      "targetPath": "public/images/blog/voice-acting-arena-video.mp4",
+      "bytes": 3529858,
+      "sha256": "6423520a54b12074378f7cf328e2111898859501cc26fc3b2eea07db21ce8276"
     },
     {
       "legacyPath": "public/images/blog/video2dataset-preview.png",
@@ -1615,6 +1640,12 @@
       "targetPath": "public/images/team/ludwig.jpg",
       "bytes": 245749,
       "sha256": "a02af2919265a014ce1f65f7352c3e13b023ffdede31f33a3bf6d056067e0397"
+    },
+    {
+      "legacyPath": "public/images/team/gijs.jpg",
+      "targetPath": "public/images/team/gijs.jpg",
+      "bytes": 691226,
+      "sha256": "98050659a69490859f2e236b72c0f298133cebf0a486c09bb9ce6ba797fd6431"
     },
     {
       "legacyPath": "public/images/team/christoph.jpg",
