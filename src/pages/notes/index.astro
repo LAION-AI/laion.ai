@@ -9,6 +9,21 @@ const posts = sortPosts(await getCollection('notes'));
 ---
 
 <BaseLayout title={meta.title} description={meta.description}>
-  <PageHero eyebrow={meta.eyebrow} title={meta.title} intro={meta.description} />
+  <PageHero eyebrow={meta.eyebrow} title={meta.title} intro={meta.description}>
+    <a class="button ghost feed-link" href="/notes/rss.xml">
+      <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"
+        ><path
+          fill="currentColor"
+          d="M2 2.5A11.5 11.5 0 0 1 13.5 14h-2A9.5 9.5 0 0 0 2 4.5v-2Zm0 4.25A7.25 7.25 0 0 1 9.25 14h-2A5.25 5.25 0 0 0 2 8.75v-2ZM3.5 11a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3Z"
+        ></path></svg
+      >Follow via RSS</a
+    >
+  </PageHero>
   <PostIndex posts={posts} basePath={meta.path} />
 </BaseLayout>
+
+<style>
+  .feed-link {
+    margin-top: 2rem;
+  }
+</style>

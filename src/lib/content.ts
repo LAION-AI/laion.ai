@@ -40,9 +40,11 @@ export function formatDate(value: string, locale = 'en-GB'): string {
 }
 
 export function sortPosts<T extends PostEntry>(posts: T[]): T[] {
-  return [...posts].sort(
-    (a, b) => parseDate(b.data.date).valueOf() - parseDate(a.data.date).valueOf(),
-  );
+  return [...posts].sort((a, b) => {
+    const byDate = parseDate(b.data.date).valueOf() - parseDate(a.data.date).valueOf();
+    // Code-point ordering makes ties independent of loader order and system locale.
+    return byDate || (a.id < b.id ? -1 : a.id > b.id ? 1 : 0);
+  });
 }
 
 export function excerpt(markdown: string, length = 210): string {
@@ -55,6 +57,11 @@ export function excerpt(markdown: string, length = 210): string {
     .replace(/\s+/g, ' ')
     .trim();
   return clean.length > length ? `${clean.slice(0, length).trimEnd()}…` : clean;
+}
+
+export function readingTime(markdown: string): number {
+  const words = excerpt(markdown, Infinity).split(' ').filter(Boolean).length;
+  return Math.max(1, Math.round(words / 230));
 }
 
 export function absoluteImage(image: string): string {

@@ -11,21 +11,26 @@ const [first, ...rest] = posts;
 
 <section class="posts shell">
   {first && <PostCard post={first} basePath={basePath} featured />}
-  <div class="grid">{rest.map((post) => <PostCard post={post} basePath={basePath} />)}</div>
+  <div class="post-grid">{rest.map((post) => <PostCard post={post} basePath={basePath} />)}</div>
 </section>
 
 <style>
   .posts {
-    padding-block: 3rem 6rem;
+    padding-block: clamp(2.5rem, 5vw, 4rem) clamp(5rem, 9vw, 7rem);
   }
-  .grid {
+  .post-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.2rem;
-    margin-top: 1.2rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.25rem;
   }
-  @media (max-width: 680px) {
-    .grid {
+  @media (max-width: 1000px) {
+    .post-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px) {
+    .post-grid {
       grid-template-columns: 1fr;
     }
   }

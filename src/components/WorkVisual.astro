@@ -1,0 +1,255 @@
+---
+// Decorative, deterministic line art for the homepage project cards.
+interface Props {
+  kind: 'video' | 'dataset' | 'model' | 'research' | 'speech';
+}
+const { kind } = Astro.props;
+
+let seed = [...kind].reduce((sum, char) => sum + char.charCodeAt(0), 0);
+const random = () => {
+  seed = (seed * 16807) % 2147483647;
+  return (seed - 1) / 2147483646;
+};
+
+const frames = Array.from({ length: 14 }, (_, index) => ({
+  x: 16 + (index % 7) * 54,
+  y: 22 + Math.floor(index / 7) * 40,
+  opacity: 0.12 + random() * 0.4,
+  active: index === 4 || index === 11,
+}));
+const wave = Array.from({ length: 64 }, (_, index) => {
+  const envelope = Math.sin((index / 63) * Math.PI) ** 0.6;
+  return { x: 16 + index * 5.9, h: 4 + envelope * (6 + random() * 30) };
+});
+
+const cells = Array.from({ length: 9 * 15 }, (_, index) => {
+  const value = random();
+  return {
+    x: 14 + (index % 15) * 25,
+    y: 14 + Math.floor(index / 15) * 22,
+    opacity: 0.08 + value * 0.42,
+    accent: value > 0.965,
+    removed: value < 0.035,
+  };
+});
+
+const pairs = [0, 1, 2, 3, 4].map((index) => ({
+  y: 30 + index * 40,
+  target: 30 + [2, 0, 4, 1, 3][index] * 40,
+  active: index === 2,
+}));
+
+const curves = [0, 1, 2, 3].map((index) => {
+  const scale = 1 - index * 0.17;
+  const points = Array.from({ length: 30 }, (_, step) => {
+    const x = 40 + step * 11.5;
+    const y = 32 + (150 - index * 18) * scale * (1 / (1 + step * 0.22)) ** 0.85 + index * 22;
+    return [x, Math.min(y, 196)] as const;
+  });
+  return {
+    d: points.map(([x, y], step) => `${step ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' '),
+    dots: points.filter((_, step) => step % 6 === 5),
+    active: index === 0,
+  };
+});
+
+const voice = Array.from({ length: 46 }, (_, index) => {
+  const t = index / 45;
+  const envelope = Math.sin(t * Math.PI) * (0.55 + 0.45 * Math.sin(t * Math.PI * 3) ** 2);
+  return {
+    x: 22 + index * 8,
+    h: 6 + envelope * (40 + random() * 70),
+    active: index > 18 && index < 28,
+  };
+});
+---
+
+<svg class="visual" viewBox="0 0 400 220" aria-hidden="true" focusable="false">
+  {
+    kind === 'video' && (
+      <g>
+        {frames.map((frame) => (
+          <rect
+            x={frame.x}
+            y={frame.y}
+            width="46"
+            height="32"
+            rx="4"
+            class:list={['fill', { 'hl-stroke': frame.active }]}
+            style={`opacity:${frame.active ? 1 : frame.opacity.toFixed(2)}`}
+          />
+        ))}
+        <line x1="257" y1="10" x2="257" y2="208" class="hl-line" />
+        <circle cx="257" cy="10" r="4" class="hl" />
+        {wave.map((bar) => (
+          <rect
+            x={bar.x}
+            y={(166 - bar.h / 2).toFixed(1)}
+            width="2.6"
+            height={bar.h.toFixed(1)}
+            rx="1.3"
+            class:list={['fill', { hl: bar.x > 240 && bar.x < 274 }]}
+            style={bar.x > 240 && bar.x < 274 ? '' : 'opacity:.45'}
+          />
+        ))}
+      </g>
+    )
+  }
+  {
+    kind === 'dataset' && (
+      <g>
+        {cells.map((cell) =>
+          cell.removed ? (
+            <rect
+              x={cell.x}
+              y={cell.y}
+              width="19"
+              height="16"
+              rx="3"
+              class="dashed"
+              stroke-dasharray="3 3"
+            />
+          ) : (
+            <rect
+              x={cell.x}
+              y={cell.y}
+              width="19"
+              height="16"
+              rx="3"
+              class:list={[cell.accent ? 'hl' : 'fill']}
+              style={cell.accent ? '' : `opacity:${cell.opacity.toFixed(2)}`}
+            />
+          ),
+        )}
+      </g>
+    )
+  }
+  {
+    kind === 'model' && (
+      <g>
+        {pairs.map((pair) => (
+          <path
+            d={`M86 ${pair.y + 12} C 200 ${pair.y + 12}, 200 ${pair.target + 12}, 302 ${pair.target + 12}`}
+            class:list={['line', { 'hl-line': pair.active }]}
+          />
+        ))}
+        {pairs.map((pair) => (
+          <rect
+            x="48"
+            y={pair.y}
+            width="32"
+            height="24"
+            rx="4"
+            class:list={[pair.active ? 'hl' : 'fill']}
+            style={pair.active ? '' : 'opacity:.5'}
+          />
+        ))}
+        {pairs.map((pair, index) => (
+          <g style={pair.active ? '' : 'opacity:.5'}>
+            <rect
+              x="308"
+              y={pair.target + 5}
+              width={44 - index * 4}
+              height="5"
+              rx="2.5"
+              class="fill"
+            />
+            <rect
+              x="308"
+              y={pair.target + 14}
+              width={26 + index * 3}
+              height="5"
+              rx="2.5"
+              class="fill"
+              style="opacity:.6"
+            />
+          </g>
+        ))}
+      </g>
+    )
+  }
+  {
+    kind === 'research' && (
+      <g>
+        {[60, 100, 140, 180].map((y) => (
+          <line x1="40" y1={y} x2="380" y2={y} class="gridline" />
+        ))}
+        <path d="M40 16 V196 H384" class="axis" />
+        {curves.map((curve) => (
+          <g>
+            <path d={curve.d} class:list={['line', { 'hl-line': curve.active }]} />
+            {curve.dots.map(([x, y]) => (
+              <circle cx={x} cy={y.toFixed(1)} r="3" class:list={[curve.active ? 'hl' : 'fill']} />
+            ))}
+          </g>
+        ))}
+      </g>
+    )
+  }
+  {
+    kind === 'speech' && (
+      <g>
+        {voice.map((bar) => (
+          <rect
+            x={bar.x}
+            y={(110 - bar.h / 2).toFixed(1)}
+            width="4"
+            height={bar.h.toFixed(1)}
+            rx="2"
+            class:list={[bar.active ? 'hl' : 'fill']}
+            style={bar.active ? '' : 'opacity:.4'}
+          />
+        ))}
+      </g>
+    )
+  }
+</svg>
+
+<style>
+  .visual {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  .fill {
+    fill: currentColor;
+  }
+  .hl {
+    fill: var(--accent);
+  }
+  .hl-stroke {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2;
+  }
+  .dashed {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1;
+    opacity: 0.5;
+  }
+  .line {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    opacity: 0.4;
+  }
+  .hl-line {
+    fill: none;
+    stroke: var(--accent);
+    stroke-width: 2;
+    opacity: 1;
+  }
+  .gridline {
+    stroke: currentColor;
+    stroke-dasharray: 2 4;
+    opacity: 0.25;
+  }
+  .axis {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.25;
+    opacity: 0.55;
+  }
+</style>

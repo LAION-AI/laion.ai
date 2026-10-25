@@ -10,7 +10,7 @@ export async function getStaticPaths() {
   }));
 }
 const { post } = Astro.props as { post: CollectionEntry<'blog'> };
-const { Content } = await render(post);
+const { Content, headings } = await render(post);
 ---
 
 <BaseLayout
@@ -19,5 +19,7 @@ const { Content } = await render(post);
   image={post.data.previewImg}
   type="article"
 >
-  <ArticleLayout post={post} backHref="/blog" backLabel="Blog"><Content /></ArticleLayout>
+  <ArticleLayout headings={headings} post={post} backHref="/blog" backLabel="Blog"
+    ><Content /></ArticleLayout
+  >
 </BaseLayout>

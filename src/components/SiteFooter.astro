@@ -1,110 +1,236 @@
-<footer>
+---
+interface Props {
+  currentPath: string;
+}
+const { currentPath } = Astro.props;
+const showCta = !currentPath.startsWith('/contribute');
+const columns = [
+  {
+    label: 'Explore',
+    links: [
+      ['Projects', '/projects'],
+      ['Blog', '/blog'],
+      ['Notes', '/notes'],
+      ['Team', '/team'],
+      ['Press', '/press'],
+    ],
+  },
+  {
+    label: 'Connect',
+    links: [
+      ['Contribute', '/contribute'],
+      ['GitHub', 'https://github.com/LAION-AI/'],
+      ['Discord', 'https://discord.com/invite/eq3cAMZtCC'],
+      ['Email', 'mailto:contact@laion.ai'],
+      ['Blog RSS', '/blog/rss.xml'],
+      ['Notes RSS', '/notes/rss.xml'],
+    ],
+  },
+  {
+    label: 'Organization',
+    links: [
+      ['About', '/about'],
+      ['Donations', '/donations'],
+      ['FAQ', '/faq'],
+      ['Dataset requests', '/dataset-requests'],
+      ['Privacy', '/privacy-policy'],
+      ['Impressum', '/impressum'],
+      ['GEP policy', '/gep-policy'],
+    ],
+  },
+];
+---
+
+<footer class="surface-dark">
+  {
+    showCta && (
+      <div class="shell cta">
+        <div>
+          <p class="eyebrow">Get involved</p>
+          <h2>Open research is a collective effort.</h2>
+        </div>
+        <div class="cta-actions">
+          <p>Bring your questions, skills, and resources. Everyone is welcome to contribute.</p>
+          <div>
+            <a class="button accent" href="/contribute">
+              Ways to contribute{' '}
+              <span class="arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
+            <a class="button ghost" href="https://discord.com/invite/eq3cAMZtCC">
+              Join our Discord
+            </a>
+          </div>
+        </div>
+      </div>
+    )
+  }
   <div class="shell footer-grid">
     <div class="footer-brand">
-      <div><span>LAION</span><img src="/images/logo.svg" alt="" width="46" height="46" /></div>
-      <p>Large-scale Artificial Intelligence Open Network</p>
-    </div>
-    <div>
-      <p class="label">Explore</p>
-      <a href="/projects">Projects</a><a href="/blog">Blog</a><a href="/notes">Notes</a><a
-        href="/team">Team</a
+      <a href="/" aria-label="LAION home"
+        ><img src="/images/logo.svg" alt="" width="40" height="40" /><span>LAION</span></a
       >
+      <p>
+        Large-scale Artificial Intelligence Open Network. A non-profit association registered in
+        Germany.
+      </p>
     </div>
-    <div>
-      <p class="label">Connect</p>
-      <a href="https://github.com/LAION-AI/">GitHub</a><a
-        href="https://discord.com/invite/eq3cAMZtCC">Discord</a
-      ><a href="mailto:contact@laion.ai">Email</a>
-    </div>
-    <div>
-      <p class="label">Organization</p>
-      <a href="/donations">Donations</a><a href="/privacy-policy">Privacy</a><a href="/impressum"
-        >Impressum</a
-      ><a href="/gep-policy">GEP policy</a>
-    </div>
+    {
+      columns.map((column) => (
+        <div class="column">
+          <p class="label">{column.label}</p>
+          {column.links.map(([label, href]) => (
+            <a href={href}>{label}</a>
+          ))}
+        </div>
+      ))
+    }
   </div>
   <div class="shell footnote">
-    <span>LAION e.V. · Non-profit, open, community-driven.</span><span
-      >© {new Date().getFullYear()} LAION</span
-    >
+    <span>© {new Date().getFullYear()} LAION e.V. · Non-profit, open, community-driven.</span>
+    <a href="mailto:contact@laion.ai">contact@laion.ai</a>
   </div>
+  <div class="watermark" aria-hidden="true">LAION</div>
 </footer>
 
 <style>
   footer {
-    padding: 4.5rem 0 1.5rem;
-    background: var(--ink);
+    padding: clamp(4rem, 8vw, 7rem) 0 0;
+    border-top: 1px solid var(--line-dark);
+  }
+  .cta {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem 4rem;
+    align-items: end;
+    padding-bottom: clamp(3.5rem, 7vw, 5.5rem);
+    border-bottom: 1px solid var(--line-dark);
+  }
+  .cta h2 {
+    max-width: 40rem;
+    margin: 0;
     color: white;
+    font-size: clamp(2.6rem, 5.5vw, 4.75rem);
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    line-height: 0.92;
+    text-wrap: balance;
+  }
+  .cta-actions p {
+    max-width: 28rem;
+    margin: 0 0 1.5rem;
+    color: var(--on-dark-muted);
+    font-size: 1.15rem;
+  }
+  .cta-actions div {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.7rem;
   }
   .footer-grid {
     display: grid;
-    grid-template-columns: minmax(16rem, 2fr) repeat(3, 1fr);
+    grid-template-columns: minmax(16rem, 1.6fr) repeat(3, 1fr);
     gap: 3rem;
   }
-  .footer-brand > div {
-    display: flex;
+  .cta + .footer-grid {
+    padding-top: clamp(3rem, 6vw, 4.5rem);
+  }
+  .footer-brand a {
+    display: inline-flex;
     gap: 0.7rem;
     align-items: center;
-    font-size: 3rem;
+    color: white;
+    font-size: 2.4rem;
     font-weight: 900;
-    letter-spacing: -0.05em;
     line-height: 1;
+    text-decoration: none;
   }
   .footer-brand img {
-    width: 2.5rem;
-    filter: brightness(0) invert(1);
+    width: 2.4rem;
+    height: 2.4rem;
   }
   .footer-brand p {
-    max-width: 18rem;
-    color: #b9c5ce;
+    max-width: 19rem;
+    margin: 1.25rem 0 0;
+    color: var(--on-dark-muted);
+    font-size: 0.98rem;
   }
   .label {
-    margin: 0.7rem 0 1rem;
-    color: #91a3b1;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.16em;
+    margin: 0.6rem 0 1rem;
+    color: var(--on-dark-muted);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
   }
-  .footer-grid > div:not(:first-child) {
+  .column {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
-  .footer-grid a {
-    margin: 0.22rem 0;
-    color: white;
+  .column a {
+    padding-block: 0.28rem;
+    color: #dbe5ec;
     text-decoration: none;
+    transition: color 0.15s ease;
   }
-  .footer-grid a:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--accent);
-    text-underline-offset: 0.2em;
+  .column a:hover {
+    color: var(--accent);
   }
   .footnote {
     display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 2rem;
     justify-content: space-between;
     margin-top: 4rem;
-    padding-top: 1.2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.18);
-    color: #91a3b1;
-    font-size: 0.82rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--line-dark);
+    color: var(--on-dark-muted);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.04em;
   }
-  @media (max-width: 760px) {
+  .footnote a {
+    color: inherit;
+    text-decoration: none;
+  }
+  .footnote a:hover {
+    color: white;
+  }
+  .watermark {
+    margin-top: 1.5rem;
+    margin-bottom: -0.16em;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0) 85%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: clamp(6rem, 24vw, 22rem);
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 0.8;
+    text-align: center;
+    user-select: none;
+  }
+  @media (max-width: 860px) {
+    .cta {
+      grid-template-columns: 1fr;
+    }
     .footer-grid {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
     }
     .footer-brand {
       grid-column: 1 / -1;
     }
   }
-  @media (max-width: 430px) {
+  @media (max-width: 520px) {
     .footer-grid {
+      grid-template-columns: 1fr 1fr;
       gap: 2rem 1rem;
     }
     .footnote {
       flex-direction: column;
-      gap: 0.35rem;
     }
   }
 </style>

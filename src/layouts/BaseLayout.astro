@@ -42,7 +42,7 @@ const organization = {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#1d374e" />
+    <meta name="theme-color" content="#061220" />
     {noindex && <meta name="robots" content="noindex" />}
     <title>{pageTitle}</title>
     <meta name="title" content={pageTitle} />
@@ -67,7 +67,7 @@ const organization = {
     <a class="skip-link" href="#main">Skip to content</a>
     <SiteHeader currentPath={Astro.url.pathname} />
     <main id="main"><slot /></main>
-    <SiteFooter />
+    <SiteFooter currentPath={Astro.url.pathname} />
   </body>
 </html>
 
@@ -77,10 +77,11 @@ const organization = {
     z-index: 100;
     top: 0.5rem;
     left: 0.5rem;
-    padding: 0.65rem 1rem;
+    padding: 0.65rem 1.1rem;
+    border-radius: 999px;
     background: var(--accent);
-    color: var(--ink);
-    font-weight: 700;
+    color: var(--night);
+    text-decoration: none;
     transform: translateY(-150%);
   }
   .skip-link:focus {

@@ -1,18 +1,38 @@
 ---
-import { getEntry, render } from 'astro:content';
+import { getEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import DocumentPage from '../components/DocumentPage.astro';
 const page = await getEntry('pages', 'donations');
 if (!page) throw new Error('Missing donations content');
-const { Content } = await render(page);
+import FundingStatement from '../components/FundingStatement.astro';
 ---
 
 <BaseLayout
   title="Donations"
   description="Support LAION's non-profit open machine-learning research."
 >
-  <DocumentPage eyebrow="Support open research" title="Donations" intro={page.data.heading}>
-    <Content />
+  <DocumentPage
+    eyebrow="Support open research"
+    title="Donations"
+    intro="Help sustain open machine-learning research and public education."
+  >
+    <FundingStatement />
+    <p>
+      Support our non-profit mission through <a href="https://gofund.me/0d9f2b7d">GoFundMe</a> or a direct
+      bank transfer using the details below.
+    </p>
+    <h2>What your support makes possible</h2>
+    <p>
+      Our work brings together dataset development, reusable training and evaluation tools, and
+      educational projects such as <a href="/blog/bud-e-release">BUD-E</a>. Explore our <a
+        href="/projects">research projects</a
+      > to see the resources we share.
+    </p>
+    <p>
+      To discuss organizational support or a contribution of computing resources, <a
+        href="/contribute">see the ways to contribute</a
+      >.
+    </p>
     <dl class="bank">
       <div><dt>Name</dt><dd>{page.data.name}</dd></div><div>
         <dt>IBAN</dt><dd>{page.data.iban}</dd>
@@ -22,27 +42,45 @@ const { Content } = await render(page);
 </BaseLayout>
 <style>
   .bank {
-    max-width: 49rem;
-    margin-top: 3rem;
-    border-top: 1px solid var(--line);
+    max-width: 46rem;
+    margin: 3rem 0 0;
+    padding: 0.5rem 1.75rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
   }
   .bank div {
     display: grid;
-    grid-template-columns: 7rem 1fr;
-    padding: 1rem 0;
-    border-bottom: 1px solid var(--line);
+    grid-template-columns: 6rem 1fr;
+    gap: 1rem;
+    align-items: baseline;
+    padding: 1.1rem 0;
+  }
+  .bank div + div {
+    border-top: 1px solid var(--line);
   }
   dt {
-    color: #667985;
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
   }
   dd {
     margin: 0;
-    font-size: 1.2rem;
-    font-weight: 700;
+    font-family: var(--font-mono);
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
     overflow-wrap: anywhere;
+  }
+  @media (max-width: 520px) {
+    .bank {
+      padding-inline: 1.15rem;
+    }
+    .bank div {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
   }
 </style>

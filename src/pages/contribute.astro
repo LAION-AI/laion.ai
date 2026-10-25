@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+const paths = [
+  {
+    title: 'Contribute code',
+    number: '01',
+    text: 'Improve dataset tooling, reproduce an experiment, fix a bug, or make documentation easier to use. Start with a project that matches your interests and read its contribution guidelines.',
+    links: [
+      { label: 'Explore repositories', href: 'https://github.com/LAION-AI/' },
+      { label: 'Find a project', href: '/projects' },
+    ],
+  },
+  {
+    title: 'Collaborate on research',
+    number: '02',
+    text: 'Share a research question, a proposed experiment, or an evaluation you would like to reproduce. Include the relevant project and the expertise you can contribute.',
+    links: [
+      { label: 'Join the research community', href: 'https://discord.com/invite/eq3cAMZtCC' },
+      {
+        label: 'Discuss a collaboration',
+        href: 'mailto:contact@laion.ai?subject=Research%20collaboration',
+      },
+    ],
+  },
+  {
+    title: 'Offer compute or infrastructure',
+    number: '03',
+    text: 'Have GPU time, storage, or infrastructure expertise to share? Contact us with the resources available, the timeframe, and any conditions so we can discuss a suitable research project.',
+    links: [
+      {
+        label: 'Discuss infrastructure support',
+        href: 'mailto:contact@laion.ai?subject=Compute%20and%20infrastructure%20support',
+      },
+    ],
+  },
+  {
+    title: 'Support financially',
+    number: '04',
+    text: 'Help sustain LAION’s work on open datasets, models, tools, and public education. Individual donations and organizational support contribute to our non-profit mission.',
+    links: [{ label: 'Support LAION', href: '/donations' }],
+  },
+];
+---
+
+<BaseLayout
+  title="Contribute"
+  description="Contribute code, collaborate on research, offer computing resources, or support LAION’s non-profit mission."
+>
+  <PageHero
+    eyebrow="Work with us"
+    title="Contribute to LAION"
+    intro="Open research is a collective effort. Bring your questions, skills, and resources."
+  />
+  <section class="shell contribution-grid" aria-label="Ways to contribute">
+    {
+      paths.map((path) => (
+        <article>
+          <span class="number">{path.number}</span>
+          <>
+            <h2>{path.title}</h2>
+            <p>{path.text}</p>
+          </>
+          <div class="links">
+            {path.links.map((link, index) => (
+              <a class:list={['button', { secondary: index > 0 }]} href={link.href}>
+                {link.label}{' '}
+                <span class="arrow" aria-hidden="true">
+                  →
+                </span>
+              </a>
+            ))}
+          </div>
+        </article>
+      ))
+    }
+  </section>
+  <div class="shell contact-note">
+    <p>
+      For dataset access, removal, or other dataset-related questions, visit <a
+        href="/dataset-requests">Dataset requests</a
+      >.
+    </p>
+  </div>
+</BaseLayout>
+<style>
+  .contribution-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    padding-top: clamp(2.5rem, 5vw, 4rem);
+  }
+  article {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: clamp(1.75rem, 4vw, 2.75rem);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.35s var(--ease-out);
+  }
+  article:hover {
+    border-color: var(--line-strong);
+    box-shadow: var(--shadow);
+  }
+  .number {
+    position: absolute;
+    top: clamp(1rem, 3vw, 1.75rem);
+    right: clamp(1.25rem, 3vw, 2rem);
+    color: var(--mist);
+    font-size: clamp(4rem, 8vw, 6.5rem);
+    font-weight: 900;
+    line-height: 0.8;
+    pointer-events: none;
+  }
+  h2 {
+    position: relative;
+    max-width: 22rem;
+    margin: 0 0 1rem;
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    font-weight: 900;
+    line-height: 1;
+    text-wrap: balance;
+  }
+  article p {
+    position: relative;
+    max-width: 34rem;
+    margin: 0 0 2rem;
+    color: var(--muted);
+  }
+  .links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: auto;
+  }
+  .links .button {
+    white-space: normal;
+  }
+  .contact-note {
+    padding-block: 2rem clamp(5rem, 9vw, 7rem);
+    color: var(--muted);
+  }
+  .contact-note a {
+    color: var(--ink);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+  }
+  @media (max-width: 760px) {
+    .contribution-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

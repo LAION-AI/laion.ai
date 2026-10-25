@@ -1,0 +1,157 @@
+{
+  "https://www.intel.com/content/www/us/en/developer/articles/technical/bud-e-ai-assisted-education-for-all.html": {
+    "title": "BUD-E: AI-assisted education",
+    "publication": "Intel",
+    "isHeadline": false
+  },
+  "https://www.lto.de/recht/hintergruende/h/kuenstliche-intelligenz-ki-urheberrecht-text-data-mining-lg-hamburg-310o22723": {
+    "title": "Fotograf muss Nutzung seines Bildes in KI-Datenbank dulden",
+    "publication": "LTO",
+    "isHeadline": true
+  },
+  "https://www.heise.de/news/KI-Update-kompakt-Generative-KI-kalifornisches-KI-Gesetz-Laion-SmartGAITLab-9957439.html": {
+    "title": "KI-Update kompakt: Generative KI, kalifornisches KI-Gesetz, Laion, SmartGAITLab",
+    "publication": "heise online",
+    "isHeadline": true
+  },
+  "https://www.arstechnica.com/tech-policy/2024/08/nonprofit-scrubs-illegal-content-from-controversial-ai-training-dataset": {
+    "title": "Nonprofit scrubs illegal content from controversial AI training dataset",
+    "publication": "Ars Technica",
+    "isHeadline": true
+  },
+  "https://www.heise.de/en/news/RE-LAION-5B-Image-database-without-abuse-images-9852925.html": {
+    "title": "RE-LAION-5B: Image database without abuse images",
+    "publication": "heise online",
+    "isHeadline": true
+  },
+  "https://www.techcrunch.com/2024/08/30/the-org-behind-the-data-set-used-to-train-stable-diffusion-claims-it-has-removed-csam/": {
+    "title": "The org behind the dataset used to train Stable Diffusion claims it has removed CSAM",
+    "publication": "TechCrunch",
+    "isHeadline": true
+  },
+  "https://www.apnews.com/article/ai-image-generators-child-sexual-abuse-laion-stable-diffusion-2652b0f4245fb28ced1cf74c60a8d9f0": {
+    "title": "Child abuse images removed from AI image-generator training source, researchers say",
+    "publication": "AP News",
+    "isHeadline": true
+  },
+  "https://www.heise.de/news/Reasoning-Fail-Gaengige-LLMs-scheitern-an-kinderleichter-Aufgabe-9755034.html": {
+    "title": "Reasoning failures in large language models",
+    "publication": "heise online",
+    "isHeadline": false
+  },
+  "https://www.nature.com/articles/d41586-024-00497-8": {
+    "title": "What the EU’s tough AI law means for research and ChatGPT",
+    "publication": "Nature",
+    "isHeadline": true
+  },
+  "https://www.techcrunch.com/2024/02/15/this-german-nonprofit-is-building-an-open-voice-assistant-that-anyone-can-use/": {
+    "title": "This German nonprofit is building an open voice assistant that anyone can use",
+    "publication": "TechCrunch",
+    "isHeadline": true
+  },
+  "https://www.heise.de/news/KI-Update-kompakt-ChatGPT-personalisieren-Digitalisierung-IAFM-Bud-E-9628384.html": {
+    "title": "KI-Update: ChatGPT, Digitalisierung, IAFM und Bud-E",
+    "publication": "heise online",
+    "isHeadline": false
+  },
+  "https://www.aibusiness.com/nlp/bud-e-aims-to-create-human-like-computer-voices": {
+    "title": "Bud-E and human-like computer voices",
+    "publication": "AI Business",
+    "isHeadline": false
+  },
+  "https://www.heise.de/news/Bud-E-Laion-arbeitet-an-Audio-KI-mit-Empathie-9626286.html": {
+    "title": "Bud-E: Laion arbeitet an Audio-KI mit Empathie",
+    "publication": "heise online",
+    "isHeadline": true
+  },
+  "https://www.forbes.com/sites/hessiejones/2023/11/30/the-rise-and-fall-and-rise-of-sam-altman-has-grave-implications-for-ai-research-and-humanity/": {
+    "title": "The Rise And Fall... And Rise Of Sam Altman Has Grave Implications For AI Research And Humanity",
+    "publication": "Forbes",
+    "isHeadline": true
+  },
+  "https://www.spektrum.de/news/interview-mit-laion-ki-im-sinn-der-menschheit-erforschen/2198369": {
+    "title": "Interview mit LAION: »KI im Sinn der Menschheit erforschen«",
+    "publication": "Spektrum der Wissenschaft",
+    "isHeadline": true
+  },
+  "https://www.techcrunch.com/2023/10/27/a-group-behind-stable-diffusion-wants-to-open-source-emotion-detecting-ai": {
+    "title": "A group behind Stable Diffusion wants to open source emotion-detecting AI",
+    "publication": "TechCrunch",
+    "isHeadline": true
+  },
+  "https://www.golem.de/news/laion-riesiges-sprachmodell-fuer-deutsch-trainiert-2309-178081.html": {
+    "title": "Laion: Riesiges Sprachmodell für Deutsch trainiert",
+    "publication": "Golem.de",
+    "isHeadline": true
+  },
+  "https://www.apnews.com/article/artists-ai-image-generators-stable-diffusion-midjourney-7ebcb6e6ddca3f165a3065c70ce85904": {
+    "title": "Visual artists fight back against AI companies for repurposing their work",
+    "publication": "AP News",
+    "isHeadline": true
+  },
+  "https://www.ardmediathek.de/video/ttt-titel-thesen-temperamente/verliert-europa-den-anschluss/das-erste/Y3JpZDovL2Rhc2Vyc3RlLmRlL3R0dCAtIHRpdGVsIHRoZXNlbiB0ZW1wZXJhbWVudGUvYjMxZTE1NDAtM2M4OC00MGExLWJiNjQtODhlYTgzNzg0MzI5": {
+    "title": "Verliert Europa den Anschluss?",
+    "publication": "ARD · ttt",
+    "isHeadline": false
+  },
+  "https://www.repubblica.it/economia/2023/07/17/news/maghi_tedeschi_algoritmi_ai-407769374/": {
+    "title": "I tre maghi tedeschi degli algoritmi per l’Ai generativa alla portata di tutti",
+    "publication": "la Repubblica",
+    "isHeadline": true
+  },
+  "https://www.tagesschau.de/wissen/technologie/ki-trainingsdaten-privat-datenschutz-100.html": {
+    "title": "KI-Trainingsdaten und Datenschutz",
+    "publication": "tagesschau",
+    "isHeadline": false
+  },
+  "https://www.golem.de/news/interview-mit-laion-der-datensatz-hinter-den-ki-bildern-2306-174786.html": {
+    "title": "Interview mit LAION: „Mehrheit der Medien dürfte bald KI-generiert sein“",
+    "publication": "Golem.de",
+    "isHeadline": true
+  },
+  "https://www.theguardian.com/technology/2023/may/04/eu-urged-to-protect-grassroots-ai-research-or-risk-losing-out-to-us": {
+    "title": "EU urged to protect grassroots AI research or risk losing out to US",
+    "publication": "The Guardian",
+    "isHeadline": true
+  },
+  "https://www.unite.ai/laion-and-a-group-of-27/": {
+    "title": "LAION in Open Letter to European Parliament Urge Call to Protect Open-Source AI in Europe",
+    "publication": "Unite.AI",
+    "isHeadline": true
+  },
+  "https://www.sifted.eu/articles/ai-supercomputer-petition-stable-diffusion": {
+    "title": "‘Combat godlike AI with benevolent godlike AI’ — the call for a CERN-like AI supercomputer",
+    "publication": "Sifted",
+    "isHeadline": true
+  },
+  "https://www.bloomberg.com/news/features/2023-04-24/a-high-school-teacher-s-free-image-database-powers-ai-unicorns#xj4y7vzkg": {
+    "title": "A High School Teacher’s Free Image Database Powers AI Unicorns",
+    "publication": "Bloomberg",
+    "isHeadline": true
+  },
+  "https://www.sueddeutsche.de/wirtschaft/ki-laion-kuenstliche-intelligenz-supercomputer-open-ai-chatgpt-1.5804840?reduced=true": {
+    "title": "LAION und öffentliche KI-Forschungsinfrastruktur",
+    "publication": "Süddeutsche Zeitung",
+    "isHeadline": false
+  },
+  "https://www.heise.de/news/Open-Source-KI-LAION-ruft-zu-offenem-GPT-4-Nachbau-auf-genug-Wissen-sei-da-8651446.html": {
+    "title": "Open-Source-KI: LAION schlägt Infrastruktur für offene KI-Entwicklung vor",
+    "publication": "heise online",
+    "isHeadline": true
+  },
+  "https://www.forbes.com/sites/hessiejones/2023/04/19/amid-growing-call-to-pause-ai-research-laion-petitions-governments-to-keep-agi-research-open-active-and-responsible/": {
+    "title": "Amid Growing Call To Pause AI Research, LAION Petitions Governments To Keep AGI Research Open, Active And Responsible",
+    "publication": "Forbes",
+    "isHeadline": true
+  },
+  "https://www.spiegel.de/spiegel/print/index-2023-10.html": {
+    "title": "DER SPIEGEL 10/2023 – Inhaltsverzeichnis",
+    "publication": "DER SPIEGEL",
+    "isHeadline": true
+  },
+  "https://www.golem.de/news/laion-5b-datensatz-zum-ki-training-bietet-fast-6-milliarden-bilder-2212-170470.html": {
+    "title": "Laion-5B: Datensatz zum KI-Training bietet fast 6 Milliarden Bilder",
+    "publication": "Golem.de",
+    "isHeadline": true
+  }
+}

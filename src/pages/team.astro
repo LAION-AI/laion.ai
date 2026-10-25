@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
-import { team } from '../lib/data';
+import { team } from '../data/team';
 ---
 
 <BaseLayout
@@ -21,14 +21,25 @@ import { team } from '../lib/data';
             <img
               src={`/images/team/${member.img ?? 'none'}.jpg`}
               alt={member.name}
+              width="224"
+              height="224"
               loading="lazy"
             />
           </div>
           <div class="member">
             <>
-              <p>{member.title}</p>
               <h2>{member.name}</h2>
-              <p>{member.desc}</p>
+              <p class="role">{member.title}</p>
+              <p class="bio">{member.desc}</p>
+              {member.profile && (
+                <a
+                  class="profile"
+                  href={member.profile}
+                  aria-label={`Research profile: ${member.name}`}
+                >
+                  Research profile <span aria-hidden="true">↗</span>
+                </a>
+              )}
             </>
           </div>
         </article>
@@ -39,63 +50,97 @@ import { team } from '../lib/data';
 <style>
   .team-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    padding-block: 3rem 7rem;
-    background: var(--line);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+    padding-block: clamp(2.5rem, 5vw, 4rem) clamp(5rem, 9vw, 7rem);
   }
   article {
-    display: grid;
-    grid-template-columns: minmax(8rem, 0.72fr) 1.28fr;
-    min-height: 18rem;
-    background: var(--paper);
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-lg);
+    background: var(--surface);
+    box-shadow: var(--shadow-sm);
+    transition:
+      border-color 0.25s ease,
+      box-shadow 0.35s var(--ease-out),
+      transform 0.35s var(--ease-out);
+  }
+  article:hover {
+    border-color: var(--line-strong);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
   }
   .portrait {
     overflow: hidden;
+    width: 7rem;
+    height: 7rem;
+    border-radius: 1.25rem;
     background: var(--mist);
+    box-shadow: inset 0 0 0 1px var(--line);
   }
   .portrait img {
+    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(0.75);
-    transition: filter 0.25s ease;
+    filter: grayscale(0.35) contrast(1.02);
+    transition: filter 0.35s ease;
   }
-  article:hover img {
-    filter: saturate(1);
+  article:hover .portrait img {
+    filter: none;
   }
   .member {
-    padding: 1.4rem;
-  }
-  .member > p:first-child {
-    margin: 0 0 2.5rem;
-    color: #6b7e8c;
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.4rem;
   }
   h2 {
     margin: 0;
-    font-size: clamp(1.6rem, 3vw, 2.4rem);
-    letter-spacing: -0.035em;
-    line-height: 0.95;
+    font-size: clamp(1.6rem, 2.4vw, 1.95rem);
+    font-weight: 900;
+    line-height: 1;
   }
-  .member > p:last-child {
-    color: #506677;
-    font-size: 0.9rem;
+  .role {
+    margin: 0.55rem 0 0;
+    color: var(--subtle);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    line-height: 1.4;
+    text-transform: uppercase;
   }
-  @media (max-width: 900px) {
+  .bio {
+    margin: 1rem 0 0;
+    color: var(--muted);
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+  .profile {
+    display: inline-flex;
+    gap: 0.35rem;
+    margin-top: auto;
+    padding-top: 1.25rem;
+    font-size: 0.92rem;
+    text-decoration: none;
+  }
+  .profile:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+  }
+  @media (max-width: 1000px) {
+    .team-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  @media (max-width: 640px) {
     .team-grid {
       grid-template-columns: 1fr;
-    }
-  }
-  @media (max-width: 480px) {
-    article {
-      grid-template-columns: 1fr;
-    }
-    .portrait {
-      aspect-ratio: 4 / 3;
     }
   }
 </style>
