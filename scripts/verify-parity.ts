@@ -1,11 +1,10 @@
-import { createHash } from 'node:crypto';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { join, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 interface Manifest {
   routes: string[];
-  files: Array<{ targetPath: string; bytes: number; sha256: string }>;
+  files: Array<{ legacyPath: string; targetPath: string }>;
   knownMissingAssets: string[];
 }
 
@@ -16,7 +15,6 @@ const manifest = JSON.parse(
 ) as Manifest;
 const failures: string[] = [];
 
-const sha256 = (path: string) => createHash('sha256').update(readFileSync(path)).digest('hex');
 const outputFor = (route: string) =>
   route === '/404'
     ? join(dist, '404.html')
@@ -28,10 +26,10 @@ for (const route of manifest.routes) {
   if (!existsSync(outputFor(route))) failures.push(`Missing built route: ${route}`);
 }
 
+// Legacy files may be edited freely; they only have to keep existing so old URLs still resolve.
 for (const file of manifest.files) {
-  const target = join(root, file.targetPath);
-  if (!existsSync(target)) failures.push(`Missing legacy file: ${file.targetPath}`);
-  else if (sha256(target) !== file.sha256) failures.push(`Changed legacy file: ${file.targetPath}`);
+  if (!existsSync(join(root, file.targetPath)))
+    failures.push(`Missing legacy file: ${file.targetPath}`);
 }
 
 for (const directory of [
@@ -115,5 +113,5 @@ if (failures.length) {
   process.exit(1);
 }
 console.log(
-  `Parity verified: ${manifest.routes.length} routes, ${manifest.files.length} unchanged legacy files, no client JavaScript. ${manifest.knownMissingAssets.length} inherited missing assets recorded.`,
+  `Parity verified: ${manifest.routes.length} routes, ${manifest.files.length} legacy files present, no client JavaScript. ${manifest.knownMissingAssets.length} inherited missing assets recorded.`,
 );

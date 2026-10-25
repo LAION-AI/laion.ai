@@ -19,7 +19,7 @@ bun run lint
 bun run test
 ```
 
-`bun run test` builds the complete site and verifies every legacy route, the preserved content and asset hashes, representative heading anchors, local asset references, and the no-client-JavaScript baseline.
+`bun run test` builds the complete site and verifies that every legacy route and file still exists, representative heading anchors, local asset references, and the security baseline: no client JavaScript, inline event handlers, or `javascript:` URLs, and a Content-Security-Policy on every page. Editing existing content never fails these checks. Deleting or renaming a legacy post or file does, because old links would break: add a redirect, or remove its entry from `tests/fixtures/legacy-manifest.json` if it is retired on purpose.
 
 ## Content
 
@@ -35,7 +35,7 @@ Posts need `title`, `author`, `date`, and `previewImg` frontmatter. Schemas in `
 
 The homepage selects the latest blog entry by date, with the slug as a stable tie-breaker, and uses its title, preview image, and excerpt automatically.
 
-Current project descriptions, resource links, and status corrections live in `src/data/projects.ts`; team copy is in `src/data/team.ts`. The original imported records remain unchanged for archival parity. About and Donations share `FundingStatement.astro` so their funding description stays consistent.
+Current project descriptions, resource links, and status corrections live in `src/data/projects.ts`; new team members go in `src/content/pages/team.json` (portraits in `public/images/team`), and `src/data/team.ts` holds copy edits layered over those records. About and Donations share `FundingStatement.astro` so their funding description stays consistent.
 
 Press titles and publication names are maintained in `src/data/press-metadata.json`, keyed by the original article URL. `isHeadline: false` identifies descriptive archive labels for sources whose headlines could not be verified. Those links are labelled “Archive link” on the page. Do not infer article headlines from URLs or bypass subscription requirements.
 

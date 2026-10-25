@@ -71,1737 +71,1159 @@
   "files": [
     {
       "legacyPath": "blog/strategic-game-dataset.md",
-      "targetPath": "src/content/blog/strategic-game-dataset.md",
-      "bytes": 4398,
-      "sha256": "40799d56d4217abd75e20579118247c5819b3ceabe40c969d7343765f93ccbeb"
+      "targetPath": "src/content/blog/strategic-game-dataset.md"
     },
     {
       "legacyPath": "blog/datacomp.md",
-      "targetPath": "src/content/blog/datacomp.md",
-      "bytes": 10870,
-      "sha256": "78fa9197a7e8a30eb01a2374646d136440f155bd90a00d20110f2e69ae953d87"
+      "targetPath": "src/content/blog/datacomp.md"
     },
     {
       "legacyPath": "blog/video2dataset.md",
-      "targetPath": "src/content/blog/video2dataset.md",
-      "bytes": 15912,
-      "sha256": "3d4f13897a4704b907594871278f8aa2558732ebcdba2c9f4b14e1e28d69e778"
+      "targetPath": "src/content/blog/video2dataset.md"
     },
     {
       "legacyPath": "blog/open-sci-ref-001.md",
-      "targetPath": "src/content/blog/open-sci-ref-001.md",
-      "bytes": 45709,
-      "sha256": "112e8418795e818018ea7d84f50b3d6042edf571414a6b18f559c23d0d01d0b4"
+      "targetPath": "src/content/blog/open-sci-ref-001.md"
     },
     {
       "legacyPath": "blog/paella.md",
-      "targetPath": "src/content/blog/paella.md",
-      "bytes": 8851,
-      "sha256": "2b8b28bff1568f696d43cbcf3bfb1ea45f9619aa914b7f72a1bcc98aeef12d11"
+      "targetPath": "src/content/blog/paella.md"
     },
     {
       "legacyPath": "blog/oig-dataset.md",
-      "targetPath": "src/content/blog/oig-dataset.md",
-      "bytes": 24864,
-      "sha256": "14d01e2acf72c40890d59b494732f8f92e0e98a481ba3f5a7d1e367ce3c19a12"
+      "targetPath": "src/content/blog/oig-dataset.md"
     },
     {
       "legacyPath": "blog/laion-intel-cooperation.md",
-      "targetPath": "src/content/blog/laion-intel-cooperation.md",
-      "bytes": 4411,
-      "sha256": "fbe777fd4cb824330240ada8206463a204f2da0463b2075763184574869ea0bf"
+      "targetPath": "src/content/blog/laion-intel-cooperation.md"
     },
     {
       "legacyPath": "blog/bvd.md",
-      "targetPath": "src/content/blog/bvd.md",
-      "bytes": 9290,
-      "sha256": "827e4792975363857f1dfa320ba2762225b07aa43929a8db4c751fc30945879b"
+      "targetPath": "src/content/blog/bvd.md"
     },
     {
       "legacyPath": "blog/h14_clip_retrieval.md",
-      "targetPath": "src/content/blog/h14_clip_retrieval.md",
-      "bytes": 3919,
-      "sha256": "ab7ace82918391ca93c88c0049fb9e576e9b72dbc781e67ca0112ed6e06b365d"
+      "targetPath": "src/content/blog/h14_clip_retrieval.md"
     },
     {
       "legacyPath": "blog/laion-disco-12m.md",
-      "targetPath": "src/content/blog/laion-disco-12m.md",
-      "bytes": 3636,
-      "sha256": "f452159b9575b91d4aac3c2d0a472d9c3941c16378c70f57767d5f9628873768"
+      "targetPath": "src/content/blog/laion-disco-12m.md"
     },
     {
       "legacyPath": "blog/clara-release.md",
-      "targetPath": "src/content/blog/clara-release.md",
-      "bytes": 4427,
-      "sha256": "34bd4397cb604f465a5762598df595f933face63f8f5e4c9e75a4ca99f4ed502"
+      "targetPath": "src/content/blog/clara-release.md"
     },
     {
       "legacyPath": "blog/bud-e-release.md",
-      "targetPath": "src/content/blog/bud-e-release.md",
-      "bytes": 19459,
-      "sha256": "a765b4150ac0dcb48cfab248c7a3b3ba8fae17f9af91fa572a87cbfa68c6beb7"
+      "targetPath": "src/content/blog/bud-e-release.md"
     },
     {
       "legacyPath": "blog/relaion-5b.md",
-      "targetPath": "src/content/blog/relaion-5b.md",
-      "bytes": 28830,
-      "sha256": "44d737a66abf7c199a4daa52a747b3f06cc6ac8d4a38311851091d760019ef3c"
+      "targetPath": "src/content/blog/relaion-5b.md"
     },
     {
       "legacyPath": "blog/falling-walls-2023.md",
-      "targetPath": "src/content/blog/falling-walls-2023.md",
-      "bytes": 2926,
-      "sha256": "52a2ca2d4f089d5f2ce71caaac68d198049a7915f25bb929d55ecb3a7011fdd7"
+      "targetPath": "src/content/blog/falling-walls-2023.md"
     },
     {
       "legacyPath": "blog/reasoning_game_arena_blog_post.md",
-      "targetPath": "src/content/blog/reasoning_game_arena_blog_post.md",
-      "bytes": 14382,
-      "sha256": "c7b9b54bb22c36c583462681186f342489d6ecc1b456995c88f1b257ac93a091"
+      "targetPath": "src/content/blog/reasoning_game_arena_blog_post.md"
     },
     {
       "legacyPath": "blog/petition.md",
-      "targetPath": "src/content/blog/petition.md",
-      "bytes": 7450,
-      "sha256": "2404b31419d0e11e70091e9b917121f8ec31eeeca40aa9bf56763b3a26f515dd"
+      "targetPath": "src/content/blog/petition.md"
     },
     {
       "legacyPath": "blog/laion-400-open-dataset.md",
-      "targetPath": "src/content/blog/laion-400-open-dataset.md",
-      "bytes": 24077,
-      "sha256": "8d3edf7ab2f36fc157a3cea64017c59973abe1fae3296df4305864ebd570e6d2"
+      "targetPath": "src/content/blog/laion-400-open-dataset.md"
     },
     {
       "legacyPath": "blog/laion-coco.md",
-      "targetPath": "src/content/blog/laion-coco.md",
-      "bytes": 9149,
-      "sha256": "0f8e577c8076e3227a182de4f798f141e63294733a20df088f8729c8130b0dfc"
+      "targetPath": "src/content/blog/laion-coco.md"
     },
     {
       "legacyPath": "blog/transparent-ai.md",
-      "targetPath": "src/content/blog/transparent-ai.md",
-      "bytes": 7850,
-      "sha256": "d5fdb585f47a1d7ee2847393ff81a8f3acd6060396ab220e2940bad9653c910b"
+      "targetPath": "src/content/blog/transparent-ai.md"
     },
     {
       "legacyPath": "blog/laion-aesthetics.md",
-      "targetPath": "src/content/blog/laion-aesthetics.md",
-      "bytes": 6286,
-      "sha256": "ff4346076c8eacb4e3b1be9942c7861f5e50355e9f8dea25ba0d3414e5d39a97"
+      "targetPath": "src/content/blog/laion-aesthetics.md"
     },
     {
       "legacyPath": "blog/laion-pop.md",
-      "targetPath": "src/content/blog/laion-pop.md",
-      "bytes": 3356,
-      "sha256": "517870408f57d6e99fded2da94e2ca786efdde6350ea421c6e1e563d09728337"
+      "targetPath": "src/content/blog/laion-pop.md"
     },
     {
       "legacyPath": "blog/giant-openclip.md",
-      "targetPath": "src/content/blog/giant-openclip.md",
-      "bytes": 11068,
-      "sha256": "2cc7231c94a45d635ac25a8673368c004c41c98870822ab33fb2fd151b32cf21"
+      "targetPath": "src/content/blog/giant-openclip.md"
     },
     {
       "legacyPath": "blog/objaverse-xl.md",
-      "targetPath": "src/content/blog/objaverse-xl.md",
-      "bytes": 5106,
-      "sha256": "a41bb25caa32519fe5c9a9a76749f64baaec0e66d078bea5ebee0ff2b9f26944"
+      "targetPath": "src/content/blog/objaverse-xl.md"
     },
     {
       "legacyPath": "blog/visit_bench.md",
-      "targetPath": "src/content/blog/visit_bench.md",
-      "bytes": 9912,
-      "sha256": "91c0917b94ad42bd679bc25ac9d27ecc821b3daa1c36553573b531973a620c7b"
+      "targetPath": "src/content/blog/visit_bench.md"
     },
     {
       "legacyPath": "blog/large-openclip.md",
-      "targetPath": "src/content/blog/large-openclip.md",
-      "bytes": 16208,
-      "sha256": "b13608440ed8ffc2dc2b5a80c444bf3c3a0e4e34be8f6760d383876aa34f3f2f"
+      "targetPath": "src/content/blog/large-openclip.md"
     },
     {
       "legacyPath": "blog/bud-e.md",
-      "targetPath": "src/content/blog/bud-e.md",
-      "bytes": 7377,
-      "sha256": "575d7c31889527d9667c20f557371d28d9d42d8c1b155506a72f30d4335f572e"
+      "targetPath": "src/content/blog/bud-e.md"
     },
     {
       "legacyPath": "blog/laion-translated.md",
-      "targetPath": "src/content/blog/laion-translated.md",
-      "bytes": 10268,
-      "sha256": "3b84a864486a34f16c347974648e6bb69a49f766c1cc88418c9d0c954ca0e069"
+      "targetPath": "src/content/blog/laion-translated.md"
     },
     {
       "legacyPath": "blog/open-lm.md",
-      "targetPath": "src/content/blog/open-lm.md",
-      "bytes": 12569,
-      "sha256": "ea3b97b26c82dfcba27bfe33566d4e659e63312a30c6e630e123b8f9460c6450"
+      "targetPath": "src/content/blog/open-lm.md"
     },
     {
       "legacyPath": "blog/laion-stable-horde.md",
-      "targetPath": "src/content/blog/laion-stable-horde.md",
-      "bytes": 4119,
-      "sha256": "be9e74c7b61d75f7884d72cd1be667725df20f06e330361742f4e75b64606df1"
+      "targetPath": "src/content/blog/laion-stable-horde.md"
     },
     {
       "legacyPath": "blog/open-flamingo-v2.md",
-      "targetPath": "src/content/blog/open-flamingo-v2.md",
-      "bytes": 7512,
-      "sha256": "2884ec2ab7c116ddc37270a994f0648503541e1dd81f2c3e2f88f9457f02bea2"
+      "targetPath": "src/content/blog/open-flamingo-v2.md"
     },
     {
       "legacyPath": "blog/open-empathic.md",
-      "targetPath": "src/content/blog/open-empathic.md",
-      "bytes": 5299,
-      "sha256": "93d0c96f7efbeff4e3e0950ac800b74254a97fd615c1a41f6429c205559faa68"
+      "targetPath": "src/content/blog/open-empathic.md"
     },
     {
       "legacyPath": "blog/leo-lm.md",
-      "targetPath": "src/content/blog/leo-lm.md",
-      "bytes": 14635,
-      "sha256": "8a8d5acd30222e4585e1d9297ccd0b481b0db22e24501694a1713a8fbe84af87"
+      "targetPath": "src/content/blog/leo-lm.md"
     },
     {
       "legacyPath": "blog/coca.md",
-      "targetPath": "src/content/blog/coca.md",
-      "bytes": 9533,
-      "sha256": "437086493860baec7a458b02bc8892c1529ba34a2b292d9ad92d8cd208dbf232"
+      "targetPath": "src/content/blog/coca.md"
     },
     {
       "legacyPath": "blog/open-flamingo.md",
-      "targetPath": "src/content/blog/open-flamingo.md",
-      "bytes": 10201,
-      "sha256": "fa80517b68aae74c95c1fd0a86c810bb7acf1871f980ae5230b5df053b23a61c"
+      "targetPath": "src/content/blog/open-flamingo.md"
     },
     {
       "legacyPath": "blog/laion-5b.md",
-      "targetPath": "src/content/blog/laion-5b.md",
-      "bytes": 31157,
-      "sha256": "368c2d65ea9639935d4bde3e70bb661decbc13a2074c24ec84e65e286ea604b0"
+      "targetPath": "src/content/blog/laion-5b.md"
     },
     {
       "legacyPath": "blog/do-they-see-what-we-see.md",
-      "targetPath": "src/content/blog/do-they-see-what-we-see.md",
-      "bytes": 29188,
-      "sha256": "d37f057b1d7874f4f3d3e60673198ce513a6fa85b03196283c22dc9513d594bd"
+      "targetPath": "src/content/blog/do-they-see-what-we-see.md"
     },
     {
       "legacyPath": "notes/voice-acting-arena.md",
-      "targetPath": "src/content/notes/voice-acting-arena.md",
-      "bytes": 3431,
-      "sha256": "c737f7b3e093c9ae0b9c08eea4e14062469abdc016c0d0777b4348d2a106129e"
+      "targetPath": "src/content/notes/voice-acting-arena.md"
     },
     {
       "legacyPath": "notes/general-gpt.md",
-      "targetPath": "src/content/notes/general-gpt.md",
-      "bytes": 13846,
-      "sha256": "864d9fcff33a7cabc566cabff09c2113269504befc701edfac3cb05198d5386e"
+      "targetPath": "src/content/notes/general-gpt.md"
     },
     {
       "legacyPath": "notes/summaries.md",
-      "targetPath": "src/content/notes/summaries.md",
-      "bytes": 21521,
-      "sha256": "931c190a0cfe0fe20e9794b952d0e167b62548b757cf689e18b9f1850c63deef"
+      "targetPath": "src/content/notes/summaries.md"
     },
     {
       "legacyPath": "notes/letter-to-the-eu-parliament.md",
-      "targetPath": "src/content/notes/letter-to-the-eu-parliament.md",
-      "bytes": 7240,
-      "sha256": "6b6b0934c87fae9ee4cf1ca1b506c08749a770dab7bd7890c2684dd38f3a85f1"
+      "targetPath": "src/content/notes/letter-to-the-eu-parliament.md"
     },
     {
       "legacyPath": "notes/cpretrain.md",
-      "targetPath": "src/content/notes/cpretrain.md",
-      "bytes": 11163,
-      "sha256": "dd04661bc4776fb36c52a0e1d2bef8cff7eccfb55dd97290ea060035c8c3b849"
+      "targetPath": "src/content/notes/cpretrain.md"
     },
     {
       "legacyPath": "notes/laion-maintenance.md",
-      "targetPath": "src/content/notes/laion-maintenance.md",
-      "bytes": 1991,
-      "sha256": "a8be1b201e08e8ac92644ba4df8555c4905f7a152cfccbd4ecbd06b6d751bfd1"
+      "targetPath": "src/content/notes/laion-maintenance.md"
     },
     {
       "legacyPath": "notes/rook.md",
-      "targetPath": "src/content/notes/rook.md",
-      "bytes": 20713,
-      "sha256": "d99b227d4094e1ff1c1b76d4103fbdb08d9c7293af5ae56d9163fa468bff3112"
+      "targetPath": "src/content/notes/rook.md"
     },
     {
       "legacyPath": "notes/open-gpt-4-o.md",
-      "targetPath": "src/content/notes/open-gpt-4-o.md",
-      "bytes": 8583,
-      "sha256": "92bc1cbc06deb5a0e18bc1a08ebca7e023bfb1d1a30d8cf8776a2ddcedacc0ba"
+      "targetPath": "src/content/notes/open-gpt-4-o.md"
     },
     {
       "legacyPath": "notes/realfake.md",
-      "targetPath": "src/content/notes/realfake.md",
-      "bytes": 8100,
-      "sha256": "7b1180e9d9732fb3feb544c0020b3b82d8d58ae7fb375d94470a76c8c549e6ef"
+      "targetPath": "src/content/notes/realfake.md"
     },
     {
       "legacyPath": "notes/admin_bud-e.md",
-      "targetPath": "src/content/notes/admin_bud-e.md",
-      "bytes": 14568,
-      "sha256": "db915814a0ef9f69fbf4bb50479f31c3634338ff23ea3254f70997099aae212e"
+      "targetPath": "src/content/notes/admin_bud-e.md"
     },
     {
       "legacyPath": "notes/laion-debate.md",
-      "targetPath": "src/content/notes/laion-debate.md",
-      "bytes": 5269,
-      "sha256": "b91604f2824bde456ba66810aeb119a8f96b63e14a433620d491b4d72c0d4364"
+      "targetPath": "src/content/notes/laion-debate.md"
     },
     {
       "legacyPath": "blog-de/admin_bud-e.md",
-      "targetPath": "src/content/blog-de/admin_bud-e.md",
-      "bytes": 14566,
-      "sha256": "8d51b9792da8a7f603d638e2e870ed740eed8cbb28b381405fe4b62b480e4751"
+      "targetPath": "src/content/blog-de/admin_bud-e.md"
     },
     {
       "legacyPath": "blog-de/leo-lm.md",
-      "targetPath": "src/content/blog-de/leo-lm.md",
-      "bytes": 15962,
-      "sha256": "515e24fa4e733dc0ae0b833225a725e4f8847dbc94d5af46ad73b861dc69e0e9"
+      "targetPath": "src/content/blog-de/leo-lm.md"
     },
     {
       "legacyPath": "content/faq.json",
-      "targetPath": "src/content/pages/faq.json",
-      "bytes": 4027,
-      "sha256": "dfe77333bd56bf5e64270ea7daef3f08a3243a6bc16124bb9af88847ee341386"
+      "targetPath": "src/content/pages/faq.json"
     },
     {
       "legacyPath": "content/donations.md",
-      "targetPath": "src/content/pages/donations.md",
-      "bytes": 815,
-      "sha256": "372ba19608df3c81a0e086fa5181694357891d20e671700d8591e46f0eddf950"
+      "targetPath": "src/content/pages/donations.md"
     },
     {
       "legacyPath": "content/impressum.md",
-      "targetPath": "src/content/pages/impressum.md",
-      "bytes": 3936,
-      "sha256": "904fc47bc7e508af84ccce707dd29d524dcfa6cd285a8a46303890e6cd709a03"
+      "targetPath": "src/content/pages/impressum.md"
     },
     {
       "legacyPath": "content/projects.json",
-      "targetPath": "src/content/pages/projects.json",
-      "bytes": 7641,
-      "sha256": "3d9132d582b6a6598e4bd8c693ef00da6bc70271146d5b55898a7c183e53a637"
+      "targetPath": "src/content/pages/projects.json"
     },
     {
       "legacyPath": "content/gep-policy.md",
-      "targetPath": "src/content/pages/gep-policy.md",
-      "bytes": 1125,
-      "sha256": "38eefa4c3f9bfecf487b916376a89243f9f7ba0b4b9786dc4352c13db5eae28a"
+      "targetPath": "src/content/pages/gep-policy.md"
     },
     {
       "legacyPath": "content/dataset-requests.json",
-      "targetPath": "src/content/pages/dataset-requests.json",
-      "bytes": 217,
-      "sha256": "f042e8d242741c488938a9436680fb08d08a205b771d9aa5ad2358284b3669a9"
+      "targetPath": "src/content/pages/dataset-requests.json"
     },
     {
       "legacyPath": "content/privacy-policy.json",
-      "targetPath": "src/content/pages/privacy-policy.json",
-      "bytes": 19453,
-      "sha256": "f50f1acdd49b1796d6b235e455558abf091a777c5ee075fe763afcb49eb40dfc"
+      "targetPath": "src/content/pages/privacy-policy.json"
     },
     {
       "legacyPath": "content/press.json",
-      "targetPath": "src/content/pages/press.json",
-      "bytes": 4906,
-      "sha256": "6999eaa229a717238c19d316657cbe4bfe88e7b3f6de407543187de5227e5f3e"
+      "targetPath": "src/content/pages/press.json"
     },
     {
       "legacyPath": "content/about.md",
-      "targetPath": "src/content/pages/about.md",
-      "bytes": 952,
-      "sha256": "66086e011d390a3bc5d9a71c8b78c58512a611fe197728ed3853eb8e8d9a54bf"
+      "targetPath": "src/content/pages/about.md"
     },
     {
       "legacyPath": "content/team.json",
-      "targetPath": "src/content/pages/team.json",
-      "bytes": 5484,
-      "sha256": "b1449d5d929f884743300729a4d7f9f27e3f8bb8a8da640ab370c9d5ee7028c2"
+      "targetPath": "src/content/pages/team.json"
     },
     {
       "legacyPath": "public/CNAME",
-      "targetPath": "public/CNAME",
-      "bytes": 8,
-      "sha256": "6889a568aa32360af5aa892b74eb7e92bdb8a9afefa17f13246d81ffe2657bab"
+      "targetPath": "public/CNAME"
     },
     {
       "legacyPath": "public/images/donations/laion-gls-donation-account.png",
-      "targetPath": "public/images/donations/laion-gls-donation-account.png",
-      "bytes": 33548,
-      "sha256": "e7c065c10c08bd08db3bf061eb02fba3baa4032e0b2549e46243dd698587fe0a"
+      "targetPath": "public/images/donations/laion-gls-donation-account.png"
     },
     {
       "legacyPath": "public/images/gallery/river.jpg",
-      "targetPath": "public/images/gallery/river.jpg",
-      "bytes": 592044,
-      "sha256": "a7260b81878d8140fdb3fc304f934109670c17ba4c844078c548c7a9f97d550f"
+      "targetPath": "public/images/gallery/river.jpg"
     },
     {
       "legacyPath": "public/images/gallery/dragon.avif",
-      "targetPath": "public/images/gallery/dragon.avif",
-      "bytes": 59469,
-      "sha256": "e77269b8c6c566ab58f611816e8c1c6c58d5a889633ffc991b27779b2a21bec1"
+      "targetPath": "public/images/gallery/dragon.avif"
     },
     {
       "legacyPath": "public/images/gallery/dragon.jpg",
-      "targetPath": "public/images/gallery/dragon.jpg",
-      "bytes": 780696,
-      "sha256": "9fc4d4c663f921893b7de02f6da0a4927db63228166ac1dabc6e9fb572fb3fc3"
+      "targetPath": "public/images/gallery/dragon.jpg"
     },
     {
       "legacyPath": "public/images/gallery/river.webp",
-      "targetPath": "public/images/gallery/river.webp",
-      "bytes": 150684,
-      "sha256": "b3ced43702ddf3e6dd6e0adaf90301c4f9cdab7dfe9f54e220c2e010e743a9d3"
+      "targetPath": "public/images/gallery/river.webp"
     },
     {
       "legacyPath": "public/images/gallery/fox.avif",
-      "targetPath": "public/images/gallery/fox.avif",
-      "bytes": 43230,
-      "sha256": "cfa95c2c579be7a95a2143ed89a3a8b201b81746d4a9bcad05658a328ffe96f7"
+      "targetPath": "public/images/gallery/fox.avif"
     },
     {
       "legacyPath": "public/images/gallery/painting.webp",
-      "targetPath": "public/images/gallery/painting.webp",
-      "bytes": 147944,
-      "sha256": "adf410b7eaf11bd42fd9ea7c4e99951b8b318364c16380c9cf83344104dadc65"
+      "targetPath": "public/images/gallery/painting.webp"
     },
     {
       "legacyPath": "public/images/gallery/painting.jpg",
-      "targetPath": "public/images/gallery/painting.jpg",
-      "bytes": 631488,
-      "sha256": "0fc32d0027366a299292499e2d5ff7465d9bed020172acf45340e99d8ca628b2"
+      "targetPath": "public/images/gallery/painting.jpg"
     },
     {
       "legacyPath": "public/images/gallery/river.avif",
-      "targetPath": "public/images/gallery/river.avif",
-      "bytes": 112137,
-      "sha256": "57d8a92e65b73d82f37204496c1b0e1823d443257eebfd78d7fe7d837290eef0"
+      "targetPath": "public/images/gallery/river.avif"
     },
     {
       "legacyPath": "public/images/gallery/fox.webp",
-      "targetPath": "public/images/gallery/fox.webp",
-      "bytes": 112076,
-      "sha256": "bc0d1d2e5a550c2ad3b7e9cc188b65eb4278ce9efe44e2cf64f410b47c9d9b67"
+      "targetPath": "public/images/gallery/fox.webp"
     },
     {
       "legacyPath": "public/images/gallery/painting.avif",
-      "targetPath": "public/images/gallery/painting.avif",
-      "bytes": 109764,
-      "sha256": "9c91a0cb7690fe7b20843cc2a4f185374c6357334396e95c8a6eb0c566aad9fd"
+      "targetPath": "public/images/gallery/painting.avif"
     },
     {
       "legacyPath": "public/images/gallery/fox.jpg",
-      "targetPath": "public/images/gallery/fox.jpg",
-      "bytes": 603263,
-      "sha256": "941b118042eff757779990bce7b4370b511914ba2a49639e423f6a7102273059"
+      "targetPath": "public/images/gallery/fox.jpg"
     },
     {
       "legacyPath": "public/images/gallery/dragon.webp",
-      "targetPath": "public/images/gallery/dragon.webp",
-      "bytes": 190974,
-      "sha256": "1301766f1f690a591f5fec49d1292f006dc64e294c69cf22a8d15eb8e5490778"
+      "targetPath": "public/images/gallery/dragon.webp"
     },
     {
       "legacyPath": "public/images/blog/videos_figure.gif",
-      "targetPath": "public/images/blog/videos_figure.gif",
-      "bytes": 12048399,
-      "sha256": "f650357f1e35f31f48ad126f7b12df1c85761b9d952b4b8af8f7a47804d1e7e2"
+      "targetPath": "public/images/blog/videos_figure.gif"
     },
     {
       "legacyPath": "public/images/blog/gpt-4-omni-2.png",
-      "targetPath": "public/images/blog/gpt-4-omni-2.png",
-      "bytes": 891950,
-      "sha256": "ce60a116ff2805b6968f58495f6ab8133ce1ea69bfd2c351a0dd48f5cc2307b6"
+      "targetPath": "public/images/blog/gpt-4-omni-2.png"
     },
     {
       "legacyPath": "public/images/blog/sci.jpg",
-      "targetPath": "public/images/blog/sci.jpg",
-      "bytes": 153220,
-      "sha256": "db5248ad9f57f1c30aa2562b374de8a76b3b531da350047a23ed83383619d2dc"
+      "targetPath": "public/images/blog/sci.jpg"
     },
     {
       "legacyPath": "public/images/blog/oig-example-2.png",
-      "targetPath": "public/images/blog/oig-example-2.png",
-      "bytes": 163878,
-      "sha256": "65ecdefbebc30dafa7393088935d5a899f8413ed771aa757464650447bd7895f"
+      "targetPath": "public/images/blog/oig-example-2.png"
     },
     {
       "legacyPath": "public/images/blog/general-gpt-logo.png",
-      "targetPath": "public/images/blog/general-gpt-logo.png",
-      "bytes": 1148636,
-      "sha256": "788429fe5f1fc927561e098112f89a6ea573d06ac9c7e35231e4d7e06cc32c87"
+      "targetPath": "public/images/blog/general-gpt-logo.png"
     },
     {
       "legacyPath": "public/images/blog/laion-1B-translated.png",
-      "targetPath": "public/images/blog/laion-1B-translated.png",
-      "bytes": 50192,
-      "sha256": "50e0452b085f992f2a39bd3cb6df7b72673f6ec56e5eba7a6dc965ff1a30cf1f"
+      "targetPath": "public/images/blog/laion-1B-translated.png"
     },
     {
       "legacyPath": "public/images/blog/leolm-banner.jpg",
-      "targetPath": "public/images/blog/leolm-banner.jpg",
-      "bytes": 1855749,
-      "sha256": "d8ae5ff9815b210a8ec22623a94d193961f4337f97bc1c2f9113c846c0fb48d1"
+      "targetPath": "public/images/blog/leolm-banner.jpg"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/ContextLengthComparison.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/ContextLengthComparison.png",
-      "bytes": 324859,
-      "sha256": "ad8bd449da57dff751af08ac6963386fd0b69427e511ab939685551162077954"
+      "targetPath": "public/images/blog/open-sci-ref-001/ContextLengthComparison.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/Reference300B.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/Reference300B.png",
-      "bytes": 459043,
-      "sha256": "9baa1ab2b8f8270f2c0f16f21ae8735bbe8cf1fb567934fe0adfb6deba557d31"
+      "targetPath": "public/images/blog/open-sci-ref-001/Reference300B.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release-v3.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release-v3.png",
-      "bytes": 724326,
-      "sha256": "a92aa6acc32019c31f4fca407ec4ec41d9c5dfd132ce62f2100ccaa945515910"
+      "targetPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release-v3.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release-v2.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release-v2.png",
-      "bytes": 736754,
-      "sha256": "dd14c9f1fb93468d9bafbd2635869f68beaf96449da28300ad35fcd145bde3e4"
+      "targetPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release-v2.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/ScalingCompute.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/ScalingCompute.png",
-      "bytes": 240738,
-      "sha256": "2f1f764ccecabc35bc9c3a40b023c6c976cd6058bd9c29e7c514f05a4fcc9402"
+      "targetPath": "public/images/blog/open-sci-ref-001/ScalingCompute.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/Reference_1_7B_1T.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/Reference_1_7B_1T.png",
-      "bytes": 679822,
-      "sha256": "7bdbf35988c328b56138e445dfb020f38f1abebb23b50559b87ea8e5a36bdb67"
+      "targetPath": "public/images/blog/open-sci-ref-001/Reference_1_7B_1T.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release.png",
-      "bytes": 768136,
-      "sha256": "be8a425a06d8687d631d1ae08ca7d37ecb701f0b4b63e6dcab50ea670b68cc11"
+      "targetPath": "public/images/blog/open-sci-ref-001/open-sci-ref-001-release.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/MMMLU_reference_comparison.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/MMMLU_reference_comparison.png",
-      "bytes": 654307,
-      "sha256": "4e356bfbc6083c151d7ac30da14e1a2d3d4dcf6111bb78725b76eee2e73665f8"
+      "targetPath": "public/images/blog/open-sci-ref-001/MMMLU_reference_comparison.png"
     },
     {
       "legacyPath": "public/images/blog/open-sci-ref-001/Reference_1_7B_300B.png",
-      "targetPath": "public/images/blog/open-sci-ref-001/Reference_1_7B_300B.png",
-      "bytes": 1285804,
-      "sha256": "8c03f7eeef4601fc308a532b76f3cd40add061ff352847f5c795aa3de4b738d7"
+      "targetPath": "public/images/blog/open-sci-ref-001/Reference_1_7B_300B.png"
     },
     {
       "legacyPath": "public/images/blog/gpt-4-omni-3.png",
-      "targetPath": "public/images/blog/gpt-4-omni-3.png",
-      "bytes": 1262077,
-      "sha256": "8e9242c50b678bf16ad6e0966058b9a708c61a07ce1e2cb0f66925c5d9d8bcac"
+      "targetPath": "public/images/blog/gpt-4-omni-3.png"
     },
     {
       "legacyPath": "public/images/blog/flamingo-v1-vs-v2.png",
-      "targetPath": "public/images/blog/flamingo-v1-vs-v2.png",
-      "bytes": 36707,
-      "sha256": "584426ed8abe68addd157dbcd02d6e2c1466acc21aa408b0ede985621bc3f5bd"
+      "targetPath": "public/images/blog/flamingo-v1-vs-v2.png"
     },
     {
       "legacyPath": "public/images/blog/scaling_vit_giant.png",
-      "targetPath": "public/images/blog/scaling_vit_giant.png",
-      "bytes": 82126,
-      "sha256": "d2e6a03059496b296583e7366b9deb03a0531432419affe1db50248b11794218"
+      "targetPath": "public/images/blog/scaling_vit_giant.png"
     },
     {
       "legacyPath": "public/images/blog/gpt-4-omni-1.png",
-      "targetPath": "public/images/blog/gpt-4-omni-1.png",
-      "bytes": 655982,
-      "sha256": "6dcbe4dbc25b7d2291202037ef507ea2cab23a806675b157af9b20530c072d94"
+      "targetPath": "public/images/blog/gpt-4-omni-1.png"
     },
     {
       "legacyPath": "public/images/blog/laion-eu-ai-act.png",
-      "targetPath": "public/images/blog/laion-eu-ai-act.png",
-      "bytes": 200641,
-      "sha256": "072e586648bcc518d91825485c03459b97bc4c8210b302a810e6352a0f450f12"
+      "targetPath": "public/images/blog/laion-eu-ai-act.png"
     },
     {
       "legacyPath": "public/images/blog/flamingo-avg-performance.png",
-      "targetPath": "public/images/blog/flamingo-avg-performance.png",
-      "bytes": 46994,
-      "sha256": "57c70984eff2fea8e96749718bd123f34717cf8664fa0ef28f1a65c04e144b73"
+      "targetPath": "public/images/blog/flamingo-avg-performance.png"
     },
     {
       "legacyPath": "public/images/blog/clara.png",
-      "targetPath": "public/images/blog/clara.png",
-      "bytes": 652389,
-      "sha256": "d97bced13fdc0195dbc76f4f4343a532eea02303582b6d795bff602003cbff9f"
+      "targetPath": "public/images/blog/clara.png"
     },
     {
       "legacyPath": "public/images/blog/mmc4-example.png",
-      "targetPath": "public/images/blog/mmc4-example.png",
-      "bytes": 638129,
-      "sha256": "0c5799221fdd1fcc03d9922aded8b43b57de6ed653eadb7ce50a8e7803b4e84e"
+      "targetPath": "public/images/blog/mmc4-example.png"
     },
     {
       "legacyPath": "public/images/blog/open-empathic.png",
-      "targetPath": "public/images/blog/open-empathic.png",
-      "bytes": 1714408,
-      "sha256": "905508b3421942d78e8bb29b065b03048fcf7c38298717fa3b27aadffd4690e8"
+      "targetPath": "public/images/blog/open-empathic.png"
     },
     {
       "legacyPath": "public/images/blog/summary_vit_giant.png",
-      "targetPath": "public/images/blog/summary_vit_giant.png",
-      "bytes": 273822,
-      "sha256": "18af9f2aeb8d7b2041eeb80a762280386582825bc2f69320ee7561b9afeda51f"
+      "targetPath": "public/images/blog/summary_vit_giant.png"
     },
     {
       "legacyPath": "public/images/blog/openlm_teaser_wide.png",
-      "targetPath": "public/images/blog/openlm_teaser_wide.png",
-      "bytes": 428077,
-      "sha256": "d976881e1cca6ab70db89c210eea024367607e15dcc038ebf29cbbb98d99879e"
+      "targetPath": "public/images/blog/openlm_teaser_wide.png"
     },
     {
       "legacyPath": "public/images/blog/new_openlm_teaser.png",
-      "targetPath": "public/images/blog/new_openlm_teaser.png",
-      "bytes": 244341,
-      "sha256": "28bc29b5bcc3c9a560e0ee87f39d504254d768f366877bd66a58e59f33bc2a13"
+      "targetPath": "public/images/blog/new_openlm_teaser.png"
     },
     {
       "legacyPath": "public/images/blog/Open_Sci.png",
-      "targetPath": "public/images/blog/Open_Sci.png",
-      "bytes": 5760,
-      "sha256": "179ce455e092fa0d76d7fe64e365d0471cf64a2e638a712fab824f700a27853d"
+      "targetPath": "public/images/blog/Open_Sci.png"
     },
     {
       "legacyPath": "public/images/blog/paella.png",
-      "targetPath": "public/images/blog/paella.png",
-      "bytes": 311663,
-      "sha256": "1c746fe38cbf0b611e0734654174098644873dc8886b1b08dce8058e077f7477"
+      "targetPath": "public/images/blog/paella.png"
     },
     {
       "legacyPath": "public/images/blog/video_metadata1.gif",
-      "targetPath": "public/images/blog/video_metadata1.gif",
-      "bytes": 492901,
-      "sha256": "b1a793d475d49ebd84923c994f817a58539a8cd9777d3660333d587b4cdd1b21"
+      "targetPath": "public/images/blog/video_metadata1.gif"
     },
     {
       "legacyPath": "public/images/blog/space_raccoon.png",
-      "targetPath": "public/images/blog/space_raccoon.png",
-      "bytes": 2021853,
-      "sha256": "b6ef07fb5c21c03ac553702228b3905357c5719e19e8dc3b1a6b56457cab0206"
+      "targetPath": "public/images/blog/space_raccoon.png"
     },
     {
       "legacyPath": "public/images/blog/laion-debate.png",
-      "targetPath": "public/images/blog/laion-debate.png",
-      "bytes": 804709,
-      "sha256": "0ccb1f056f055169a8735a5dbe439a5a73f3f38ef14efa07d90e2860be49621f"
+      "targetPath": "public/images/blog/laion-debate.png"
     },
     {
       "legacyPath": "public/images/blog/zero123-xl.jpg",
-      "targetPath": "public/images/blog/zero123-xl.jpg",
-      "bytes": 1231036,
-      "sha256": "c8f3e21434434c6a8098d9803794a8329c3040068286575e86c192bcb796c031"
+      "targetPath": "public/images/blog/zero123-xl.jpg"
     },
     {
       "legacyPath": "public/images/blog/video_metadata3.gif",
-      "targetPath": "public/images/blog/video_metadata3.gif",
-      "bytes": 590767,
-      "sha256": "d75fcb823f8152e6950e381196c42c5b2893932290d059ac6279cb1b43926065"
+      "targetPath": "public/images/blog/video_metadata3.gif"
     },
     {
       "legacyPath": "public/images/blog/ipod_apple.png",
-      "targetPath": "public/images/blog/ipod_apple.png",
-      "bytes": 528085,
-      "sha256": "5c3e11e7ea0381c9d35161ffb7ce12bdd91b4a5ab754983f1d1a857e5ddd0c5d"
+      "targetPath": "public/images/blog/ipod_apple.png"
     },
     {
       "legacyPath": "public/images/blog/video_metadata1_opt_flow.gif",
-      "targetPath": "public/images/blog/video_metadata1_opt_flow.gif",
-      "bytes": 463957,
-      "sha256": "777ec2651a0b43e7e1c4d966de24b136c3a8f687f879ce44c414453f14333d2e"
+      "targetPath": "public/images/blog/video_metadata1_opt_flow.gif"
     },
     {
       "legacyPath": "public/images/blog/laion_coco_beach.png",
-      "targetPath": "public/images/blog/laion_coco_beach.png",
-      "bytes": 584027,
-      "sha256": "e734f3160f81a52a488269b30735f8298f5d9c7a94dc51db78b07b2e89cde7ce"
+      "targetPath": "public/images/blog/laion_coco_beach.png"
     },
     {
       "legacyPath": "public/images/blog/video_metadata2.gif",
-      "targetPath": "public/images/blog/video_metadata2.gif",
-      "bytes": 18934,
-      "sha256": "3dace0546becd3f864c6c7090bf044dc421d5d61b960e62eddb6cb76136331dd"
+      "targetPath": "public/images/blog/video_metadata2.gif"
     },
     {
       "legacyPath": "public/images/blog/flamingo-samples.png",
-      "targetPath": "public/images/blog/flamingo-samples.png",
-      "bytes": 412095,
-      "sha256": "d7b41cbb1792522ecbc318ceb6ffdbe3d78d4d61ff3808c39ff17ca7dfe38901"
+      "targetPath": "public/images/blog/flamingo-samples.png"
     },
     {
       "legacyPath": "public/images/blog/flamingo-9B-sample-two.png",
-      "targetPath": "public/images/blog/flamingo-9B-sample-two.png",
-      "bytes": 1771074,
-      "sha256": "55f4dc136dd0e67b4021d6c775dd6d41dbd5e194b14e4bd32f7ec0b8a1db2506"
+      "targetPath": "public/images/blog/flamingo-9B-sample-two.png"
     },
     {
       "legacyPath": "public/images/blog/500m.png",
-      "targetPath": "public/images/blog/500m.png",
-      "bytes": 1160536,
-      "sha256": "46012badb6f4b57e27153764232fb6e0fa93da20869d46b475c8e911aabc1426"
+      "targetPath": "public/images/blog/500m.png"
     },
     {
       "legacyPath": "public/images/blog/gpt-4-omni.webp",
-      "targetPath": "public/images/blog/gpt-4-omni.webp",
-      "bytes": 449638,
-      "sha256": "fa5cbf41d3894d834ab4bab3e70d383c527f9e04c7294ffa78a32f4e18431b08"
+      "targetPath": "public/images/blog/gpt-4-omni.webp"
     },
     {
       "legacyPath": "public/images/blog/admin-bud-e+.jpg",
-      "targetPath": "public/images/blog/admin-bud-e+.jpg",
-      "bytes": 285370,
-      "sha256": "0dc9034e148992428c314af627abb1291220325aa5110d8e72b18d599ef6baab"
+      "targetPath": "public/images/blog/admin-bud-e+.jpg"
     },
     {
       "legacyPath": "public/images/blog/laion-blue.png",
-      "targetPath": "public/images/blog/laion-blue.png",
-      "bytes": 434320,
-      "sha256": "d843aa422eae265616e9dd34ce1ad09b62b556c60d98abb7f0d8fa58ec2d471e"
+      "targetPath": "public/images/blog/laion-blue.png"
     },
     {
       "legacyPath": "public/images/blog/voice-acting-arena.jpeg",
-      "targetPath": "public/images/blog/voice-acting-arena.jpeg",
-      "bytes": 46129,
-      "sha256": "e2d1a2ebc57660b65bb8bc7be952802df9af792432a79dafa05cc72ce7ae1da2"
+      "targetPath": "public/images/blog/voice-acting-arena.jpeg"
     },
     {
       "legacyPath": "public/images/blog/datacomp_scaling_plot.png",
-      "targetPath": "public/images/blog/datacomp_scaling_plot.png",
-      "bytes": 36429,
-      "sha256": "f341e2a49f4d564aff8dd5995a2e9d3f6a67cde0ce59334a3aed368882aef479"
+      "targetPath": "public/images/blog/datacomp_scaling_plot.png"
     },
     {
       "legacyPath": "public/images/blog/FW23A.png",
-      "targetPath": "public/images/blog/FW23A.png",
-      "bytes": 177016,
-      "sha256": "b499600f3733d99736051a41362a6234a4d09528e7982e3a5484d5f496cb34be"
+      "targetPath": "public/images/blog/FW23A.png"
     },
     {
       "legacyPath": "public/images/blog/oig-example.png",
-      "targetPath": "public/images/blog/oig-example.png",
-      "bytes": 489778,
-      "sha256": "1cbea6acfff3696c067ee9589d300875291f7a6132cfb32a1e830f844bdd70b8"
+      "targetPath": "public/images/blog/oig-example.png"
     },
     {
       "legacyPath": "public/images/blog/chessboard.png",
-      "targetPath": "public/images/blog/chessboard.png",
-      "bytes": 1223896,
-      "sha256": "6ba417b643ea2b6f42789e3dadb808a9586e29b97798f81802702126adddfe92"
+      "targetPath": "public/images/blog/chessboard.png"
     },
     {
       "legacyPath": "public/images/blog/bud-e-1.0.png",
-      "targetPath": "public/images/blog/bud-e-1.0.png",
-      "bytes": 1500962,
-      "sha256": "ef36bda8aef3105a14e070f71125a65d5fc1b74041136696ba1ed9efa98df337"
+      "targetPath": "public/images/blog/bud-e-1.0.png"
     },
     {
       "legacyPath": "public/images/blog/laion_coco_man.png",
-      "targetPath": "public/images/blog/laion_coco_man.png",
-      "bytes": 63877,
-      "sha256": "35f11ae697d525c797dc482246d9cb7176bc8d0c8d613305b746adc2f04ed9ba"
+      "targetPath": "public/images/blog/laion_coco_man.png"
     },
     {
       "legacyPath": "public/images/blog/bud-e-video.png",
-      "targetPath": "public/images/blog/bud-e-video.png",
-      "bytes": 1693527,
-      "sha256": "3b61bfc4268d84216246ebc2689c60e720dcdce626200a44b717eae55ef207a5"
+      "targetPath": "public/images/blog/bud-e-video.png"
     },
     {
       "legacyPath": "public/images/blog/sheeple.png",
-      "targetPath": "public/images/blog/sheeple.png",
-      "bytes": 376860,
-      "sha256": "b952432342f5b9b7087cc64c944fc727011287ecdc7215c048217a842f005c2b"
+      "targetPath": "public/images/blog/sheeple.png"
     },
     {
       "legacyPath": "public/images/blog/general-gpt_coco-retrieval_example-2.png",
-      "targetPath": "public/images/blog/general-gpt_coco-retrieval_example-2.png",
-      "bytes": 333777,
-      "sha256": "1dd7cdfb3370908b8733985ed42ee1fe7bb1ba2a152aba7519e856daa6595850"
+      "targetPath": "public/images/blog/general-gpt_coco-retrieval_example-2.png"
     },
     {
       "legacyPath": "public/images/blog/general-gpt_captioning_example-1.png",
-      "targetPath": "public/images/blog/general-gpt_captioning_example-1.png",
-      "bytes": 235184,
-      "sha256": "ca474a476dc077a83e5648616ae31dc93cb1cd634c2b2a9a2650789706ce2472"
+      "targetPath": "public/images/blog/general-gpt_captioning_example-1.png"
     },
     {
       "legacyPath": "public/images/blog/benchmarks.png",
-      "targetPath": "public/images/blog/benchmarks.png",
-      "bytes": 41882,
-      "sha256": "22c6a3aa6a3f89a6fe80a74363ee98dc4c15ecface5286e600307f5ff2b15c1b"
+      "targetPath": "public/images/blog/benchmarks.png"
     },
     {
       "legacyPath": "public/images/blog/openlm_teaser.png",
-      "targetPath": "public/images/blog/openlm_teaser.png",
-      "bytes": 1779501,
-      "sha256": "73c3eceb25255b817da05660372b8b732a46de6611aeacb351b179fb13728cb3"
+      "targetPath": "public/images/blog/openlm_teaser.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png",
-      "bytes": 192798,
-      "sha256": "5e338ebe1da2f1c88125cd3d36c1ad0ec14c3f96941111b1b321f3e38c3889c2"
+      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_together_ai_meta_llama_Meta_Llama_3.1_8B_Instruct_Turbo.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png",
-      "bytes": 36582,
-      "sha256": "91cae39c9999f3d487865b0482ab53a74fa96e1e45b52c4e9cc205f845ca26bc"
+      "targetPath": "public/images/blog/game_reasoning_arena/entropy_by_turn_all_agents_tic_tac_toe.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/0_blog_logo.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/0_blog_logo.png",
-      "bytes": 1288373,
-      "sha256": "8dd38b123dd287e3b6dc792b50cd9148fe4d74e6b6d78e8ece4ebc2445e1b2e6"
+      "targetPath": "public/images/blog/game_reasoning_arena/0_blog_logo.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/0_reasoning_types.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/0_reasoning_types.png",
-      "bytes": 137923,
-      "sha256": "4893fd72207d71a31aa69d59720878637ed7348dbb7488c8908a02b1abc5d0c8"
+      "targetPath": "public/images/blog/game_reasoning_arena/0_reasoning_types.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png",
-      "bytes": 170079,
-      "sha256": "a36f898157de19755600eb34cb33d9ee1afba905a583d32d310ebb558cd1ea3c"
+      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_70b_8192.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_70b_8192.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_70b_8192.png",
-      "bytes": 184037,
-      "sha256": "24c017cf48009591cf7921d4d093bbde2bdad3f77179d7666536cd805895b7be"
+      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_70b_8192.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama_3_1_8b_instant_tic_tac_toe.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama_3_1_8b_instant_tic_tac_toe.png",
-      "bytes": 158846,
-      "sha256": "e8fe23529fd0e1127a3f87f404d0e504d303cc40441bae770ad8d771309f528a"
+      "targetPath": "public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama_3_1_8b_instant_tic_tac_toe.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/README.md",
-      "targetPath": "public/images/blog/game_reasoning_arena/README.md",
-      "bytes": 71,
-      "sha256": "de2035159db8d5bde5942da04c08822de6add77ec73bd828b185160bb05302d7"
+      "targetPath": "public/images/blog/game_reasoning_arena/README.md"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png",
-      "bytes": 559353,
-      "sha256": "8ecd5defb549c54b4dd8f410bc029bc913a060ea7ab21df5861cadc0889d1895"
+      "targetPath": "public/images/blog/game_reasoning_arena/radar_comparison_llm_litellm_groq_llama3_70b_8192.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png",
-      "bytes": 188637,
-      "sha256": "946b30380f34cdbc843b897180a48d3ed96a7d644cd45e037ff0ce65b82227a8"
+      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_by_game_llm_litellm_groq_llama3_8b_8192.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png",
-      "bytes": 213041,
-      "sha256": "b7ad55733a1f9a1ac776b4fcb9beca4924b95a0e51b80c1dc82ae9346f2cce48"
+      "targetPath": "public/images/blog/game_reasoning_arena/evolution_heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png",
-      "bytes": 210417,
-      "sha256": "4588b29024616de20ff77dca3247bd1ecba1f4d75935f6b857cb8669774cff8e"
+      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_stacked_llm_litellm_groq_llama3_8b_8192.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png",
-      "bytes": 195219,
-      "sha256": "bee946bb28d310884ab2fe80402718a79e4a4d6ad53139fe5d5b6f702004e933"
+      "targetPath": "public/images/blog/game_reasoning_arena/reasoning_pie_llm_litellm_groq_llama3_8b_8192.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png",
-      "bytes": 36338,
-      "sha256": "1817e8bdd9c0f4bf8863a47cf18d23ee982feb0f3be8cc43c77f796a2b964c4a"
+      "targetPath": "public/images/blog/game_reasoning_arena/heatmap_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png"
     },
     {
       "legacyPath": "public/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png",
-      "targetPath": "public/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png",
-      "bytes": 192932,
-      "sha256": "5b7e9b7c79b92e4663df0ca36e6f714827e415ecc8fa90fedc56e0d5fd23d90d"
+      "targetPath": "public/images/blog/game_reasoning_arena/evolution_llm_litellm_groq_llama3_8b_8192_tic_tac_toe.png"
     },
     {
       "legacyPath": "public/images/blog/eval_coca_clip_diff.jpg",
-      "targetPath": "public/images/blog/eval_coca_clip_diff.jpg",
-      "bytes": 215900,
-      "sha256": "ba2538ebb934b47363f8ff2e10b932bd6abd4e3c1279bf1f6fd318ec22894562"
+      "targetPath": "public/images/blog/eval_coca_clip_diff.jpg"
     },
     {
       "legacyPath": "public/images/blog/training_params.png",
-      "targetPath": "public/images/blog/training_params.png",
-      "bytes": 97301,
-      "sha256": "0c0281f75b0a18820bcec0b925c4b09bc322d786ed5e6491f2349e231525f0c7"
+      "targetPath": "public/images/blog/training_params.png"
     },
     {
       "legacyPath": "public/images/blog/general-gpt_coco-retrieval_example-1.png",
-      "targetPath": "public/images/blog/general-gpt_coco-retrieval_example-1.png",
-      "bytes": 249008,
-      "sha256": "00e3c79b04db1f11915ece5ecd12b36c2330109589e74da04b1e07e4c39b72ff"
+      "targetPath": "public/images/blog/general-gpt_coco-retrieval_example-1.png"
     },
     {
       "legacyPath": "public/images/blog/general-gpt_captioning_example-2.png",
-      "targetPath": "public/images/blog/general-gpt_captioning_example-2.png",
-      "bytes": 296055,
-      "sha256": "01ab11205015a24e2b9245792ff577d2634fe5717bcc013b859faa42ed763238"
+      "targetPath": "public/images/blog/general-gpt_captioning_example-2.png"
     },
     {
       "legacyPath": "public/images/blog/1B_loss.png",
-      "targetPath": "public/images/blog/1B_loss.png",
-      "bytes": 20944,
-      "sha256": "59e2a4d9b8abb79beb9d6f8c21f3ebe834ed7b84dacf7ae491a313f37d5e5dfe"
+      "targetPath": "public/images/blog/1B_loss.png"
     },
     {
       "legacyPath": "public/images/blog/sci5.png",
-      "targetPath": "public/images/blog/sci5.png",
-      "bytes": 564585,
-      "sha256": "e5380d7b39cb3a6eb17e1d422e6cc3d3207c8e125d7c229053ceb4e6be7f7a4f"
+      "targetPath": "public/images/blog/sci5.png"
     },
     {
       "legacyPath": "public/images/blog/laion-black-old.png",
-      "targetPath": "public/images/blog/laion-black-old.png",
-      "bytes": 29518,
-      "sha256": "5fe761c019646418090aba9a9540cdcee85ee9bd0bd6d4c7e8ef6cb867b0fc64"
+      "targetPath": "public/images/blog/laion-black-old.png"
     },
     {
       "legacyPath": "public/images/blog/general-gpt_laion-retrieval_example-2.jpg",
-      "targetPath": "public/images/blog/general-gpt_laion-retrieval_example-2.jpg",
-      "bytes": 71731,
-      "sha256": "1ea6eb15bf676f953dc1f82694fd50ae4500194b5672566a58bdea2d65202a83"
+      "targetPath": "public/images/blog/general-gpt_laion-retrieval_example-2.jpg"
     },
     {
       "legacyPath": "public/images/blog/h_14_clip_front.png",
-      "targetPath": "public/images/blog/h_14_clip_front.png",
-      "bytes": 4472606,
-      "sha256": "b712cf6036b66ea4a532f2ddb8fb8a12a21e8238ca13af41f99c8eac05292ad4"
+      "targetPath": "public/images/blog/h_14_clip_front.png"
     },
     {
       "legacyPath": "public/images/blog/artbot-image-ratings.png",
-      "targetPath": "public/images/blog/artbot-image-ratings.png",
-      "bytes": 477222,
-      "sha256": "0b2b858e5520ab125e07003dee354ee057e832df1d5afed8c783a28fde79e3b5"
+      "targetPath": "public/images/blog/artbot-image-ratings.png"
     },
     {
       "legacyPath": "public/images/blog/flamingo-9B-sample-one.png",
-      "targetPath": "public/images/blog/flamingo-9B-sample-one.png",
-      "bytes": 2350201,
-      "sha256": "193dabcae54c1d382d986c33091f9989dd7cbd28cafff5600443051087a212c0"
+      "targetPath": "public/images/blog/flamingo-9B-sample-one.png"
     },
     {
       "legacyPath": "public/images/blog/FW23.jpg",
-      "targetPath": "public/images/blog/FW23.jpg",
-      "bytes": 117371,
-      "sha256": "675dcaa6b09bc040e107502523921af2c7c96267453f7765a5d04b0bf44c879e"
+      "targetPath": "public/images/blog/FW23.jpg"
     },
     {
       "legacyPath": "public/images/blog/LAION-Aesthetics.jpg",
-      "targetPath": "public/images/blog/LAION-Aesthetics.jpg",
-      "bytes": 352422,
-      "sha256": "bb0689bb9e73f78024f51faf464aef2bf6913466d25c1aa9e4e05b87956a8f18"
+      "targetPath": "public/images/blog/LAION-Aesthetics.jpg"
     },
     {
       "legacyPath": "public/images/blog/dataset-distribution.jpg",
-      "targetPath": "public/images/blog/dataset-distribution.jpg",
-      "bytes": 208952,
-      "sha256": "a17fc1d3ae2e9bb5cef13001614828a96471aaafe8f5c82e81b06aa7b055354b"
+      "targetPath": "public/images/blog/dataset-distribution.jpg"
     },
     {
       "legacyPath": "public/images/blog/wolf-round.jpg",
-      "targetPath": "public/images/blog/wolf-round.jpg",
-      "bytes": 2475,
-      "sha256": "c53da359debc78f3cae44c3b602a9a10726c54a8244835db608ca1d49e5c5543"
+      "targetPath": "public/images/blog/wolf-round.jpg"
     },
     {
       "legacyPath": "public/images/blog/sci4.png",
-      "targetPath": "public/images/blog/sci4.png",
-      "bytes": 461914,
-      "sha256": "0ff1a1c2a917602eadb0f8560492969b2bcbd92edef86185e2b43a81067fc995"
+      "targetPath": "public/images/blog/sci4.png"
     },
     {
       "legacyPath": "public/images/blog/eval_coca_clip.jpg",
-      "targetPath": "public/images/blog/eval_coca_clip.jpg",
-      "bytes": 330002,
-      "sha256": "fde36771549cc44e963840ccd200df7c62400c150ef459820506719486381f5e"
+      "targetPath": "public/images/blog/eval_coca_clip.jpg"
     },
     {
       "legacyPath": "public/images/blog/ring.png",
-      "targetPath": "public/images/blog/ring.png",
-      "bytes": 40172,
-      "sha256": "ace5a882ad5ec02572ce13c9985d234103ceb171fa27a9fd26b2eb15ebf04f18"
+      "targetPath": "public/images/blog/ring.png"
     },
     {
       "legacyPath": "public/images/blog/general-gpt_laion-retrieval_example-1.jpg",
-      "targetPath": "public/images/blog/general-gpt_laion-retrieval_example-1.jpg",
-      "bytes": 161642,
-      "sha256": "696e2f9a71fb340ba6ac58521e1c1b6a5129a1551b8a34f071a76e227e0895d6"
+      "targetPath": "public/images/blog/general-gpt_laion-retrieval_example-1.jpg"
     },
     {
       "legacyPath": "public/images/blog/eval_laion_coco.png",
-      "targetPath": "public/images/blog/eval_laion_coco.png",
-      "bytes": 6954,
-      "sha256": "ccc2a0fbe283eb3df8e090be7761429045a3f96bb7cce8c12606275ad70bb9a4"
+      "targetPath": "public/images/blog/eval_laion_coco.png"
     },
     {
       "legacyPath": "public/images/blog/laion-translated-samples.png",
-      "targetPath": "public/images/blog/laion-translated-samples.png",
-      "bytes": 685730,
-      "sha256": "a6afdeb26a5bb2bc679402d55e6fb28cedfdbba15a04c4a153512840cbc199d0"
+      "targetPath": "public/images/blog/laion-translated-samples.png"
     },
     {
       "legacyPath": "public/images/blog/bvd-preview.jpg",
-      "targetPath": "public/images/blog/bvd-preview.jpg",
-      "bytes": 259020,
-      "sha256": "c8bae93678b73ef609d514c5f8a075d70965fec3e73284ed0536eb37c7a0f2db"
+      "targetPath": "public/images/blog/bvd-preview.jpg"
     },
     {
       "legacyPath": "public/images/blog/flamingo-aggregated-performance.png",
-      "targetPath": "public/images/blog/flamingo-aggregated-performance.png",
-      "bytes": 97949,
-      "sha256": "862c703379f7a8c98ad60bbac0718460966c58e5a7f8e4ec613ab672ec6a1b6c"
+      "targetPath": "public/images/blog/flamingo-aggregated-performance.png"
     },
     {
       "legacyPath": "public/images/blog/admin-bud-e.jpg",
-      "targetPath": "public/images/blog/admin-bud-e.jpg",
-      "bytes": 285370,
-      "sha256": "0dc9034e148992428c314af627abb1291220325aa5110d8e72b18d599ef6baab"
+      "targetPath": "public/images/blog/admin-bud-e.jpg"
     },
     {
       "legacyPath": "public/images/blog/laion_coco_tags.png",
-      "targetPath": "public/images/blog/laion_coco_tags.png",
-      "bytes": 654358,
-      "sha256": "f103aa06390badde08a4e088fd94000ae1728367cb3e9dd39ee97137aa217393"
+      "targetPath": "public/images/blog/laion_coco_tags.png"
     },
     {
       "legacyPath": "public/images/blog/sci3.jpg",
-      "targetPath": "public/images/blog/sci3.jpg",
-      "bytes": 320019,
-      "sha256": "9f9c295e94f213f5c2b1d05a15b0eb52a20d526366e78ab84be0f9e79a28746a"
+      "targetPath": "public/images/blog/sci3.jpg"
     },
     {
       "legacyPath": "public/images/blog/voice-acting-arena-video.mp4",
-      "targetPath": "public/images/blog/voice-acting-arena-video.mp4",
-      "bytes": 3529858,
-      "sha256": "6423520a54b12074378f7cf328e2111898859501cc26fc3b2eea07db21ce8276"
+      "targetPath": "public/images/blog/voice-acting-arena-video.mp4"
     },
     {
       "legacyPath": "public/images/blog/video2dataset-preview.png",
-      "targetPath": "public/images/blog/video2dataset-preview.png",
-      "bytes": 914323,
-      "sha256": "47bffdbc69fe9182b8e2515b427e43c8ceb1a8d26ce07a16b7e32611ea388ae6"
+      "targetPath": "public/images/blog/video2dataset-preview.png"
     },
     {
       "legacyPath": "public/images/blog/datacomp_samples.png",
-      "targetPath": "public/images/blog/datacomp_samples.png",
-      "bytes": 8689970,
-      "sha256": "ca76288e10a1663d898513f36a2ba8f61a6f4b0d1c7f67777711dabb36f14b68"
+      "targetPath": "public/images/blog/datacomp_samples.png"
     },
     {
       "legacyPath": "public/images/blog/cond_pretrain_im4a.PNG",
-      "targetPath": "public/images/blog/cond_pretrain_im4a.PNG",
-      "bytes": 8368,
-      "sha256": "8cdff5080cd2d9c0c2a0865f1940e4d097f20c130c3b9e838dcc01700d92486a"
+      "targetPath": "public/images/blog/cond_pretrain_im4a.PNG"
     },
     {
       "legacyPath": "public/images/blog/laion-2B-translated.png",
-      "targetPath": "public/images/blog/laion-2B-translated.png",
-      "bytes": 49729,
-      "sha256": "f0e0015089316136d6e919ee895b15c8adc9400a2668f0c80a2f9676b72f2f58"
+      "targetPath": "public/images/blog/laion-2B-translated.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/3_2_collection.png",
-      "targetPath": "public/images/blog/visit_bench/3_2_collection.png",
-      "bytes": 2064489,
-      "sha256": "2fb19a08272bcef7b4eeecced803123c6f1a44f13c6b61580f1b3f04ef6f83ef"
+      "targetPath": "public/images/blog/visit_bench/3_2_collection.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/1_fig1.png",
-      "targetPath": "public/images/blog/visit_bench/1_fig1.png",
-      "bytes": 1710812,
-      "sha256": "24ed47934f44be6ac17ad1cec89f16d391532b2f628b9178df81e69f4067759a"
+      "targetPath": "public/images/blog/visit_bench/1_fig1.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/6_dataset_results.png",
-      "targetPath": "public/images/blog/visit_bench/6_dataset_results.png",
-      "bytes": 80537,
-      "sha256": "813811f325fad2d61a7b9f52601313152590b2df95430a958ec0829c98e22d23"
+      "targetPath": "public/images/blog/visit_bench/6_dataset_results.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/4_nlvr_image.png",
-      "targetPath": "public/images/blog/visit_bench/4_nlvr_image.png",
-      "bytes": 2773739,
-      "sha256": "e43763252a78e106ab1991c8d4339b0ab3c457b54a39d821247cc7285ced7c8d"
+      "targetPath": "public/images/blog/visit_bench/4_nlvr_image.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/3_3_collection.png",
-      "targetPath": "public/images/blog/visit_bench/3_3_collection.png",
-      "bytes": 1433859,
-      "sha256": "4ff526787b6cdd54a28019a3f06f9f085449e654886f87b0dea1280b3c9e1618"
+      "targetPath": "public/images/blog/visit_bench/3_3_collection.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/9_auto_eval_rating.png",
-      "targetPath": "public/images/blog/visit_bench/9_auto_eval_rating.png",
-      "bytes": 332933,
-      "sha256": "b40b36944570d9fc3e57fd82765fec98faee0b3bd99e328bd6b2cb5cfbc728d5"
+      "targetPath": "public/images/blog/visit_bench/9_auto_eval_rating.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/3_1_collection.png",
-      "targetPath": "public/images/blog/visit_bench/3_1_collection.png",
-      "bytes": 2249165,
-      "sha256": "bca9d2eaebbea44e9e949c2060ccdc9fadabbfb43d570cedb83c242c01961463"
+      "targetPath": "public/images/blog/visit_bench/3_1_collection.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/2_example.png",
-      "targetPath": "public/images/blog/visit_bench/2_example.png",
-      "bytes": 312271,
-      "sha256": "477f657a1c465d1ccb56faa8ea1b25a5be0d6bd6bc5c41c84a6c528d8d1192c7"
+      "targetPath": "public/images/blog/visit_bench/2_example.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/12_res_per_category.png",
-      "targetPath": "public/images/blog/visit_bench/12_res_per_category.png",
-      "bytes": 321207,
-      "sha256": "bc1e65a2bb5a66ba12014aace3b5d817797b17fe37b9a0a7ac84434d04e6a105"
+      "targetPath": "public/images/blog/visit_bench/12_res_per_category.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/8_human_performance.png",
-      "targetPath": "public/images/blog/visit_bench/8_human_performance.png",
-      "bytes": 637091,
-      "sha256": "9b4cac40f080f2fa8922ab47761d00b15bf96c70a763754b98bc90ac1db67bc5"
+      "targetPath": "public/images/blog/visit_bench/8_human_performance.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/13_leaderboard.png",
-      "targetPath": "public/images/blog/visit_bench/13_leaderboard.png",
-      "bytes": 88663,
-      "sha256": "a8c0f2fbb2b46adbc528d95bf65708083d793912a8a49254d2aaf412becaef12"
+      "targetPath": "public/images/blog/visit_bench/13_leaderboard.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/3_dataset_collection.png",
-      "targetPath": "public/images/blog/visit_bench/3_dataset_collection.png",
-      "bytes": 1203171,
-      "sha256": "f27a8a71a320108d6bb38f9f4ab778d117c46001053c7364b327aa082ad66a9b"
+      "targetPath": "public/images/blog/visit_bench/3_dataset_collection.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/5_necessity_of_captions.png",
-      "targetPath": "public/images/blog/visit_bench/5_necessity_of_captions.png",
-      "bytes": 722220,
-      "sha256": "cda79b03f532dc173398a4000c4b414cffb43457694387faffe8e5fb499be9e0"
+      "targetPath": "public/images/blog/visit_bench/5_necessity_of_captions.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/7_table_compare.png",
-      "targetPath": "public/images/blog/visit_bench/7_table_compare.png",
-      "bytes": 142746,
-      "sha256": "c85d3d383c5027062d65685a35e58e168387e465ffa4598349d3902c3ab24269"
+      "targetPath": "public/images/blog/visit_bench/7_table_compare.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/11_correlation.png",
-      "targetPath": "public/images/blog/visit_bench/11_correlation.png",
-      "bytes": 190242,
-      "sha256": "ddba04cd44a5a4bda390a580959dc306458df048bc8386ef2e02faa8e50757d0"
+      "targetPath": "public/images/blog/visit_bench/11_correlation.png"
     },
     {
       "legacyPath": "public/images/blog/visit_bench/10_auto_eval_expanded.png",
-      "targetPath": "public/images/blog/visit_bench/10_auto_eval_expanded.png",
-      "bytes": 908609,
-      "sha256": "b9a5f96f9d9883ad7b8f9eac0ddc1b4e007e41d13d214eb6c40df9685d28add9"
+      "targetPath": "public/images/blog/visit_bench/10_auto_eval_expanded.png"
     },
     {
       "legacyPath": "public/images/blog/7B_loss.png",
-      "targetPath": "public/images/blog/7B_loss.png",
-      "bytes": 21635,
-      "sha256": "529e93795f8313463b5042331e5b9ef137b04a3e2b65290a6796ddab2a93b1f6"
+      "targetPath": "public/images/blog/7B_loss.png"
     },
     {
       "legacyPath": "public/images/blog/flamingo-evaluations.png",
-      "targetPath": "public/images/blog/flamingo-evaluations.png",
-      "bytes": 215926,
-      "sha256": "4e54947c9b05dbf733e5957172d1bfd8a0ada379d144d0b1316c1a7fc99b91c3"
+      "targetPath": "public/images/blog/flamingo-evaluations.png"
     },
     {
       "legacyPath": "public/images/blog/sci2.jpg",
-      "targetPath": "public/images/blog/sci2.jpg",
-      "bytes": 129708,
-      "sha256": "9f83ee6ebc0f42aec1adb190a801983155c7ed39761c34ee7d6507756a5ca078"
+      "targetPath": "public/images/blog/sci2.jpg"
     },
     {
       "legacyPath": "public/images/blog/laion-petition.png",
-      "targetPath": "public/images/blog/laion-petition.png",
-      "bytes": 213779,
-      "sha256": "592549674158eff8db66e397c2d6e8f1c08495f99e1022aa5ab7d429d45f8345"
+      "targetPath": "public/images/blog/laion-petition.png"
     },
     {
       "legacyPath": "public/images/blog/video2dataset_diagram.png",
-      "targetPath": "public/images/blog/video2dataset_diagram.png",
-      "bytes": 106565,
-      "sha256": "a827d85b696b38356f53691288b372c6e0f1d39d16ded334b0fd9fde4ce56ec2"
+      "targetPath": "public/images/blog/video2dataset_diagram.png"
     },
     {
       "legacyPath": "public/images/blog/video2dataset_wandb_logs.png",
-      "targetPath": "public/images/blog/video2dataset_wandb_logs.png",
-      "bytes": 438769,
-      "sha256": "7942cfb5b1720154c7bcfdf2b555b2b3eab2a1dc95070ea259ac403e66a63fcc"
+      "targetPath": "public/images/blog/video2dataset_wandb_logs.png"
     },
     {
       "legacyPath": "public/images/blog/bvd_fig7.png",
-      "targetPath": "public/images/blog/bvd_fig7.png",
-      "bytes": 125037,
-      "sha256": "07c076f2e231c284a42c3c4b4d5c724a24dd3c178d3a305ec47cb47323a97116"
+      "targetPath": "public/images/blog/bvd_fig7.png"
     },
     {
       "legacyPath": "public/images/blog/laion_coco_umbrella.png",
-      "targetPath": "public/images/blog/laion_coco_umbrella.png",
-      "bytes": 534710,
-      "sha256": "36d19bc43f24c5ca88e8c79b226723ed7a7de89bc0c3622bc37c771942b95eb9"
+      "targetPath": "public/images/blog/laion_coco_umbrella.png"
     },
     {
       "legacyPath": "public/images/blog/school-bud-e-video.png",
-      "targetPath": "public/images/blog/school-bud-e-video.png",
-      "bytes": 650463,
-      "sha256": "08714f76a38e5bf9808649908cf54c58b6950e044d15161eb3a5f468d398a986"
+      "targetPath": "public/images/blog/school-bud-e-video.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image8.png",
-      "targetPath": "public/images/blog/do_they_see/image8.png",
-      "bytes": 166471,
-      "sha256": "ae625630102716b390d92d4a7babf818e82ca52d53140ac92883d65a18911ae8"
+      "targetPath": "public/images/blog/do_they_see/image8.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image9.png",
-      "targetPath": "public/images/blog/do_they_see/image9.png",
-      "bytes": 686995,
-      "sha256": "9d9e7d57a07a9856b4d3db0304a1556aea7f286ec828f69da7b2b89b465c0348"
+      "targetPath": "public/images/blog/do_they_see/image9.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image14.png",
-      "targetPath": "public/images/blog/do_they_see/image14.png",
-      "bytes": 366222,
-      "sha256": "3a21639d45bfe4cd9171c57d817e0aa4a5d63f75e1d15a204472dbd2aa7247b3"
+      "targetPath": "public/images/blog/do_they_see/image14.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image15.png",
-      "targetPath": "public/images/blog/do_they_see/image15.png",
-      "bytes": 227520,
-      "sha256": "4cc1d42c3527c38443a8cf71bdeb81e4c9636b8e8b0a5470fe3e35118485a84e"
+      "targetPath": "public/images/blog/do_they_see/image15.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image16.png",
-      "targetPath": "public/images/blog/do_they_see/image16.png",
-      "bytes": 60444,
-      "sha256": "1fb06f7b0b9bdea641a3b29b16e89a330012b6fefdd4b1619ba6ca0b69c600d5"
+      "targetPath": "public/images/blog/do_they_see/image16.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image12.png",
-      "targetPath": "public/images/blog/do_they_see/image12.png",
-      "bytes": 370484,
-      "sha256": "8dab28401d6b4de9da17bec7eb1e99e6c7efef2c8576df0cc4efb72ca3304fb5"
+      "targetPath": "public/images/blog/do_they_see/image12.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image13.png",
-      "targetPath": "public/images/blog/do_they_see/image13.png",
-      "bytes": 222174,
-      "sha256": "191d04e3d7280e8573a17a6523128d5f5f4432a81911c5fc19d491a522e4931e"
+      "targetPath": "public/images/blog/do_they_see/image13.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image11.png",
-      "targetPath": "public/images/blog/do_they_see/image11.png",
-      "bytes": 117945,
-      "sha256": "74541189fa60047ffbd5b5708e7251fb46ab091bc681b73177e0f848f3767b0b"
+      "targetPath": "public/images/blog/do_they_see/image11.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image10.png",
-      "targetPath": "public/images/blog/do_they_see/image10.png",
-      "bytes": 384167,
-      "sha256": "d4abcea17406f3a3d5e878c141c6a176f72bb75dfbcba880a22affe7bece85bd"
+      "targetPath": "public/images/blog/do_they_see/image10.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image7.png",
-      "targetPath": "public/images/blog/do_they_see/image7.png",
-      "bytes": 185679,
-      "sha256": "07be902b62ec1273b028e0d2e5cb7d084b9c9f0ab6c14baf348177094cba6945"
+      "targetPath": "public/images/blog/do_they_see/image7.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image6.png",
-      "targetPath": "public/images/blog/do_they_see/image6.png",
-      "bytes": 179046,
-      "sha256": "d983478b7fb770dc874bd0227384dbb4dafd4bc6bbfc04f384308cea975bb652"
+      "targetPath": "public/images/blog/do_they_see/image6.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image4.png",
-      "targetPath": "public/images/blog/do_they_see/image4.png",
-      "bytes": 2288686,
-      "sha256": "f312b68c62433cfa5b01622b7aed81371e8ebe1053ad33d5346d818b6fdf343a"
+      "targetPath": "public/images/blog/do_they_see/image4.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image5.png",
-      "targetPath": "public/images/blog/do_they_see/image5.png",
-      "bytes": 572330,
-      "sha256": "ce89d561e5781500949114f1b1479593687508f5449d3487d81fd92cd5e49709"
+      "targetPath": "public/images/blog/do_they_see/image5.png"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image1.jpg",
-      "targetPath": "public/images/blog/do_they_see/image1.jpg",
-      "bytes": 131429,
-      "sha256": "efb6a4bb59dc26bc808b03f6369027b4a3f299d459b1a1c1915fdddc6d053001"
+      "targetPath": "public/images/blog/do_they_see/image1.jpg"
     },
     {
       "legacyPath": "public/images/blog/do_they_see/image2.png",
-      "targetPath": "public/images/blog/do_they_see/image2.png",
-      "bytes": 278003,
-      "sha256": "6fa7e6ec1d33972b87e2ea217ddabab9c2c500130438fe45bc49d171b8a84bbe"
+      "targetPath": "public/images/blog/do_they_see/image2.png"
     },
     {
       "legacyPath": "public/images/blog/cond_pretrain_im3a.PNG",
-      "targetPath": "public/images/blog/cond_pretrain_im3a.PNG",
-      "bytes": 34604,
-      "sha256": "bc91fcb9d870b4103585123a269e4c60b0e034e8250e8871d5b7aade6745adfc"
+      "targetPath": "public/images/blog/cond_pretrain_im3a.PNG"
     },
     {
       "legacyPath": "public/images/blog/bvd_fig6.png",
-      "targetPath": "public/images/blog/bvd_fig6.png",
-      "bytes": 45848,
-      "sha256": "c2ee8f4e15e6429da2336e87ef0a7b82d2cfa8afc1e0bf79cc0ba22c4bb30334"
+      "targetPath": "public/images/blog/bvd_fig6.png"
     },
     {
       "legacyPath": "public/images/blog/boot.png",
-      "targetPath": "public/images/blog/boot.png",
-      "bytes": 56194,
-      "sha256": "8182bde268582275128e193cb4857ff8a79d5e9fb883e3434922a189abaca818"
+      "targetPath": "public/images/blog/boot.png"
     },
     {
       "legacyPath": "public/images/blog/loss_vit_giant.png",
-      "targetPath": "public/images/blog/loss_vit_giant.png",
-      "bytes": 43700,
-      "sha256": "1d2a52e6098d83902b7df33a0b69f05bcfe564181c0ed1be48aed24b9425da2c"
+      "targetPath": "public/images/blog/loss_vit_giant.png"
     },
     {
       "legacyPath": "public/images/blog/bvd_fig4.png",
-      "targetPath": "public/images/blog/bvd_fig4.png",
-      "bytes": 438130,
-      "sha256": "62a3f326fe2a106cb9b9a547907ead0ab9690c31f1e1f3be9fff51e86af87c07"
+      "targetPath": "public/images/blog/bvd_fig4.png"
     },
     {
       "legacyPath": "public/images/blog/laion-disco-12m.webp",
-      "targetPath": "public/images/blog/laion-disco-12m.webp",
-      "bytes": 133478,
-      "sha256": "e04c3f7535f049b85fa62a68a8952deb13f44776783c1bdc0dcfa06bed736d3e"
+      "targetPath": "public/images/blog/laion-disco-12m.webp"
     },
     {
       "legacyPath": "public/images/blog/AIW_Humpty.png",
-      "targetPath": "public/images/blog/AIW_Humpty.png",
-      "bytes": 262163,
-      "sha256": "de7927cefda3a01ed22ee37a51cea3da8aaa49278a813fd32cb27c2c99399d90"
+      "targetPath": "public/images/blog/AIW_Humpty.png"
     },
     {
       "legacyPath": "public/images/blog/bud-e.webp",
-      "targetPath": "public/images/blog/bud-e.webp",
-      "bytes": 336552,
-      "sha256": "c4b848a8f82f6b9db17d158b2740b707978fe04690ad1f2f64202e392de47f1f"
+      "targetPath": "public/images/blog/bud-e.webp"
     },
     {
       "legacyPath": "public/images/blog/intel-laion-cooperation.webp",
-      "targetPath": "public/images/blog/intel-laion-cooperation.webp",
-      "bytes": 351036,
-      "sha256": "6e75e688a1eede458206c7c80cea7443aa30cc2114d546689ad1a7119193df9b"
+      "targetPath": "public/images/blog/intel-laion-cooperation.webp"
     },
     {
       "legacyPath": "public/images/blog/cond_pretrain_im3b.PNG",
-      "targetPath": "public/images/blog/cond_pretrain_im3b.PNG",
-      "bytes": 64307,
-      "sha256": "11826e0573f6635855c7537661b0b5ca91e66e21f63818a66dc9a91f982bf15b"
+      "targetPath": "public/images/blog/cond_pretrain_im3b.PNG"
     },
     {
       "legacyPath": "public/images/blog/5b.png",
-      "targetPath": "public/images/blog/5b.png",
-      "bytes": 1692722,
-      "sha256": "f9a58d7fba56d55fa6177df83747bc43ae15fbed4278ddbe47cb2ec1694d409e"
+      "targetPath": "public/images/blog/5b.png"
     },
     {
       "legacyPath": "public/images/blog/bvd_fig5.png",
-      "targetPath": "public/images/blog/bvd_fig5.png",
-      "bytes": 91840,
-      "sha256": "b8f362907d7804f2057498f3a041a88c09a1cadbedd7dc77c00231056cf59c2e"
+      "targetPath": "public/images/blog/bvd_fig5.png"
     },
     {
       "legacyPath": "public/images/blog/flamingo-logo.png",
-      "targetPath": "public/images/blog/flamingo-logo.png",
-      "bytes": 1360739,
-      "sha256": "6a48efc30c30481a386a16814ece842b8292fcd775df14c29d082f3790855d60"
+      "targetPath": "public/images/blog/flamingo-logo.png"
     },
     {
       "legacyPath": "public/images/blog/video_metadata3_opt_flow.gif",
-      "targetPath": "public/images/blog/video_metadata3_opt_flow.gif",
-      "bytes": 599472,
-      "sha256": "3fb3ae4291c5ca34a3c64372ad8ae0331dcf8d6bc45a81300d2687f3d4a58d2b"
+      "targetPath": "public/images/blog/video_metadata3_opt_flow.gif"
     },
     {
       "legacyPath": "public/images/blog/rook-3.png",
-      "targetPath": "public/images/blog/rook-3.png",
-      "bytes": 50537,
-      "sha256": "b83c577fe235cda9158fc32f88daecc45333ff42890034cc08bcbed185e9fabb"
+      "targetPath": "public/images/blog/rook-3.png"
     },
     {
       "legacyPath": "public/images/blog/school-bud-e-example-2.png",
-      "targetPath": "public/images/blog/school-bud-e-example-2.png",
-      "bytes": 227520,
-      "sha256": "d093f76a420045abc1a7f121d7403b0fe862efe2d39993597c6e30c1b6bf02f1"
+      "targetPath": "public/images/blog/school-bud-e-example-2.png"
     },
     {
       "legacyPath": "public/images/blog/video2dataset_tree_of_datasets.mp4",
-      "targetPath": "public/images/blog/video2dataset_tree_of_datasets.mp4",
-      "bytes": 14680961,
-      "sha256": "07f2a162336be999254aef40711e899adae6e8a4e21be930a2882ad1e31c4c5d"
+      "targetPath": "public/images/blog/video2dataset_tree_of_datasets.mp4"
     },
     {
       "legacyPath": "public/images/blog/bvd_fig1.png",
-      "targetPath": "public/images/blog/bvd_fig1.png",
-      "bytes": 78446,
-      "sha256": "caa3cca6767ff475161293dcf1ca4836bf0c06d580e120579542c1bb04e0ef94"
+      "targetPath": "public/images/blog/bvd_fig1.png"
     },
     {
       "legacyPath": "public/images/blog/datacomp_workflow.png",
-      "targetPath": "public/images/blog/datacomp_workflow.png",
-      "bytes": 1913522,
-      "sha256": "372c0280df135ddb440455298dfb10c79d7cea16a9090a66b24f742044ec669d"
+      "targetPath": "public/images/blog/datacomp_workflow.png"
     },
     {
       "legacyPath": "public/images/blog/flamingo-family.png",
-      "targetPath": "public/images/blog/flamingo-family.png",
-      "bytes": 662972,
-      "sha256": "87c07827e3cba449dc6f4a7d4c7c4e1e3bb5beeb31253f0a82035bdfbcc0f95c"
+      "targetPath": "public/images/blog/flamingo-family.png"
     },
     {
       "legacyPath": "public/images/blog/objaverse-xl.jpg",
-      "targetPath": "public/images/blog/objaverse-xl.jpg",
-      "bytes": 780503,
-      "sha256": "e9ff6f8da63bd897f582b0a66006807b0fc03e3685c653ca53049948018f9d8e"
+      "targetPath": "public/images/blog/objaverse-xl.jpg"
     },
     {
       "legacyPath": "public/images/blog/flamingo-llama.png",
-      "targetPath": "public/images/blog/flamingo-llama.png",
-      "bytes": 1208905,
-      "sha256": "1345b0a443435206c5c9c5cbfe42adb1cf3dc594854af66694d31c1ff9f467f6"
+      "targetPath": "public/images/blog/flamingo-llama.png"
     },
     {
       "legacyPath": "public/images/blog/mt_bench.png",
-      "targetPath": "public/images/blog/mt_bench.png",
-      "bytes": 30501,
-      "sha256": "c02f3e3d391a6ffa250ed4569fac3e467b6b7eb17b8a70e72385e66d78ee9501"
+      "targetPath": "public/images/blog/mt_bench.png"
     },
     {
       "legacyPath": "public/images/blog/cond_pretrain_im2.png",
-      "targetPath": "public/images/blog/cond_pretrain_im2.png",
-      "bytes": 38039,
-      "sha256": "9ac528e5ac4c82b1e5b0c7f7f0569f0e378ff654498fcddd4840df13c06e83d1"
+      "targetPath": "public/images/blog/cond_pretrain_im2.png"
     },
     {
       "legacyPath": "public/images/blog/compare3.png",
-      "targetPath": "public/images/blog/compare3.png",
-      "bytes": 101113,
-      "sha256": "fb55cb510736f513b80355f288f71083167f78fc35d190fa50e40843330909fc"
+      "targetPath": "public/images/blog/compare3.png"
     },
     {
       "legacyPath": "public/images/blog/rook-2.png",
-      "targetPath": "public/images/blog/rook-2.png",
-      "bytes": 32833,
-      "sha256": "0d8bdd94f40c5f98255913010b5f3dbc1f0c42074c43ffcc29d78d7affe043f1"
+      "targetPath": "public/images/blog/rook-2.png"
     },
     {
       "legacyPath": "public/images/blog/bvd_fig2.png",
-      "targetPath": "public/images/blog/bvd_fig2.png",
-      "bytes": 81082,
-      "sha256": "1925ef7f9cc314998768eb9c29247c452623c05f72c7f682dae05b51926778d4"
+      "targetPath": "public/images/blog/bvd_fig2.png"
     },
     {
       "legacyPath": "public/images/blog/video_metadata2_opt_flow.gif",
-      "targetPath": "public/images/blog/video_metadata2_opt_flow.gif",
-      "bytes": 48083,
-      "sha256": "f5701de3b3ec6607e9dc7fd5a465d0431bb3aabd52dde86f06b9913d81dbb3bd"
+      "targetPath": "public/images/blog/video_metadata2_opt_flow.gif"
     },
     {
       "legacyPath": "public/images/blog/laion_pop.jpg",
-      "targetPath": "public/images/blog/laion_pop.jpg",
-      "bytes": 223365,
-      "sha256": "057d43af9303d88dac74d2a1e7f2047c31f52c02dbb3d75a39cc4cf5a60b63e1"
+      "targetPath": "public/images/blog/laion_pop.jpg"
     },
     {
       "legacyPath": "public/images/blog/bvd_fig3.png",
-      "targetPath": "public/images/blog/bvd_fig3.png",
-      "bytes": 86266,
-      "sha256": "bd48e754119357a19ffd5b0bb1f6a3aea3162a342a93a93a50f2e0b527d847cc"
+      "targetPath": "public/images/blog/bvd_fig3.png"
     },
     {
       "legacyPath": "public/images/blog/cond_pretrain_im1.png",
-      "targetPath": "public/images/blog/cond_pretrain_im1.png",
-      "bytes": 156424,
-      "sha256": "509791d6bba913c89095cc5ec5cbd40cba2bda4224bbdd41ece53a666c481a97"
+      "targetPath": "public/images/blog/cond_pretrain_im1.png"
     },
     {
       "legacyPath": "public/images/blog/rook-1.png",
-      "targetPath": "public/images/blog/rook-1.png",
-      "bytes": 50525,
-      "sha256": "bfb6f1eb392a1eb1cef290ccc6f2b7e036b72df2adddf01b39551c89cb4790f2"
+      "targetPath": "public/images/blog/rook-1.png"
     },
     {
       "legacyPath": "public/images/logo.pdf",
-      "targetPath": "public/images/logo.pdf",
-      "bytes": 1019,
-      "sha256": "b7e9a2cdcd90519073da06432cd0839759def6c41e46380e09bfa63ccb027981"
+      "targetPath": "public/images/logo.pdf"
     },
     {
       "legacyPath": "public/images/team/robin.jpg",
-      "targetPath": "public/images/team/robin.jpg",
-      "bytes": 71803,
-      "sha256": "a26ad8894e180b00da30cd2f8cbdf93d00555d5c1dcd47d3e3e28267bd13944f"
+      "targetPath": "public/images/team/robin.jpg"
     },
     {
       "legacyPath": "public/images/team/robert.jpg",
-      "targetPath": "public/images/team/robert.jpg",
-      "bytes": 36985,
-      "sha256": "ecf14acf1b68f7a1680d2e4584eecc4bea75f19cf38162d0b2d96f7eb02f5a69"
+      "targetPath": "public/images/team/robert.jpg"
     },
     {
       "legacyPath": "public/images/team/huu.jpg",
-      "targetPath": "public/images/team/huu.jpg",
-      "bytes": 44027,
-      "sha256": "5de556a37a60016de98f430c2b288c6050b353fc76df9db2b34405aaf84a4a61"
+      "targetPath": "public/images/team/huu.jpg"
     },
     {
       "legacyPath": "public/images/team/marianna.jpg",
-      "targetPath": "public/images/team/marianna.jpg",
-      "bytes": 98985,
-      "sha256": "f32b40a320ce9997c2dd073feecc6ca8c632fbc27fc31c06ad004eb8b63ad603"
+      "targetPath": "public/images/team/marianna.jpg"
     },
     {
       "legacyPath": "public/images/team/theo.jpg",
-      "targetPath": "public/images/team/theo.jpg",
-      "bytes": 26995,
-      "sha256": "1b58f2448a10013567386a62ae210b1fc700dda15a3022401a70b1d7c86b527d"
+      "targetPath": "public/images/team/theo.jpg"
     },
     {
       "legacyPath": "public/images/team/katherine.jpg",
-      "targetPath": "public/images/team/katherine.jpg",
-      "bytes": 22612,
-      "sha256": "5b0a757b2332cc9f81233ac4a15dcaa1d3ab33c6e1bdddbe57d1b8ff68ba45e4"
+      "targetPath": "public/images/team/katherine.jpg"
     },
     {
       "legacyPath": "public/images/team/bjoern.jpg",
-      "targetPath": "public/images/team/bjoern.jpg",
-      "bytes": 630468,
-      "sha256": "d96a3fee55600b17be217fdbed57dd81699490591e474cb6cc8ded5a70bc852d"
+      "targetPath": "public/images/team/bjoern.jpg"
     },
     {
       "legacyPath": "public/images/team/rioyokota.jpg",
-      "targetPath": "public/images/team/rioyokota.jpg",
-      "bytes": 7563,
-      "sha256": "94894c5ba8c7e404daf99003ec52f34d7c5f6a27581544010a0344209d05bac2"
+      "targetPath": "public/images/team/rioyokota.jpg"
     },
     {
       "legacyPath": "public/images/team/dome.jpg",
-      "targetPath": "public/images/team/dome.jpg",
-      "bytes": 340278,
-      "sha256": "2df3296d687df933e7b35d2c7c2a3751c4773e4905e1fa82d44c2a14de5ee98d"
+      "targetPath": "public/images/team/dome.jpg"
     },
     {
       "legacyPath": "public/images/team/irina.jpg",
-      "targetPath": "public/images/team/irina.jpg",
-      "bytes": 30507,
-      "sha256": "b84952bbfa37e96f0e181bbf0bed009958db3b3feb07ce3a0b8a3f637d8c336e"
+      "targetPath": "public/images/team/irina.jpg"
     },
     {
       "legacyPath": "public/images/team/aran.jpg",
-      "targetPath": "public/images/team/aran.jpg",
-      "bytes": 64286,
-      "sha256": "b9a5b0085cf7b13ce657fac192941573fb1f15ce8f720f23cbd881a02110f05d"
+      "targetPath": "public/images/team/aran.jpg"
     },
     {
       "legacyPath": "public/images/team/ludwig.jpg",
-      "targetPath": "public/images/team/ludwig.jpg",
-      "bytes": 245749,
-      "sha256": "a02af2919265a014ce1f65f7352c3e13b023ffdede31f33a3bf6d056067e0397"
+      "targetPath": "public/images/team/ludwig.jpg"
     },
     {
       "legacyPath": "public/images/team/gijs.jpg",
-      "targetPath": "public/images/team/gijs.jpg",
-      "bytes": 691226,
-      "sha256": "98050659a69490859f2e236b72c0f298133cebf0a486c09bb9ce6ba797fd6431"
+      "targetPath": "public/images/team/gijs.jpg"
     },
     {
       "legacyPath": "public/images/team/christoph.jpg",
-      "targetPath": "public/images/team/christoph.jpg",
-      "bytes": 18482,
-      "sha256": "c0010022b1cfe619faa41f49e9100d740a9df23cd42f766bc7df4763abe41d1e"
+      "targetPath": "public/images/team/christoph.jpg"
     },
     {
       "legacyPath": "public/images/team/romain.jpg",
-      "targetPath": "public/images/team/romain.jpg",
-      "bytes": 31322,
-      "sha256": "f0086a63d3c0b1b2fd0095723af4d566bee8b528d8635cefd3ed52465d8057a2"
+      "targetPath": "public/images/team/romain.jpg"
     },
     {
       "legacyPath": "public/images/team/jenia.jpg",
-      "targetPath": "public/images/team/jenia.jpg",
-      "bytes": 2515788,
-      "sha256": "79c841abb0444ce4f733d22f4d38926d8a7b5e446a313cc536c03d4a8429dd8f"
+      "targetPath": "public/images/team/jenia.jpg"
     },
     {
       "legacyPath": "public/images/team/hildekuehne.jpg",
-      "targetPath": "public/images/team/hildekuehne.jpg",
-      "bytes": 51605,
-      "sha256": "a90a8e03177ca4b0a70b8dd56be099cf6d7f8ddb57470962b55aa55c5862c71d"
+      "targetPath": "public/images/team/hildekuehne.jpg"
     },
     {
       "legacyPath": "public/images/team/mehdi.jpg",
-      "targetPath": "public/images/team/mehdi.jpg",
-      "bytes": 30227,
-      "sha256": "77694146ad1c6ee45b2f1841b507e82ad2b743f41ac7c0fc57680da1aa12edec"
+      "targetPath": "public/images/team/mehdi.jpg"
     },
     {
       "legacyPath": "public/images/team/none.jpg",
-      "targetPath": "public/images/team/none.jpg",
-      "bytes": 8518,
-      "sha256": "bcc3804542963c98009647a17935c0b46470889e6af480ae95c8be14cf32ffa5"
+      "targetPath": "public/images/team/none.jpg"
     },
     {
       "legacyPath": "public/images/team/vencu.jpg",
-      "targetPath": "public/images/team/vencu.jpg",
-      "bytes": 18902,
-      "sha256": "ef46376ee3fd8e3e7f11c280e2df67d43762190e24c9c5fdc870633e0e9ed20b"
+      "targetPath": "public/images/team/vencu.jpg"
     },
     {
       "legacyPath": "public/images/team/luciacipkun.jpg",
-      "targetPath": "public/images/team/luciacipkun.jpg",
-      "bytes": 2706402,
-      "sha256": "bc7d524597c3eeb58d6207564dc68de5c4e3a8b890a537cde943d75810aaf433"
+      "targetPath": "public/images/team/luciacipkun.jpg"
     },
     {
       "legacyPath": "public/images/team/pablo.jpg",
-      "targetPath": "public/images/team/pablo.jpg",
-      "bytes": 216462,
-      "sha256": "807a4e36cd7f6c76ff1223c36e9b7acc2b7bea6c2926b3468e4b86db23066a9f"
+      "targetPath": "public/images/team/pablo.jpg"
     },
     {
       "legacyPath": "public/images/team/joerg_franke.jpg",
-      "targetPath": "public/images/team/joerg_franke.jpg",
-      "bytes": 1830570,
-      "sha256": "2a0fd5b7048a74e86b30f1f988f15016c935328b963da014695aa886ca855f56"
+      "targetPath": "public/images/team/joerg_franke.jpg"
     },
     {
       "legacyPath": "public/images/logo.svg",
-      "targetPath": "public/images/logo.svg",
-      "bytes": 1405,
-      "sha256": "d9d88be18015b848b15fa3dcda9a9e4a38619f1e56b264036ad2fc8c321f9fc2"
+      "targetPath": "public/images/logo.svg"
     },
     {
       "legacyPath": "public/favicon.png",
-      "targetPath": "public/favicon.png",
-      "bytes": 1707,
-      "sha256": "8756bcdb8b077b8d12c90aff02325fe76aa1dc6ba42bf24751c73beb6b353f33"
+      "targetPath": "public/favicon.png"
     },
     {
       "legacyPath": "public/documents/transparent-ai.pdf",
-      "targetPath": "public/documents/transparent-ai.pdf",
-      "bytes": 77840,
-      "sha256": "672d8ab02e51c69608f030bf69f7818d278991d830025158d99a8ef8ad8e6308"
+      "targetPath": "public/documents/transparent-ai.pdf"
     },
     {
       "legacyPath": "public/documents/open-letter-to-eu-parliament.pdf",
-      "targetPath": "public/documents/open-letter-to-eu-parliament.pdf",
-      "bytes": 363224,
-      "sha256": "61d2e1e6955b50b1c6ad88374dc4e4dd56765b291c3477cad45d115b28e5b781"
+      "targetPath": "public/documents/open-letter-to-eu-parliament.pdf"
     },
     {
       "legacyPath": "public/documents/llava_cogvlm_pop.html",
-      "targetPath": "public/documents/llava_cogvlm_pop.html",
-      "bytes": 114005,
-      "sha256": "0b0c093dd46dc2c5e920c89cf14e008382d835217443d867b0c033bce50b51dc"
+      "targetPath": "public/documents/llava_cogvlm_pop.html"
     },
     {
       "legacyPath": "public/documents/leo-lm.pdf",
-      "targetPath": "public/documents/leo-lm.pdf",
-      "bytes": 42629,
-      "sha256": "ae4794a84e0d5fbaa3f800724ebc9c3d3eff93b4f52a70699ac65fd15548e692"
+      "targetPath": "public/documents/leo-lm.pdf"
     },
     {
       "legacyPath": "public/fonts/Dinish-Regular.woff2",
-      "targetPath": "src/assets/fonts/Dinish-Regular.woff2",
-      "bytes": 16852,
-      "sha256": "7bf196ad456832fda1b13442aa1eb6498cd5f84718229af24989ebdb2ee9524e"
+      "targetPath": "src/assets/fonts/Dinish-Regular.woff2"
     },
     {
       "legacyPath": "public/fonts/load.css",
-      "targetPath": "src/assets/fonts/load.css",
-      "bytes": 670,
-      "sha256": "f5417fbcf22a80bb2f13df52e922efca316329c24b91930785b2bbd21b5fcbfb"
+      "targetPath": "src/assets/fonts/load.css"
     },
     {
       "legacyPath": "public/fonts/DinishCondensed-Bold.woff2",
-      "targetPath": "src/assets/fonts/DinishCondensed-Bold.woff2",
-      "bytes": 16268,
-      "sha256": "87b2aaf669a88eb520e8dd89a71d2ae5f766b38c01044121a5b91e67270d9e55"
+      "targetPath": "src/assets/fonts/DinishCondensed-Bold.woff2"
     },
     {
       "legacyPath": "public/fonts/Dinish-Italic.woff2",
-      "targetPath": "src/assets/fonts/Dinish-Italic.woff2",
-      "bytes": 18900,
-      "sha256": "884a3f248b646ad65a5634bbfbd3207bae9b8a2db3b4449c042b99655f72ed74"
+      "targetPath": "src/assets/fonts/Dinish-Italic.woff2"
     },
     {
       "legacyPath": "public/fonts/DinishCondensed-Bold.woff",
-      "targetPath": "src/assets/fonts/DinishCondensed-Bold.woff",
-      "bytes": 23764,
-      "sha256": "beb33bd216ddb8580c78b1fe296d86ecd1761c231eff0a0c0d0851de4de6456f"
+      "targetPath": "src/assets/fonts/DinishCondensed-Bold.woff"
     },
     {
       "legacyPath": "public/fonts/Dinish-Regular.woff",
-      "targetPath": "src/assets/fonts/Dinish-Regular.woff",
-      "bytes": 24656,
-      "sha256": "546d5d92a8c38450d177375dccfd65fcae5a4578b093bb247191a5a6e3efbd06"
+      "targetPath": "src/assets/fonts/Dinish-Regular.woff"
     },
     {
       "legacyPath": "public/fonts/Dinish-Italic.woff",
-      "targetPath": "src/assets/fonts/Dinish-Italic.woff",
-      "bytes": 27584,
-      "sha256": "169523328b43263e334517d90006ced6522de0fc5cbd57aa2fbf8d3c44c0a3d6"
+      "targetPath": "src/assets/fonts/Dinish-Italic.woff"
     },
     {
       "legacyPath": "public/fonts/Dinish-Regular.otf",
-      "targetPath": "src/assets/fonts/Dinish-Regular.otf",
-      "bytes": 29972,
-      "sha256": "eb04a703d295b5f5364b85737d4af554939e7057a42b8d297eba3c428cef6de0"
+      "targetPath": "src/assets/fonts/Dinish-Regular.otf"
     },
     {
       "legacyPath": "public/favicon.svg",
-      "targetPath": "public/favicon.svg",
-      "bytes": 2259,
-      "sha256": "f41f5e4f2021332421465dd4ccb2a24048d15e87ec99cdbed2a448bafd44f8b3"
+      "targetPath": "public/favicon.svg"
     },
     {
       "legacyPath": "public/social.png",
-      "targetPath": "public/social.png",
-      "bytes": 61857,
-      "sha256": "03d320dbde3099ac9ecdff5d609c8cf5d0a6855166b3cdb113bfc766fa277631"
+      "targetPath": "public/social.png"
     }
   ],
   "knownMissingAssets": [

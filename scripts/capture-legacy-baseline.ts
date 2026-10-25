@@ -1,6 +1,5 @@
 import { execFileSync } from 'node:child_process';
-import { createHash } from 'node:crypto';
-import { existsSync, mkdirSync, readdirSync, readFileSync, statSync, writeFileSync } from 'node:fs';
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join, relative, resolve } from 'node:path';
 
 const legacyRoot = resolve(process.argv[2] ?? '../laion.ai-legacy');
@@ -18,10 +17,6 @@ function filesBelow(directory: string): string[] {
     const path = join(directory, entry.name);
     return entry.isDirectory() ? filesBelow(path) : [path];
   });
-}
-
-function sha256(path: string): string {
-  return createHash('sha256').update(readFileSync(path)).digest('hex');
 }
 
 const mappings = [
@@ -50,8 +45,6 @@ const files = mappings.flatMap(([legacyDirectory, targetDirectory]) =>
   filesBelow(join(legacyRoot, legacyDirectory)).map((path) => ({
     legacyPath: relative(legacyRoot, path),
     targetPath: join(targetDirectory, relative(join(legacyRoot, legacyDirectory), path)),
-    bytes: statSync(path).size,
-    sha256: sha256(path),
   })),
 );
 
@@ -63,8 +56,6 @@ for (const path of filesBelow(join(legacyRoot, 'public'))) {
     targetPath: publicPath.startsWith('fonts/')
       ? join('src/assets', publicPath)
       : join('public', publicPath),
-    bytes: statSync(path).size,
-    sha256: sha256(path),
   });
 }
 
