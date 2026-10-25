@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import QuestionList from '../components/QuestionList.astro';
+import { jsonLd } from '../lib/content';
 import { faq } from '../lib/data';
 const structuredData = {
   '@context': 'https://schema.org',
@@ -18,12 +19,7 @@ const structuredData = {
   title="FAQ"
   description="Frequently asked questions about LAION, our datasets, and open machine-learning research."
 >
-  <script
-    is:inline
-    slot="head"
-    type="application/ld+json"
-    set:html={JSON.stringify(structuredData)}
-  />
+  <script is:inline slot="head" type="application/ld+json" set:html={jsonLd(structuredData)} />
   <PageHero
     eyebrow="Questions, answered"
     title="FAQ"

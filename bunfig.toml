@@ -1,0 +1,4 @@
+[install]
+# Only resolve package versions that have been public for at least seven days,
+# so a freshly compromised release is unlikely to reach the lockfile.
+minimumReleaseAge = 604800

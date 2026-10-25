@@ -64,8 +64,19 @@ const htmlFiles = (directory: string): string[] =>
   });
 for (const path of htmlFiles(dist)) {
   const html = readFileSync(path, 'utf8');
-  if (/<script\b[^>]*\bsrc=/i.test(html))
-    failures.push(`Unexpected client JavaScript: ${path.slice(dist.length)}`);
+  // Markdown renders raw HTML, so anything executable fails the build. JSON-LD is inert data.
+  for (const script of html.matchAll(/<script\b[^>]*>/gi)) {
+    if (!/\btype="application\/ld\+json"/i.test(script[0]))
+      failures.push(`Unexpected client JavaScript: ${path.slice(dist.length)}`);
+  }
+  for (const tag of html.matchAll(/<[a-z][^>]*>/gi)) {
+    if (/\son[a-z]+\s*=/i.test(tag[0].replace(/"[^"]*"|'[^']*'/g, '""')))
+      failures.push(`Inline event handler in ${path.slice(dist.length)}: ${tag[0].slice(0, 80)}`);
+  }
+  if (/\b(?:href|src|action|formaction)\s*=\s*["']?\s*javascript:/i.test(html))
+    failures.push(`javascript: URL in ${path.slice(dist.length)}`);
+  if (/<main\b/i.test(html) && !html.includes('http-equiv="Content-Security-Policy"'))
+    failures.push(`Missing Content-Security-Policy in ${path.slice(dist.length)}`);
   for (const match of html.matchAll(
     /<(?:a|img|source|video)\b[^>]*(?:href|src|srcset)="(?<url>\/[^"]+)"/gi,
   )) {

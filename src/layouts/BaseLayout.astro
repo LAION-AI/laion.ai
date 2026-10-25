@@ -2,7 +2,7 @@
 import '../styles/global.css';
 import SiteFooter from '../components/SiteFooter.astro';
 import SiteHeader from '../components/SiteHeader.astro';
-import { absoluteImage } from '../lib/content';
+import { absoluteImage, jsonLd } from '../lib/content';
 
 interface Props {
   title?: string;
@@ -34,12 +34,33 @@ const organization = {
   email: 'contact@laion.ai',
   sameAs: ['https://github.com/LAION-AI/', 'https://discord.com/invite/eq3cAMZtCC'],
 };
+// GitHub Pages cannot send headers, so the policy ships as a meta tag. The site runs no
+// JavaScript; blocking scripts contains any markup that slips into Markdown content.
+// Dev builds skip it because Vite injects its client script.
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  "base-uri 'self'",
+  "object-src 'none'",
+  "script-src 'none'",
+  "style-src 'self' 'unsafe-inline'",
+  "img-src 'self' https: data:",
+  "media-src 'self' https:",
+  "font-src 'self' data:",
+  'frame-src https://www.youtube-nocookie.com',
+  "form-action 'self' https://submit-form.com",
+  'upgrade-insecure-requests',
+].join('; ');
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset="UTF-8" />
+    {
+      import.meta.env.PROD && (
+        <meta http-equiv="Content-Security-Policy" content={contentSecurityPolicy} />
+      )
+    }
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#061220" />
@@ -60,7 +81,7 @@ const organization = {
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={socialImage} />
-    <script is:inline type="application/ld+json" set:html={JSON.stringify(organization)} />
+    <script is:inline type="application/ld+json" set:html={jsonLd(organization)} />
     <slot name="head" />
   </head>
   <body>

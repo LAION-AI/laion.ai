@@ -64,6 +64,11 @@ export function readingTime(markdown: string): number {
   return Math.max(1, Math.round(words / 230));
 }
 
+// JSON.stringify leaves "</script>" intact; escaping "<" keeps the data inside its script element.
+export function jsonLd(data: unknown): string {
+  return JSON.stringify(data).replace(/</g, '\\u003c');
+}
+
 export function absoluteImage(image: string): string {
   return image.startsWith('http') ? image : new URL(image, 'https://laion.ai').href;
 }

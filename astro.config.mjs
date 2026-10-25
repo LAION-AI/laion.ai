@@ -9,8 +9,20 @@ import { defineHastPlugin } from 'satteri';
 const legacyMarkupCompatibility = defineHastPlugin({
   name: 'legacy-markup-compatibility',
   element: {
-    filter: ['a', 'img'],
+    filter: ['a', 'img', 'iframe'],
     visit(node, context) {
+      // The privacy-enhanced host sets no YouTube cookies until a visitor plays the video.
+      const src = node.properties?.src;
+      if (node.tagName === 'iframe' && typeof src === 'string') {
+        context.setProperty(
+          node,
+          'src',
+          src.replace(
+            /^https:\/\/(?:www\.)?youtube\.com\/embed\//,
+            'https://www.youtube-nocookie.com/embed/',
+          ),
+        );
+      }
       if (node.tagName === 'a' && node.properties?.href === '/notes/laion-maintenance.md') {
         context.setProperty(node, 'href', '/notes/laion-maintenance');
       }
