@@ -9,22 +9,81 @@ const { name, iban, bic, bank, qrImage } = page.data;
 // Printed IBANs are grouped in fours; banking apps accept either form.
 const displayIban = iban?.replace(/(.{4})(?=.)/g, '$1 ');
 
+// Venues are as reported by the authors. Work that is not peer-reviewed is styled apart.
 const pillars = [
   {
     number: '01',
     title: 'Mathematics & physics',
-    text: 'Models that reason through mathematics and physics, built on open language-model training that anyone can reproduce.',
-    link: { label: 'Our open training baselines', href: '/blog/open-sci-ref-001' },
+    status: 'Published work',
+    text: 'Models that reason through mathematics, physics, and code, built on open data recipes, benchmarks, and language-model training that anyone can reproduce.',
+    works: [
+      {
+        name: 'OpenThoughts',
+        about: 'Data recipes for reasoning models',
+        venue: 'ICLR 2026 · Oral',
+        href: 'https://arxiv.org/abs/2506.04178',
+      },
+      {
+        name: 'Terminal-Bench',
+        about: 'Benchmarking agents on hard, realistic command-line tasks',
+        venue: 'ICLR 2026',
+        href: 'https://arxiv.org/abs/2601.11868',
+      },
+      {
+        name: 'MixtureVitae',
+        about: 'Permissive-first pretraining data that front-loads math and code reasoning',
+        venue: 'TMLR 2026 · Featured Certification',
+        href: 'https://arxiv.org/abs/2509.25531',
+      },
+      {
+        name: 'Alice in Wonderland',
+        about: 'Simple tasks that expose reasoning breakdowns in frontier models',
+        venue: 'TMLR 2026',
+        href: 'https://arxiv.org/abs/2406.02061',
+      },
+      {
+        name: 'OpenThoughts-Agent',
+        about: 'Data recipes for agentic models',
+        venue: 'arXiv preprint',
+        peerReviewed: false,
+        href: 'https://arxiv.org/abs/2606.24855',
+      },
+      {
+        name: 'Open-sci-ref',
+        about: 'Open reference baselines for comparing language models and datasets',
+        venue: 'Open release',
+        peerReviewed: false,
+        href: '/blog/open-sci-ref-001',
+      },
+    ],
   },
   {
     number: '02',
     title: 'Biology',
-    text: 'Foundation models for genomics, proteomics, and metabolomics that learn from DNA, proteins, and the molecules of living cells.',
+    status: 'Upcoming',
+    upcoming: true,
+    text: 'Our next pillar: foundation models for genomics, proteomics, and metabolomics that learn from DNA, proteins, and the molecules of living cells, built with the same open pipelines.',
+    focus: ['Genomics & DNA', 'Proteomics', 'Metabolomics'],
   },
   {
     number: '03',
-    title: 'Robotics & world models',
-    text: 'Multimodal, agentic world foundation models that perceive, plan, and act, as an open basis for robotics.',
+    title: 'Multimodal world models',
+    status: 'Published work',
+    text: 'Multimodal, agentic world foundation models that see, hear, and act, as an open basis for robotics, and the methods to tell which approaches scale.',
+    works: [
+      {
+        name: 'LAION-BVD',
+        about: 'A 10-million-hour open video dataset for multimodal research',
+        venue: 'NeurIPS 2026',
+        href: '/blog/bvd',
+      },
+      {
+        name: 'Scaling laws for model and dataset comparison',
+        about: 'Deciding which learning procedure is more scalable',
+        venue: 'NeurIPS 2025',
+        href: 'https://arxiv.org/abs/2506.04598',
+      },
+    ],
   },
 ];
 const steps = [
@@ -45,15 +104,17 @@ const lighthouses = [
   },
   {
     name: 'Project Alexandria',
-    status: 'Paper and code released',
+    status: 'Under way',
     need: 'Needs storage',
     text: [
-      'Collecting the world’s useful knowledge: scientific knowledge first, but not only. Alexandria turns documents into Knowledge Units, structured facts and relations that keep the knowledge without redistributing the original text.',
-      'Research comes first. Curated subsets can then be made available for standard use, including in industry.',
+      'A new library for humanity. Like the library of ancient Alexandria, it should hold everything that can help train models for human progress: scientific papers with their figures and images, video, which can be scientific data too, and any other data we want to see shared at large scale.',
+      'LAION-BVD alone takes about 10 PB of storage, provided today by the Jülich Supercomputing Centre (JSC). A library for everything needs storage on a far larger scale.',
+      'Research comes first. Alexandria turns scientific texts into Knowledge Units that keep the knowledge without redistributing the original wording, and curated subsets can be made available for wider use, including in industry.',
     ],
     links: [
       { label: 'Read the paper', href: 'https://arxiv.org/abs/2502.19413' },
       { label: 'Code', href: 'https://github.com/LAION-AI/project-alexandria' },
+      { label: 'LAION-BVD', href: '/blog/bvd' },
     ],
   },
 ];
@@ -70,7 +131,7 @@ const ways = [
   },
   {
     title: 'Storage',
-    text: 'Project Alexandria and the open datasets around it need large, durable storage.',
+    text: 'Project Alexandria needs durable storage far beyond the 10 PB that LAION-BVD alone takes up.',
     link: { label: 'Offer storage', href: 'mailto:contact@laion.ai?subject=Storage%20donation' },
   },
 ];
@@ -78,12 +139,12 @@ const ways = [
 
 <BaseLayout
   title="Donate"
-  description="Support LAION's open pipelines and foundation models for mathematics and physics, biology, and robotics with funds, compute, or storage."
+  description="Support LAION's open pipelines and foundation models for mathematics and physics, biology, and multimodal world models with funds, compute, or storage."
 >
   <PageHero
     eyebrow="Donate"
     title="Open foundation models for science"
-    intro="LAION is a non-profit. Help us build open pipelines for data, training, and evaluation, shared across mathematics and physics, biology, and robotics, so anyone can study, reproduce, and improve the models that drive science."
+    intro="LAION is a non-profit. Help us build open pipelines for data, training, and evaluation, shared across mathematics and physics, biology, and multimodal world models, so anyone can study, reproduce, and improve the models that drive science."
   >
     <div class="hero-actions">
       <a class="button accent" href="#bank-transfer"
@@ -98,26 +159,43 @@ const ways = [
       <p class="eyebrow">Three pillars</p>
       <h2 class="heading" id="pillars-heading">Where open models can move science forward.</h2>
       <p>
-        Three fields are fundamental for progress on foundation models. LAION works on all three in
-        the open.
+        Three fields are fundamental for progress on foundation models. In two of them, our open
+        work is already published at ICLR, NeurIPS, and TMLR. Biology is next.
       </p>
     </div>
-    <ol class="cards pillars">
+    <ol class="pillars">
       {
         pillars.map((pillar) => (
-          <li class="card">
-            <span class="number" aria-hidden="true">
-              {pillar.number}
-            </span>
-            <h3>{pillar.title}</h3>
-            <p>{pillar.text}</p>
-            {pillar.link && (
-              <a class="arrow-link" href={pillar.link.href}>
-                {pillar.link.label}{' '}
-                <span class="arrow" aria-hidden="true">
-                  →
+          <li class:list={['card', 'pillar', { upcoming: pillar.upcoming }]}>
+            <div class="pillar-intro">
+              <div class="pillar-top">
+                <span class="number" aria-hidden="true">
+                  {pillar.number}
                 </span>
-              </a>
+                <span class:list={['chip', { status: !pillar.upcoming }]}>{pillar.status}</span>
+              </div>
+              <h3>{pillar.title}</h3>
+              <p>{pillar.text}</p>
+            </div>
+            {pillar.works && (
+              <ul class="works" aria-label={`${pillar.title}: selected work`}>
+                {pillar.works.map((work) => (
+                  <li>
+                    <a href={work.href}>{work.name}</a>
+                    <span class:list={['venue', { pending: work.peerReviewed === false }]}>
+                      {work.venue}
+                    </span>
+                    <p>{work.about}</p>
+                  </li>
+                ))}
+              </ul>
+            )}
+            {pillar.focus && (
+              <ul class="focus" aria-label={`${pillar.title}: planned focus`}>
+                {pillar.focus.map((area) => (
+                  <li>{area}</li>
+                ))}
+              </ul>
             )}
           </li>
         ))
@@ -346,6 +424,101 @@ const ways = [
     background: rgba(245, 200, 76, 0.16);
     color: var(--ink);
   }
+  .pillars {
+    display: grid;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .pillar {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+    gap: 1.75rem clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+  /* A dashed outline marks work that has not started yet. */
+  .pillar.upcoming {
+    border-style: dashed;
+    border-color: var(--line-strong);
+    background: transparent;
+    box-shadow: none;
+  }
+  .pillar-top {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1.1rem;
+  }
+  .pillar-top .number {
+    margin: 0;
+  }
+  .chip.status {
+    border-color: var(--ink);
+    background: var(--ink);
+    color: white;
+  }
+  .works {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .works li {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.2rem 1rem;
+    padding: 0.85rem 0;
+    border-top: 1px solid var(--line);
+  }
+  .works li:first-child {
+    padding-top: 0.2rem;
+    border-top: 0;
+  }
+  .works a {
+    color: var(--ink);
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 2px;
+    text-underline-offset: 0.2em;
+  }
+  .works p {
+    grid-column: 1 / -1;
+    margin: 0;
+    font-size: 0.95rem;
+  }
+  .venue {
+    align-self: start;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(245, 200, 76, 0.22);
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .venue.pending {
+    background: var(--mist);
+    color: var(--muted);
+  }
+  .focus {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .focus li {
+    padding: 0.6rem 1rem;
+    border: 1px dashed var(--line-strong);
+    border-radius: 999px;
+    color: var(--muted);
+  }
   .links {
     display: flex;
     flex-wrap: wrap;
@@ -485,7 +658,8 @@ const ways = [
   }
   @media (max-width: 960px) {
     .cards,
-    .lighthouses {
+    .lighthouses,
+    .pillar {
       grid-template-columns: 1fr;
     }
     .engine-grid {
@@ -495,6 +669,13 @@ const ways = [
   @media (max-width: 640px) {
     .transfer {
       grid-template-columns: 1fr;
+    }
+    .works li {
+      grid-template-columns: 1fr;
+    }
+    .venue {
+      justify-self: start;
+      white-space: normal;
     }
     .loop li {
       grid-template-columns: 1fr;
