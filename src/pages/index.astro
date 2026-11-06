@@ -8,7 +8,11 @@ import { excerpt, formatDate, sortPosts } from '../lib/content';
 
 const posts = sortPosts(await getCollection('blog'));
 const featured = posts[0];
-const [lead, ...recent] = posts.slice(0, 4);
+// the newest post leads; the next four move down into the list beside it
+const [lead, ...recent] = posts.slice(0, 5);
+// list thumbnails are small and 3:2: a post can use a tighter crop of its preview there
+const THUMBS: Record<string, string> = { bvd: '/images/blog/bvd-preview-text.jpg' };
+const thumbOf = (post: (typeof posts)[number]) => THUMBS[post.id] ?? post.data.previewImg;
 const releaseCount = new Set(projects.flatMap((group) => group.entries.map((entry) => entry.name)))
   .size;
 
@@ -33,12 +37,20 @@ const columns = [
 
 const work = [
   {
+    title: 'LAION-Audio-XL & CLAP2',
+    kind: 'Dataset & models · Audio',
+    text: '365 million audio clips with 707 million captions, and CLAP2: open audio–text models that beat every earlier CLAP model.',
+    href: '/blog/laion-audio-xl',
+    visual: 'audio-matrix',
+    layout: 'third dark',
+  },
+  {
     title: 'LAION-BVD',
     kind: 'Dataset · Video',
     text: 'A 10-million-hour open video dataset for research on video-language, audio-language, and image–text models.',
     href: '/blog/bvd',
-    visual: 'video',
-    layout: 'wide dark',
+    visual: 'film',
+    layout: 'third',
   },
   {
     title: 'Re-LAION-5B',
@@ -46,7 +58,7 @@ const work = [
     text: 'The updated LAION-5B: 5.5 billion text–image-link pairs with additional safety fixes.',
     href: '/blog/relaion-5b',
     visual: 'dataset',
-    layout: 'narrow',
+    layout: 'third',
   },
   {
     title: 'OpenCLIP',
@@ -287,8 +299,14 @@ const principles = [
           recent.map((post) => (
             <li class="reveal">
               <article>
-                <a class="thumb" href={`/blog/${post.id}`} tabindex="-1" aria-hidden="true">
-                  <img src={post.data.previewImg} alt="" width="240" height="160" loading="lazy" />
+                <a
+                  class="thumb"
+                  href={`/blog/${post.id}`}
+                  tabindex="-1"
+                  aria-hidden="true"
+                  style={`--preview: url("${thumbOf(post)}")`}
+                >
+                  <img src={thumbOf(post)} alt="" width="240" height="160" loading="lazy" />
                 </a>
                 <div>
                   <p class="meta">
@@ -574,7 +592,8 @@ const principles = [
   }
   .bento {
     display: grid;
-    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-auto-rows: 1fr;   /* every tile as tall as the tallest, whatever its text */
     gap: 1rem;
   }
   .tile {
@@ -599,14 +618,9 @@ const principles = [
     box-shadow: var(--shadow-lg);
     transform: translateY(-4px);
   }
-  .tile.wide {
-    grid-column: span 4;
-  }
-  .tile.narrow {
-    grid-column: span 2;
-  }
+  /* six projects in two rows of three, all the same size; the newest is highlighted (dark), not enlarged */
   .tile.third {
-    grid-column: span 2;
+    grid-column: span 4;
   }
   .tile.dark {
     border-color: transparent;
@@ -615,13 +629,21 @@ const principles = [
       var(--night);
     color: white;
   }
+  /* the same fixed height in every tile, so each tile's tag, title and text start on the same line;
+     the drawing is scaled to fit inside it, and a shorter text leaves its space at the bottom */
   .tile-visual {
-    flex: 1;
+    flex: none;
+    height: 15rem;
     display: grid;
     align-items: center;
     padding: 2rem 2rem 0;
     color: var(--sky);
     transition: transform 0.5s var(--ease-out);
+  }
+  .tile-visual :global(svg) {
+    width: 100%;
+    height: 100%;
+    max-height: 100%;
   }
   .tile:hover .tile-visual {
     transform: scale(1.025);
@@ -629,10 +651,8 @@ const principles = [
   .tile.dark .tile-visual {
     color: #9cc3ff;
   }
-  .tile.wide .tile-visual {
-    padding-inline: 2.5rem 30%;
-  }
   .tile-body {
+    flex: 1;
     padding: 1.75rem 2rem 2rem;
   }
   .tile.dark .chip {
@@ -786,7 +806,8 @@ const principles = [
     object-fit: cover;
     transition: transform 0.6s var(--ease-out);
   }
-  .lead-image img {
+  .lead-image img,
+  .thumb img {
     object-fit: contain;
   }
   .lead-story:hover .lead-image img,
@@ -836,11 +857,24 @@ const principles = [
     padding-top: 0;
   }
   .thumb {
+    position: relative;
+    isolation: isolate;
     display: block;
     overflow: hidden;
     aspect-ratio: 3 / 2;
     border-radius: var(--radius-sm);
     background: var(--mist);
+  }
+  /* the whole preview fits the thumbnail (wide ones like LAION-BVD's aren't cut off left and right);
+     a blurred copy of it fills the space around, as for the lead story */
+  .thumb::before {
+    position: absolute;
+    z-index: -1;
+    inset: -1rem;
+    background: var(--preview) center / cover;
+    filter: blur(14px) saturate(1.15);
+    opacity: 0.55;
+    content: '';
   }
   .story-list h3 {
     margin: 0.45rem 0 0;
@@ -851,15 +885,11 @@ const principles = [
   }
 
   @media (max-width: 1080px) {
-    .tile.wide {
-      grid-column: span 6;
+    .bento {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
     }
-    .tile.narrow,
     .tile.third {
       grid-column: span 3;
-    }
-    .tile.third:last-child {
-      grid-column: span 6;
     }
   }
   @media (max-width: 900px) {
@@ -878,9 +908,13 @@ const principles = [
     .stats {
       grid-template-columns: repeat(2, 1fr);
     }
-    .stats div:nth-child(3) {
+    /* two per row: each row starts without the divider; an odd last figure takes the full row */
+    .stats div + div:nth-child(2n + 1) {
       padding-left: 0;
       border-left: 0;
+    }
+    .stats div + div:nth-child(2n + 1):last-child {
+      grid-column: span 2;
     }
     .stats div:nth-child(n + 3) {
       border-top: 1px solid var(--line-dark);
@@ -891,10 +925,7 @@ const principles = [
     }
   }
   @media (max-width: 640px) {
-    .tile.wide,
-    .tile.narrow,
-    .tile.third,
-    .tile.third:last-child {
+    .tile.third {
       grid-column: span 6;
     }
     .tile {
@@ -902,9 +933,6 @@ const principles = [
     }
     .tile-arrow {
       display: none;
-    }
-    .tile.wide .tile-visual {
-      padding-inline: 1.5rem;
     }
     .tile-visual {
       padding: 1.5rem 1.5rem 0;
@@ -926,7 +954,7 @@ const principles = [
     .stats div + div {
       padding: 1.25rem 0.75rem 1.5rem 0;
     }
-    .stats div:nth-child(even) {
+    .stats div + div:nth-child(even) {
       padding-left: 1rem;
     }
     .story-list article {

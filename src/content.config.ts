@@ -7,6 +7,8 @@ const postSchema = z.object({
   author: z.string().min(1),
   date: z.string().min(1),
   previewImg: z.string().min(1),
+  // colour around a preview that doesn't fill its box (e.g. the edge colour of a dark image); without it, a blurred copy fills
+  previewBg: z.string().optional(),
 });
 
 const blog = defineCollection({
