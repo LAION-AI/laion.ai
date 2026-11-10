@@ -78,7 +78,7 @@ We evaluate LAION-BVD across three modalities:
 
 Our experiments show:
 
-* ViCLIP models trained on LAION-BVD outperform InternVid-trained baselines by up to 4.0 percentage points on aggregate retrieval and classification benchmarks (Table 1, BVD-V-50M vs InternVid-10M-FLT)  
+* ViCLIP models trained on LAION-BVD outperform InternVid-trained baselines by 3.3 percentage points on aggregate retrieval and classification benchmarks (Table 1, BVD-V-10M vs InternVid-10M-FLT)  
 * CLAP models trained on BVD audio achieve competitive performance despite minimal curation (Table 2\)  
 * Frame-caption pairs extracted from videos provide strong image-text retrieval performance and favorable scaling behavior (Table 3\)
 
