@@ -690,15 +690,26 @@ img {
     grid-template-columns: minmax(0, 1fr);
   }
 }
-.prose-laion .link-card span {
+.prose-laion .link-card span[aria-hidden] {
   transition: transform 0.15s ease;
 }
 .prose-laion .link-card:hover {
   border-color: var(--line-strong);
   background: var(--mist);
 }
-.prose-laion .link-card:hover span {
+.prose-laion .link-card:hover span[aria-hidden] {
   transform: translateX(0.25rem);
+}
+/* a link card can lead with a brand icon (inline SVG, drawn in the text colour) before its label */
+.prose-laion .link-card .link-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.prose-laion .link-card .link-icon {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
 }
 .prose-laion table {
   display: block;

@@ -9,6 +9,10 @@ const postSchema = z.object({
   previewImg: z.string().min(1),
   // colour around a preview that doesn't fill its box (e.g. the edge colour of a dark image); without it, a blurred copy fills
   previewBg: z.string().optional(),
+  // one or two sentences for link previews and search results; without it, the start of the post is used
+  description: z.string().optional(),
+  // image for link previews when shared (1200 x 630, may carry the title); without it, previewImg is used
+  socialImg: z.string().optional(),
 });
 
 const blog = defineCollection({

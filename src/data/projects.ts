@@ -149,12 +149,12 @@ const clap2Model: Project = {
 const audioXlPaper: Project = {
   name: 'LAION-Audio-XL',
   modality: 'audio / text',
-  // TODO: add the paper link (arXiv) as link and a 'Paper' resource once it is public
   status: 'Preprint',
-  date: '2026-11-05',
-  desc: 'A web-scale corpus and scaling laws for contrastive language–audio pretraining.',
-  link: 'https://projects.laion.ai/clap2/',
+  date: '2026-11-08',
+  desc: 'A web-scale corpus and scaling studies for contrastive language–audio pretraining.',
+  link: 'https://arxiv.org/abs/2611.11592',
   resources: [
+    { label: 'Paper', href: 'https://arxiv.org/abs/2611.11592' },
     { label: 'Project page', href: 'https://projects.laion.ai/clap2/' },
     { label: 'Release notes', href: '/blog/laion-audio-xl' },
   ],
