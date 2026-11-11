@@ -120,6 +120,46 @@ const revisedDataset: Project = {
   ],
 };
 
+// LAION-Audio-XL and CLAP2 (blog: /blog/laion-audio-xl; project page: projects.laion.ai/clap2)
+const audioXlDataset: Project = {
+  name: 'LAION-Audio-XL',
+  modality: 'audio / text',
+  status: 'Released',
+  link: '/blog/laion-audio-xl',
+  desc: 'A web-scale audio–text corpus: 365M audio clips of up to 30 s with 707M short and long captions (1.39M hours), curated from 1.48B collected clips.',
+  resources: [
+    { label: 'Dataset', href: 'https://huggingface.co/datasets/laion/laion-audio-xl' },
+    { label: 'Code', href: 'https://github.com/LAION-AI/clap2' },
+    { label: 'Project page', href: 'https://projects.laion.ai/clap2/' },
+  ],
+};
+const clap2Model: Project = {
+  name: 'CLAP2',
+  modality: 'audio / text',
+  kind: 'Contrastive',
+  status: 'Released',
+  link: '/blog/laion-audio-xl',
+  desc: 'Five contrastive language–audio models (27M to 340M parameters) trained from scratch on LAION-Audio-XL; CLAP2-L reaches 53.6% on MAEB-30. Drop-in replacements for CLAP, loaded with OpenCLIP.',
+  resources: [
+    { label: 'Weights', href: 'https://huggingface.co/models?search=laion/clap2' },
+    { label: 'Code', href: 'https://github.com/LAION-AI/clap2' },
+    { label: 'Project page', href: 'https://projects.laion.ai/clap2/' },
+  ],
+};
+const audioXlPaper: Project = {
+  name: 'LAION-Audio-XL',
+  modality: 'audio / text',
+  status: 'Preprint',
+  date: '2026-11-08',
+  desc: 'A web-scale corpus and scaling studies for contrastive language–audio pretraining.',
+  link: 'https://arxiv.org/abs/2611.11592',
+  resources: [
+    { label: 'Paper', href: 'https://arxiv.org/abs/2611.11592' },
+    { label: 'Project page', href: 'https://projects.laion.ai/clap2/' },
+    { label: 'Release notes', href: '/blog/laion-audio-xl' },
+  ],
+};
+
 const defaultResource = (link: string): Resource => ({
   label: link.startsWith('/')
     ? 'Release notes'
@@ -164,13 +204,15 @@ export const projects = legacyProjects.map((group) => {
   if (group.name === 'Datasets') {
     entries.sort((a, b) => Number(b.name === 'LAION-BVD') - Number(a.name === 'LAION-BVD'));
     entries.splice(1, 0, revisedDataset);
+    entries.unshift(audioXlDataset);
   }
   if (group.name === 'Models' && clipModel) entries.splice(1, 0, clipModel);
+  if (group.name === 'Models') entries.unshift(clap2Model);
   if (group.name === 'Papers')
     entries.unshift({
       name: 'LAION-BVD',
       modality: 'video / audio / image / text',
-      status: 'Preprint',
+      status: 'Published',
       date: '2026-08-26',
       desc: 'A 10-million-hour open video dataset for multimodal pre-training.',
       link: 'https://arxiv.org/abs/2608.24845',
@@ -179,6 +221,7 @@ export const projects = legacyProjects.map((group) => {
         { label: 'Project', href: '/blog/bvd' },
       ],
     });
+  if (group.name === 'Papers') entries.unshift(audioXlPaper);
   return { name: group.name, entries };
 });
 projects.push({ name: 'Historical datasets', entries: archive });
