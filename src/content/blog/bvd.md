@@ -1,5 +1,5 @@
 ---
-title: "LAION-BVD: A 10-Million-Hour Open Video Dataset for Multimodal Research"
+title: "LAION-BVD: A 13-Million-Hour Open Video Dataset for Multimodal Research"
 author: "Andreas Hochlehnert, Marianna Nezhurina, Mehdi Cherti, Andrej Radonjic, Thaddäus Wiedemer, Christoph Schuhmann, Romain Beaumont, Wieland Brendel, Bernhard Schölkopf, A. Sophia Koepke, Jenia Jitsev, Matthias Bethge"
 date: "Aug 26, 2026"
 previewImg: "/images/blog/bvd-preview.jpg"
@@ -11,7 +11,7 @@ LAION-BVD contains:
 
 * 1.3 billion platform-specific video URLs collected from Common Crawl 
 * 80 million downloaded videos  
-* 10 million hours of video content  
+* 13.5 million hours of video content  
 * 55 million captioned video clips  
 * 300 million captioned video frames
 
@@ -31,7 +31,7 @@ LAION-BVD aims to provide an open foundation for multimodal research across vide
 
 We started from Common Crawl WAT files and extracted platform-specific video URLs using yt-dlp extractors. Using a distributed Apache Spark pipeline and large-scale download infrastructure, we processed video links from YouTube, Vimeo, and Dailymotion. 
 
-From 1.3B extracted video URLs, we downloaded a subset of around 80M videos corresponding to roughly 10M hours of content. 
+From 1.3B extracted video URLs, we downloaded a subset of around 80M videos corresponding to roughly 13.5M hours of content. 
 
 We then created several multimodal subsets: 
 
@@ -48,9 +48,9 @@ Our pipeline uses scene detection and lightweight filtering to extract clips and
 
 ## Dataset Statistics
 
-LAION-BVD spans a broad range of languages, topics, and video formats. While English is the largest language group, 43% of the videos are non-English. The dataset includes entertainment, education, science, sports, music, gaming, and many other categories. 
+LAION-BVD spans a broad range of languages, topics, and video formats. Most videos (97.1%) come from YouTube, with smaller shares from Dailymotion and Vimeo. Among videos with language tags, English accounts for about half, followed by Spanish, Russian, Japanese, and many other languages. The largest categories are People & Blogs, Music, and Entertainment, alongside news, education, sports, science, and many other topics.
 
-Most videos are shorter than five minutes, but the distribution is long-tailed and includes longer-form content suitable for long-horizon video tasks.
+Most videos are short (median 3.5 minutes), but the distribution is long-tailed: the mean duration is 10.1 minutes, and about 7.5% of videos are 30 minutes or longer, making the dataset suitable for long-horizon video tasks.
 
 <figure style="margin: 1.5rem 0 1rem;">
   <img src="/images/blog/bvd_fig3.png" alt="LAION-BVD dataset statistics" style="display: block; margin: 0 auto;">
@@ -78,7 +78,7 @@ We evaluate LAION-BVD across three modalities:
 
 Our experiments show:
 
-* ViCLIP models trained on LAION-BVD outperform InternVid-trained baselines by up to 3.3 percentage points on aggregate retrieval and classification benchmarks (Table 1, BVD-V-10M vs InternVid-10M-FLT)  
+* ViCLIP models trained on LAION-BVD outperform InternVid-trained baselines by 3.3 percentage points on aggregate retrieval and classification benchmarks (Table 1, BVD-V-10M vs InternVid-10M-FLT)  
 * CLAP models trained on BVD audio achieve competitive performance despite minimal curation (Table 2\)  
 * Frame-caption pairs extracted from videos provide strong image-text retrieval performance and favorable scaling behavior (Table 3\)
 
