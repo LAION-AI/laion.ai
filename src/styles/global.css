@@ -659,7 +659,11 @@ img {
   padding-right: 1.5rem;
 }
 /* a bold rule above the first row after the bold-named ones, to set our models apart from the baselines */
-.prose-laion .table-fill tr:has(> td:first-child > strong) + tr:not(:has(> td:first-child > strong)) td {
+.prose-laion
+  .table-fill
+  tr:has(> td:first-child > strong)
+  + tr:not(:has(> td:first-child > strong))
+  td {
   border-top: 2px solid var(--ink);
 }
 .prose-laion .link-card {
@@ -674,7 +678,9 @@ img {
   background: var(--surface);
   font-weight: 700;
   text-decoration: none;
-  transition: border-color 0.15s ease, background-color 0.15s ease;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
 }
 .prose-laion .link-grid {
   display: grid;

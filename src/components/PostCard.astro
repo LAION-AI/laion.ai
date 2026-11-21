@@ -17,7 +17,9 @@ const lang = basePath === 'blog-de' ? 'de' : 'en';
     tabindex="-1"
     aria-hidden="true"
     class:list={['image-wrap', { 'solid-bg': featured && post.data.previewBg }]}
-    style={featured ? `--preview: url("${post.data.previewImg}");${post.data.previewBg ? ` --preview-bg: ${post.data.previewBg};` : ''}` : undefined}
+    style={featured
+      ? `--preview: url("${post.data.previewImg}");${post.data.previewBg ? ` --preview-bg: ${post.data.previewBg};` : ''}`
+      : undefined}
   >
     <img
       src={post.data.previewImg}
