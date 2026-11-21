@@ -69,6 +69,6 @@ export function jsonLd(data: unknown): string {
   return JSON.stringify(data).replace(/</g, '\\u003c');
 }
 
-export function absoluteImage(image: string): string {
-  return image.startsWith('http') ? image : new URL(image, 'https://laion.ai').href;
+export function absoluteImage(image: string, site: URL | string = 'https://laion.ai'): string {
+  return image.startsWith('http') ? image : new URL(image, site).href;
 }

@@ -15,8 +15,8 @@ const { Content, headings } = await render(post);
 
 <BaseLayout
   title={post.data.title}
-  description={excerpt(post.body ?? '', 157)}
-  image={post.data.previewImg}
+  description={post.data.description ?? excerpt(post.body ?? '', 157)}
+  image={post.data.socialImg ?? post.data.previewImg}
   type="article"
 >
   <ArticleLayout headings={headings} post={post} backHref="/blog" backLabel="Blog"

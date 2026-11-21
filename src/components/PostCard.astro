@@ -13,11 +13,11 @@ const lang = basePath === 'blog-de' ? 'de' : 'en';
 
 <article class:list={['post-card', { featured }]}>
   <a
-    class="image-wrap"
     href={href}
     tabindex="-1"
     aria-hidden="true"
-    style={featured ? `--preview: url("${post.data.previewImg}")` : undefined}
+    class:list={['image-wrap', { 'solid-bg': featured && post.data.previewBg }]}
+    style={featured ? `--preview: url("${post.data.previewImg}");${post.data.previewBg ? ` --preview-bg: ${post.data.previewBg};` : ''}` : undefined}
   >
     <img
       src={post.data.previewImg}
@@ -158,6 +158,13 @@ const lang = basePath === 'blog-de' ? 'de' : 'en';
   }
   .featured .image-wrap img {
     object-fit: contain;
+  }
+  /* a post that names its preview's edge colour: the box is filled with it, so the image reads as full-bleed */
+  .featured .image-wrap.solid-bg {
+    background: var(--preview-bg);
+  }
+  .featured .image-wrap.solid-bg::before {
+    display: none;
   }
   .featured .card-body {
     justify-content: center;

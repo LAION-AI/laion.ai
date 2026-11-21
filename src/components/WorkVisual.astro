@@ -1,7 +1,7 @@
 ---
 // Decorative, deterministic line art for the homepage project cards.
 interface Props {
-  kind: 'video' | 'dataset' | 'model' | 'research' | 'speech';
+  kind: 'video' | 'dataset' | 'model' | 'research' | 'speech' | 'film' | 'audio-matrix';
 }
 const { kind } = Astro.props;
 
@@ -62,6 +62,27 @@ const voice = Array.from({ length: 46 }, (_, index) => {
     active: index > 18 && index < 28,
   };
 });
+
+// film: a filmstrip with sprocket holes; two scene cuts are picked out, each with its caption lines below (LAION-BVD)
+const film = Array.from({ length: 6 }, (_, index) => ({
+  x: 18 + index * 62,
+  opacity: 0.14 + random() * 0.32,
+  active: index === 1 || index === 4,
+}));
+const holes = Array.from({ length: 24 }, (_, index) => 20 + index * 15.5);
+
+// audio-matrix: CLAP's audio-text similarity grid, waveforms on top, caption lines on the left, the diagonal matches
+const matrix = Array.from({ length: 36 }, (_, index) => {
+  const r = Math.floor(index / 6), c = index % 6;
+  return { x: 170 + c * 30, y: 34 + r * 30, diag: r === c, opacity: 0.1 + random() * 0.3 };
+});
+const miniWaves = Array.from({ length: 6 }, (_, c) =>
+  Array.from({ length: 5 }, (_, k) => ({ x: 171 + c * 30 + k * 5, h: 4 + random() * 14 })),
+);
+const captionBars = Array.from({ length: 6 }, (_, r) => ({ y: 45 + r * 30, w: 50 + random() * 60, active: r === 2 }));
+// centre the whole drawing (caption lines on the left to the grid's right edge at 346) in the 400-wide frame
+const matrixShift = (200 - (Math.min(...captionBars.map((bar) => 160 - bar.w)) + 346) / 2).toFixed(1);
+
 ---
 
 <svg class="visual" viewBox="0 0 400 220" aria-hidden="true" focusable="false">
@@ -182,6 +203,55 @@ const voice = Array.from({ length: 46 }, (_, index) => {
               <circle cx={x} cy={y.toFixed(1)} r="3" class:list={[curve.active ? 'hl' : 'fill']} />
             ))}
           </g>
+        ))}
+      </g>
+    )
+  }
+  {
+    kind === 'film' && (
+      <g>
+        <rect x="8" y="24" width="384" height="104" rx="6" class="dashed" />
+        {holes.map((x) => (
+          <g>
+            <rect x={x} y="31" width="7" height="6" rx="1.5" class="fill" style="opacity:.35" />
+            <rect x={x} y="115" width="7" height="6" rx="1.5" class="fill" style="opacity:.35" />
+          </g>
+        ))}
+        {film.map((frame) => (
+          <rect
+            x={frame.x}
+            y="44"
+            width="54"
+            height="64"
+            rx="4"
+            class:list={['fill', { 'hl-stroke': frame.active }]}
+            style={`opacity:${frame.active ? 1 : frame.opacity.toFixed(2)}`}
+          />
+        ))}
+        {film.filter((frame) => frame.active).map((frame) => (
+          <g>
+            <line x1={frame.x + 27} y1="128" x2={frame.x + 27} y2="150" class="hl-line" />
+            <rect x={frame.x - 18} y="158" width="90" height="6" rx="3" class="hl" />
+            <rect x={frame.x - 18} y="172" width="70" height="6" rx="3" class="fill" style="opacity:.45" />
+            <rect x={frame.x - 18} y="186" width="80" height="6" rx="3" class="fill" style="opacity:.3" />
+          </g>
+        ))}
+      </g>
+    )
+  }
+  {
+    kind === 'audio-matrix' && (
+      <g transform={`translate(${matrixShift} 0)`}>
+        {miniWaves.map((bars) =>
+          bars.map((bar) => (
+            <rect x={bar.x} y={(18 - bar.h / 2).toFixed(1)} width="3" height={bar.h.toFixed(1)} rx="1.5" class="fill" style="opacity:.5" />
+          )),
+        )}
+        {captionBars.map((bar) => (
+          <rect x={160 - bar.w} y={bar.y} width={bar.w.toFixed(0)} height="6" rx="3" class:list={[bar.active ? 'hl' : 'fill']} style={bar.active ? '' : 'opacity:.4'} />
+        ))}
+        {matrix.map((cell) => (
+          <rect x={cell.x} y={cell.y} width="26" height="26" rx="4" class:list={[cell.diag ? 'hl' : 'fill']} style={cell.diag ? '' : `opacity:${cell.opacity.toFixed(2)}`} />
         ))}
       </g>
     )
