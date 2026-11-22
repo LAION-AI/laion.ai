@@ -91,12 +91,12 @@ const updates: Record<string, Partial<Project>> = {
   'Clip Benchmark': {
     name: 'CLIP Benchmark',
     status: 'Released',
-    desc: 'Evaluate vision–language models on zero-shot classification and retrieval tasks.',
+    desc: 'Evaluate vision–language and audio–language models on zero-shot classification and retrieval tasks.',
   },
   'LAION-5B': {
     status: 'Published',
     date: '2022-10-16',
-    desc: 'An open dataset of 5.85 billion CLIP-filtered image–text pairs for training the next generation of image–text models.',
+    desc: 'The paper on the original 2022 image–text dataset. Re-LAION-5B is the updated release with additional safety fixes.',
     link: 'https://arxiv.org/abs/2210.08402',
     resources: [{ label: 'Paper', href: 'https://arxiv.org/abs/2210.08402' }],
   },
@@ -203,8 +203,8 @@ export const projects = legacyProjects.map((group) => {
     if (group.name === 'Papers' && source.name === 'LAION-400M')
       Object.assign(project, {
         status: 'Published',
-        date: '2021-11-03',
-        desc: 'An open dataset of 400 million CLIP-filtered image–text pairs, released with their CLIP embeddings and kNN indices.',
+        date: '2021-08-20',
+        desc: 'Formerly known as crawling@home (C@H), an openly accessible 400M image-text-pair dataset.',
       });
     if (group.name === 'Datasets' && historical.has(source.name)) archive.push(project);
     else if (source.name === 'Clip H/14') clipModel = project;
