@@ -128,6 +128,7 @@ const audioXlDataset: Project = {
   link: '/blog/laion-audio-xl',
   desc: 'A web-scale audio–text corpus: 365M audio clips of up to 30 s with 707M short and long captions (1.39M hours), curated from 1.48B collected clips.',
   resources: [
+    { label: 'Paper', href: 'https://arxiv.org/abs/2611.11592' },
     { label: 'Dataset', href: 'https://huggingface.co/datasets/laion/laion-audio-xl' },
     { label: 'Code', href: 'https://github.com/LAION-AI/clap2' },
     { label: 'Project page', href: 'https://projects.laion.ai/clap2/' },
@@ -141,6 +142,7 @@ const clap2Model: Project = {
   link: '/blog/laion-audio-xl',
   desc: 'Five contrastive language–audio models (27M to 340M parameters) trained from scratch on LAION-Audio-XL; CLAP2-L reaches 53.6% on MAEB-30. Drop-in replacements for CLAP, loaded with OpenCLIP.',
   resources: [
+    { label: 'Paper', href: 'https://arxiv.org/abs/2611.11592' },
     { label: 'Weights', href: 'https://huggingface.co/models?search=laion/clap2' },
     { label: 'Code', href: 'https://github.com/LAION-AI/clap2' },
     { label: 'Project page', href: 'https://projects.laion.ai/clap2/' },
