@@ -96,6 +96,7 @@ const updates: Record<string, Partial<Project>> = {
   'LAION-5B': {
     status: 'Published',
     date: '2022-10-16',
+    desc: 'An open dataset of 5.85 billion CLIP-filtered image–text pairs for training the next generation of image–text models.',
     link: 'https://arxiv.org/abs/2210.08402',
     resources: [{ label: 'Paper', href: 'https://arxiv.org/abs/2210.08402' }],
   },
@@ -198,7 +199,13 @@ export const projects = legacyProjects.map((group) => {
       resources: [defaultResource(source.link)],
       ...updates[source.name],
     };
-    if (group.name === 'Papers' && source.name === 'LAION-400M') project.status = 'Published';
+    // The LAION-400M dataset and paper share a name, so paper-only fields are set here.
+    if (group.name === 'Papers' && source.name === 'LAION-400M')
+      Object.assign(project, {
+        status: 'Published',
+        date: '2021-11-03',
+        desc: 'An open dataset of 400 million CLIP-filtered image–text pairs, released with their CLIP embeddings and kNN indices.',
+      });
     if (group.name === 'Datasets' && historical.has(source.name)) archive.push(project);
     else if (source.name === 'Clip H/14') clipModel = project;
     else entries.push(project);
