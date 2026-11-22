@@ -2,11 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHero from '../components/PageHero.astro';
 import { getCollection } from 'astro:content';
-import { projects } from '../data/projects';
+import { projects, type Resource } from '../data/projects';
 import { formatDate, parseDate } from '../lib/content';
 const releases = new Map(
   (await getCollection('blog')).map((post) => [`/blog/${post.id}`, post.data.date]),
 );
+// Resource buttons are laid out in rows of two; with an odd number, the first row holds three,
+// so no button is left alone. Long labels go last. Buttons in a row share its width evenly but
+// never shrink below their label, so a row that doesn't fit wraps into full-width buttons.
+const rowsOf = (resources: Resource[]) => {
+  const ordered = [
+    ...resources.filter((resource) => resource.label.length <= 15),
+    ...resources.filter((resource) => resource.label.length > 15),
+  ];
+  const first = ordered.length % 2 === 1 && ordered.length > 1 ? 3 : 2;
+  const rows = [ordered.slice(0, first)];
+  for (let i = first; i < ordered.length; i += 2) rows.push(ordered.slice(i, i + 2));
+  return rows;
+};
 const groupId = (name: string) => name.toLowerCase().replaceAll(' ', '-');
 const statusTone = (status: string) =>
   /historical|superseded/i.test(status)
@@ -71,11 +84,18 @@ const statusTone = (status: string) =>
                   {date && <time datetime={parseDate(date).toISOString()}>{formatDate(date)}</time>}
                   {project.desc && <p>{project.desc}</p>}
                   <nav class="resources" aria-label={`${project.name} resources`}>
-                    {project.resources.map((resource) => (
-                      <a href={resource.href}>
-                        {resource.label}
-                        <span aria-hidden="true"> {resource.href.startsWith('/') ? '→' : '↗'}</span>
-                      </a>
+                    {rowsOf(project.resources).map((row) => (
+                      <div class="resource-row">
+                        {row.map((resource) => (
+                          <a href={resource.href}>
+                            {resource.label}
+                            <span aria-hidden="true">
+                              {' '}
+                              {resource.href.startsWith('/') ? '→' : '↗'}
+                            </span>
+                          </a>
+                        ))}
+                      </div>
                     ))}
                   </nav>
                 </article>
@@ -246,16 +266,26 @@ const statusTone = (status: string) =>
     font-size: 0.98rem;
     line-height: 1.55;
   }
+  /* rows come from rowsOf() above */
   .resources {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
     gap: 0.4rem;
     margin-top: auto;
     padding-top: 1.1rem;
     border-top: 1px solid var(--line);
   }
+  .resource-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  /* equal shares of the row, but never narrower than the label */
   .resources a {
-    padding: 0.35rem 0.75rem;
+    flex: 1 1 0;
+    min-width: max-content;
+    padding: 0.35rem 0.6rem;
+    text-align: center;
+    white-space: nowrap;
     border: 1px solid var(--line);
     border-radius: 999px;
     font-size: 0.88rem;
@@ -264,6 +294,10 @@ const statusTone = (status: string) =>
       background 0.15s ease,
       border-color 0.15s ease,
       color 0.15s ease;
+  }
+  /* a card's only button is half a row wide, lined up with the left button of other cards */
+  .resources a:only-child {
+    flex: 0 0 calc(50% - 0.2rem);
   }
   .resources a:hover {
     border-color: var(--ink);
