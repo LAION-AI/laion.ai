@@ -18,7 +18,7 @@ LAION-BVD contains:
 The dataset is intended for research on video-language, audio-language, and image-text models.  
 <figure style="margin: 1.5rem 0 1rem;">
   <img src="/images/blog/bvd_fig1.png" alt="LAION-BVD dataset comparison and scaling behavior" style="display: block; margin: 0 auto;">
-  <figcaption style="margin-top: 0.25rem; text-align: center;">Figure 1: <strong>LAION-BVD compared with existing open video datasets; video and audio scaling behavior of ViCLIP and CLAP, respectively.</strong></figcaption>
+  <figcaption style="margin-top: 0.25rem; text-align: center;">Figure 1: <strong>Left: LAION-BVD compared with existing open video datasets (Total: BVD-RAW, Captioned: BVD-V-55M). Right: average downstream performance of ViCLIP (video-text) and scaling trends of CLAP (audio-text).</strong></figcaption>
 </figure>
 
 ## Why LAION-BVD?
@@ -31,13 +31,13 @@ LAION-BVD aims to provide an open foundation for multimodal research across vide
 
 We started from Common Crawl WAT files and extracted platform-specific video URLs using yt-dlp extractors. Using a distributed Apache Spark pipeline and large-scale download infrastructure, we processed video links from YouTube, Vimeo, and Dailymotion. 
 
-From 1.3B extracted video URLs, we downloaded a subset of around 80M videos corresponding to roughly 13.5M hours of content. 
+From 1.3B extracted video URLs (BVD-URLs), we downloaded a subset of around 80M videos corresponding to roughly 13.5M hours of content (BVD-RAW). 
 
-We then created several multimodal subsets: 
+From a random sample of these videos, we then created several captioned multimodal subsets: 
 
-- BVD-V-55M: 55M scene-level video clips with generated captions  
-- BVD-A-10M and BVD-A-1.7M: captioned audio subsets  
-- BVD-I-300M: 300M scene-changing video frames for image-text training
+- BVD-V-55M: 55M scene-level video clips from 2.4M source videos with generated captions (168k hours in total)  
+- BVD-A-10M: 10M audio clips of 2–30 seconds randomly sampled from BVD-V-55M with generated audio captions (27.5k hours), plus a smaller BVD-A-1.7M subset  
+- BVD-I-300M: 300M captioned scene-changing video frames for image-text training
 
 Our pipeline uses scene detection and lightweight filtering to extract clips and keyframes at scale. Video and audio captions are generated automatically using multimodal captioning models. 
 
@@ -48,7 +48,7 @@ Our pipeline uses scene detection and lightweight filtering to extract clips and
 
 ## Dataset Statistics
 
-LAION-BVD spans a broad range of languages, topics, and video formats. Most videos (97.1%) come from YouTube, with smaller shares from Dailymotion and Vimeo. Among videos with language tags, English accounts for about half, followed by Spanish, Russian, Japanese, and many other languages. The largest categories are People & Blogs, Music, and Entertainment, alongside news, education, sports, science, and many other topics.
+LAION-BVD spans a broad range of languages, topics, and video formats. Most videos (97.1%) come from YouTube, with smaller shares from Dailymotion and Vimeo. Among the 58.2% of videos with language tags, English accounts for about half, followed by Spanish, Russian, Japanese, and many other languages. The largest categories are People & Blogs, Music, and Entertainment, alongside news, education, sports, science, and many other topics.
 
 Most videos are short (median 3.5 minutes), but the distribution is long-tailed: the mean duration is 10.1 minutes, and about 7.5% of videos are 30 minutes or longer, making the dataset suitable for long-horizon video tasks.
 
@@ -87,7 +87,7 @@ Across modalities, we observe consistent improvements with increasing data and m
 <br/>
 
 Table 1: **L-14 scaling with LAION-BVD data on classification and retrieval tasks.**
-LAION-BVD-trained ViCLIP outperforms both InternVid-trained ViCLIP and the image-only CLIP baseline trained on DataComp-1B where video embeddings are obtained by averaging frame embeddings. Performance consistently improves with increased training data and dataset scale, with BVD-V-50M achieving the best overall average. (\* denotes results reported in [InternVid](https://arxiv.org/abs/2307.06942); all other results are evaluated using our pipeline.)  
+ViCLIP trained on BVD-V-10M and BVD-V-50M outperforms both InternVid-trained ViCLIP and the image-only CLIP baseline trained on DataComp-1B where video embeddings are obtained by averaging frame embeddings. Performance consistently improves with increased training data and dataset scale, with BVD-V-50M achieving the best overall average. (\* denotes results reported in [InternVid](https://arxiv.org/abs/2307.06942); all other results are evaluated using our pipeline.)  
 ![L-14 scaling with LAION-BVD data on classification and retrieval tasks](/images/blog/bvd_fig5.png)
 
 Table 2: **Average zero-shot audio performance for pure training data sources at 30M samples seen.**
